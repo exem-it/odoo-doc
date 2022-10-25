@@ -1,6 +1,16 @@
 # GenerateOdooModelDocumentation
 
+Generates a documentation listing all the models and fields existing in the Exem Odoo software.
 
+## Getting started
+
+Launch the main.py will generate the documentation in the html folder. To check the doc open the [html/index.html](html/index.html) file in your browser.
+
+The documentation generated is based on the [doc template](https://github.com/harnishdesign/iDocs) made by iDocs, it's the reference to modify the html template.
+
+The html code is full bootstrap compatible, check this [readme](html/README.md) for more informations.
+
+# Gitlab
 
 ## Getting started
 

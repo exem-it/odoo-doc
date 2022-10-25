@@ -1,0 +1,1569 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1.0, shrink-to-fit=no">
+  <link href="../../assets/images/odoo_doc.png" rel="icon" />
+  <title>Odoo API Documentation</title>
+  <meta name="description" content="Your ThemeForest item Name and description">
+  <meta name="author" content="harnishdesign.net">
+
+  <!-- Stylesheet
+============================== -->
+  <!-- Bootstrap -->
+  <link rel="stylesheet" type="text/css" href="../../assets/vendor/bootstrap/css/bootstrap.min.css" />
+  <!-- Font Awesome Icon -->
+  <link rel="stylesheet" type="text/css" href="../../assets/vendor/font-awesome/css/all.min.css" />
+  <!-- Magnific Popup -->
+  <link rel="stylesheet" type="text/css" href="../../assets/vendor/magnific-popup/magnific-popup.min.css" />
+  <!-- Highlight Syntax -->
+  <link rel="stylesheet" type="text/css" href="../../assets/vendor/highlight.js/styles/github.css" />
+  <!-- Custom Stylesheet -->
+  <link rel="stylesheet" type="text/css" href="../../assets/css/stylesheet.css" />
+</head>
+
+<body data-spy="scroll" data-target=".idocs-navigation" data-offset="125">
+
+  <!-- Preloader -->
+  <div class="preloader">
+    <div class="lds-ellipsis">
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+    </div>
+  </div>
+  <!-- Preloader End -->
+
+  <!-- Document Wrapper   
+=============================== -->
+  <div id="main-wrapper">
+
+  <!-- Header
+  ============================ -->
+  <header id="header" class="sticky-top">
+    <!-- Navbar -->
+    <nav class="primary-menu navbar navbar-expand-lg navbar-dropdown-dark">
+      <div class="container-fluid">
+        <!-- Sidebar Toggler -->
+		<button id="sidebarCollapse" class="navbar-toggler d-block d-md-none" type="button"><span></span><span class="w-75"></span><span class="w-50"></span></button>
+
+		<!-- Logo -->
+        <a class="logo ml-md-3" href="index.html" title="iDocs Template"> <img src="../../assets/images/odoo_doc.png" alt="iDocs Template"/> </a>
+		<span class="text-2 ml-2">v1.0</span>
+        <!-- Logo End -->
+
+		<!-- Navbar Toggler -->
+		<button class="navbar-toggler ml-auto" type="button" data-toggle="collapse" data-target="#header-nav"><span></span><span></span><span></span></button>
+
+		<div id="header-nav" class="collapse navbar-collapse justify-content-end">
+          <ul class="navbar-nav">
+            <li class="dropdown"> <a class="dropdown-toggle" href="#">Navigation</a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="index.html">ir.model</a></li>
+                <li><a class="dropdown-item" href="odoo_operators.html">operators</a></li>
+              </ul>
+            </li>
+            <li><a target="_blank" href="https://themeforest.net/user/harnishdesign/#contact?ref=HarnishDesign">Support</a></li>
+          </ul>
+        </div>
+        <ul class="social-icons social-icons-sm ml-lg-2 mr-2">
+          <li class="social-icons-twitter"><a data-toggle="tooltip" href="http://www.twitter.com/harnishdesign/" target="_blank" title="" data-original-title="Twitter"><i class="fab fa-twitter"></i></a></li>
+        </ul>
+      </div>
+    </nav>
+    <!-- Navbar End -->
+  </header>
+  <!-- Header End -->
+
+  <!-- Content
+  ============================ -->
+  <div id="content" role="main">
+
+    <!-- Sidebar Navigation
+	============================ -->
+    <div class="idocs-navigation bg-light">
+        <ul class="nav flex-column">
+          <li class="nav-item"><a class="nav-link" href="#name">name</a></li>
+<li class="nav-item"><a class="nav-link" href="#origin">origin</a></li>
+<li class="nav-item"><a class="nav-link" href="#note">note</a></li>
+<li class="nav-item"><a class="nav-link" href="#backorder_id">backorder_id</a></li>
+<li class="nav-item"><a class="nav-link" href="#backorder_ids">backorder_ids</a></li>
+<li class="nav-item"><a class="nav-link" href="#move_type">move_type</a></li>
+<li class="nav-item"><a class="nav-link" href="#state">state</a></li>
+<li class="nav-item"><a class="nav-link" href="#group_id">group_id</a></li>
+<li class="nav-item"><a class="nav-link" href="#priority">priority</a></li>
+<li class="nav-item"><a class="nav-link" href="#scheduled_date">scheduled_date</a></li>
+<li class="nav-item"><a class="nav-link" href="#date">date</a></li>
+<li class="nav-item"><a class="nav-link" href="#date_done">date_done</a></li>
+<li class="nav-item"><a class="nav-link" href="#location_id">location_id</a></li>
+<li class="nav-item"><a class="nav-link" href="#location_dest_id">location_dest_id</a></li>
+<li class="nav-item"><a class="nav-link" href="#move_lines">move_lines</a></li>
+<li class="nav-item"><a class="nav-link" href="#move_ids_without_package">move_ids_without_package</a></li>
+<li class="nav-item"><a class="nav-link" href="#has_scrap_move">has_scrap_move</a></li>
+<li class="nav-item"><a class="nav-link" href="#picking_type_id">picking_type_id</a></li>
+<li class="nav-item"><a class="nav-link" href="#picking_type_code">picking_type_code</a></li>
+<li class="nav-item"><a class="nav-link" href="#picking_type_entire_packs">picking_type_entire_packs</a></li>
+<li class="nav-item"><a class="nav-link" href="#partner_id">partner_id</a></li>
+<li class="nav-item"><a class="nav-link" href="#company_id">company_id</a></li>
+<li class="nav-item"><a class="nav-link" href="#move_line_ids">move_line_ids</a></li>
+<li class="nav-item"><a class="nav-link" href="#move_line_ids_without_package">move_line_ids_without_package</a></li>
+<li class="nav-item"><a class="nav-link" href="#move_line_exist">move_line_exist</a></li>
+<li class="nav-item"><a class="nav-link" href="#has_packages">has_packages</a></li>
+<li class="nav-item"><a class="nav-link" href="#show_check_availability">show_check_availability</a></li>
+<li class="nav-item"><a class="nav-link" href="#show_mark_as_todo">show_mark_as_todo</a></li>
+<li class="nav-item"><a class="nav-link" href="#show_validate">show_validate</a></li>
+<li class="nav-item"><a class="nav-link" href="#owner_id">owner_id</a></li>
+<li class="nav-item"><a class="nav-link" href="#printed">printed</a></li>
+<li class="nav-item"><a class="nav-link" href="#is_locked">is_locked</a></li>
+<li class="nav-item"><a class="nav-link" href="#product_id">product_id</a></li>
+<li class="nav-item"><a class="nav-link" href="#show_operations">show_operations</a></li>
+<li class="nav-item"><a class="nav-link" href="#show_lots_text">show_lots_text</a></li>
+<li class="nav-item"><a class="nav-link" href="#has_tracking">has_tracking</a></li>
+<li class="nav-item"><a class="nav-link" href="#immediate_transfer">immediate_transfer</a></li>
+<li class="nav-item"><a class="nav-link" href="#package_level_ids">package_level_ids</a></li>
+<li class="nav-item"><a class="nav-link" href="#package_level_ids_details">package_level_ids_details</a></li>
+<li class="nav-item"><a class="nav-link" href="#purchase_id">purchase_id</a></li>
+<li class="nav-item"><a class="nav-link" href="#sale_id">sale_id</a></li>
+<li class="nav-item"><a class="nav-link" href="#product_domain">product_domain</a></li>
+<li class="nav-item"><a class="nav-link" href="#activity_ids">activity_ids</a></li>
+<li class="nav-item"><a class="nav-link" href="#activity_state">activity_state</a></li>
+<li class="nav-item"><a class="nav-link" href="#activity_user_id">activity_user_id</a></li>
+<li class="nav-item"><a class="nav-link" href="#activity_type_id">activity_type_id</a></li>
+<li class="nav-item"><a class="nav-link" href="#activity_date_deadline">activity_date_deadline</a></li>
+<li class="nav-item"><a class="nav-link" href="#activity_summary">activity_summary</a></li>
+<li class="nav-item"><a class="nav-link" href="#message_is_follower">message_is_follower</a></li>
+<li class="nav-item"><a class="nav-link" href="#message_follower_ids">message_follower_ids</a></li>
+<li class="nav-item"><a class="nav-link" href="#message_partner_ids">message_partner_ids</a></li>
+<li class="nav-item"><a class="nav-link" href="#message_channel_ids">message_channel_ids</a></li>
+<li class="nav-item"><a class="nav-link" href="#message_ids">message_ids</a></li>
+<li class="nav-item"><a class="nav-link" href="#message_unread">message_unread</a></li>
+<li class="nav-item"><a class="nav-link" href="#message_unread_counter">message_unread_counter</a></li>
+<li class="nav-item"><a class="nav-link" href="#message_needaction">message_needaction</a></li>
+<li class="nav-item"><a class="nav-link" href="#message_needaction_counter">message_needaction_counter</a></li>
+<li class="nav-item"><a class="nav-link" href="#message_has_error">message_has_error</a></li>
+<li class="nav-item"><a class="nav-link" href="#message_has_error_counter">message_has_error_counter</a></li>
+<li class="nav-item"><a class="nav-link" href="#message_attachment_count">message_attachment_count</a></li>
+<li class="nav-item"><a class="nav-link" href="#message_main_attachment_id">message_main_attachment_id</a></li>
+<li class="nav-item"><a class="nav-link" href="#website_message_ids">website_message_ids</a></li>
+<li class="nav-item"><a class="nav-link" href="#id">id</a></li>
+<li class="nav-item"><a class="nav-link" href="#display_name">display_name</a></li>
+<li class="nav-item"><a class="nav-link" href="#create_uid">create_uid</a></li>
+<li class="nav-item"><a class="nav-link" href="#create_date">create_date</a></li>
+<li class="nav-item"><a class="nav-link" href="#write_uid">write_uid</a></li>
+<li class="nav-item"><a class="nav-link" href="#write_date">write_date</a></li>
+<li class="nav-item"><a class="nav-link" href="#__last_update">__last_update</a></li>
+
+        </ul>
+    </div>
+
+    <!-- Docs Content
+	============================ -->
+    <div class="idocs-content">
+      <div class="container">
+        <h2>stock.picking</h2>
+<section id="name" class="card card-body">
+<h4 class="card-title">name</h4>
+<p>
+<strong>type:</strong> char<br>
+<strong>change_default:</strong> False<br>
+<strong>company_dependent:</strong> False<br>
+<strong>depends:</strong> []<br>
+<strong>manual:</strong> False<br>
+<strong>readonly:</strong> False<br>
+<strong>required:</strong> False<br>
+<strong>searchable:</strong> True<br>
+<strong>sortable:</strong> True<br>
+<strong>states:</strong> {'done': [['readonly', True]], 'cancel': [['readonly', True]]}<br>
+<strong>store:</strong> True<br>
+<strong>string:</strong> Reference<br>
+<strong>translate:</strong> False<br>
+<strong>trim:</strong> True<br>
+</p>
+</section>
+
+<section id="origin" class="card card-body">
+<h4 class="card-title">origin</h4>
+<p>
+<strong>type:</strong> char<br>
+<strong>change_default:</strong> False<br>
+<strong>company_dependent:</strong> False<br>
+<strong>depends:</strong> []<br>
+<strong>help:</strong> Reference of the document<br>
+<strong>manual:</strong> False<br>
+<strong>readonly:</strong> False<br>
+<strong>required:</strong> False<br>
+<strong>searchable:</strong> True<br>
+<strong>sortable:</strong> True<br>
+<strong>states:</strong> {'done': [['readonly', True]], 'cancel': [['readonly', True]]}<br>
+<strong>store:</strong> True<br>
+<strong>string:</strong> Source Document<br>
+<strong>translate:</strong> False<br>
+<strong>trim:</strong> True<br>
+</p>
+</section>
+
+<section id="note" class="card card-body">
+<h4 class="card-title">note</h4>
+<p>
+<strong>type:</strong> text<br>
+<strong>change_default:</strong> False<br>
+<strong>company_dependent:</strong> False<br>
+<strong>depends:</strong> []<br>
+<strong>manual:</strong> False<br>
+<strong>readonly:</strong> False<br>
+<strong>required:</strong> False<br>
+<strong>searchable:</strong> True<br>
+<strong>sortable:</strong> True<br>
+<strong>store:</strong> True<br>
+<strong>string:</strong> Notes<br>
+<strong>translate:</strong> False<br>
+</p>
+</section>
+
+<section id="backorder_id" class="card card-body">
+<h4 class="card-title">backorder_id</h4>
+<p>
+<strong>type:</strong> many2one<br>
+<strong>change_default:</strong> False<br>
+<strong>company_dependent:</strong> False<br>
+<strong>context:</strong> {}<br>
+<strong>depends:</strong> []<br>
+<strong>domain:</strong> []<br>
+<strong>help:</strong> If this shipment was split, then this field links to the shipment which contains the already processed part.<br>
+<strong>manual:</strong> False<br>
+<strong>readonly:</strong> False<br>
+<strong>relation:</strong> <a class="nav-link" href="../stock_picking/index.html">stock.picking</a><br>
+<strong>required:</strong> False<br>
+<strong>searchable:</strong> True<br>
+<strong>sortable:</strong> True<br>
+<strong>states:</strong> {'done': [['readonly', True]], 'cancel': [['readonly', True]]}<br>
+<strong>store:</strong> True<br>
+<strong>string:</strong> Back Order of<br>
+</p>
+</section>
+
+<section id="backorder_ids" class="card card-body">
+<h4 class="card-title">backorder_ids</h4>
+<p>
+<strong>type:</strong> one2many<br>
+<strong>change_default:</strong> False<br>
+<strong>company_dependent:</strong> False<br>
+<strong>context:</strong> {}<br>
+<strong>depends:</strong> []<br>
+<strong>domain:</strong> []<br>
+<strong>manual:</strong> False<br>
+<strong>readonly:</strong> False<br>
+<strong>relation:</strong> <a class="nav-link" href="../stock_picking/index.html">stock.picking</a><br>
+<strong>relation_field:</strong> backorder_id<br>
+<strong>required:</strong> False<br>
+<strong>searchable:</strong> True<br>
+<strong>sortable:</strong> False<br>
+<strong>store:</strong> True<br>
+<strong>string:</strong> Back Orders<br>
+</p>
+</section>
+
+<section id="move_type" class="card card-body">
+<h4 class="card-title">move_type</h4>
+<p>
+<strong>type:</strong> selection<br>
+<strong>change_default:</strong> False<br>
+<strong>company_dependent:</strong> False<br>
+<strong>depends:</strong> []<br>
+<strong>help:</strong> It specifies goods to be deliver partially or all at once<br>
+<strong>manual:</strong> False<br>
+<strong>readonly:</strong> False<br>
+<strong>required:</strong> True<br>
+<strong>searchable:</strong> True<br>
+<strong>selection:</strong> [['direct', 'As soon as possible'], ['one', 'When all products are ready']]<br>
+<strong>sortable:</strong> True<br>
+<strong>states:</strong> {'done': [['readonly', True]], 'cancel': [['readonly', True]]}<br>
+<strong>store:</strong> True<br>
+<strong>string:</strong> Shipping Policy<br>
+</p>
+</section>
+
+<section id="state" class="card card-body">
+<h4 class="card-title">state</h4>
+<p>
+<strong>type:</strong> selection<br>
+<strong>change_default:</strong> False<br>
+<strong>company_dependent:</strong> False<br>
+<strong>depends:</strong> ['move_type', 'move_lines.state', 'move_lines.picking_id']<br>
+<strong>help:</strong>  * Draft: not confirmed yet and will not be scheduled until confirmed.
+ * Waiting Another Operation: waiting for another move to proceed before it becomes automatically available (e.g. in Make-To-Order flows).
+ * Waiting: if it is not ready to be sent because the required products could not be reserved.
+ * Ready: products are reserved and ready to be sent. If the shipping policy is 'As soon as possible' this happens as soon as anything is reserved.
+ * Done: has been processed, can't be modified or cancelled anymore.
+ * Cancelled: has been cancelled, can't be confirmed anymore.<br>
+<strong>manual:</strong> False<br>
+<strong>readonly:</strong> True<br>
+<strong>required:</strong> False<br>
+<strong>searchable:</strong> True<br>
+<strong>selection:</strong> [['draft', 'Draft'], ['waiting', 'Waiting Another Operation'], ['confirmed', 'Waiting'], ['assigned', 'Ready'], ['done', 'Done'], ['cancel', 'Cancelled']]<br>
+<strong>sortable:</strong> True<br>
+<strong>store:</strong> True<br>
+<strong>string:</strong> Status<br>
+</p>
+</section>
+
+<section id="group_id" class="card card-body">
+<h4 class="card-title">group_id</h4>
+<p>
+<strong>type:</strong> many2one<br>
+<strong>change_default:</strong> False<br>
+<strong>company_dependent:</strong> False<br>
+<strong>context:</strong> {}<br>
+<strong>depends:</strong> ['move_lines.group_id']<br>
+<strong>domain:</strong> []<br>
+<strong>manual:</strong> False<br>
+<strong>readonly:</strong> True<br>
+<strong>related:</strong> ['move_lines', 'group_id']<br>
+<strong>relation:</strong> <a class="nav-link" href="../procurement_group/index.html">procurement.group</a><br>
+<strong>required:</strong> False<br>
+<strong>searchable:</strong> True<br>
+<strong>sortable:</strong> True<br>
+<strong>store:</strong> True<br>
+<strong>string:</strong> Procurement Group<br>
+</p>
+</section>
+
+<section id="priority" class="card card-body">
+<h4 class="card-title">priority</h4>
+<p>
+<strong>type:</strong> selection<br>
+<strong>change_default:</strong> False<br>
+<strong>company_dependent:</strong> False<br>
+<strong>depends:</strong> ['move_lines.priority']<br>
+<strong>help:</strong> Priority for this picking. Setting manually a value here would set it as priority for all the moves<br>
+<strong>manual:</strong> False<br>
+<strong>readonly:</strong> False<br>
+<strong>required:</strong> False<br>
+<strong>searchable:</strong> True<br>
+<strong>selection:</strong> [['0', 'Not urgent'], ['1', 'Normal'], ['2', 'Urgent'], ['3', 'Very Urgent']]<br>
+<strong>sortable:</strong> True<br>
+<strong>states:</strong> {'done': [['readonly', True]], 'cancel': [['readonly', True]]}<br>
+<strong>store:</strong> True<br>
+<strong>string:</strong> Priority<br>
+</p>
+</section>
+
+<section id="scheduled_date" class="card card-body">
+<h4 class="card-title">scheduled_date</h4>
+<p>
+<strong>type:</strong> datetime<br>
+<strong>change_default:</strong> False<br>
+<strong>company_dependent:</strong> False<br>
+<strong>depends:</strong> ['move_lines.date_expected']<br>
+<strong>help:</strong> Scheduled time for the first part of the shipment to be processed. Setting manually a value here would set it as expected date for all the stock moves.<br>
+<strong>manual:</strong> False<br>
+<strong>readonly:</strong> False<br>
+<strong>required:</strong> False<br>
+<strong>searchable:</strong> True<br>
+<strong>sortable:</strong> True<br>
+<strong>store:</strong> True<br>
+<strong>string:</strong> Scheduled Date<br>
+</p>
+</section>
+
+<section id="date" class="card card-body">
+<h4 class="card-title">date</h4>
+<p>
+<strong>type:</strong> datetime<br>
+<strong>change_default:</strong> False<br>
+<strong>company_dependent:</strong> False<br>
+<strong>depends:</strong> []<br>
+<strong>help:</strong> Creation Date, usually the time of the order<br>
+<strong>manual:</strong> False<br>
+<strong>readonly:</strong> False<br>
+<strong>required:</strong> False<br>
+<strong>searchable:</strong> True<br>
+<strong>sortable:</strong> True<br>
+<strong>states:</strong> {'done': [['readonly', True]], 'cancel': [['readonly', True]]}<br>
+<strong>store:</strong> True<br>
+<strong>string:</strong> Creation Date<br>
+</p>
+</section>
+
+<section id="date_done" class="card card-body">
+<h4 class="card-title">date_done</h4>
+<p>
+<strong>type:</strong> datetime<br>
+<strong>change_default:</strong> False<br>
+<strong>company_dependent:</strong> False<br>
+<strong>depends:</strong> []<br>
+<strong>help:</strong> Date at which the transfer has been processed or cancelled.<br>
+<strong>manual:</strong> False<br>
+<strong>readonly:</strong> True<br>
+<strong>required:</strong> False<br>
+<strong>searchable:</strong> True<br>
+<strong>sortable:</strong> True<br>
+<strong>store:</strong> True<br>
+<strong>string:</strong> Date of Transfer<br>
+</p>
+</section>
+
+<section id="location_id" class="card card-body">
+<h4 class="card-title">location_id</h4>
+<p>
+<strong>type:</strong> many2one<br>
+<strong>change_default:</strong> False<br>
+<strong>company_dependent:</strong> False<br>
+<strong>context:</strong> {}<br>
+<strong>depends:</strong> []<br>
+<strong>domain:</strong> []<br>
+<strong>manual:</strong> False<br>
+<strong>readonly:</strong> True<br>
+<strong>relation:</strong> <a class="nav-link" href="../stock_location/index.html">stock.location</a><br>
+<strong>required:</strong> True<br>
+<strong>searchable:</strong> True<br>
+<strong>sortable:</strong> True<br>
+<strong>states:</strong> {'draft': [['readonly', False]]}<br>
+<strong>store:</strong> True<br>
+<strong>string:</strong> Source Location<br>
+</p>
+</section>
+
+<section id="location_dest_id" class="card card-body">
+<h4 class="card-title">location_dest_id</h4>
+<p>
+<strong>type:</strong> many2one<br>
+<strong>change_default:</strong> False<br>
+<strong>company_dependent:</strong> False<br>
+<strong>context:</strong> {}<br>
+<strong>depends:</strong> []<br>
+<strong>domain:</strong> []<br>
+<strong>manual:</strong> False<br>
+<strong>readonly:</strong> True<br>
+<strong>relation:</strong> <a class="nav-link" href="../stock_location/index.html">stock.location</a><br>
+<strong>required:</strong> True<br>
+<strong>searchable:</strong> True<br>
+<strong>sortable:</strong> True<br>
+<strong>states:</strong> {'draft': [['readonly', False]]}<br>
+<strong>store:</strong> True<br>
+<strong>string:</strong> Destination Location<br>
+</p>
+</section>
+
+<section id="move_lines" class="card card-body">
+<h4 class="card-title">move_lines</h4>
+<p>
+<strong>type:</strong> one2many<br>
+<strong>change_default:</strong> False<br>
+<strong>company_dependent:</strong> False<br>
+<strong>context:</strong> {}<br>
+<strong>depends:</strong> []<br>
+<strong>domain:</strong> []<br>
+<strong>manual:</strong> False<br>
+<strong>readonly:</strong> False<br>
+<strong>relation:</strong> <a class="nav-link" href="../stock_move/index.html">stock.move</a><br>
+<strong>relation_field:</strong> picking_id<br>
+<strong>required:</strong> False<br>
+<strong>searchable:</strong> True<br>
+<strong>sortable:</strong> False<br>
+<strong>store:</strong> True<br>
+<strong>string:</strong> Stock Moves<br>
+</p>
+</section>
+
+<section id="move_ids_without_package" class="card card-body">
+<h4 class="card-title">move_ids_without_package</h4>
+<p>
+<strong>type:</strong> one2many<br>
+<strong>change_default:</strong> False<br>
+<strong>company_dependent:</strong> False<br>
+<strong>context:</strong> {}<br>
+<strong>depends:</strong> ['move_ids_without_package.package_level_id', 'move_ids_without_package.picking_type_entire_packs']<br>
+<strong>domain:</strong> ['|', ['package_level_id', '=', False], ['picking_type_entire_packs', '=', False]]<br>
+<strong>manual:</strong> False<br>
+<strong>readonly:</strong> False<br>
+<strong>relation:</strong> <a class="nav-link" href="../stock_move/index.html">stock.move</a><br>
+<strong>relation_field:</strong> picking_id<br>
+<strong>required:</strong> False<br>
+<strong>searchable:</strong> True<br>
+<strong>sortable:</strong> False<br>
+<strong>store:</strong> True<br>
+<strong>string:</strong> Stock moves not in package<br>
+</p>
+</section>
+
+<section id="has_scrap_move" class="card card-body">
+<h4 class="card-title">has_scrap_move</h4>
+<p>
+<strong>type:</strong> boolean<br>
+<strong>change_default:</strong> False<br>
+<strong>company_dependent:</strong> False<br>
+<strong>depends:</strong> []<br>
+<strong>manual:</strong> False<br>
+<strong>readonly:</strong> True<br>
+<strong>required:</strong> False<br>
+<strong>searchable:</strong> False<br>
+<strong>sortable:</strong> False<br>
+<strong>store:</strong> False<br>
+<strong>string:</strong> Has Scrap Moves<br>
+</p>
+</section>
+
+<section id="picking_type_id" class="card card-body">
+<h4 class="card-title">picking_type_id</h4>
+<p>
+<strong>type:</strong> many2one<br>
+<strong>change_default:</strong> False<br>
+<strong>company_dependent:</strong> False<br>
+<strong>context:</strong> {}<br>
+<strong>depends:</strong> []<br>
+<strong>domain:</strong> []<br>
+<strong>manual:</strong> False<br>
+<strong>readonly:</strong> True<br>
+<strong>relation:</strong> <a class="nav-link" href="../stock_picking_type/index.html">stock.picking.type</a><br>
+<strong>required:</strong> True<br>
+<strong>searchable:</strong> True<br>
+<strong>sortable:</strong> True<br>
+<strong>states:</strong> {'draft': [['readonly', False]]}<br>
+<strong>store:</strong> True<br>
+<strong>string:</strong> Operation Type<br>
+</p>
+</section>
+
+<section id="picking_type_code" class="card card-body">
+<h4 class="card-title">picking_type_code</h4>
+<p>
+<strong>type:</strong> selection<br>
+<strong>change_default:</strong> False<br>
+<strong>company_dependent:</strong> False<br>
+<strong>depends:</strong> ['picking_type_id.code']<br>
+<strong>manual:</strong> False<br>
+<strong>readonly:</strong> True<br>
+<strong>related:</strong> ['picking_type_id', 'code']<br>
+<strong>required:</strong> False<br>
+<strong>searchable:</strong> True<br>
+<strong>selection:</strong> [['incoming', 'Vendors'], ['outgoing', 'Customers'], ['internal', 'Internal'], ['mrp_operation', 'Manufacturing Operation']]<br>
+<strong>sortable:</strong> False<br>
+<strong>store:</strong> False<br>
+<strong>string:</strong> Type of Operation<br>
+</p>
+</section>
+
+<section id="picking_type_entire_packs" class="card card-body">
+<h4 class="card-title">picking_type_entire_packs</h4>
+<p>
+<strong>type:</strong> boolean<br>
+<strong>change_default:</strong> False<br>
+<strong>company_dependent:</strong> False<br>
+<strong>depends:</strong> ['picking_type_id.show_entire_packs']<br>
+<strong>help:</strong> If ticked, you will be able to select entire packages to move<br>
+<strong>manual:</strong> False<br>
+<strong>readonly:</strong> True<br>
+<strong>related:</strong> ['picking_type_id', 'show_entire_packs']<br>
+<strong>required:</strong> False<br>
+<strong>searchable:</strong> True<br>
+<strong>sortable:</strong> False<br>
+<strong>store:</strong> False<br>
+<strong>string:</strong> Move Entire Packages<br>
+</p>
+</section>
+
+<section id="partner_id" class="card card-body">
+<h4 class="card-title">partner_id</h4>
+<p>
+<strong>type:</strong> many2one<br>
+<strong>change_default:</strong> False<br>
+<strong>company_dependent:</strong> False<br>
+<strong>context:</strong> {}<br>
+<strong>depends:</strong> []<br>
+<strong>domain:</strong> []<br>
+<strong>manual:</strong> False<br>
+<strong>readonly:</strong> False<br>
+<strong>relation:</strong> <a class="nav-link" href="../res_partner/index.html">res.partner</a><br>
+<strong>required:</strong> False<br>
+<strong>searchable:</strong> True<br>
+<strong>sortable:</strong> True<br>
+<strong>states:</strong> {'done': [['readonly', True]], 'cancel': [['readonly', True]]}<br>
+<strong>store:</strong> True<br>
+<strong>string:</strong> Partner<br>
+</p>
+</section>
+
+<section id="company_id" class="card card-body">
+<h4 class="card-title">company_id</h4>
+<p>
+<strong>type:</strong> many2one<br>
+<strong>change_default:</strong> False<br>
+<strong>company_dependent:</strong> False<br>
+<strong>context:</strong> {}<br>
+<strong>depends:</strong> []<br>
+<strong>domain:</strong> []<br>
+<strong>manual:</strong> False<br>
+<strong>readonly:</strong> False<br>
+<strong>relation:</strong> <a class="nav-link" href="../res_company/index.html">res.company</a><br>
+<strong>required:</strong> True<br>
+<strong>searchable:</strong> True<br>
+<strong>sortable:</strong> True<br>
+<strong>states:</strong> {'done': [['readonly', True]], 'cancel': [['readonly', True]]}<br>
+<strong>store:</strong> True<br>
+<strong>string:</strong> Company<br>
+</p>
+</section>
+
+<section id="move_line_ids" class="card card-body">
+<h4 class="card-title">move_line_ids</h4>
+<p>
+<strong>type:</strong> one2many<br>
+<strong>change_default:</strong> False<br>
+<strong>company_dependent:</strong> False<br>
+<strong>context:</strong> {}<br>
+<strong>depends:</strong> []<br>
+<strong>domain:</strong> []<br>
+<strong>manual:</strong> False<br>
+<strong>readonly:</strong> False<br>
+<strong>relation:</strong> <a class="nav-link" href="../stock_move_line/index.html">stock.move.line</a><br>
+<strong>relation_field:</strong> picking_id<br>
+<strong>required:</strong> False<br>
+<strong>searchable:</strong> True<br>
+<strong>sortable:</strong> False<br>
+<strong>store:</strong> True<br>
+<strong>string:</strong> Operations<br>
+</p>
+</section>
+
+<section id="move_line_ids_without_package" class="card card-body">
+<h4 class="card-title">move_line_ids_without_package</h4>
+<p>
+<strong>type:</strong> one2many<br>
+<strong>change_default:</strong> False<br>
+<strong>company_dependent:</strong> False<br>
+<strong>context:</strong> {}<br>
+<strong>depends:</strong> ['move_line_ids_without_package.package_level_id', 'move_line_ids_without_package.picking_type_entire_packs']<br>
+<strong>domain:</strong> ['|', ['package_level_id', '=', False], ['picking_type_entire_packs', '=', False]]<br>
+<strong>manual:</strong> False<br>
+<strong>readonly:</strong> False<br>
+<strong>relation:</strong> <a class="nav-link" href="../stock_move_line/index.html">stock.move.line</a><br>
+<strong>relation_field:</strong> picking_id<br>
+<strong>required:</strong> False<br>
+<strong>searchable:</strong> True<br>
+<strong>sortable:</strong> False<br>
+<strong>store:</strong> True<br>
+<strong>string:</strong> Operations without package<br>
+</p>
+</section>
+
+<section id="move_line_exist" class="card card-body">
+<h4 class="card-title">move_line_exist</h4>
+<p>
+<strong>type:</strong> boolean<br>
+<strong>change_default:</strong> False<br>
+<strong>company_dependent:</strong> False<br>
+<strong>depends:</strong> []<br>
+<strong>help:</strong> Check the existence of pack operation on the picking<br>
+<strong>manual:</strong> False<br>
+<strong>readonly:</strong> True<br>
+<strong>required:</strong> False<br>
+<strong>searchable:</strong> False<br>
+<strong>sortable:</strong> False<br>
+<strong>store:</strong> False<br>
+<strong>string:</strong> Has Pack Operations<br>
+</p>
+</section>
+
+<section id="has_packages" class="card card-body">
+<h4 class="card-title">has_packages</h4>
+<p>
+<strong>type:</strong> boolean<br>
+<strong>change_default:</strong> False<br>
+<strong>company_dependent:</strong> False<br>
+<strong>depends:</strong> []<br>
+<strong>help:</strong> Check the existence of destination packages on move lines<br>
+<strong>manual:</strong> False<br>
+<strong>readonly:</strong> True<br>
+<strong>required:</strong> False<br>
+<strong>searchable:</strong> False<br>
+<strong>sortable:</strong> False<br>
+<strong>store:</strong> False<br>
+<strong>string:</strong> Has Packages<br>
+</p>
+</section>
+
+<section id="show_check_availability" class="card card-body">
+<h4 class="card-title">show_check_availability</h4>
+<p>
+<strong>type:</strong> boolean<br>
+<strong>change_default:</strong> False<br>
+<strong>company_dependent:</strong> False<br>
+<strong>depends:</strong> []<br>
+<strong>help:</strong> Technical field used to compute whether the check availability button should be shown.<br>
+<strong>manual:</strong> False<br>
+<strong>readonly:</strong> True<br>
+<strong>required:</strong> False<br>
+<strong>searchable:</strong> False<br>
+<strong>sortable:</strong> False<br>
+<strong>store:</strong> False<br>
+<strong>string:</strong> Show Check Availability<br>
+</p>
+</section>
+
+<section id="show_mark_as_todo" class="card card-body">
+<h4 class="card-title">show_mark_as_todo</h4>
+<p>
+<strong>type:</strong> boolean<br>
+<strong>change_default:</strong> False<br>
+<strong>company_dependent:</strong> False<br>
+<strong>depends:</strong> ['state', 'move_lines']<br>
+<strong>help:</strong> Technical field used to compute whether the mark as todo button should be shown.<br>
+<strong>manual:</strong> False<br>
+<strong>readonly:</strong> True<br>
+<strong>required:</strong> False<br>
+<strong>searchable:</strong> False<br>
+<strong>sortable:</strong> False<br>
+<strong>store:</strong> False<br>
+<strong>string:</strong> Show Mark As Todo<br>
+</p>
+</section>
+
+<section id="show_validate" class="card card-body">
+<h4 class="card-title">show_validate</h4>
+<p>
+<strong>type:</strong> boolean<br>
+<strong>change_default:</strong> False<br>
+<strong>company_dependent:</strong> False<br>
+<strong>depends:</strong> ['state', 'is_locked']<br>
+<strong>help:</strong> Technical field used to compute whether the validate should be shown.<br>
+<strong>manual:</strong> False<br>
+<strong>readonly:</strong> True<br>
+<strong>required:</strong> False<br>
+<strong>searchable:</strong> False<br>
+<strong>sortable:</strong> False<br>
+<strong>store:</strong> False<br>
+<strong>string:</strong> Show Validate<br>
+</p>
+</section>
+
+<section id="owner_id" class="card card-body">
+<h4 class="card-title">owner_id</h4>
+<p>
+<strong>type:</strong> many2one<br>
+<strong>change_default:</strong> False<br>
+<strong>company_dependent:</strong> False<br>
+<strong>context:</strong> {}<br>
+<strong>depends:</strong> []<br>
+<strong>domain:</strong> []<br>
+<strong>help:</strong> Default Owner<br>
+<strong>manual:</strong> False<br>
+<strong>readonly:</strong> False<br>
+<strong>relation:</strong> <a class="nav-link" href="../res_partner/index.html">res.partner</a><br>
+<strong>required:</strong> False<br>
+<strong>searchable:</strong> True<br>
+<strong>sortable:</strong> True<br>
+<strong>states:</strong> {'done': [['readonly', True]], 'cancel': [['readonly', True]]}<br>
+<strong>store:</strong> True<br>
+<strong>string:</strong> Owner<br>
+</p>
+</section>
+
+<section id="printed" class="card card-body">
+<h4 class="card-title">printed</h4>
+<p>
+<strong>type:</strong> boolean<br>
+<strong>change_default:</strong> False<br>
+<strong>company_dependent:</strong> False<br>
+<strong>depends:</strong> []<br>
+<strong>manual:</strong> False<br>
+<strong>readonly:</strong> False<br>
+<strong>required:</strong> False<br>
+<strong>searchable:</strong> True<br>
+<strong>sortable:</strong> True<br>
+<strong>store:</strong> True<br>
+<strong>string:</strong> Printed<br>
+</p>
+</section>
+
+<section id="is_locked" class="card card-body">
+<h4 class="card-title">is_locked</h4>
+<p>
+<strong>type:</strong> boolean<br>
+<strong>change_default:</strong> False<br>
+<strong>company_dependent:</strong> False<br>
+<strong>depends:</strong> []<br>
+<strong>help:</strong> When the picking is not done this allows changing the initial demand. When the picking is done this allows changing the done quantities.<br>
+<strong>manual:</strong> False<br>
+<strong>readonly:</strong> False<br>
+<strong>required:</strong> False<br>
+<strong>searchable:</strong> True<br>
+<strong>sortable:</strong> True<br>
+<strong>store:</strong> True<br>
+<strong>string:</strong> Is Locked<br>
+</p>
+</section>
+
+<section id="product_id" class="card card-body">
+<h4 class="card-title">product_id</h4>
+<p>
+<strong>type:</strong> many2one<br>
+<strong>change_default:</strong> False<br>
+<strong>company_dependent:</strong> False<br>
+<strong>context:</strong> {}<br>
+<strong>depends:</strong> ['move_lines.product_id']<br>
+<strong>domain:</strong> [['type', 'in', ['product', 'consu']]]<br>
+<strong>manual:</strong> False<br>
+<strong>readonly:</strong> True<br>
+<strong>related:</strong> ['move_lines', 'product_id']<br>
+<strong>relation:</strong> <a class="nav-link" href="../product_product/index.html">product.product</a><br>
+<strong>required:</strong> False<br>
+<strong>searchable:</strong> True<br>
+<strong>sortable:</strong> False<br>
+<strong>store:</strong> False<br>
+<strong>string:</strong> Product<br>
+</p>
+</section>
+
+<section id="show_operations" class="card card-body">
+<h4 class="card-title">show_operations</h4>
+<p>
+<strong>type:</strong> boolean<br>
+<strong>change_default:</strong> False<br>
+<strong>company_dependent:</strong> False<br>
+<strong>depends:</strong> ['picking_type_id.show_operations']<br>
+<strong>manual:</strong> False<br>
+<strong>readonly:</strong> True<br>
+<strong>required:</strong> False<br>
+<strong>searchable:</strong> False<br>
+<strong>sortable:</strong> False<br>
+<strong>store:</strong> False<br>
+<strong>string:</strong> Show Operations<br>
+</p>
+</section>
+
+<section id="show_lots_text" class="card card-body">
+<h4 class="card-title">show_lots_text</h4>
+<p>
+<strong>type:</strong> boolean<br>
+<strong>change_default:</strong> False<br>
+<strong>company_dependent:</strong> False<br>
+<strong>depends:</strong> ['move_line_ids', 'picking_type_id.use_create_lots', 'picking_type_id.use_existing_lots', 'state']<br>
+<strong>manual:</strong> False<br>
+<strong>readonly:</strong> True<br>
+<strong>required:</strong> False<br>
+<strong>searchable:</strong> False<br>
+<strong>sortable:</strong> False<br>
+<strong>store:</strong> False<br>
+<strong>string:</strong> Show Lots Text<br>
+</p>
+</section>
+
+<section id="has_tracking" class="card card-body">
+<h4 class="card-title">has_tracking</h4>
+<p>
+<strong>type:</strong> boolean<br>
+<strong>change_default:</strong> False<br>
+<strong>company_dependent:</strong> False<br>
+<strong>depends:</strong> []<br>
+<strong>manual:</strong> False<br>
+<strong>readonly:</strong> True<br>
+<strong>required:</strong> False<br>
+<strong>searchable:</strong> False<br>
+<strong>sortable:</strong> False<br>
+<strong>store:</strong> False<br>
+<strong>string:</strong> Has Tracking<br>
+</p>
+</section>
+
+<section id="immediate_transfer" class="card card-body">
+<h4 class="card-title">immediate_transfer</h4>
+<p>
+<strong>type:</strong> boolean<br>
+<strong>change_default:</strong> False<br>
+<strong>company_dependent:</strong> False<br>
+<strong>depends:</strong> []<br>
+<strong>manual:</strong> False<br>
+<strong>readonly:</strong> False<br>
+<strong>required:</strong> False<br>
+<strong>searchable:</strong> True<br>
+<strong>sortable:</strong> True<br>
+<strong>store:</strong> True<br>
+<strong>string:</strong> Immediate Transfer<br>
+</p>
+</section>
+
+<section id="package_level_ids" class="card card-body">
+<h4 class="card-title">package_level_ids</h4>
+<p>
+<strong>type:</strong> one2many<br>
+<strong>change_default:</strong> False<br>
+<strong>company_dependent:</strong> False<br>
+<strong>context:</strong> {}<br>
+<strong>depends:</strong> []<br>
+<strong>domain:</strong> []<br>
+<strong>manual:</strong> False<br>
+<strong>readonly:</strong> False<br>
+<strong>relation:</strong> <a class="nav-link" href="../stock_package_level/index.html">stock.package_level</a><br>
+<strong>relation_field:</strong> picking_id<br>
+<strong>required:</strong> False<br>
+<strong>searchable:</strong> True<br>
+<strong>sortable:</strong> False<br>
+<strong>store:</strong> True<br>
+<strong>string:</strong> Package Level<br>
+</p>
+</section>
+
+<section id="package_level_ids_details" class="card card-body">
+<h4 class="card-title">package_level_ids_details</h4>
+<p>
+<strong>type:</strong> one2many<br>
+<strong>change_default:</strong> False<br>
+<strong>company_dependent:</strong> False<br>
+<strong>context:</strong> {}<br>
+<strong>depends:</strong> []<br>
+<strong>domain:</strong> []<br>
+<strong>manual:</strong> False<br>
+<strong>readonly:</strong> False<br>
+<strong>relation:</strong> <a class="nav-link" href="../stock_package_level/index.html">stock.package_level</a><br>
+<strong>relation_field:</strong> picking_id<br>
+<strong>required:</strong> False<br>
+<strong>searchable:</strong> True<br>
+<strong>sortable:</strong> False<br>
+<strong>store:</strong> True<br>
+<strong>string:</strong> Package Level Ids Details<br>
+</p>
+</section>
+
+<section id="purchase_id" class="card card-body">
+<h4 class="card-title">purchase_id</h4>
+<p>
+<strong>type:</strong> many2one<br>
+<strong>change_default:</strong> False<br>
+<strong>company_dependent:</strong> False<br>
+<strong>context:</strong> {}<br>
+<strong>depends:</strong> ['move_lines.purchase_line_id.order_id']<br>
+<strong>domain:</strong> []<br>
+<strong>manual:</strong> False<br>
+<strong>readonly:</strong> True<br>
+<strong>related:</strong> ['move_lines', 'purchase_line_id', 'order_id']<br>
+<strong>relation:</strong> <a class="nav-link" href="../purchase_order/index.html">purchase.order</a><br>
+<strong>required:</strong> False<br>
+<strong>searchable:</strong> True<br>
+<strong>sortable:</strong> False<br>
+<strong>store:</strong> False<br>
+<strong>string:</strong> Purchase Orders<br>
+</p>
+</section>
+
+<section id="sale_id" class="card card-body">
+<h4 class="card-title">sale_id</h4>
+<p>
+<strong>type:</strong> many2one<br>
+<strong>change_default:</strong> False<br>
+<strong>company_dependent:</strong> False<br>
+<strong>context:</strong> {}<br>
+<strong>depends:</strong> ['group_id.sale_id']<br>
+<strong>domain:</strong> []<br>
+<strong>manual:</strong> False<br>
+<strong>readonly:</strong> False<br>
+<strong>related:</strong> ['group_id', 'sale_id']<br>
+<strong>relation:</strong> <a class="nav-link" href="../sale_order/index.html">sale.order</a><br>
+<strong>required:</strong> False<br>
+<strong>searchable:</strong> True<br>
+<strong>sortable:</strong> True<br>
+<strong>store:</strong> True<br>
+<strong>string:</strong> Sales Order<br>
+</p>
+</section>
+
+<section id="product_domain" class="card card-body">
+<h4 class="card-title">product_domain</h4>
+<p>
+<strong>type:</strong> many2many<br>
+<strong>change_default:</strong> False<br>
+<strong>company_dependent:</strong> False<br>
+<strong>context:</strong> {}<br>
+<strong>depends:</strong> []<br>
+<strong>domain:</strong> []<br>
+<strong>manual:</strong> False<br>
+<strong>readonly:</strong> 1<br>
+<strong>relation:</strong> <a class="nav-link" href="../product_product/index.html">product.product</a><br>
+<strong>required:</strong> False<br>
+<strong>searchable:</strong> False<br>
+<strong>sortable:</strong> False<br>
+<strong>store:</strong> False<br>
+<strong>string:</strong> Product Domain<br>
+</p>
+</section>
+
+<section id="activity_ids" class="card card-body">
+<h4 class="card-title">activity_ids</h4>
+<p>
+<strong>type:</strong> one2many<br>
+<strong>change_default:</strong> False<br>
+<strong>company_dependent:</strong> False<br>
+<strong>context:</strong> {}<br>
+<strong>depends:</strong> []<br>
+<strong>domain:</strong> [['res_model', '=', 'stock.picking']]<br>
+<strong>groups:</strong> base.group_user<br>
+<strong>manual:</strong> False<br>
+<strong>readonly:</strong> False<br>
+<strong>relation:</strong> <a class="nav-link" href="../mail_activity/index.html">mail.activity</a><br>
+<strong>relation_field:</strong> res_id<br>
+<strong>required:</strong> False<br>
+<strong>searchable:</strong> True<br>
+<strong>sortable:</strong> False<br>
+<strong>store:</strong> True<br>
+<strong>string:</strong> Activities<br>
+</p>
+</section>
+
+<section id="activity_state" class="card card-body">
+<h4 class="card-title">activity_state</h4>
+<p>
+<strong>type:</strong> selection<br>
+<strong>change_default:</strong> False<br>
+<strong>company_dependent:</strong> False<br>
+<strong>depends:</strong> ['activity_ids.state']<br>
+<strong>groups:</strong> base.group_user<br>
+<strong>help:</strong> Status based on activities
+Overdue: Due date is already passed
+Today: Activity date is today
+Planned: Future activities.<br>
+<strong>manual:</strong> False<br>
+<strong>readonly:</strong> True<br>
+<strong>required:</strong> False<br>
+<strong>searchable:</strong> False<br>
+<strong>selection:</strong> [['overdue', 'Overdue'], ['today', 'Today'], ['planned', 'Planned']]<br>
+<strong>sortable:</strong> False<br>
+<strong>store:</strong> False<br>
+<strong>string:</strong> Activity State<br>
+</p>
+</section>
+
+<section id="activity_user_id" class="card card-body">
+<h4 class="card-title">activity_user_id</h4>
+<p>
+<strong>type:</strong> many2one<br>
+<strong>change_default:</strong> False<br>
+<strong>company_dependent:</strong> False<br>
+<strong>context:</strong> {}<br>
+<strong>depends:</strong> ['activity_ids.user_id']<br>
+<strong>domain:</strong> []<br>
+<strong>groups:</strong> base.group_user<br>
+<strong>manual:</strong> False<br>
+<strong>readonly:</strong> False<br>
+<strong>related:</strong> ['activity_ids', 'user_id']<br>
+<strong>relation:</strong> <a class="nav-link" href="../res_users/index.html">res.users</a><br>
+<strong>required:</strong> False<br>
+<strong>searchable:</strong> True<br>
+<strong>sortable:</strong> False<br>
+<strong>store:</strong> False<br>
+<strong>string:</strong> Responsible User<br>
+</p>
+</section>
+
+<section id="activity_type_id" class="card card-body">
+<h4 class="card-title">activity_type_id</h4>
+<p>
+<strong>type:</strong> many2one<br>
+<strong>change_default:</strong> False<br>
+<strong>company_dependent:</strong> False<br>
+<strong>context:</strong> {}<br>
+<strong>depends:</strong> ['activity_ids.activity_type_id']<br>
+<strong>domain:</strong> ['|', ('res_model_id', '=', False), ('res_model_id', '=', res_model_id)]<br>
+<strong>groups:</strong> base.group_user<br>
+<strong>manual:</strong> False<br>
+<strong>readonly:</strong> False<br>
+<strong>related:</strong> ['activity_ids', 'activity_type_id']<br>
+<strong>relation:</strong> <a class="nav-link" href="../mail_activity_type/index.html">mail.activity.type</a><br>
+<strong>required:</strong> False<br>
+<strong>searchable:</strong> True<br>
+<strong>sortable:</strong> False<br>
+<strong>store:</strong> False<br>
+<strong>string:</strong> Next Activity Type<br>
+</p>
+</section>
+
+<section id="activity_date_deadline" class="card card-body">
+<h4 class="card-title">activity_date_deadline</h4>
+<p>
+<strong>type:</strong> date<br>
+<strong>change_default:</strong> False<br>
+<strong>company_dependent:</strong> False<br>
+<strong>depends:</strong> ['activity_ids.date_deadline']<br>
+<strong>groups:</strong> base.group_user<br>
+<strong>manual:</strong> False<br>
+<strong>readonly:</strong> True<br>
+<strong>required:</strong> False<br>
+<strong>searchable:</strong> True<br>
+<strong>sortable:</strong> False<br>
+<strong>store:</strong> False<br>
+<strong>string:</strong> Next Activity Deadline<br>
+</p>
+</section>
+
+<section id="activity_summary" class="card card-body">
+<h4 class="card-title">activity_summary</h4>
+<p>
+<strong>type:</strong> char<br>
+<strong>change_default:</strong> False<br>
+<strong>company_dependent:</strong> False<br>
+<strong>depends:</strong> ['activity_ids.summary']<br>
+<strong>groups:</strong> base.group_user<br>
+<strong>manual:</strong> False<br>
+<strong>readonly:</strong> False<br>
+<strong>related:</strong> ['activity_ids', 'summary']<br>
+<strong>required:</strong> False<br>
+<strong>searchable:</strong> True<br>
+<strong>sortable:</strong> False<br>
+<strong>store:</strong> False<br>
+<strong>string:</strong> Next Activity Summary<br>
+<strong>translate:</strong> False<br>
+<strong>trim:</strong> True<br>
+</p>
+</section>
+
+<section id="message_is_follower" class="card card-body">
+<h4 class="card-title">message_is_follower</h4>
+<p>
+<strong>type:</strong> boolean<br>
+<strong>change_default:</strong> False<br>
+<strong>company_dependent:</strong> False<br>
+<strong>depends:</strong> ['message_follower_ids']<br>
+<strong>manual:</strong> False<br>
+<strong>readonly:</strong> True<br>
+<strong>required:</strong> False<br>
+<strong>searchable:</strong> True<br>
+<strong>sortable:</strong> False<br>
+<strong>store:</strong> False<br>
+<strong>string:</strong> Is Follower<br>
+</p>
+</section>
+
+<section id="message_follower_ids" class="card card-body">
+<h4 class="card-title">message_follower_ids</h4>
+<p>
+<strong>type:</strong> one2many<br>
+<strong>change_default:</strong> False<br>
+<strong>company_dependent:</strong> False<br>
+<strong>context:</strong> {}<br>
+<strong>depends:</strong> []<br>
+<strong>domain:</strong> [['res_model', '=', 'stock.picking']]<br>
+<strong>manual:</strong> False<br>
+<strong>readonly:</strong> False<br>
+<strong>relation:</strong> <a class="nav-link" href="../mail_followers/index.html">mail.followers</a><br>
+<strong>relation_field:</strong> res_id<br>
+<strong>required:</strong> False<br>
+<strong>searchable:</strong> True<br>
+<strong>sortable:</strong> False<br>
+<strong>store:</strong> True<br>
+<strong>string:</strong> Followers<br>
+</p>
+</section>
+
+<section id="message_partner_ids" class="card card-body">
+<h4 class="card-title">message_partner_ids</h4>
+<p>
+<strong>type:</strong> many2many<br>
+<strong>change_default:</strong> False<br>
+<strong>company_dependent:</strong> False<br>
+<strong>context:</strong> {}<br>
+<strong>depends:</strong> ['message_follower_ids']<br>
+<strong>domain:</strong> []<br>
+<strong>manual:</strong> False<br>
+<strong>readonly:</strong> True<br>
+<strong>relation:</strong> <a class="nav-link" href="../res_partner/index.html">res.partner</a><br>
+<strong>required:</strong> False<br>
+<strong>searchable:</strong> True<br>
+<strong>sortable:</strong> False<br>
+<strong>store:</strong> False<br>
+<strong>string:</strong> Followers (Partners)<br>
+</p>
+</section>
+
+<section id="message_channel_ids" class="card card-body">
+<h4 class="card-title">message_channel_ids</h4>
+<p>
+<strong>type:</strong> many2many<br>
+<strong>change_default:</strong> False<br>
+<strong>company_dependent:</strong> False<br>
+<strong>context:</strong> {}<br>
+<strong>depends:</strong> ['message_follower_ids']<br>
+<strong>domain:</strong> []<br>
+<strong>manual:</strong> False<br>
+<strong>readonly:</strong> True<br>
+<strong>relation:</strong> <a class="nav-link" href="../mail_channel/index.html">mail.channel</a><br>
+<strong>required:</strong> False<br>
+<strong>searchable:</strong> True<br>
+<strong>sortable:</strong> False<br>
+<strong>store:</strong> False<br>
+<strong>string:</strong> Followers (Channels)<br>
+</p>
+</section>
+
+<section id="message_ids" class="card card-body">
+<h4 class="card-title">message_ids</h4>
+<p>
+<strong>type:</strong> one2many<br>
+<strong>change_default:</strong> False<br>
+<strong>company_dependent:</strong> False<br>
+<strong>context:</strong> {}<br>
+<strong>depends:</strong> []<br>
+<strong>domain:</strong> [['model', '=', 'stock.picking']]<br>
+<strong>manual:</strong> False<br>
+<strong>readonly:</strong> False<br>
+<strong>relation:</strong> <a class="nav-link" href="../mail_message/index.html">mail.message</a><br>
+<strong>relation_field:</strong> res_id<br>
+<strong>required:</strong> False<br>
+<strong>searchable:</strong> True<br>
+<strong>sortable:</strong> False<br>
+<strong>store:</strong> True<br>
+<strong>string:</strong> Messages<br>
+</p>
+</section>
+
+<section id="message_unread" class="card card-body">
+<h4 class="card-title">message_unread</h4>
+<p>
+<strong>type:</strong> boolean<br>
+<strong>change_default:</strong> False<br>
+<strong>company_dependent:</strong> False<br>
+<strong>depends:</strong> []<br>
+<strong>help:</strong> If checked new messages require your attention.<br>
+<strong>manual:</strong> False<br>
+<strong>readonly:</strong> True<br>
+<strong>required:</strong> False<br>
+<strong>searchable:</strong> False<br>
+<strong>sortable:</strong> False<br>
+<strong>store:</strong> False<br>
+<strong>string:</strong> Unread Messages<br>
+</p>
+</section>
+
+<section id="message_unread_counter" class="card card-body">
+<h4 class="card-title">message_unread_counter</h4>
+<p>
+<strong>type:</strong> integer<br>
+<strong>change_default:</strong> False<br>
+<strong>company_dependent:</strong> False<br>
+<strong>depends:</strong> []<br>
+<strong>group_operator:</strong> sum<br>
+<strong>help:</strong> Number of unread messages<br>
+<strong>manual:</strong> False<br>
+<strong>readonly:</strong> True<br>
+<strong>required:</strong> False<br>
+<strong>searchable:</strong> False<br>
+<strong>sortable:</strong> False<br>
+<strong>store:</strong> False<br>
+<strong>string:</strong> Unread Messages Counter<br>
+</p>
+</section>
+
+<section id="message_needaction" class="card card-body">
+<h4 class="card-title">message_needaction</h4>
+<p>
+<strong>type:</strong> boolean<br>
+<strong>change_default:</strong> False<br>
+<strong>company_dependent:</strong> False<br>
+<strong>depends:</strong> []<br>
+<strong>help:</strong> If checked, new messages require your attention.<br>
+<strong>manual:</strong> False<br>
+<strong>readonly:</strong> True<br>
+<strong>required:</strong> False<br>
+<strong>searchable:</strong> True<br>
+<strong>sortable:</strong> False<br>
+<strong>store:</strong> False<br>
+<strong>string:</strong> Action Needed<br>
+</p>
+</section>
+
+<section id="message_needaction_counter" class="card card-body">
+<h4 class="card-title">message_needaction_counter</h4>
+<p>
+<strong>type:</strong> integer<br>
+<strong>change_default:</strong> False<br>
+<strong>company_dependent:</strong> False<br>
+<strong>depends:</strong> []<br>
+<strong>group_operator:</strong> sum<br>
+<strong>help:</strong> Number of messages which requires an action<br>
+<strong>manual:</strong> False<br>
+<strong>readonly:</strong> True<br>
+<strong>required:</strong> False<br>
+<strong>searchable:</strong> False<br>
+<strong>sortable:</strong> False<br>
+<strong>store:</strong> False<br>
+<strong>string:</strong> Number of Actions<br>
+</p>
+</section>
+
+<section id="message_has_error" class="card card-body">
+<h4 class="card-title">message_has_error</h4>
+<p>
+<strong>type:</strong> boolean<br>
+<strong>change_default:</strong> False<br>
+<strong>company_dependent:</strong> False<br>
+<strong>depends:</strong> []<br>
+<strong>help:</strong> If checked, some messages have a delivery error.<br>
+<strong>manual:</strong> False<br>
+<strong>readonly:</strong> True<br>
+<strong>required:</strong> False<br>
+<strong>searchable:</strong> True<br>
+<strong>sortable:</strong> False<br>
+<strong>store:</strong> False<br>
+<strong>string:</strong> Message Delivery error<br>
+</p>
+</section>
+
+<section id="message_has_error_counter" class="card card-body">
+<h4 class="card-title">message_has_error_counter</h4>
+<p>
+<strong>type:</strong> integer<br>
+<strong>change_default:</strong> False<br>
+<strong>company_dependent:</strong> False<br>
+<strong>depends:</strong> []<br>
+<strong>group_operator:</strong> sum<br>
+<strong>help:</strong> Number of messages with delivery error<br>
+<strong>manual:</strong> False<br>
+<strong>readonly:</strong> True<br>
+<strong>required:</strong> False<br>
+<strong>searchable:</strong> False<br>
+<strong>sortable:</strong> False<br>
+<strong>store:</strong> False<br>
+<strong>string:</strong> Number of error<br>
+</p>
+</section>
+
+<section id="message_attachment_count" class="card card-body">
+<h4 class="card-title">message_attachment_count</h4>
+<p>
+<strong>type:</strong> integer<br>
+<strong>change_default:</strong> False<br>
+<strong>company_dependent:</strong> False<br>
+<strong>depends:</strong> []<br>
+<strong>group_operator:</strong> sum<br>
+<strong>manual:</strong> False<br>
+<strong>readonly:</strong> True<br>
+<strong>required:</strong> False<br>
+<strong>searchable:</strong> False<br>
+<strong>sortable:</strong> False<br>
+<strong>store:</strong> False<br>
+<strong>string:</strong> Attachment Count<br>
+</p>
+</section>
+
+<section id="message_main_attachment_id" class="card card-body">
+<h4 class="card-title">message_main_attachment_id</h4>
+<p>
+<strong>type:</strong> many2one<br>
+<strong>change_default:</strong> False<br>
+<strong>company_dependent:</strong> False<br>
+<strong>context:</strong> {}<br>
+<strong>depends:</strong> []<br>
+<strong>domain:</strong> []<br>
+<strong>manual:</strong> False<br>
+<strong>readonly:</strong> False<br>
+<strong>relation:</strong> <a class="nav-link" href="../ir_attachment/index.html">ir.attachment</a><br>
+<strong>required:</strong> False<br>
+<strong>searchable:</strong> True<br>
+<strong>sortable:</strong> True<br>
+<strong>store:</strong> True<br>
+<strong>string:</strong> Main Attachment<br>
+</p>
+</section>
+
+<section id="website_message_ids" class="card card-body">
+<h4 class="card-title">website_message_ids</h4>
+<p>
+<strong>type:</strong> one2many<br>
+<strong>change_default:</strong> False<br>
+<strong>company_dependent:</strong> False<br>
+<strong>context:</strong> {}<br>
+<strong>depends:</strong> []<br>
+<strong>domain:</strong> [['model', '=', 'stock.picking'], '|', ['message_type', '=', 'comment'], ['message_type', '=', 'email']]<br>
+<strong>help:</strong> Website communication history<br>
+<strong>manual:</strong> False<br>
+<strong>readonly:</strong> False<br>
+<strong>relation:</strong> <a class="nav-link" href="../mail_message/index.html">mail.message</a><br>
+<strong>relation_field:</strong> res_id<br>
+<strong>required:</strong> False<br>
+<strong>searchable:</strong> True<br>
+<strong>sortable:</strong> False<br>
+<strong>store:</strong> True<br>
+<strong>string:</strong> Website Messages<br>
+</p>
+</section>
+
+<section id="id" class="card card-body">
+<h4 class="card-title">id</h4>
+<p>
+<strong>type:</strong> integer<br>
+<strong>change_default:</strong> False<br>
+<strong>company_dependent:</strong> False<br>
+<strong>depends:</strong> []<br>
+<strong>manual:</strong> False<br>
+<strong>readonly:</strong> True<br>
+<strong>required:</strong> False<br>
+<strong>searchable:</strong> True<br>
+<strong>sortable:</strong> True<br>
+<strong>store:</strong> True<br>
+<strong>string:</strong> ID<br>
+</p>
+</section>
+
+<section id="display_name" class="card card-body">
+<h4 class="card-title">display_name</h4>
+<p>
+<strong>type:</strong> char<br>
+<strong>change_default:</strong> False<br>
+<strong>company_dependent:</strong> False<br>
+<strong>depends:</strong> ['name']<br>
+<strong>manual:</strong> False<br>
+<strong>readonly:</strong> True<br>
+<strong>required:</strong> False<br>
+<strong>searchable:</strong> False<br>
+<strong>sortable:</strong> False<br>
+<strong>store:</strong> False<br>
+<strong>string:</strong> Display Name<br>
+<strong>translate:</strong> False<br>
+<strong>trim:</strong> True<br>
+</p>
+</section>
+
+<section id="create_uid" class="card card-body">
+<h4 class="card-title">create_uid</h4>
+<p>
+<strong>type:</strong> many2one<br>
+<strong>change_default:</strong> False<br>
+<strong>company_dependent:</strong> False<br>
+<strong>context:</strong> {}<br>
+<strong>depends:</strong> []<br>
+<strong>domain:</strong> []<br>
+<strong>manual:</strong> False<br>
+<strong>readonly:</strong> True<br>
+<strong>relation:</strong> <a class="nav-link" href="../res_users/index.html">res.users</a><br>
+<strong>required:</strong> False<br>
+<strong>searchable:</strong> True<br>
+<strong>sortable:</strong> True<br>
+<strong>store:</strong> True<br>
+<strong>string:</strong> Created by<br>
+</p>
+</section>
+
+<section id="create_date" class="card card-body">
+<h4 class="card-title">create_date</h4>
+<p>
+<strong>type:</strong> datetime<br>
+<strong>change_default:</strong> False<br>
+<strong>company_dependent:</strong> False<br>
+<strong>depends:</strong> []<br>
+<strong>manual:</strong> False<br>
+<strong>readonly:</strong> True<br>
+<strong>required:</strong> False<br>
+<strong>searchable:</strong> True<br>
+<strong>sortable:</strong> True<br>
+<strong>store:</strong> True<br>
+<strong>string:</strong> Created on<br>
+</p>
+</section>
+
+<section id="write_uid" class="card card-body">
+<h4 class="card-title">write_uid</h4>
+<p>
+<strong>type:</strong> many2one<br>
+<strong>change_default:</strong> False<br>
+<strong>company_dependent:</strong> False<br>
+<strong>context:</strong> {}<br>
+<strong>depends:</strong> []<br>
+<strong>domain:</strong> []<br>
+<strong>manual:</strong> False<br>
+<strong>readonly:</strong> True<br>
+<strong>relation:</strong> <a class="nav-link" href="../res_users/index.html">res.users</a><br>
+<strong>required:</strong> False<br>
+<strong>searchable:</strong> True<br>
+<strong>sortable:</strong> True<br>
+<strong>store:</strong> True<br>
+<strong>string:</strong> Last Updated by<br>
+</p>
+</section>
+
+<section id="write_date" class="card card-body">
+<h4 class="card-title">write_date</h4>
+<p>
+<strong>type:</strong> datetime<br>
+<strong>change_default:</strong> False<br>
+<strong>company_dependent:</strong> False<br>
+<strong>depends:</strong> []<br>
+<strong>manual:</strong> False<br>
+<strong>readonly:</strong> True<br>
+<strong>required:</strong> False<br>
+<strong>searchable:</strong> True<br>
+<strong>sortable:</strong> True<br>
+<strong>store:</strong> True<br>
+<strong>string:</strong> Last Updated on<br>
+</p>
+</section>
+
+<section id="__last_update" class="card card-body">
+<h4 class="card-title">__last_update</h4>
+<p>
+<strong>type:</strong> datetime<br>
+<strong>change_default:</strong> False<br>
+<strong>company_dependent:</strong> False<br>
+<strong>depends:</strong> ['create_date', 'write_date']<br>
+<strong>manual:</strong> False<br>
+<strong>readonly:</strong> True<br>
+<strong>required:</strong> False<br>
+<strong>searchable:</strong> False<br>
+<strong>sortable:</strong> False<br>
+<strong>store:</strong> False<br>
+<strong>string:</strong> Last Modified on<br>
+</p>
+</section>
+
+
+      </div>
+    </div>
+
+  </div>
+  <!-- Content end -->
+
+  <!-- Footer
+  ============================ -->
+  <footer id="footer" class="section bg-dark footer-text-light">
+    <div class="container">
+      <ul class="social-icons social-icons-lg social-icons-muted justify-content-center mb-3">
+        <li><a data-toggle="tooltip" href="https://twitter.com/harnishdesign/" target="_blank" title=""
+            data-original-title="Twitter"><i class="fab fa-twitter"></i></a></li>
+        <li><a data-toggle="tooltip" href="http://www.facebook.com/harnishdesign/" target="_blank" title=""
+            data-original-title="Facebook"><i class="fab fa-facebook-f"></i></a></li>
+        <li><a data-toggle="tooltip" href="http://www.dribbble.com/harnishdesign/" target="_blank" title=""
+            data-original-title="Dribbble"><i class="fab fa-dribbble"></i></a></li>
+        <li><a data-toggle="tooltip" href="http://www.github.com/" target="_blank" title=""
+            data-original-title="GitHub"><i class="fab fa-github"></i></a></li>
+      </ul>
+      <p class="text-center">Copyright &copy; 2020 <a
+          href="http://www.harnishdesign.net/idocs-one-page-documentation-html-template/">iDocs</a>. All Rights
+        Reserved.</p>
+      <p class="text-2 text-center mb-0">Design &amp; Develop by <a class="btn-link" target="_blank"
+          href="http://www.harnishdesign.net/">HarnishDesign</a>.</p>
+    </div>
+  </footer>
+  <!-- Footer end -->
+
+  </div>
+  <!-- Document Wrapper end -->
+
+  <!-- Back To Top -->
+  <a id="back-to-top" data-toggle="tooltip" title="Back to Top" href="javascript:void(0)"><i
+      class="fa fa-chevron-up"></i></a>
+
+  <!-- JavaScript
+============================ -->
+  <script src="../../assets/vendor/jquery/jquery.min.js"></script>
+  <script src="../../assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <!-- Highlight JS -->
+  <script src="../../assets/vendor/highlight.js/highlight.min.js"></script>
+  <!-- Easing -->
+  <script src="../../assets/vendor/jquery.easing/jquery.easing.min.js"></script>
+  <!-- Magnific Popup -->
+  <script src="../../assets/vendor/magnific-popup/jquery.magnific-popup.min.js"></script>
+  <!-- Custom Script -->
+  <script src="../../assets/js/theme.js"></script>
+</body>
+
+</html>
