@@ -2,6 +2,8 @@ image: alpine:latest
 
 pages:
   stage: deploy
+  tags:
+    - server-test
   script:
   - echo 'Nothing to do...'
   artifacts:
