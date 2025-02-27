@@ -291,6 +291,7 @@
 <li class="nav-item"><a class="nav-link" href="#api_token">api_token</a></li>
 <li class="nav-item"><a class="nav-link" href="#stage_name">stage_name</a></li>
 <li class="nav-item"><a class="nav-link" href="#notify_channel_id">notify_channel_id</a></li>
+<li class="nav-item"><a class="nav-link" href="#s_max_hour">s_max_hour</a></li>
 <li class="nav-item"><a class="nav-link" href="#s_url_to_call">s_url_to_call</a></li>
 <li class="nav-item"><a class="nav-link" href="#id">id</a></li>
 <li class="nav-item"><a class="nav-link" href="#display_name">display_name</a></li>
@@ -3919,7 +3920,7 @@ This mode is advised if you issue the final invoice at the order and not after t
 <strong>change_default:</strong> False<br>
 <strong>company_dependent:</strong> False<br>
 <strong>depends:</strong> ['company_id.pipedrive_api']<br>
-<strong>help:</strong> API is activated<br>
+<strong>help:</strong> L'API est désactivé<br>
 <strong>manual:</strong> False<br>
 <strong>readonly:</strong> False<br>
 <strong>related:</strong> ['company_id', 'pipedrive_api']<br>
@@ -3927,7 +3928,7 @@ This mode is advised if you issue the final invoice at the order and not after t
 <strong>searchable:</strong> True<br>
 <strong>sortable:</strong> False<br>
 <strong>store:</strong> False<br>
-<strong>string:</strong> Active the API<br>
+<strong>string:</strong> Activer l'API<br>
 </p>
 </section>
 
@@ -3938,7 +3939,7 @@ This mode is advised if you issue the final invoice at the order and not after t
 <strong>change_default:</strong> False<br>
 <strong>company_dependent:</strong> False<br>
 <strong>depends:</strong> ['company_id.company_domain']<br>
-<strong>help:</strong> The Company Domain in Pipedrive Config.<br>
+<strong>help:</strong> Le nom de votre domaine dans la configuration de Pipedrive.<br>
 <strong>manual:</strong> False<br>
 <strong>readonly:</strong> False<br>
 <strong>related:</strong> ['company_id', 'company_domain']<br>
@@ -3958,7 +3959,7 @@ This mode is advised if you issue the final invoice at the order and not after t
 <strong>change_default:</strong> False<br>
 <strong>company_dependent:</strong> False<br>
 <strong>depends:</strong> ['company_id.api_token']<br>
-<strong>help:</strong> The API token from your Pipedrive's Account.<br>
+<strong>help:</strong> Le jeton API de votre compte Pipedrive.<br>
 <strong>manual:</strong> False<br>
 <strong>readonly:</strong> False<br>
 <strong>related:</strong> ['company_id', 'api_token']<br>
@@ -3966,7 +3967,7 @@ This mode is advised if you issue the final invoice at the order and not after t
 <strong>searchable:</strong> True<br>
 <strong>sortable:</strong> False<br>
 <strong>store:</strong> False<br>
-<strong>string:</strong> API Token<br>
+<strong>string:</strong> Jeton API<br>
 <strong>translate:</strong> False<br>
 <strong>trim:</strong> True<br>
 </p>
@@ -3979,7 +3980,7 @@ This mode is advised if you issue the final invoice at the order and not after t
 <strong>change_default:</strong> False<br>
 <strong>company_dependent:</strong> False<br>
 <strong>depends:</strong> ['company_id.stage_name']<br>
-<strong>help:</strong> The Stage that trigger the Odoo creation lead.<br>
+<strong>help:</strong> L'étape de Pipedrive qui déclenche la création d'une opportunité dans Odoo.<br>
 <strong>manual:</strong> False<br>
 <strong>readonly:</strong> False<br>
 <strong>related:</strong> ['company_id', 'stage_name']<br>
@@ -3987,7 +3988,7 @@ This mode is advised if you issue the final invoice at the order and not after t
 <strong>searchable:</strong> True<br>
 <strong>sortable:</strong> False<br>
 <strong>store:</strong> False<br>
-<strong>string:</strong> Stage Name<br>
+<strong>string:</strong> Nom de l'étape<br>
 <strong>translate:</strong> False<br>
 <strong>trim:</strong> True<br>
 </p>
@@ -4002,7 +4003,7 @@ This mode is advised if you issue the final invoice at the order and not after t
 <strong>context:</strong> {}<br>
 <strong>depends:</strong> ['company_id.notify_channel_id']<br>
 <strong>domain:</strong> []<br>
-<strong>help:</strong> Channel to notify when new Deal is here.<br>
+<strong>help:</strong> Canal à notifier quand une opportunité est arrivée.<br>
 <strong>manual:</strong> False<br>
 <strong>readonly:</strong> False<br>
 <strong>related:</strong> ['company_id', 'notify_channel_id']<br>
@@ -4011,7 +4012,26 @@ This mode is advised if you issue the final invoice at the order and not after t
 <strong>searchable:</strong> True<br>
 <strong>sortable:</strong> False<br>
 <strong>store:</strong> False<br>
-<strong>string:</strong> Channel<br>
+<strong>string:</strong> Canal<br>
+</p>
+</section>
+
+<section id="s_max_hour" class="card card-body">
+<h4 class="card-title">s_max_hour</h4>
+<p>
+<strong>type:</strong> char<br>
+<strong>change_default:</strong> False<br>
+<strong>company_dependent:</strong> False<br>
+<strong>depends:</strong> []<br>
+<strong>manual:</strong> False<br>
+<strong>readonly:</strong> False<br>
+<strong>required:</strong> False<br>
+<strong>searchable:</strong> True<br>
+<strong>sortable:</strong> True<br>
+<strong>store:</strong> True<br>
+<strong>string:</strong> Heure maximum<br>
+<strong>translate:</strong> False<br>
+<strong>trim:</strong> True<br>
 </p>
 </section>
 

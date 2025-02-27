@@ -1,5 +1,5 @@
-from odoo.Odoo import Odoo
-from logs.Log import Log
+from Log import Log
+from Odoo import Odoo
 
 from GenerateHtml import GenerateHtml
 
@@ -16,8 +16,8 @@ if __name__ == '__main__':
         Odoo.PASSWORD: "Q9f9W@x5X@w<2u"
     })
 
-    model_ids = odoo.getIds("ir.model", [])
-    model_fields = odoo.getFields("ir.model", model_ids, ["name", "model", "info", "state", "modules"])
+    model_ids = odoo.get_ids("ir.model")
+    model_fields = odoo.get_fields("ir.model", model_ids, ["name", "model", "info", "state", "modules"])
     models = [model["model"] for model in model_fields]
 
     models_folder = f"models"
@@ -26,5 +26,5 @@ if __name__ == '__main__':
 
     models_html = html.generate_nav(html.generate_nav_keys(models, False, models_folder))
 
-    html.generate_main_index(models_html, odoo.getFieldsName("ir.model"))
+    html.generate_main_index(models_html, odoo.get_fields_name("ir.model"))
     html.generate_models_index(odoo, model_fields)

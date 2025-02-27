@@ -132,6 +132,12 @@
 <li class="nav-item"><a class="nav-link" href="#coach_id">coach_id</a></li>
 <li class="nav-item"><a class="nav-link" href="#category_ids">category_ids</a></li>
 <li class="nav-item"><a class="nav-link" href="#notes">notes</a></li>
+<li class="nav-item"><a class="nav-link" href="#manager">manager</a></li>
+<li class="nav-item"><a class="nav-link" href="#medic_exam">medic_exam</a></li>
+<li class="nav-item"><a class="nav-link" href="#vehicle">vehicle</a></li>
+<li class="nav-item"><a class="nav-link" href="#contract_ids">contract_ids</a></li>
+<li class="nav-item"><a class="nav-link" href="#contract_id">contract_id</a></li>
+<li class="nav-item"><a class="nav-link" href="#contracts_count">contracts_count</a></li>
 <li class="nav-item"><a class="nav-link" href="#remaining_leaves">remaining_leaves</a></li>
 <li class="nav-item"><a class="nav-link" href="#current_leave_state">current_leave_state</a></li>
 <li class="nav-item"><a class="nav-link" href="#current_leave_id">current_leave_id</a></li>
@@ -1083,6 +1089,121 @@
 <strong>store:</strong> True<br>
 <strong>string:</strong> Notes<br>
 <strong>translate:</strong> False<br>
+</p>
+</section>
+
+<section id="manager" class="card card-body">
+<h4 class="card-title">manager</h4>
+<p>
+<strong>type:</strong> boolean<br>
+<strong>change_default:</strong> False<br>
+<strong>company_dependent:</strong> False<br>
+<strong>depends:</strong> []<br>
+<strong>manual:</strong> False<br>
+<strong>readonly:</strong> False<br>
+<strong>required:</strong> False<br>
+<strong>searchable:</strong> True<br>
+<strong>sortable:</strong> True<br>
+<strong>store:</strong> True<br>
+<strong>string:</strong> Is a Manager<br>
+</p>
+</section>
+
+<section id="medic_exam" class="card card-body">
+<h4 class="card-title">medic_exam</h4>
+<p>
+<strong>type:</strong> date<br>
+<strong>change_default:</strong> False<br>
+<strong>company_dependent:</strong> False<br>
+<strong>depends:</strong> []<br>
+<strong>groups:</strong> hr.group_hr_user<br>
+<strong>manual:</strong> False<br>
+<strong>readonly:</strong> False<br>
+<strong>required:</strong> False<br>
+<strong>searchable:</strong> True<br>
+<strong>sortable:</strong> True<br>
+<strong>store:</strong> True<br>
+<strong>string:</strong> Medical Examination Date<br>
+</p>
+</section>
+
+<section id="vehicle" class="card card-body">
+<h4 class="card-title">vehicle</h4>
+<p>
+<strong>type:</strong> char<br>
+<strong>change_default:</strong> False<br>
+<strong>company_dependent:</strong> False<br>
+<strong>depends:</strong> []<br>
+<strong>groups:</strong> hr.group_hr_user<br>
+<strong>manual:</strong> False<br>
+<strong>readonly:</strong> False<br>
+<strong>required:</strong> False<br>
+<strong>searchable:</strong> True<br>
+<strong>sortable:</strong> True<br>
+<strong>store:</strong> True<br>
+<strong>string:</strong> Company Vehicle<br>
+<strong>translate:</strong> False<br>
+<strong>trim:</strong> True<br>
+</p>
+</section>
+
+<section id="contract_ids" class="card card-body">
+<h4 class="card-title">contract_ids</h4>
+<p>
+<strong>type:</strong> one2many<br>
+<strong>change_default:</strong> False<br>
+<strong>company_dependent:</strong> False<br>
+<strong>context:</strong> {}<br>
+<strong>depends:</strong> []<br>
+<strong>domain:</strong> []<br>
+<strong>manual:</strong> False<br>
+<strong>readonly:</strong> False<br>
+<strong>relation:</strong> <a class="nav-link" href="../hr_contract/index.html">hr.contract</a><br>
+<strong>relation_field:</strong> employee_id<br>
+<strong>required:</strong> False<br>
+<strong>searchable:</strong> True<br>
+<strong>sortable:</strong> False<br>
+<strong>store:</strong> True<br>
+<strong>string:</strong> Employee Contracts<br>
+</p>
+</section>
+
+<section id="contract_id" class="card card-body">
+<h4 class="card-title">contract_id</h4>
+<p>
+<strong>type:</strong> many2one<br>
+<strong>change_default:</strong> False<br>
+<strong>company_dependent:</strong> False<br>
+<strong>context:</strong> {}<br>
+<strong>depends:</strong> []<br>
+<strong>domain:</strong> []<br>
+<strong>help:</strong> Latest contract of the employee<br>
+<strong>manual:</strong> False<br>
+<strong>readonly:</strong> True<br>
+<strong>relation:</strong> <a class="nav-link" href="../hr_contract/index.html">hr.contract</a><br>
+<strong>required:</strong> False<br>
+<strong>searchable:</strong> False<br>
+<strong>sortable:</strong> False<br>
+<strong>store:</strong> False<br>
+<strong>string:</strong> Current Contract<br>
+</p>
+</section>
+
+<section id="contracts_count" class="card card-body">
+<h4 class="card-title">contracts_count</h4>
+<p>
+<strong>type:</strong> integer<br>
+<strong>change_default:</strong> False<br>
+<strong>company_dependent:</strong> False<br>
+<strong>depends:</strong> []<br>
+<strong>group_operator:</strong> sum<br>
+<strong>manual:</strong> False<br>
+<strong>readonly:</strong> True<br>
+<strong>required:</strong> False<br>
+<strong>searchable:</strong> False<br>
+<strong>sortable:</strong> False<br>
+<strong>store:</strong> False<br>
+<strong>string:</strong> Contract Count<br>
 </p>
 </section>
 

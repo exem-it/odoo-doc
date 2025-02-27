@@ -288,9 +288,10 @@
 <li class="nav-item"><a class="nav-link" href="#in_group_62">in_group_62</a></li>
 <li class="nav-item"><a class="nav-link" href="#sel_groups_29_33">sel_groups_29_33</a></li>
 <li class="nav-item"><a class="nav-link" href="#sel_groups_52_53">sel_groups_52_53</a></li>
+<li class="nav-item"><a class="nav-link" href="#sel_groups_64_56_57">sel_groups_64_56_57</a></li>
 <li class="nav-item"><a class="nav-link" href="#sel_groups_1_9_10">sel_groups_1_9_10</a></li>
-<li class="nav-item"><a class="nav-link" href="#sel_groups_56_57">sel_groups_56_57</a></li>
 <li class="nav-item"><a class="nav-link" href="#sel_groups_58_59">sel_groups_58_59</a></li>
+<li class="nav-item"><a class="nav-link" href="#sel_groups_65">sel_groups_65</a></li>
 <li class="nav-item"><a class="nav-link" href="#sel_groups_60_61">sel_groups_60_61</a></li>
 <li class="nav-item"><a class="nav-link" href="#sel_groups_2_3">sel_groups_2_3</a></li>
 <li class="nav-item"><a class="nav-link" href="#in_group_7">in_group_7</a></li>
@@ -3980,6 +3981,20 @@ Manager: the user will have an access to the sales configuration as well as stat
 </p>
 </section>
 
+<section id="sel_groups_64_56_57" class="card card-body">
+<h4 class="card-title">sel_groups_64_56_57</h4>
+<p>
+<strong>type:</strong> selection<br>
+<strong>string:</strong> Employees<br>
+<strong>selection:</strong> [[False, ''], [64, 'Equipment Manager'], [56, 'Officer'], [57, 'Manager']]<br>
+<strong>help:</strong> Equipment Manager: The user will be able to manage equipments.
+Officer: The user will be able to approve document created by employees.
+Manager: The user will have access to the human resources configuration as well as statistic reports.<br>
+<strong>exportable:</strong> False<br>
+<strong>selectable:</strong> False<br>
+</p>
+</section>
+
 <section id="sel_groups_1_9_10" class="card card-body">
 <h4 class="card-title">sel_groups_1_9_10</h4>
 <p>
@@ -3995,25 +4010,24 @@ Public: Public users have specific access rights (such as record rules and restr
 </p>
 </section>
 
-<section id="sel_groups_56_57" class="card card-body">
-<h4 class="card-title">sel_groups_56_57</h4>
-<p>
-<strong>type:</strong> selection<br>
-<strong>string:</strong> Employees<br>
-<strong>selection:</strong> [[False, ''], [56, 'Officer'], [57, 'Manager']]<br>
-<strong>help:</strong> Officer: The user will be able to approve document created by employees.
-Manager: The user will have access to the human resources configuration as well as statistic reports.<br>
-<strong>exportable:</strong> False<br>
-<strong>selectable:</strong> False<br>
-</p>
-</section>
-
 <section id="sel_groups_58_59" class="card card-body">
 <h4 class="card-title">sel_groups_58_59</h4>
 <p>
 <strong>type:</strong> selection<br>
 <strong>string:</strong> Leaves<br>
 <strong>selection:</strong> [[False, ''], [58, 'Officer'], [59, 'Manager']]<br>
+<strong>help:</strong> <br>
+<strong>exportable:</strong> False<br>
+<strong>selectable:</strong> False<br>
+</p>
+</section>
+
+<section id="sel_groups_65" class="card card-body">
+<h4 class="card-title">sel_groups_65</h4>
+<p>
+<strong>type:</strong> selection<br>
+<strong>string:</strong> Contracts<br>
+<strong>selection:</strong> [[False, ''], [65, 'Manager']]<br>
 <strong>help:</strong> <br>
 <strong>exportable:</strong> False<br>
 <strong>selectable:</strong> False<br>

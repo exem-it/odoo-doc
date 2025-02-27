@@ -1,13 +1,13 @@
 import os
 import shutil
 
-from logs.Log import Log
+from Log import Log
 
 
 class GenerateHtml:
     def __init__(self, nav_elements, models_folder):
         self.log = Log("GenerateHtml")
-        self.main_folder = "html"
+        self.main_folder = "public"
         self.template = open(f"{self.main_folder}/template.html", "r").read()
         self.nav_elements = nav_elements
         self.models_folder = models_folder
@@ -52,7 +52,7 @@ class GenerateHtml:
             model_folder = model_name.replace(".", "_")
             pages_html = self.template.replace("assets", "../../assets")
             try:
-                fields = odoo.getFieldsName(model["model"])
+                fields = odoo.get_fields_name(model["model"])
                 fields_keys = self.generate_nav_keys(fields.keys())
                 pages_html = pages_html.replace("</HERE NAVIGATION>", self.generate_nav(fields_keys))
                 pages_html = pages_html.replace("</HERE CONTENT>", self.generate_content(fields, model_name))

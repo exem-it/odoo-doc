@@ -86,13 +86,10 @@
 	============================ -->
     <div class="idocs-navigation bg-light">
         <ul class="nav flex-column">
-          <li class="nav-item"><a class="nav-link" href="#deal_id">deal_id</a></li>
-<li class="nav-item"><a class="nav-link" href="#name">name</a></li>
-<li class="nav-item"><a class="nav-link" href="#product_id">product_id</a></li>
-<li class="nav-item"><a class="nav-link" href="#quantity">quantity</a></li>
-<li class="nav-item"><a class="nav-link" href="#discount">discount</a></li>
-<li class="nav-item"><a class="nav-link" href="#nb_prestation">nb_prestation</a></li>
-<li class="nav-item"><a class="nav-link" href="#nb_livrable">nb_livrable</a></li>
+          <li class="nav-item"><a class="nav-link" href="#name">name</a></li>
+<li class="nav-item"><a class="nav-link" href="#sequence">sequence</a></li>
+<li class="nav-item"><a class="nav-link" href="#fold">fold</a></li>
+<li class="nav-item"><a class="nav-link" href="#done">done</a></li>
 <li class="nav-item"><a class="nav-link" href="#id">id</a></li>
 <li class="nav-item"><a class="nav-link" href="#display_name">display_name</a></li>
 <li class="nav-item"><a class="nav-link" href="#create_uid">create_uid</a></li>
@@ -108,27 +105,7 @@
 	============================ -->
     <div class="idocs-content">
       <div class="container">
-        <h2>pipedrive.deal.line</h2>
-<section id="deal_id" class="card card-body">
-<h4 class="card-title">deal_id</h4>
-<p>
-<strong>type:</strong> many2one<br>
-<strong>change_default:</strong> False<br>
-<strong>company_dependent:</strong> False<br>
-<strong>context:</strong> {}<br>
-<strong>depends:</strong> []<br>
-<strong>domain:</strong> []<br>
-<strong>manual:</strong> False<br>
-<strong>readonly:</strong> False<br>
-<strong>relation:</strong> <a class="nav-link" href="../pipedrive_deal/index.html">pipedrive.deal</a><br>
-<strong>required:</strong> False<br>
-<strong>searchable:</strong> True<br>
-<strong>sortable:</strong> True<br>
-<strong>store:</strong> True<br>
-<strong>string:</strong> Deal<br>
-</p>
-</section>
-
+        <h2>maintenance.stage</h2>
 <section id="name" class="card card-body">
 <h4 class="card-title">name</h4>
 <p>
@@ -138,74 +115,18 @@
 <strong>depends:</strong> []<br>
 <strong>manual:</strong> False<br>
 <strong>readonly:</strong> False<br>
-<strong>required:</strong> False<br>
+<strong>required:</strong> True<br>
 <strong>searchable:</strong> True<br>
 <strong>sortable:</strong> True<br>
 <strong>store:</strong> True<br>
-<strong>string:</strong> Description<br>
-<strong>translate:</strong> False<br>
+<strong>string:</strong> Name<br>
+<strong>translate:</strong> True<br>
 <strong>trim:</strong> True<br>
 </p>
 </section>
 
-<section id="product_id" class="card card-body">
-<h4 class="card-title">product_id</h4>
-<p>
-<strong>type:</strong> many2one<br>
-<strong>change_default:</strong> False<br>
-<strong>company_dependent:</strong> False<br>
-<strong>context:</strong> {}<br>
-<strong>depends:</strong> []<br>
-<strong>domain:</strong> []<br>
-<strong>manual:</strong> False<br>
-<strong>readonly:</strong> False<br>
-<strong>relation:</strong> <a class="nav-link" href="../product_product/index.html">product.product</a><br>
-<strong>required:</strong> False<br>
-<strong>searchable:</strong> True<br>
-<strong>sortable:</strong> True<br>
-<strong>store:</strong> True<br>
-<strong>string:</strong> Product Name<br>
-</p>
-</section>
-
-<section id="quantity" class="card card-body">
-<h4 class="card-title">quantity</h4>
-<p>
-<strong>type:</strong> float<br>
-<strong>change_default:</strong> False<br>
-<strong>company_dependent:</strong> False<br>
-<strong>depends:</strong> []<br>
-<strong>group_operator:</strong> sum<br>
-<strong>manual:</strong> False<br>
-<strong>readonly:</strong> False<br>
-<strong>required:</strong> False<br>
-<strong>searchable:</strong> True<br>
-<strong>sortable:</strong> True<br>
-<strong>store:</strong> True<br>
-<strong>string:</strong> Quantity<br>
-</p>
-</section>
-
-<section id="discount" class="card card-body">
-<h4 class="card-title">discount</h4>
-<p>
-<strong>type:</strong> float<br>
-<strong>change_default:</strong> False<br>
-<strong>company_dependent:</strong> False<br>
-<strong>depends:</strong> []<br>
-<strong>group_operator:</strong> sum<br>
-<strong>manual:</strong> False<br>
-<strong>readonly:</strong> False<br>
-<strong>required:</strong> False<br>
-<strong>searchable:</strong> True<br>
-<strong>sortable:</strong> True<br>
-<strong>store:</strong> True<br>
-<strong>string:</strong> Discount (%)<br>
-</p>
-</section>
-
-<section id="nb_prestation" class="card card-body">
-<h4 class="card-title">nb_prestation</h4>
+<section id="sequence" class="card card-body">
+<h4 class="card-title">sequence</h4>
 <p>
 <strong>type:</strong> integer<br>
 <strong>change_default:</strong> False<br>
@@ -218,25 +139,41 @@
 <strong>searchable:</strong> True<br>
 <strong>sortable:</strong> True<br>
 <strong>store:</strong> True<br>
-<strong>string:</strong> Nb prest.<br>
+<strong>string:</strong> Sequence<br>
 </p>
 </section>
 
-<section id="nb_livrable" class="card card-body">
-<h4 class="card-title">nb_livrable</h4>
+<section id="fold" class="card card-body">
+<h4 class="card-title">fold</h4>
 <p>
-<strong>type:</strong> integer<br>
+<strong>type:</strong> boolean<br>
 <strong>change_default:</strong> False<br>
 <strong>company_dependent:</strong> False<br>
 <strong>depends:</strong> []<br>
-<strong>group_operator:</strong> sum<br>
 <strong>manual:</strong> False<br>
 <strong>readonly:</strong> False<br>
 <strong>required:</strong> False<br>
 <strong>searchable:</strong> True<br>
 <strong>sortable:</strong> True<br>
 <strong>store:</strong> True<br>
-<strong>string:</strong> Nb livra.<br>
+<strong>string:</strong> Folded in Maintenance Pipe<br>
+</p>
+</section>
+
+<section id="done" class="card card-body">
+<h4 class="card-title">done</h4>
+<p>
+<strong>type:</strong> boolean<br>
+<strong>change_default:</strong> False<br>
+<strong>company_dependent:</strong> False<br>
+<strong>depends:</strong> []<br>
+<strong>manual:</strong> False<br>
+<strong>readonly:</strong> False<br>
+<strong>required:</strong> False<br>
+<strong>searchable:</strong> True<br>
+<strong>sortable:</strong> True<br>
+<strong>store:</strong> True<br>
+<strong>string:</strong> Request Done<br>
 </p>
 </section>
 

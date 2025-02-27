@@ -98,7 +98,6 @@
 <li class="nav-item"><a class="nav-link" href="#require_payment">require_payment</a></li>
 <li class="nav-item"><a class="nav-link" href="#remaining_validity_days">remaining_validity_days</a></li>
 <li class="nav-item"><a class="nav-link" href="#create_date">create_date</a></li>
-<li class="nav-item"><a class="nav-link" href="#confirmation_date">confirmation_date</a></li>
 <li class="nav-item"><a class="nav-link" href="#user_id">user_id</a></li>
 <li class="nav-item"><a class="nav-link" href="#partner_id">partner_id</a></li>
 <li class="nav-item"><a class="nav-link" href="#partner_invoice_id">partner_invoice_id</a></li>
@@ -149,6 +148,7 @@
 <li class="nav-item"><a class="nav-link" href="#mesure_ids">mesure_ids</a></li>
 <li class="nav-item"><a class="nav-link" href="#etat_mesure">etat_mesure</a></li>
 <li class="nav-item"><a class="nav-link" href="#etat_rapport">etat_rapport</a></li>
+<li class="nav-item"><a class="nav-link" href="#confirmation_date">confirmation_date</a></li>
 <li class="nav-item"><a class="nav-link" href="#invoice_status">invoice_status</a></li>
 <li class="nav-item"><a class="nav-link" href="#activity_ids">activity_ids</a></li>
 <li class="nav-item"><a class="nav-link" href="#activity_state">activity_state</a></li>
@@ -410,24 +410,6 @@
 <strong>sortable:</strong> True<br>
 <strong>store:</strong> True<br>
 <strong>string:</strong> Creation Date<br>
-</p>
-</section>
-
-<section id="confirmation_date" class="card card-body">
-<h4 class="card-title">confirmation_date</h4>
-<p>
-<strong>type:</strong> datetime<br>
-<strong>change_default:</strong> False<br>
-<strong>company_dependent:</strong> False<br>
-<strong>depends:</strong> []<br>
-<strong>help:</strong> Date on which the sales order is confirmed.<br>
-<strong>manual:</strong> False<br>
-<strong>readonly:</strong> True<br>
-<strong>required:</strong> False<br>
-<strong>searchable:</strong> True<br>
-<strong>sortable:</strong> True<br>
-<strong>store:</strong> True<br>
-<strong>string:</strong> Confirmation Date<br>
 </p>
 </section>
 
@@ -1417,6 +1399,24 @@
 <strong>string:</strong> Etat Rapport<br>
 <strong>translate:</strong> False<br>
 <strong>trim:</strong> True<br>
+</p>
+</section>
+
+<section id="confirmation_date" class="card card-body">
+<h4 class="card-title">confirmation_date</h4>
+<p>
+<strong>type:</strong> datetime<br>
+<strong>change_default:</strong> False<br>
+<strong>company_dependent:</strong> False<br>
+<strong>depends:</strong> []<br>
+<strong>help:</strong> Date on which the sales order is confirmed.<br>
+<strong>manual:</strong> False<br>
+<strong>readonly:</strong> False<br>
+<strong>required:</strong> False<br>
+<strong>searchable:</strong> True<br>
+<strong>sortable:</strong> True<br>
+<strong>store:</strong> True<br>
+<strong>string:</strong> Confirmation Date<br>
 </p>
 </section>
 
