@@ -34,6 +34,11 @@ def build_root_index(doc_dirs):
 """
 
 
+def touch_nojekyll(directory):
+    with open(os.path.join(directory, ".nojekyll"), "w", encoding="utf-8"):
+        pass
+
+
 def build_site():
     doc_dirs = discover_doc_dirs()
     if not doc_dirs:
@@ -44,10 +49,14 @@ def build_site():
     os.makedirs(SITE_DIR)
 
     for name in doc_dirs:
-        shutil.copytree(name, os.path.join(SITE_DIR, name))
+        destination = os.path.join(SITE_DIR, name)
+        shutil.copytree(name, destination)
+        touch_nojekyll(destination)
 
     with open(os.path.join(SITE_DIR, "index.html"), "w", encoding="utf-8") as file:
         file.write(build_root_index(doc_dirs))
+
+    touch_nojekyll(SITE_DIR)
 
     print(f"Built GitHub Pages site in {SITE_DIR}/ with: {', '.join(doc_dirs)}")
 

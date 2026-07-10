@@ -28,6 +28,9 @@ jobs:
       - name: Build site from docs* folders
         run: python build_pages.py
 
+      - name: Verify Jekyll is disabled
+        run: test -f _site/.nojekyll
+
       - name: Upload Pages artifact
         uses: actions/upload-pages-artifact@v3
         with:
