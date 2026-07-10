@@ -1,0 +1,1162 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1.0, shrink-to-fit=no">
+  <link href="../../assets/images/odoo_doc.png" rel="icon" />
+  <title>Odoo API Documentation</title>
+  <meta name="description" content="Your ThemeForest item Name and description">
+  <meta name="author" content="harnishdesign.net">
+
+  <!-- Stylesheet
+============================== -->
+  <!-- Bootstrap -->
+  <link rel="stylesheet" type="text/css" href="../../assets/vendor/bootstrap/css/bootstrap.min.css" />
+  <!-- Font Awesome Icon -->
+  <link rel="stylesheet" type="text/css" href="../../assets/vendor/font-awesome/css/all.min.css" />
+  <!-- Magnific Popup -->
+  <link rel="stylesheet" type="text/css" href="../../assets/vendor/magnific-popup/magnific-popup.min.css" />
+  <!-- Highlight Syntax -->
+  <link rel="stylesheet" type="text/css" href="../../assets/vendor/highlight.js/styles/github.css" />
+  <!-- Custom Stylesheet -->
+  <link rel="stylesheet" type="text/css" href="../../assets/css/stylesheet.css" />
+</head>
+
+<body data-spy="scroll" data-target=".idocs-navigation" data-offset="125">
+
+  <!-- Preloader -->
+  <div class="preloader">
+    <div class="lds-ellipsis">
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+    </div>
+  </div>
+  <!-- Preloader End -->
+
+  <!-- Document Wrapper   
+=============================== -->
+  <div id="main-wrapper">
+
+  <!-- Header
+  ============================ -->
+  <header id="header" class="sticky-top">
+    <!-- Navbar -->
+    <nav class="primary-menu navbar navbar-expand-lg navbar-dropdown-dark">
+      <div class="container-fluid">
+        <!-- Sidebar Toggler -->
+		<button id="sidebarCollapse" class="navbar-toggler d-block d-md-none" type="button"><span></span><span class="w-75"></span><span class="w-50"></span></button>
+
+		<!-- Logo -->
+        <a class="logo ml-md-3" href="index.html" title="iDocs Template"> <img src="../../assets/images/odoo_doc.png" alt="iDocs Template"/> </a>
+		<span class="text-2 ml-2">v1.0</span>
+        <!-- Logo End -->
+
+		<!-- Navbar Toggler -->
+		<button class="navbar-toggler ml-auto" type="button" data-toggle="collapse" data-target="#header-nav"><span></span><span></span><span></span></button>
+
+		<div id="header-nav" class="collapse navbar-collapse justify-content-end">
+          <ul class="navbar-nav">
+            <li class="dropdown"> <a class="dropdown-toggle" href="#">Navigation</a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="index.html">ir.model</a></li>
+                <li><a class="dropdown-item" href="odoo_operators.html">operators</a></li>
+              </ul>
+            </li>
+            <li><a target="_blank" href="https://themeforest.net/user/harnishdesign/#contact?ref=HarnishDesign">Support</a></li>
+          </ul>
+        </div>
+        <ul class="social-icons social-icons-sm ml-lg-2 mr-2">
+          <li class="social-icons-twitter"><a data-toggle="tooltip" href="http://www.twitter.com/harnishdesign/" target="_blank" title="" data-original-title="Twitter"><i class="fab fa-twitter"></i></a></li>
+        </ul>
+      </div>
+    </nav>
+    <!-- Navbar End -->
+  </header>
+  <!-- Header End -->
+
+  <!-- Content
+  ============================ -->
+  <div id="content" role="main">
+
+    <!-- Sidebar Navigation
+	============================ -->
+    <div class="idocs-navigation bg-light">
+        <ul class="nav flex-column">
+          <li class="nav-item"><a class="nav-link" href="#name">name</a></li>
+<li class="nav-item"><a class="nav-link" href="#sequence">sequence</a></li>
+<li class="nav-item"><a class="nav-link" href="#code">code</a></li>
+<li class="nav-item"><a class="nav-link" href="#state">state</a></li>
+<li class="nav-item"><a class="nav-link" href="#is_published">is_published</a></li>
+<li class="nav-item"><a class="nav-link" href="#company_id">company_id</a></li>
+<li class="nav-item"><a class="nav-link" href="#main_currency_id">main_currency_id</a></li>
+<li class="nav-item"><a class="nav-link" href="#payment_method_ids">payment_method_ids</a></li>
+<li class="nav-item"><a class="nav-link" href="#allow_tokenization">allow_tokenization</a></li>
+<li class="nav-item"><a class="nav-link" href="#capture_manually">capture_manually</a></li>
+<li class="nav-item"><a class="nav-link" href="#allow_express_checkout">allow_express_checkout</a></li>
+<li class="nav-item"><a class="nav-link" href="#redirect_form_view_id">redirect_form_view_id</a></li>
+<li class="nav-item"><a class="nav-link" href="#inline_form_view_id">inline_form_view_id</a></li>
+<li class="nav-item"><a class="nav-link" href="#token_inline_form_view_id">token_inline_form_view_id</a></li>
+<li class="nav-item"><a class="nav-link" href="#express_checkout_form_view_id">express_checkout_form_view_id</a></li>
+<li class="nav-item"><a class="nav-link" href="#available_country_ids">available_country_ids</a></li>
+<li class="nav-item"><a class="nav-link" href="#available_currency_ids">available_currency_ids</a></li>
+<li class="nav-item"><a class="nav-link" href="#maximum_amount">maximum_amount</a></li>
+<li class="nav-item"><a class="nav-link" href="#pre_msg">pre_msg</a></li>
+<li class="nav-item"><a class="nav-link" href="#pending_msg">pending_msg</a></li>
+<li class="nav-item"><a class="nav-link" href="#auth_msg">auth_msg</a></li>
+<li class="nav-item"><a class="nav-link" href="#done_msg">done_msg</a></li>
+<li class="nav-item"><a class="nav-link" href="#cancel_msg">cancel_msg</a></li>
+<li class="nav-item"><a class="nav-link" href="#support_tokenization">support_tokenization</a></li>
+<li class="nav-item"><a class="nav-link" href="#support_manual_capture">support_manual_capture</a></li>
+<li class="nav-item"><a class="nav-link" href="#support_express_checkout">support_express_checkout</a></li>
+<li class="nav-item"><a class="nav-link" href="#support_refund">support_refund</a></li>
+<li class="nav-item"><a class="nav-link" href="#image_128">image_128</a></li>
+<li class="nav-item"><a class="nav-link" href="#color">color</a></li>
+<li class="nav-item"><a class="nav-link" href="#module_id">module_id</a></li>
+<li class="nav-item"><a class="nav-link" href="#module_state">module_state</a></li>
+<li class="nav-item"><a class="nav-link" href="#module_to_buy">module_to_buy</a></li>
+<li class="nav-item"><a class="nav-link" href="#id">id</a></li>
+<li class="nav-item"><a class="nav-link" href="#display_name">display_name</a></li>
+<li class="nav-item"><a class="nav-link" href="#create_uid">create_uid</a></li>
+<li class="nav-item"><a class="nav-link" href="#create_date">create_date</a></li>
+<li class="nav-item"><a class="nav-link" href="#write_uid">write_uid</a></li>
+<li class="nav-item"><a class="nav-link" href="#write_date">write_date</a></li>
+<li class="nav-item"><a class="nav-link" href="#journal_id">journal_id</a></li>
+<li class="nav-item"><a class="nav-link" href="#so_reference_type">so_reference_type</a></li>
+
+        </ul>
+    </div>
+
+    <!-- Docs Content
+	============================ -->
+    <div class="idocs-content">
+      <div class="container">
+        <h2>payment.provider</h2>
+<section id="name" class="card card-body">
+<h4 class="card-title">name</h4>
+<p>
+<strong>change_default:</strong> False<br>
+<strong>company_dependent:</strong> False<br>
+<strong>default_export_compatible:</strong> False<br>
+<strong>depends:</strong> []<br>
+<strong>exportable:</strong> True<br>
+<strong>groupable:</strong> True<br>
+<strong>manual:</strong> False<br>
+<strong>name:</strong> name<br>
+<strong>readonly:</strong> False<br>
+<strong>required:</strong> True<br>
+<strong>searchable:</strong> True<br>
+<strong>sortable:</strong> True<br>
+<strong>store:</strong> True<br>
+<strong>string:</strong> Name<br>
+<strong>translate:</strong> True<br>
+<strong>trim:</strong> True<br>
+<strong>type:</strong> char<br>
+</p>
+</section>
+
+<section id="sequence" class="card card-body">
+<h4 class="card-title">sequence</h4>
+<p>
+<strong>change_default:</strong> False<br>
+<strong>company_dependent:</strong> False<br>
+<strong>default_export_compatible:</strong> False<br>
+<strong>depends:</strong> []<br>
+<strong>exportable:</strong> True<br>
+<strong>groupable:</strong> True<br>
+<strong>help:</strong> Define the display order<br>
+<strong>manual:</strong> False<br>
+<strong>name:</strong> sequence<br>
+<strong>readonly:</strong> False<br>
+<strong>required:</strong> False<br>
+<strong>searchable:</strong> True<br>
+<strong>sortable:</strong> True<br>
+<strong>store:</strong> True<br>
+<strong>string:</strong> Sequence<br>
+<strong>type:</strong> integer<br>
+</p>
+</section>
+
+<section id="code" class="card card-body">
+<h4 class="card-title">code</h4>
+<p>
+<strong>change_default:</strong> False<br>
+<strong>company_dependent:</strong> False<br>
+<strong>default_export_compatible:</strong> False<br>
+<strong>depends:</strong> []<br>
+<strong>exportable:</strong> True<br>
+<strong>groupable:</strong> True<br>
+<strong>help:</strong> The technical code of this payment provider.<br>
+<strong>manual:</strong> False<br>
+<strong>name:</strong> code<br>
+<strong>readonly:</strong> False<br>
+<strong>required:</strong> True<br>
+<strong>searchable:</strong> True<br>
+<strong>selection:</strong> [['none', 'No Provider Set']]<br>
+<strong>sortable:</strong> True<br>
+<strong>store:</strong> True<br>
+<strong>string:</strong> Code<br>
+<strong>type:</strong> selection<br>
+</p>
+</section>
+
+<section id="state" class="card card-body">
+<h4 class="card-title">state</h4>
+<p>
+<strong>change_default:</strong> False<br>
+<strong>company_dependent:</strong> False<br>
+<strong>default_export_compatible:</strong> False<br>
+<strong>depends:</strong> []<br>
+<strong>exportable:</strong> True<br>
+<strong>groupable:</strong> True<br>
+<strong>help:</strong> In test mode, a fake payment is processed through a test payment interface.
+This mode is advised when setting up the provider.<br>
+<strong>manual:</strong> False<br>
+<strong>name:</strong> state<br>
+<strong>readonly:</strong> False<br>
+<strong>required:</strong> True<br>
+<strong>searchable:</strong> True<br>
+<strong>selection:</strong> [['disabled', 'Disabled'], ['enabled', 'Enabled'], ['test', 'Test Mode']]<br>
+<strong>sortable:</strong> True<br>
+<strong>store:</strong> True<br>
+<strong>string:</strong> State<br>
+<strong>type:</strong> selection<br>
+</p>
+</section>
+
+<section id="is_published" class="card card-body">
+<h4 class="card-title">is_published</h4>
+<p>
+<strong>change_default:</strong> False<br>
+<strong>company_dependent:</strong> False<br>
+<strong>default_export_compatible:</strong> False<br>
+<strong>depends:</strong> []<br>
+<strong>exportable:</strong> True<br>
+<strong>groupable:</strong> True<br>
+<strong>help:</strong> Whether the provider is visible on the website or not. Tokens remain functional but are only visible on manage forms.<br>
+<strong>manual:</strong> False<br>
+<strong>name:</strong> is_published<br>
+<strong>readonly:</strong> False<br>
+<strong>required:</strong> False<br>
+<strong>searchable:</strong> True<br>
+<strong>sortable:</strong> True<br>
+<strong>store:</strong> True<br>
+<strong>string:</strong> Published<br>
+<strong>type:</strong> boolean<br>
+</p>
+</section>
+
+<section id="company_id" class="card card-body">
+<h4 class="card-title">company_id</h4>
+<p>
+<strong>allow_hierachy_operators:</strong> True<br>
+<strong>change_default:</strong> False<br>
+<strong>company_dependent:</strong> False<br>
+<strong>context:</strong> {}<br>
+<strong>default_export_compatible:</strong> False<br>
+<strong>depends:</strong> []<br>
+<strong>domain:</strong> []<br>
+<strong>exportable:</strong> True<br>
+<strong>groupable:</strong> True<br>
+<strong>manual:</strong> False<br>
+<strong>name:</strong> company_id<br>
+<strong>readonly:</strong> False<br>
+<strong>relation:</strong> <a class="nav-link" href="../res_company/index.html">res.company</a><br>
+<strong>required:</strong> True<br>
+<strong>searchable:</strong> True<br>
+<strong>sortable:</strong> True<br>
+<strong>store:</strong> True<br>
+<strong>string:</strong> Company<br>
+<strong>type:</strong> many2one<br>
+</p>
+</section>
+
+<section id="main_currency_id" class="card card-body">
+<h4 class="card-title">main_currency_id</h4>
+<p>
+<strong>allow_hierachy_operators:</strong> False<br>
+<strong>change_default:</strong> False<br>
+<strong>company_dependent:</strong> False<br>
+<strong>context:</strong> {}<br>
+<strong>default_export_compatible:</strong> False<br>
+<strong>depends:</strong> ['company_id.currency_id']<br>
+<strong>domain:</strong> []<br>
+<strong>exportable:</strong> True<br>
+<strong>groupable:</strong> True<br>
+<strong>help:</strong> The main currency of the company, used to display monetary fields.<br>
+<strong>manual:</strong> False<br>
+<strong>name:</strong> main_currency_id<br>
+<strong>readonly:</strong> True<br>
+<strong>related:</strong> company_id.currency_id<br>
+<strong>relation:</strong> <a class="nav-link" href="../res_currency/index.html">res.currency</a><br>
+<strong>required:</strong> False<br>
+<strong>searchable:</strong> True<br>
+<strong>sortable:</strong> True<br>
+<strong>store:</strong> False<br>
+<strong>string:</strong> Currency<br>
+<strong>type:</strong> many2one<br>
+</p>
+</section>
+
+<section id="payment_method_ids" class="card card-body">
+<h4 class="card-title">payment_method_ids</h4>
+<p>
+<strong>allow_hierachy_operators:</strong> False<br>
+<strong>change_default:</strong> False<br>
+<strong>company_dependent:</strong> False<br>
+<strong>context:</strong> {}<br>
+<strong>default_export_compatible:</strong> False<br>
+<strong>depends:</strong> []<br>
+<strong>domain:</strong> []<br>
+<strong>exportable:</strong> True<br>
+<strong>groupable:</strong> True<br>
+<strong>manual:</strong> False<br>
+<strong>name:</strong> payment_method_ids<br>
+<strong>readonly:</strong> False<br>
+<strong>relation:</strong> <a class="nav-link" href="../payment_method/index.html">payment.method</a><br>
+<strong>required:</strong> False<br>
+<strong>searchable:</strong> True<br>
+<strong>sortable:</strong> False<br>
+<strong>store:</strong> True<br>
+<strong>string:</strong> Supported Payment Methods<br>
+<strong>type:</strong> many2many<br>
+</p>
+</section>
+
+<section id="allow_tokenization" class="card card-body">
+<h4 class="card-title">allow_tokenization</h4>
+<p>
+<strong>change_default:</strong> False<br>
+<strong>company_dependent:</strong> False<br>
+<strong>default_export_compatible:</strong> False<br>
+<strong>depends:</strong> []<br>
+<strong>exportable:</strong> True<br>
+<strong>groupable:</strong> True<br>
+<strong>help:</strong> This controls whether customers can save their payment methods as payment tokens.
+A payment token is an anonymous link to the payment method details saved in the
+provider's database, allowing the customer to reuse it for a next purchase.<br>
+<strong>manual:</strong> False<br>
+<strong>name:</strong> allow_tokenization<br>
+<strong>readonly:</strong> False<br>
+<strong>required:</strong> False<br>
+<strong>searchable:</strong> True<br>
+<strong>sortable:</strong> True<br>
+<strong>store:</strong> True<br>
+<strong>string:</strong> Allow Saving Payment Methods<br>
+<strong>type:</strong> boolean<br>
+</p>
+</section>
+
+<section id="capture_manually" class="card card-body">
+<h4 class="card-title">capture_manually</h4>
+<p>
+<strong>change_default:</strong> False<br>
+<strong>company_dependent:</strong> False<br>
+<strong>default_export_compatible:</strong> False<br>
+<strong>depends:</strong> []<br>
+<strong>exportable:</strong> True<br>
+<strong>groupable:</strong> True<br>
+<strong>help:</strong> Capture the amount from Odoo, when the delivery is completed.
+Use this if you want to charge your customers cards only when
+you are sure you can ship the goods to them.<br>
+<strong>manual:</strong> False<br>
+<strong>name:</strong> capture_manually<br>
+<strong>readonly:</strong> False<br>
+<strong>required:</strong> False<br>
+<strong>searchable:</strong> True<br>
+<strong>sortable:</strong> True<br>
+<strong>store:</strong> True<br>
+<strong>string:</strong> Capture Amount Manually<br>
+<strong>type:</strong> boolean<br>
+</p>
+</section>
+
+<section id="allow_express_checkout" class="card card-body">
+<h4 class="card-title">allow_express_checkout</h4>
+<p>
+<strong>change_default:</strong> False<br>
+<strong>company_dependent:</strong> False<br>
+<strong>default_export_compatible:</strong> False<br>
+<strong>depends:</strong> []<br>
+<strong>exportable:</strong> True<br>
+<strong>groupable:</strong> True<br>
+<strong>help:</strong> This controls whether customers can use express payment methods. Express checkout enables customers to pay with Google Pay and Apple Pay from which address information is collected at payment.<br>
+<strong>manual:</strong> False<br>
+<strong>name:</strong> allow_express_checkout<br>
+<strong>readonly:</strong> False<br>
+<strong>required:</strong> False<br>
+<strong>searchable:</strong> True<br>
+<strong>sortable:</strong> True<br>
+<strong>store:</strong> True<br>
+<strong>string:</strong> Allow Express Checkout<br>
+<strong>type:</strong> boolean<br>
+</p>
+</section>
+
+<section id="redirect_form_view_id" class="card card-body">
+<h4 class="card-title">redirect_form_view_id</h4>
+<p>
+<strong>allow_hierachy_operators:</strong> False<br>
+<strong>change_default:</strong> False<br>
+<strong>company_dependent:</strong> False<br>
+<strong>context:</strong> {}<br>
+<strong>default_export_compatible:</strong> False<br>
+<strong>depends:</strong> []<br>
+<strong>domain:</strong> [['type', '=', 'qweb']]<br>
+<strong>exportable:</strong> True<br>
+<strong>groupable:</strong> True<br>
+<strong>help:</strong> The template rendering a form submitted to redirect the user when making a payment<br>
+<strong>manual:</strong> False<br>
+<strong>name:</strong> redirect_form_view_id<br>
+<strong>readonly:</strong> False<br>
+<strong>relation:</strong> <a class="nav-link" href="../ir_ui_view/index.html">ir.ui.view</a><br>
+<strong>required:</strong> False<br>
+<strong>searchable:</strong> True<br>
+<strong>sortable:</strong> True<br>
+<strong>store:</strong> True<br>
+<strong>string:</strong> Redirect Form Template<br>
+<strong>type:</strong> many2one<br>
+</p>
+</section>
+
+<section id="inline_form_view_id" class="card card-body">
+<h4 class="card-title">inline_form_view_id</h4>
+<p>
+<strong>allow_hierachy_operators:</strong> False<br>
+<strong>change_default:</strong> False<br>
+<strong>company_dependent:</strong> False<br>
+<strong>context:</strong> {}<br>
+<strong>default_export_compatible:</strong> False<br>
+<strong>depends:</strong> []<br>
+<strong>domain:</strong> [['type', '=', 'qweb']]<br>
+<strong>exportable:</strong> True<br>
+<strong>groupable:</strong> True<br>
+<strong>help:</strong> The template rendering the inline payment form when making a direct payment<br>
+<strong>manual:</strong> False<br>
+<strong>name:</strong> inline_form_view_id<br>
+<strong>readonly:</strong> False<br>
+<strong>relation:</strong> <a class="nav-link" href="../ir_ui_view/index.html">ir.ui.view</a><br>
+<strong>required:</strong> False<br>
+<strong>searchable:</strong> True<br>
+<strong>sortable:</strong> True<br>
+<strong>store:</strong> True<br>
+<strong>string:</strong> Inline Form Template<br>
+<strong>type:</strong> many2one<br>
+</p>
+</section>
+
+<section id="token_inline_form_view_id" class="card card-body">
+<h4 class="card-title">token_inline_form_view_id</h4>
+<p>
+<strong>allow_hierachy_operators:</strong> False<br>
+<strong>change_default:</strong> False<br>
+<strong>company_dependent:</strong> False<br>
+<strong>context:</strong> {}<br>
+<strong>default_export_compatible:</strong> False<br>
+<strong>depends:</strong> []<br>
+<strong>domain:</strong> [['type', '=', 'qweb']]<br>
+<strong>exportable:</strong> True<br>
+<strong>groupable:</strong> True<br>
+<strong>help:</strong> The template rendering the inline payment form when making a payment by token.<br>
+<strong>manual:</strong> False<br>
+<strong>name:</strong> token_inline_form_view_id<br>
+<strong>readonly:</strong> False<br>
+<strong>relation:</strong> <a class="nav-link" href="../ir_ui_view/index.html">ir.ui.view</a><br>
+<strong>required:</strong> False<br>
+<strong>searchable:</strong> True<br>
+<strong>sortable:</strong> True<br>
+<strong>store:</strong> True<br>
+<strong>string:</strong> Token Inline Form Template<br>
+<strong>type:</strong> many2one<br>
+</p>
+</section>
+
+<section id="express_checkout_form_view_id" class="card card-body">
+<h4 class="card-title">express_checkout_form_view_id</h4>
+<p>
+<strong>allow_hierachy_operators:</strong> False<br>
+<strong>change_default:</strong> False<br>
+<strong>company_dependent:</strong> False<br>
+<strong>context:</strong> {}<br>
+<strong>default_export_compatible:</strong> False<br>
+<strong>depends:</strong> []<br>
+<strong>domain:</strong> [['type', '=', 'qweb']]<br>
+<strong>exportable:</strong> True<br>
+<strong>groupable:</strong> True<br>
+<strong>help:</strong> The template rendering the express payment methods' form.<br>
+<strong>manual:</strong> False<br>
+<strong>name:</strong> express_checkout_form_view_id<br>
+<strong>readonly:</strong> False<br>
+<strong>relation:</strong> <a class="nav-link" href="../ir_ui_view/index.html">ir.ui.view</a><br>
+<strong>required:</strong> False<br>
+<strong>searchable:</strong> True<br>
+<strong>sortable:</strong> True<br>
+<strong>store:</strong> True<br>
+<strong>string:</strong> Express Checkout Form Template<br>
+<strong>type:</strong> many2one<br>
+</p>
+</section>
+
+<section id="available_country_ids" class="card card-body">
+<h4 class="card-title">available_country_ids</h4>
+<p>
+<strong>allow_hierachy_operators:</strong> False<br>
+<strong>change_default:</strong> False<br>
+<strong>company_dependent:</strong> False<br>
+<strong>context:</strong> {}<br>
+<strong>default_export_compatible:</strong> False<br>
+<strong>depends:</strong> []<br>
+<strong>domain:</strong> []<br>
+<strong>exportable:</strong> True<br>
+<strong>groupable:</strong> True<br>
+<strong>help:</strong> The countries in which this payment provider is available. Leave blank to make it available in all countries.<br>
+<strong>manual:</strong> False<br>
+<strong>name:</strong> available_country_ids<br>
+<strong>readonly:</strong> False<br>
+<strong>relation:</strong> <a class="nav-link" href="../res_country/index.html">res.country</a><br>
+<strong>required:</strong> False<br>
+<strong>searchable:</strong> True<br>
+<strong>sortable:</strong> False<br>
+<strong>store:</strong> True<br>
+<strong>string:</strong> Countries<br>
+<strong>type:</strong> many2many<br>
+</p>
+</section>
+
+<section id="available_currency_ids" class="card card-body">
+<h4 class="card-title">available_currency_ids</h4>
+<p>
+<strong>allow_hierachy_operators:</strong> False<br>
+<strong>change_default:</strong> False<br>
+<strong>company_dependent:</strong> False<br>
+<strong>context:</strong> {'active_test': False}<br>
+<strong>default_export_compatible:</strong> False<br>
+<strong>depends:</strong> ['code']<br>
+<strong>domain:</strong> []<br>
+<strong>exportable:</strong> True<br>
+<strong>groupable:</strong> True<br>
+<strong>help:</strong> The currencies available with this payment provider. Leave empty not to restrict any.<br>
+<strong>manual:</strong> False<br>
+<strong>name:</strong> available_currency_ids<br>
+<strong>readonly:</strong> False<br>
+<strong>relation:</strong> <a class="nav-link" href="../res_currency/index.html">res.currency</a><br>
+<strong>required:</strong> False<br>
+<strong>searchable:</strong> True<br>
+<strong>sortable:</strong> False<br>
+<strong>store:</strong> True<br>
+<strong>string:</strong> Currencies<br>
+<strong>type:</strong> many2many<br>
+</p>
+</section>
+
+<section id="maximum_amount" class="card card-body">
+<h4 class="card-title">maximum_amount</h4>
+<p>
+<strong>aggregator:</strong> sum<br>
+<strong>change_default:</strong> False<br>
+<strong>company_dependent:</strong> False<br>
+<strong>currency_field:</strong> main_currency_id<br>
+<strong>default_export_compatible:</strong> False<br>
+<strong>depends:</strong> []<br>
+<strong>exportable:</strong> True<br>
+<strong>groupable:</strong> True<br>
+<strong>help:</strong> The maximum payment amount that this payment provider is available for. Leave blank to make it available for any payment amount.<br>
+<strong>manual:</strong> False<br>
+<strong>name:</strong> maximum_amount<br>
+<strong>readonly:</strong> False<br>
+<strong>required:</strong> False<br>
+<strong>searchable:</strong> True<br>
+<strong>sortable:</strong> True<br>
+<strong>store:</strong> True<br>
+<strong>string:</strong> Maximum Amount<br>
+<strong>type:</strong> monetary<br>
+</p>
+</section>
+
+<section id="pre_msg" class="card card-body">
+<h4 class="card-title">pre_msg</h4>
+<p>
+<strong>change_default:</strong> False<br>
+<strong>company_dependent:</strong> False<br>
+<strong>default_export_compatible:</strong> False<br>
+<strong>depends:</strong> []<br>
+<strong>exportable:</strong> True<br>
+<strong>groupable:</strong> True<br>
+<strong>help:</strong> The message displayed to explain and help the payment process<br>
+<strong>manual:</strong> False<br>
+<strong>name:</strong> pre_msg<br>
+<strong>readonly:</strong> False<br>
+<strong>required:</strong> False<br>
+<strong>sanitize:</strong> True<br>
+<strong>sanitize_attributes:</strong> True<br>
+<strong>sanitize_style:</strong> False<br>
+<strong>sanitize_tags:</strong> True<br>
+<strong>searchable:</strong> True<br>
+<strong>sortable:</strong> True<br>
+<strong>store:</strong> True<br>
+<strong>string:</strong> Help Message<br>
+<strong>strip_classes:</strong> False<br>
+<strong>strip_style:</strong> False<br>
+<strong>translate:</strong> True<br>
+<strong>type:</strong> html<br>
+</p>
+</section>
+
+<section id="pending_msg" class="card card-body">
+<h4 class="card-title">pending_msg</h4>
+<p>
+<strong>change_default:</strong> False<br>
+<strong>company_dependent:</strong> False<br>
+<strong>default_export_compatible:</strong> False<br>
+<strong>depends:</strong> []<br>
+<strong>exportable:</strong> True<br>
+<strong>groupable:</strong> True<br>
+<strong>help:</strong> The message displayed if the order pending after the payment process<br>
+<strong>manual:</strong> False<br>
+<strong>name:</strong> pending_msg<br>
+<strong>readonly:</strong> False<br>
+<strong>required:</strong> False<br>
+<strong>sanitize:</strong> True<br>
+<strong>sanitize_attributes:</strong> True<br>
+<strong>sanitize_style:</strong> False<br>
+<strong>sanitize_tags:</strong> True<br>
+<strong>searchable:</strong> True<br>
+<strong>sortable:</strong> True<br>
+<strong>store:</strong> True<br>
+<strong>string:</strong> Pending Message<br>
+<strong>strip_classes:</strong> False<br>
+<strong>strip_style:</strong> False<br>
+<strong>translate:</strong> True<br>
+<strong>type:</strong> html<br>
+</p>
+</section>
+
+<section id="auth_msg" class="card card-body">
+<h4 class="card-title">auth_msg</h4>
+<p>
+<strong>change_default:</strong> False<br>
+<strong>company_dependent:</strong> False<br>
+<strong>default_export_compatible:</strong> False<br>
+<strong>depends:</strong> []<br>
+<strong>exportable:</strong> True<br>
+<strong>groupable:</strong> True<br>
+<strong>help:</strong> The message displayed if payment is authorized<br>
+<strong>manual:</strong> False<br>
+<strong>name:</strong> auth_msg<br>
+<strong>readonly:</strong> False<br>
+<strong>required:</strong> False<br>
+<strong>sanitize:</strong> True<br>
+<strong>sanitize_attributes:</strong> True<br>
+<strong>sanitize_style:</strong> False<br>
+<strong>sanitize_tags:</strong> True<br>
+<strong>searchable:</strong> True<br>
+<strong>sortable:</strong> True<br>
+<strong>store:</strong> True<br>
+<strong>string:</strong> Authorize Message<br>
+<strong>strip_classes:</strong> False<br>
+<strong>strip_style:</strong> False<br>
+<strong>translate:</strong> True<br>
+<strong>type:</strong> html<br>
+</p>
+</section>
+
+<section id="done_msg" class="card card-body">
+<h4 class="card-title">done_msg</h4>
+<p>
+<strong>change_default:</strong> False<br>
+<strong>company_dependent:</strong> False<br>
+<strong>default_export_compatible:</strong> False<br>
+<strong>depends:</strong> []<br>
+<strong>exportable:</strong> True<br>
+<strong>groupable:</strong> True<br>
+<strong>help:</strong> The message displayed if the order is successfully done after the payment process<br>
+<strong>manual:</strong> False<br>
+<strong>name:</strong> done_msg<br>
+<strong>readonly:</strong> False<br>
+<strong>required:</strong> False<br>
+<strong>sanitize:</strong> True<br>
+<strong>sanitize_attributes:</strong> True<br>
+<strong>sanitize_style:</strong> False<br>
+<strong>sanitize_tags:</strong> True<br>
+<strong>searchable:</strong> True<br>
+<strong>sortable:</strong> True<br>
+<strong>store:</strong> True<br>
+<strong>string:</strong> Done Message<br>
+<strong>strip_classes:</strong> False<br>
+<strong>strip_style:</strong> False<br>
+<strong>translate:</strong> True<br>
+<strong>type:</strong> html<br>
+</p>
+</section>
+
+<section id="cancel_msg" class="card card-body">
+<h4 class="card-title">cancel_msg</h4>
+<p>
+<strong>change_default:</strong> False<br>
+<strong>company_dependent:</strong> False<br>
+<strong>default_export_compatible:</strong> False<br>
+<strong>depends:</strong> []<br>
+<strong>exportable:</strong> True<br>
+<strong>groupable:</strong> True<br>
+<strong>help:</strong> The message displayed if the order is cancelled during the payment process<br>
+<strong>manual:</strong> False<br>
+<strong>name:</strong> cancel_msg<br>
+<strong>readonly:</strong> False<br>
+<strong>required:</strong> False<br>
+<strong>sanitize:</strong> True<br>
+<strong>sanitize_attributes:</strong> True<br>
+<strong>sanitize_style:</strong> False<br>
+<strong>sanitize_tags:</strong> True<br>
+<strong>searchable:</strong> True<br>
+<strong>sortable:</strong> True<br>
+<strong>store:</strong> True<br>
+<strong>string:</strong> Cancelled Message<br>
+<strong>strip_classes:</strong> False<br>
+<strong>strip_style:</strong> False<br>
+<strong>translate:</strong> True<br>
+<strong>type:</strong> html<br>
+</p>
+</section>
+
+<section id="support_tokenization" class="card card-body">
+<h4 class="card-title">support_tokenization</h4>
+<p>
+<strong>change_default:</strong> False<br>
+<strong>company_dependent:</strong> False<br>
+<strong>default_export_compatible:</strong> False<br>
+<strong>depends:</strong> ['code']<br>
+<strong>exportable:</strong> True<br>
+<strong>groupable:</strong> False<br>
+<strong>manual:</strong> False<br>
+<strong>name:</strong> support_tokenization<br>
+<strong>readonly:</strong> True<br>
+<strong>required:</strong> False<br>
+<strong>searchable:</strong> False<br>
+<strong>sortable:</strong> False<br>
+<strong>store:</strong> False<br>
+<strong>string:</strong> Tokenization<br>
+<strong>type:</strong> boolean<br>
+</p>
+</section>
+
+<section id="support_manual_capture" class="card card-body">
+<h4 class="card-title">support_manual_capture</h4>
+<p>
+<strong>change_default:</strong> False<br>
+<strong>company_dependent:</strong> False<br>
+<strong>default_export_compatible:</strong> False<br>
+<strong>depends:</strong> ['code']<br>
+<strong>exportable:</strong> True<br>
+<strong>groupable:</strong> False<br>
+<strong>manual:</strong> False<br>
+<strong>name:</strong> support_manual_capture<br>
+<strong>readonly:</strong> True<br>
+<strong>required:</strong> False<br>
+<strong>searchable:</strong> False<br>
+<strong>selection:</strong> [['full_only', 'Full Only'], ['partial', 'Partial']]<br>
+<strong>sortable:</strong> False<br>
+<strong>store:</strong> False<br>
+<strong>string:</strong> Manual Capture Supported<br>
+<strong>type:</strong> selection<br>
+</p>
+</section>
+
+<section id="support_express_checkout" class="card card-body">
+<h4 class="card-title">support_express_checkout</h4>
+<p>
+<strong>change_default:</strong> False<br>
+<strong>company_dependent:</strong> False<br>
+<strong>default_export_compatible:</strong> False<br>
+<strong>depends:</strong> ['code']<br>
+<strong>exportable:</strong> True<br>
+<strong>groupable:</strong> False<br>
+<strong>manual:</strong> False<br>
+<strong>name:</strong> support_express_checkout<br>
+<strong>readonly:</strong> True<br>
+<strong>required:</strong> False<br>
+<strong>searchable:</strong> False<br>
+<strong>sortable:</strong> False<br>
+<strong>store:</strong> False<br>
+<strong>string:</strong> Express Checkout<br>
+<strong>type:</strong> boolean<br>
+</p>
+</section>
+
+<section id="support_refund" class="card card-body">
+<h4 class="card-title">support_refund</h4>
+<p>
+<strong>change_default:</strong> False<br>
+<strong>company_dependent:</strong> False<br>
+<strong>default_export_compatible:</strong> False<br>
+<strong>depends:</strong> ['code']<br>
+<strong>exportable:</strong> True<br>
+<strong>groupable:</strong> False<br>
+<strong>help:</strong> Refund is a feature allowing to refund customers directly from the payment in Odoo.<br>
+<strong>manual:</strong> False<br>
+<strong>name:</strong> support_refund<br>
+<strong>readonly:</strong> True<br>
+<strong>required:</strong> False<br>
+<strong>searchable:</strong> False<br>
+<strong>selection:</strong> [['none', 'Unsupported'], ['full_only', 'Full Only'], ['partial', 'Full & Partial']]<br>
+<strong>sortable:</strong> False<br>
+<strong>store:</strong> False<br>
+<strong>string:</strong> Refund<br>
+<strong>type:</strong> selection<br>
+</p>
+</section>
+
+<section id="image_128" class="card card-body">
+<h4 class="card-title">image_128</h4>
+<p>
+<strong>attachment:</strong> True<br>
+<strong>change_default:</strong> False<br>
+<strong>company_dependent:</strong> False<br>
+<strong>default_export_compatible:</strong> False<br>
+<strong>depends:</strong> []<br>
+<strong>exportable:</strong> True<br>
+<strong>groupable:</strong> False<br>
+<strong>manual:</strong> False<br>
+<strong>name:</strong> image_128<br>
+<strong>readonly:</strong> False<br>
+<strong>required:</strong> False<br>
+<strong>searchable:</strong> True<br>
+<strong>sortable:</strong> False<br>
+<strong>store:</strong> True<br>
+<strong>string:</strong> Image<br>
+<strong>type:</strong> binary<br>
+</p>
+</section>
+
+<section id="color" class="card card-body">
+<h4 class="card-title">color</h4>
+<p>
+<strong>aggregator:</strong> sum<br>
+<strong>change_default:</strong> False<br>
+<strong>company_dependent:</strong> False<br>
+<strong>default_export_compatible:</strong> False<br>
+<strong>depends:</strong> ['state', 'module_state']<br>
+<strong>exportable:</strong> True<br>
+<strong>groupable:</strong> True<br>
+<strong>help:</strong> The color of the card in kanban view<br>
+<strong>manual:</strong> False<br>
+<strong>name:</strong> color<br>
+<strong>readonly:</strong> True<br>
+<strong>required:</strong> False<br>
+<strong>searchable:</strong> True<br>
+<strong>sortable:</strong> True<br>
+<strong>store:</strong> True<br>
+<strong>string:</strong> Color<br>
+<strong>type:</strong> integer<br>
+</p>
+</section>
+
+<section id="module_id" class="card card-body">
+<h4 class="card-title">module_id</h4>
+<p>
+<strong>allow_hierachy_operators:</strong> False<br>
+<strong>change_default:</strong> False<br>
+<strong>company_dependent:</strong> False<br>
+<strong>context:</strong> {}<br>
+<strong>default_export_compatible:</strong> False<br>
+<strong>depends:</strong> []<br>
+<strong>domain:</strong> []<br>
+<strong>exportable:</strong> True<br>
+<strong>groupable:</strong> True<br>
+<strong>manual:</strong> False<br>
+<strong>name:</strong> module_id<br>
+<strong>readonly:</strong> False<br>
+<strong>relation:</strong> <a class="nav-link" href="../ir_module_module/index.html">ir.module.module</a><br>
+<strong>required:</strong> False<br>
+<strong>searchable:</strong> True<br>
+<strong>sortable:</strong> True<br>
+<strong>store:</strong> True<br>
+<strong>string:</strong> Corresponding Module<br>
+<strong>type:</strong> many2one<br>
+</p>
+</section>
+
+<section id="module_state" class="card card-body">
+<h4 class="card-title">module_state</h4>
+<p>
+<strong>change_default:</strong> False<br>
+<strong>company_dependent:</strong> False<br>
+<strong>default_export_compatible:</strong> False<br>
+<strong>depends:</strong> ['module_id.state']<br>
+<strong>exportable:</strong> True<br>
+<strong>groupable:</strong> True<br>
+<strong>manual:</strong> False<br>
+<strong>name:</strong> module_state<br>
+<strong>readonly:</strong> True<br>
+<strong>related:</strong> module_id.state<br>
+<strong>required:</strong> False<br>
+<strong>searchable:</strong> True<br>
+<strong>selection:</strong> [['uninstallable', 'Uninstallable'], ['uninstalled', 'Not Installed'], ['installed', 'Installed'], ['to upgrade', 'To be upgraded'], ['to remove', 'To be removed'], ['to install', 'To be installed']]<br>
+<strong>sortable:</strong> True<br>
+<strong>store:</strong> False<br>
+<strong>string:</strong> Installation State<br>
+<strong>type:</strong> selection<br>
+</p>
+</section>
+
+<section id="module_to_buy" class="card card-body">
+<h4 class="card-title">module_to_buy</h4>
+<p>
+<strong>change_default:</strong> False<br>
+<strong>company_dependent:</strong> False<br>
+<strong>default_export_compatible:</strong> False<br>
+<strong>depends:</strong> ['module_id.to_buy']<br>
+<strong>exportable:</strong> True<br>
+<strong>groupable:</strong> True<br>
+<strong>manual:</strong> False<br>
+<strong>name:</strong> module_to_buy<br>
+<strong>readonly:</strong> True<br>
+<strong>related:</strong> module_id.to_buy<br>
+<strong>required:</strong> False<br>
+<strong>searchable:</strong> True<br>
+<strong>sortable:</strong> True<br>
+<strong>store:</strong> False<br>
+<strong>string:</strong> Odoo Enterprise Module<br>
+<strong>type:</strong> boolean<br>
+</p>
+</section>
+
+<section id="id" class="card card-body">
+<h4 class="card-title">id</h4>
+<p>
+<strong>change_default:</strong> False<br>
+<strong>company_dependent:</strong> False<br>
+<strong>default_export_compatible:</strong> False<br>
+<strong>depends:</strong> []<br>
+<strong>exportable:</strong> True<br>
+<strong>groupable:</strong> True<br>
+<strong>manual:</strong> False<br>
+<strong>name:</strong> id<br>
+<strong>readonly:</strong> True<br>
+<strong>required:</strong> False<br>
+<strong>searchable:</strong> True<br>
+<strong>sortable:</strong> True<br>
+<strong>store:</strong> True<br>
+<strong>string:</strong> ID<br>
+<strong>type:</strong> integer<br>
+</p>
+</section>
+
+<section id="display_name" class="card card-body">
+<h4 class="card-title">display_name</h4>
+<p>
+<strong>change_default:</strong> False<br>
+<strong>company_dependent:</strong> False<br>
+<strong>default_export_compatible:</strong> False<br>
+<strong>depends:</strong> ['name']<br>
+<strong>exportable:</strong> True<br>
+<strong>groupable:</strong> False<br>
+<strong>manual:</strong> False<br>
+<strong>name:</strong> display_name<br>
+<strong>readonly:</strong> True<br>
+<strong>required:</strong> False<br>
+<strong>searchable:</strong> True<br>
+<strong>sortable:</strong> False<br>
+<strong>store:</strong> False<br>
+<strong>string:</strong> Display Name<br>
+<strong>translate:</strong> False<br>
+<strong>trim:</strong> True<br>
+<strong>type:</strong> char<br>
+</p>
+</section>
+
+<section id="create_uid" class="card card-body">
+<h4 class="card-title">create_uid</h4>
+<p>
+<strong>allow_hierachy_operators:</strong> True<br>
+<strong>change_default:</strong> False<br>
+<strong>company_dependent:</strong> False<br>
+<strong>context:</strong> {}<br>
+<strong>default_export_compatible:</strong> False<br>
+<strong>depends:</strong> []<br>
+<strong>domain:</strong> []<br>
+<strong>exportable:</strong> True<br>
+<strong>groupable:</strong> True<br>
+<strong>manual:</strong> False<br>
+<strong>name:</strong> create_uid<br>
+<strong>readonly:</strong> True<br>
+<strong>relation:</strong> <a class="nav-link" href="../res_users/index.html">res.users</a><br>
+<strong>required:</strong> False<br>
+<strong>searchable:</strong> True<br>
+<strong>sortable:</strong> True<br>
+<strong>store:</strong> True<br>
+<strong>string:</strong> Created by<br>
+<strong>type:</strong> many2one<br>
+</p>
+</section>
+
+<section id="create_date" class="card card-body">
+<h4 class="card-title">create_date</h4>
+<p>
+<strong>change_default:</strong> False<br>
+<strong>company_dependent:</strong> False<br>
+<strong>default_export_compatible:</strong> False<br>
+<strong>depends:</strong> []<br>
+<strong>exportable:</strong> True<br>
+<strong>groupable:</strong> True<br>
+<strong>manual:</strong> False<br>
+<strong>name:</strong> create_date<br>
+<strong>readonly:</strong> True<br>
+<strong>required:</strong> False<br>
+<strong>searchable:</strong> True<br>
+<strong>sortable:</strong> True<br>
+<strong>store:</strong> True<br>
+<strong>string:</strong> Created on<br>
+<strong>type:</strong> datetime<br>
+</p>
+</section>
+
+<section id="write_uid" class="card card-body">
+<h4 class="card-title">write_uid</h4>
+<p>
+<strong>allow_hierachy_operators:</strong> True<br>
+<strong>change_default:</strong> False<br>
+<strong>company_dependent:</strong> False<br>
+<strong>context:</strong> {}<br>
+<strong>default_export_compatible:</strong> False<br>
+<strong>depends:</strong> []<br>
+<strong>domain:</strong> []<br>
+<strong>exportable:</strong> True<br>
+<strong>groupable:</strong> True<br>
+<strong>manual:</strong> False<br>
+<strong>name:</strong> write_uid<br>
+<strong>readonly:</strong> True<br>
+<strong>relation:</strong> <a class="nav-link" href="../res_users/index.html">res.users</a><br>
+<strong>required:</strong> False<br>
+<strong>searchable:</strong> True<br>
+<strong>sortable:</strong> True<br>
+<strong>store:</strong> True<br>
+<strong>string:</strong> Last Updated by<br>
+<strong>type:</strong> many2one<br>
+</p>
+</section>
+
+<section id="write_date" class="card card-body">
+<h4 class="card-title">write_date</h4>
+<p>
+<strong>change_default:</strong> False<br>
+<strong>company_dependent:</strong> False<br>
+<strong>default_export_compatible:</strong> False<br>
+<strong>depends:</strong> []<br>
+<strong>exportable:</strong> True<br>
+<strong>groupable:</strong> True<br>
+<strong>manual:</strong> False<br>
+<strong>name:</strong> write_date<br>
+<strong>readonly:</strong> True<br>
+<strong>required:</strong> False<br>
+<strong>searchable:</strong> True<br>
+<strong>sortable:</strong> True<br>
+<strong>store:</strong> True<br>
+<strong>string:</strong> Last Updated on<br>
+<strong>type:</strong> datetime<br>
+</p>
+</section>
+
+<section id="journal_id" class="card card-body">
+<h4 class="card-title">journal_id</h4>
+<p>
+<strong>allow_hierachy_operators:</strong> False<br>
+<strong>change_default:</strong> False<br>
+<strong>company_dependent:</strong> False<br>
+<strong>context:</strong> {}<br>
+<strong>default_export_compatible:</strong> False<br>
+<strong>depends:</strong> ['code', 'state', 'company_id']<br>
+<strong>domain:</strong> (company_id and ['|', ('company_id', '=', False), ('company_id', 'parent_of', [company_id])] or ['|', ('company_id', '=', False), ('company_id', 'parent_of', '')]) + ([("type", "=", "bank")])<br>
+<strong>exportable:</strong> True<br>
+<strong>groupable:</strong> False<br>
+<strong>help:</strong> The journal in which the successful transactions are posted.<br>
+<strong>manual:</strong> False<br>
+<strong>name:</strong> journal_id<br>
+<strong>readonly:</strong> False<br>
+<strong>relation:</strong> <a class="nav-link" href="../account_journal/index.html">account.journal</a><br>
+<strong>required:</strong> False<br>
+<strong>searchable:</strong> False<br>
+<strong>sortable:</strong> False<br>
+<strong>store:</strong> False<br>
+<strong>string:</strong> Payment Journal<br>
+<strong>type:</strong> many2one<br>
+</p>
+</section>
+
+<section id="so_reference_type" class="card card-body">
+<h4 class="card-title">so_reference_type</h4>
+<p>
+<strong>change_default:</strong> False<br>
+<strong>company_dependent:</strong> False<br>
+<strong>default_export_compatible:</strong> False<br>
+<strong>depends:</strong> []<br>
+<strong>exportable:</strong> True<br>
+<strong>groupable:</strong> True<br>
+<strong>help:</strong> You can set here the communication type that will appear on sales orders.The communication will be given to the customer when they choose the payment method.<br>
+<strong>manual:</strong> False<br>
+<strong>name:</strong> so_reference_type<br>
+<strong>readonly:</strong> False<br>
+<strong>required:</strong> False<br>
+<strong>searchable:</strong> True<br>
+<strong>selection:</strong> [['so_name', 'Based on Document Reference'], ['partner', 'Based on Customer ID']]<br>
+<strong>sortable:</strong> True<br>
+<strong>store:</strong> True<br>
+<strong>string:</strong> Communication<br>
+<strong>type:</strong> selection<br>
+</p>
+</section>
+
+
+      </div>
+    </div>
+
+  </div>
+  <!-- Content end -->
+
+  <!-- Footer
+  ============================ -->
+  <footer id="footer" class="section bg-dark footer-text-light">
+    <div class="container">
+      <ul class="social-icons social-icons-lg social-icons-muted justify-content-center mb-3">
+        <li><a data-toggle="tooltip" href="https://twitter.com/harnishdesign/" target="_blank" title=""
+            data-original-title="Twitter"><i class="fab fa-twitter"></i></a></li>
+        <li><a data-toggle="tooltip" href="http://www.facebook.com/harnishdesign/" target="_blank" title=""
+            data-original-title="Facebook"><i class="fab fa-facebook-f"></i></a></li>
+        <li><a data-toggle="tooltip" href="http://www.dribbble.com/harnishdesign/" target="_blank" title=""
+            data-original-title="Dribbble"><i class="fab fa-dribbble"></i></a></li>
+        <li><a data-toggle="tooltip" href="http://www.github.com/" target="_blank" title=""
+            data-original-title="GitHub"><i class="fab fa-github"></i></a></li>
+      </ul>
+      <p class="text-center">Copyright &copy; 2020 <a
+          href="http://www.harnishdesign.net/idocs-one-page-documentation-html-template/">iDocs</a>. All Rights
+        Reserved.</p>
+      <p class="text-2 text-center mb-0">Design &amp; Develop by <a class="btn-link" target="_blank"
+          href="http://www.harnishdesign.net/">HarnishDesign</a>.</p>
+    </div>
+  </footer>
+  <!-- Footer end -->
+
+  </div>
+  <!-- Document Wrapper end -->
+
+  <!-- Back To Top -->
+  <a id="back-to-top" data-toggle="tooltip" title="Back to Top" href="javascript:void(0)"><i
+      class="fa fa-chevron-up"></i></a>
+
+  <!-- JavaScript
+============================ -->
+  <script src="../../assets/vendor/jquery/jquery.min.js"></script>
+  <script src="../../assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <!-- Highlight JS -->
+  <script src="../../assets/vendor/highlight.js/highlight.min.js"></script>
+  <!-- Easing -->
+  <script src="../../assets/vendor/jquery.easing/jquery.easing.min.js"></script>
+  <!-- Magnific Popup -->
+  <script src="../../assets/vendor/magnific-popup/jquery.magnific-popup.min.js"></script>
+  <!-- Custom Script -->
+  <script src="../../assets/js/theme.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,1198 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1.0, shrink-to-fit=no">
+  <link href="assets/images/odoo_doc.png" rel="icon" />
+  <title>Odoo API Documentation</title>
+  <meta name="description" content="Your ThemeForest item Name and description">
+  <meta name="author" content="harnishdesign.net">
+
+  <!-- Stylesheet
+============================== -->
+  <!-- Bootstrap -->
+  <link rel="stylesheet" type="text/css" href="assets/vendor/bootstrap/css/bootstrap.min.css" />
+  <!-- Font Awesome Icon -->
+  <link rel="stylesheet" type="text/css" href="assets/vendor/font-awesome/css/all.min.css" />
+  <!-- Magnific Popup -->
+  <link rel="stylesheet" type="text/css" href="assets/vendor/magnific-popup/magnific-popup.min.css" />
+  <!-- Highlight Syntax -->
+  <link rel="stylesheet" type="text/css" href="assets/vendor/highlight.js/styles/github.css" />
+  <!-- Custom Stylesheet -->
+  <link rel="stylesheet" type="text/css" href="assets/css/stylesheet.css" />
+</head>
+
+<body data-spy="scroll" data-target=".idocs-navigation" data-offset="125">
+
+  <!-- Preloader -->
+  <div class="preloader">
+    <div class="lds-ellipsis">
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+    </div>
+  </div>
+  <!-- Preloader End -->
+
+  <!-- Document Wrapper   
+=============================== -->
+  <div id="main-wrapper">
+
+  <!-- Header
+  ============================ -->
+  <header id="header" class="sticky-top">
+    <!-- Navbar -->
+    <nav class="primary-menu navbar navbar-expand-lg navbar-dropdown-dark">
+      <div class="container-fluid">
+        <!-- Sidebar Toggler -->
+		<button id="sidebarCollapse" class="navbar-toggler d-block d-md-none" type="button"><span></span><span class="w-75"></span><span class="w-50"></span></button>
+
+		<!-- Logo -->
+        <a class="logo ml-md-3" href="index.html" title="iDocs Template"> <img src="assets/images/odoo_doc.png" alt="iDocs Template"/> </a>
+		<span class="text-2 ml-2">v1.0</span>
+        <!-- Logo End -->
+
+		<!-- Navbar Toggler -->
+		<button class="navbar-toggler ml-auto" type="button" data-toggle="collapse" data-target="#header-nav"><span></span><span></span><span></span></button>
+
+		<div id="header-nav" class="collapse navbar-collapse justify-content-end">
+          <ul class="navbar-nav">
+            <li class="dropdown"> <a class="dropdown-toggle" href="#">Navigation</a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="index.html">ir.model</a></li>
+                <li><a class="dropdown-item" href="odoo_operators.html">operators</a></li>
+              </ul>
+            </li>
+            <li><a target="_blank" href="https://themeforest.net/user/harnishdesign/#contact?ref=HarnishDesign">Support</a></li>
+          </ul>
+        </div>
+        <ul class="social-icons social-icons-sm ml-lg-2 mr-2">
+          <li class="social-icons-twitter"><a data-toggle="tooltip" href="http://www.twitter.com/harnishdesign/" target="_blank" title="" data-original-title="Twitter"><i class="fab fa-twitter"></i></a></li>
+        </ul>
+      </div>
+    </nav>
+    <!-- Navbar End -->
+  </header>
+  <!-- Header End -->
+
+  <!-- Content
+  ============================ -->
+  <div id="content" role="main">
+
+    <!-- Sidebar Navigation
+	============================ -->
+    <div class="idocs-navigation bg-light">
+        <ul class="nav flex-column">
+          <li class="nav-item"><a class="nav-link" href="models/account_account/index.html">account.account</a></li>
+<li class="nav-item"><a class="nav-link" href="models/account_analytic_account/index.html">account.analytic.account</a></li>
+<li class="nav-item"><a class="nav-link" href="models/res_partner_bank/index.html">res.partner.bank</a></li>
+<li class="nav-item"><a class="nav-link" href="models/calendar_event/index.html">calendar.event</a></li>
+<li class="nav-item"><a class="nav-link" href="models/res_company/index.html">res.company</a></li>
+<li class="nav-item"><a class="nav-link" href="models/res_partner/index.html">res.partner</a></li>
+<li class="nav-item"><a class="nav-link" href="models/hr_department/index.html">hr.department</a></li>
+<li class="nav-item"><a class="nav-link" href="models/discuss_channel/index.html">discuss.channel</a></li>
+<li class="nav-item"><a class="nav-link" href="models/mail_thread_cc/index.html">mail.thread.cc</a></li>
+<li class="nav-item"><a class="nav-link" href="models/mail_thread/index.html">mail.thread</a></li>
+<li class="nav-item"><a class="nav-link" href="models/hr_employee/index.html">hr.employee</a></li>
+<li class="nav-item"><a class="nav-link" href="models/fsm_equipment/index.html">fsm.equipment</a></li>
+<li class="nav-item"><a class="nav-link" href="models/fsm_location/index.html">fsm.location</a></li>
+<li class="nav-item"><a class="nav-link" href="models/fsm_order/index.html">fsm.order</a></li>
+<li class="nav-item"><a class="nav-link" href="models/fsm_team/index.html">fsm.team</a></li>
+<li class="nav-item"><a class="nav-link" href="models/fsm_person/index.html">fsm.person</a></li>
+<li class="nav-item"><a class="nav-link" href="models/iap_account/index.html">iap.account</a></li>
+<li class="nav-item"><a class="nav-link" href="models/hr_job/index.html">hr.job</a></li>
+<li class="nav-item"><a class="nav-link" href="models/account_journal/index.html">account.journal</a></li>
+<li class="nav-item"><a class="nav-link" href="models/account_move/index.html">account.move</a></li>
+<li class="nav-item"><a class="nav-link" href="models/stock_lot/index.html">stock.lot</a></li>
+<li class="nav-item"><a class="nav-link" href="models/mail_blacklist/index.html">mail.blacklist</a></li>
+<li class="nav-item"><a class="nav-link" href="models/mail_thread_blacklist/index.html">mail.thread.blacklist</a></li>
+<li class="nav-item"><a class="nav-link" href="models/mail_thread_main_attachment/index.html">mail.thread.main.attachment</a></li>
+<li class="nav-item"><a class="nav-link" href="models/maintenance_equipment/index.html">maintenance.equipment</a></li>
+<li class="nav-item"><a class="nav-link" href="models/maintenance_equipment_category/index.html">maintenance.equipment.category</a></li>
+<li class="nav-item"><a class="nav-link" href="models/maintenance_request/index.html">maintenance.request</a></li>
+<li class="nav-item"><a class="nav-link" href="models/fleet_vehicle_model/index.html">fleet.vehicle.model</a></li>
+<li class="nav-item"><a class="nav-link" href="models/account_payment/index.html">account.payment</a></li>
+<li class="nav-item"><a class="nav-link" href="models/phone_blacklist/index.html">phone.blacklist</a></li>
+<li class="nav-item"><a class="nav-link" href="models/mail_thread_phone/index.html">mail.thread.phone</a></li>
+<li class="nav-item"><a class="nav-link" href="models/account_reconcile_model/index.html">account.reconcile.model</a></li>
+<li class="nav-item"><a class="nav-link" href="models/product_pricelist/index.html">product.pricelist</a></li>
+<li class="nav-item"><a class="nav-link" href="models/product_template/index.html">product.template</a></li>
+<li class="nav-item"><a class="nav-link" href="models/product_category/index.html">product.category</a></li>
+<li class="nav-item"><a class="nav-link" href="models/product_product/index.html">product.product</a></li>
+<li class="nav-item"><a class="nav-link" href="models/sale_order/index.html">sale.order</a></li>
+<li class="nav-item"><a class="nav-link" href="models/crm_team/index.html">crm.team</a></li>
+<li class="nav-item"><a class="nav-link" href="models/crm_team_member/index.html">crm.team.member</a></li>
+<li class="nav-item"><a class="nav-link" href="models/stock_scrap/index.html">stock.scrap</a></li>
+<li class="nav-item"><a class="nav-link" href="models/fleet_vehicle_log_services/index.html">fleet.vehicle.log.services</a></li>
+<li class="nav-item"><a class="nav-link" href="models/account_tax/index.html">account.tax</a></li>
+<li class="nav-item"><a class="nav-link" href="models/stock_picking/index.html">stock.picking</a></li>
+<li class="nav-item"><a class="nav-link" href="models/fleet_vehicle/index.html">fleet.vehicle</a></li>
+<li class="nav-item"><a class="nav-link" href="models/fleet_vehicle_log_contract/index.html">fleet.vehicle.log.contract</a></li>
+<li class="nav-item"><a class="nav-link" href="models/auth_totp_wizard/index.html">auth_totp.wizard</a></li>
+<li class="nav-item"><a class="nav-link" href="models/account_edi_xml_ubl_a_nz/index.html">account.edi.xml.ubl_a_nz</a></li>
+<li class="nav-item"><a class="nav-link" href="models/res_users_apikeys_description/index.html">res.users.apikeys.description</a></li>
+<li class="nav-item"><a class="nav-link" href="models/res_groups/index.html">res.groups</a></li>
+<li class="nav-item"><a class="nav-link" href="models/account_cash_rounding/index.html">account.cash.rounding</a></li>
+<li class="nav-item"><a class="nav-link" href="models/account_chart_template/index.html">account.chart.template</a></li>
+<li class="nav-item"><a class="nav-link" href="models/account_group/index.html">account.group</a></li>
+<li class="nav-item"><a class="nav-link" href="models/account_journal_group/index.html">account.journal.group</a></li>
+<li class="nav-item"><a class="nav-link" href="models/account_lock_exception/index.html">account.lock_exception</a></li>
+<li class="nav-item"><a class="nav-link" href="models/account_move_reversal/index.html">account.move.reversal</a></li>
+<li class="nav-item"><a class="nav-link" href="models/account_move_send/index.html">account.move.send</a></li>
+<li class="nav-item"><a class="nav-link" href="models/account_move_send_batch_wizard/index.html">account.move.send.batch.wizard</a></li>
+<li class="nav-item"><a class="nav-link" href="models/account_move_send_wizard/index.html">account.move.send.wizard</a></li>
+<li class="nav-item"><a class="nav-link" href="models/account_account_tag/index.html">account.account.tag</a></li>
+<li class="nav-item"><a class="nav-link" href="models/account_root/index.html">account.root</a></li>
+<li class="nav-item"><a class="nav-link" href="models/account_merge_wizard/index.html">account.merge.wizard</a></li>
+<li class="nav-item"><a class="nav-link" href="models/account_merge_wizard_line/index.html">account.merge.wizard.line</a></li>
+<li class="nav-item"><a class="nav-link" href="models/report_account_report_invoice_with_payments/index.html">report.account.report_invoice_with_payments</a></li>
+<li class="nav-item"><a class="nav-link" href="models/report_account_report_invoice/index.html">report.account.report_invoice</a></li>
+<li class="nav-item"><a class="nav-link" href="models/account_report/index.html">account.report</a></li>
+<li class="nav-item"><a class="nav-link" href="models/account_report_column/index.html">account.report.column</a></li>
+<li class="nav-item"><a class="nav-link" href="models/account_report_expression/index.html">account.report.expression</a></li>
+<li class="nav-item"><a class="nav-link" href="models/account_report_external_value/index.html">account.report.external.value</a></li>
+<li class="nav-item"><a class="nav-link" href="models/account_report_line/index.html">account.report.line</a></li>
+<li class="nav-item"><a class="nav-link" href="models/account_fiscal_position_account/index.html">account.fiscal.position.account</a></li>
+<li class="nav-item"><a class="nav-link" href="models/account_accrued_orders_wizard/index.html">account.accrued.orders.wizard</a></li>
+<li class="nav-item"><a class="nav-link" href="models/ir_actions_act_url/index.html">ir.actions.act_url</a></li>
+<li class="nav-item"><a class="nav-link" href="models/ir_actions_act_window/index.html">ir.actions.act_window</a></li>
+<li class="nav-item"><a class="nav-link" href="models/ir_actions_act_window_close/index.html">ir.actions.act_window_close</a></li>
+<li class="nav-item"><a class="nav-link" href="models/ir_actions_act_window_view/index.html">ir.actions.act_window.view</a></li>
+<li class="nav-item"><a class="nav-link" href="models/ir_actions_actions/index.html">ir.actions.actions</a></li>
+<li class="nav-item"><a class="nav-link" href="models/mail_activity/index.html">mail.activity</a></li>
+<li class="nav-item"><a class="nav-link" href="models/mail_activity_mixin/index.html">mail.activity.mixin</a></li>
+<li class="nav-item"><a class="nav-link" href="models/mail_activity_plan/index.html">mail.activity.plan</a></li>
+<li class="nav-item"><a class="nav-link" href="models/mail_activity_type/index.html">mail.activity.type</a></li>
+<li class="nav-item"><a class="nav-link" href="models/mail_activity_plan_template/index.html">mail.activity.plan.template</a></li>
+<li class="nav-item"><a class="nav-link" href="models/mail_activity_schedule/index.html">mail.activity.schedule</a></li>
+<li class="nav-item"><a class="nav-link" href="models/format_address_mixin/index.html">format.address.mixin</a></li>
+<li class="nav-item"><a class="nav-link" href="models/account_analytic_distribution_model/index.html">account.analytic.distribution.model</a></li>
+<li class="nav-item"><a class="nav-link" href="models/account_analytic_line/index.html">account.analytic.line</a></li>
+<li class="nav-item"><a class="nav-link" href="models/analytic_mixin/index.html">analytic.mixin</a></li>
+<li class="nav-item"><a class="nav-link" href="models/analytic_plan_fields_mixin/index.html">analytic.plan.fields.mixin</a></li>
+<li class="nav-item"><a class="nav-link" href="models/account_analytic_applicability/index.html">account.analytic.applicability</a></li>
+<li class="nav-item"><a class="nav-link" href="models/account_analytic_plan/index.html">account.analytic.plan</a></li>
+<li class="nav-item"><a class="nav-link" href="models/ir_module_category/index.html">ir.module.category</a></li>
+<li class="nav-item"><a class="nav-link" href="models/ir_asset/index.html">ir.asset</a></li>
+<li class="nav-item"><a class="nav-link" href="models/web_editor_assets/index.html">web_editor.assets</a></li>
+<li class="nav-item"><a class="nav-link" href="models/ir_attachment/index.html">ir.attachment</a></li>
+<li class="nav-item"><a class="nav-link" href="models/product_attribute_value/index.html">product.attribute.value</a></li>
+<li class="nav-item"><a class="nav-link" href="models/auth_totp_device/index.html">auth_totp.device</a></li>
+<li class="nav-item"><a class="nav-link" href="models/ir_autovacuum/index.html">ir.autovacuum</a></li>
+<li class="nav-item"><a class="nav-link" href="models/sequence_mixin/index.html">sequence.mixin</a></li>
+<li class="nav-item"><a class="nav-link" href="models/account_autopost_bills_wizard/index.html">account.autopost.bills.wizard</a></li>
+<li class="nav-item"><a class="nav-link" href="models/avatar_mixin/index.html">avatar.mixin</a></li>
+<li class="nav-item"><a class="nav-link" href="models/account_edi_xml_ubl_de/index.html">account.edi.xml.ubl_de</a></li>
+<li class="nav-item"><a class="nav-link" href="models/stock_backorder_confirmation/index.html">stock.backorder.confirmation</a></li>
+<li class="nav-item"><a class="nav-link" href="models/stock_backorder_confirmation_line/index.html">stock.backorder.confirmation.line</a></li>
+<li class="nav-item"><a class="nav-link" href="models/res_bank/index.html">res.bank</a></li>
+<li class="nav-item"><a class="nav-link" href="models/account_bank_statement/index.html">account.bank.statement</a></li>
+<li class="nav-item"><a class="nav-link" href="models/account_bank_statement_line/index.html">account.bank.statement.line</a></li>
+<li class="nav-item"><a class="nav-link" href="models/account_setup_bank_manual_config/index.html">account.setup.bank.manual.config</a></li>
+<li class="nav-item"><a class="nav-link" href="models/barcodes_barcode_events_mixin/index.html">barcodes.barcode_events_mixin</a></li>
+<li class="nav-item"><a class="nav-link" href="models/barcode_nomenclature/index.html">barcode.nomenclature</a></li>
+<li class="nav-item"><a class="nav-link" href="models/barcode_rule/index.html">barcode.rule</a></li>
+<li class="nav-item"><a class="nav-link" href="models/base/index.html">base</a></li>
+<li class="nav-item"><a class="nav-link" href="models/base_import_import/index.html">base_import.import</a></li>
+<li class="nav-item"><a class="nav-link" href="models/base_import_mapping/index.html">base_import.mapping</a></li>
+<li class="nav-item"><a class="nav-link" href="models/account_edi_ubl/index.html">account.edi.ubl</a></li>
+<li class="nav-item"><a class="nav-link" href="models/hr_employee_base/index.html">hr.employee.base</a></li>
+<li class="nav-item"><a class="nav-link" href="models/fsm_blackout_day/index.html">fsm.blackout.day</a></li>
+<li class="nav-item"><a class="nav-link" href="models/fsm_blackout_group/index.html">fsm.blackout.group</a></li>
+<li class="nav-item"><a class="nav-link" href="models/fleet_vehicle_model_brand/index.html">fleet.vehicle.model.brand</a></li>
+<li class="nav-item"><a class="nav-link" href="models/crm_tag/index.html">crm.tag</a></li>
+<li class="nav-item"><a class="nav-link" href="models/calendar_attendee/index.html">calendar.attendee</a></li>
+<li class="nav-item"><a class="nav-link" href="models/calendar_filters/index.html">calendar.filters</a></li>
+<li class="nav-item"><a class="nav-link" href="models/calendar_popover_delete_wizard/index.html">calendar.popover.delete.wizard</a></li>
+<li class="nav-item"><a class="nav-link" href="models/calendar_provider_config/index.html">calendar.provider.config</a></li>
+<li class="nav-item"><a class="nav-link" href="models/utm_stage/index.html">utm.stage</a></li>
+<li class="nav-item"><a class="nav-link" href="models/bus_listener_mixin/index.html">bus.listener.mixin</a></li>
+<li class="nav-item"><a class="nav-link" href="models/sale_mass_cancel_orders/index.html">sale.mass.cancel.orders</a></li>
+<li class="nav-item"><a class="nav-link" href="models/mail_canned_response/index.html">mail.canned.response</a></li>
+<li class="nav-item"><a class="nav-link" href="models/fleet_vehicle_model_category/index.html">fleet.vehicle.model.category</a></li>
+<li class="nav-item"><a class="nav-link" href="models/change_password_wizard/index.html">change.password.wizard</a></li>
+<li class="nav-item"><a class="nav-link" href="models/stock_change_product_qty/index.html">stock.change.product.qty</a></li>
+<li class="nav-item"><a class="nav-link" href="models/discuss_channel_member/index.html">discuss.channel.member</a></li>
+<li class="nav-item"><a class="nav-link" href="models/lot_label_layout/index.html">lot.label.layout</a></li>
+<li class="nav-item"><a class="nav-link" href="models/product_label_layout/index.html">product.label.layout</a></li>
+<li class="nav-item"><a class="nav-link" href="models/picking_label_type/index.html">picking.label.type</a></li>
+<li class="nav-item"><a class="nav-link" href="models/ir_actions_client/index.html">ir.actions.client</a></li>
+<li class="nav-item"><a class="nav-link" href="models/comment_wizard/index.html">comment.wizard</a></li>
+<li class="nav-item"><a class="nav-link" href="models/account_edi_common/index.html">account.edi.common</a></li>
+<li class="nav-item"><a class="nav-link" href="models/sale_edi_common/index.html">sale.edi.common</a></li>
+<li class="nav-item"><a class="nav-link" href="models/bus_bus/index.html">bus.bus</a></li>
+<li class="nav-item"><a class="nav-link" href="models/base_document_layout/index.html">base.document.layout</a></li>
+<li class="nav-item"><a class="nav-link" href="models/res_config/index.html">res.config</a></li>
+<li class="nav-item"><a class="nav-link" href="models/res_config_settings/index.html">res.config.settings</a></li>
+<li class="nav-item"><a class="nav-link" href="models/ir_actions_todo/index.html">ir.actions.todo</a></li>
+<li class="nav-item"><a class="nav-link" href="models/confirm_stock_sms/index.html">confirm.stock.sms</a></li>
+<li class="nav-item"><a class="nav-link" href="models/stock_inventory_conflict/index.html">stock.inventory.conflict</a></li>
+<li class="nav-item"><a class="nav-link" href="models/hr_contract_type/index.html">hr.contract.type</a></li>
+<li class="nav-item"><a class="nav-link" href="models/spreadsheet_dashboard_share/index.html">spreadsheet.dashboard.share</a></li>
+<li class="nav-item"><a class="nav-link" href="models/res_country/index.html">res.country</a></li>
+<li class="nav-item"><a class="nav-link" href="models/res_country_group/index.html">res.country.group</a></li>
+<li class="nav-item"><a class="nav-link" href="models/format_vat_label_mixin/index.html">format.vat.label.mixin</a></li>
+<li class="nav-item"><a class="nav-link" href="models/res_country_state/index.html">res.country.state</a></li>
+<li class="nav-item"><a class="nav-link" href="models/account_automatic_entry_wizard/index.html">account.automatic.entry.wizard</a></li>
+<li class="nav-item"><a class="nav-link" href="models/wizard_ir_model_menu_create/index.html">wizard.ir.model.menu.create</a></li>
+<li class="nav-item"><a class="nav-link" href="models/res_currency/index.html">res.currency</a></li>
+<li class="nav-item"><a class="nav-link" href="models/res_currency_rate/index.html">res.currency.rate</a></li>
+<li class="nav-item"><a class="nav-link" href="models/ir_ui_view_custom/index.html">ir.ui.view.custom</a></li>
+<li class="nav-item"><a class="nav-link" href="models/stock_lot_report/index.html">stock.lot.report</a></li>
+<li class="nav-item"><a class="nav-link" href="models/decimal_precision/index.html">decimal.precision</a></li>
+<li class="nav-item"><a class="nav-link" href="models/ir_default/index.html">ir.default</a></li>
+<li class="nav-item"><a class="nav-link" href="models/fsm_delivery_time_range/index.html">fsm.delivery.time.range</a></li>
+<li class="nav-item"><a class="nav-link" href="models/ir_demo/index.html">ir.demo</a></li>
+<li class="nav-item"><a class="nav-link" href="models/ir_demo_failure_wizard/index.html">ir.demo_failure.wizard</a></li>
+<li class="nav-item"><a class="nav-link" href="models/ir_demo_failure/index.html">ir.demo_failure</a></li>
+<li class="nav-item"><a class="nav-link" href="models/hr_departure_reason/index.html">hr.departure.reason</a></li>
+<li class="nav-item"><a class="nav-link" href="models/hr_departure_wizard/index.html">hr.departure.wizard</a></li>
+<li class="nav-item"><a class="nav-link" href="models/res_device_log/index.html">res.device.log</a></li>
+<li class="nav-item"><a class="nav-link" href="models/res_device/index.html">res.device</a></li>
+<li class="nav-item"><a class="nav-link" href="models/digest_digest/index.html">digest.digest</a></li>
+<li class="nav-item"><a class="nav-link" href="models/digest_tip/index.html">digest.tip</a></li>
+<li class="nav-item"><a class="nav-link" href="models/sale_order_discount/index.html">sale.order.discount</a></li>
+<li class="nav-item"><a class="nav-link" href="models/res_district/index.html">res.district</a></li>
+<li class="nav-item"><a class="nav-link" href="models/mail_followers/index.html">mail.followers</a></li>
+<li class="nav-item"><a class="nav-link" href="models/fleet_vehicle_assignation_log/index.html">fleet.vehicle.assignation.log</a></li>
+<li class="nav-item"><a class="nav-link" href="models/account_edi_xml_ubl_efff/index.html">account.edi.xml.ubl_efff</a></li>
+<li class="nav-item"><a class="nav-link" href="models/mail_alias/index.html">mail.alias</a></li>
+<li class="nav-item"><a class="nav-link" href="models/mail_alias_mixin/index.html">mail.alias.mixin</a></li>
+<li class="nav-item"><a class="nav-link" href="models/mail_alias_mixin_optional/index.html">mail.alias.mixin.optional</a></li>
+<li class="nav-item"><a class="nav-link" href="models/mail_alias_domain/index.html">mail.alias.domain</a></li>
+<li class="nav-item"><a class="nav-link" href="models/mail_template_preview/index.html">mail.template.preview</a></li>
+<li class="nav-item"><a class="nav-link" href="models/mail_template/index.html">mail.template</a></li>
+<li class="nav-item"><a class="nav-link" href="models/mail_compose_message/index.html">mail.compose.message</a></li>
+<li class="nav-item"><a class="nav-link" href="models/mail_resend_message/index.html">mail.resend.message</a></li>
+<li class="nav-item"><a class="nav-link" href="models/ir_embedded_actions/index.html">ir.embedded.actions</a></li>
+<li class="nav-item"><a class="nav-link" href="models/hr_employee_category/index.html">hr.employee.category</a></li>
+<li class="nav-item"><a class="nav-link" href="models/report_hr_skills_report_employee_cv/index.html">report.hr_skills.report_employee_cv</a></li>
+<li class="nav-item"><a class="nav-link" href="models/hr_employee_skill_report/index.html">hr.employee.skill.report</a></li>
+<li class="nav-item"><a class="nav-link" href="models/base_enable_profiling_wizard/index.html">base.enable.profiling.wizard</a></li>
+<li class="nav-item"><a class="nav-link" href="models/calendar_alarm/index.html">calendar.alarm</a></li>
+<li class="nav-item"><a class="nav-link" href="models/calendar_alarm_manager/index.html">calendar.alarm_manager</a></li>
+<li class="nav-item"><a class="nav-link" href="models/calendar_event_type/index.html">calendar.event.type</a></li>
+<li class="nav-item"><a class="nav-link" href="models/calendar_recurrence/index.html">calendar.recurrence</a></li>
+<li class="nav-item"><a class="nav-link" href="models/ir_exports/index.html">ir.exports</a></li>
+<li class="nav-item"><a class="nav-link" href="models/ir_exports_line/index.html">ir.exports.line</a></li>
+<li class="nav-item"><a class="nav-link" href="models/fsm_fleet_wizard/index.html">fsm.fleet.wizard</a></li>
+<li class="nav-item"><a class="nav-link" href="models/fsm_order_sign_wizard/index.html">fsm.order.sign.wizard</a></li>
+<li class="nav-item"><a class="nav-link" href="models/fsm_person_calendar_filter/index.html">fsm.person.calendar.filter</a></li>
+<li class="nav-item"><a class="nav-link" href="models/fsm_wizard/index.html">fsm.wizard</a></li>
+<li class="nav-item"><a class="nav-link" href="models/account_edi_xml_cii/index.html">account.edi.xml.cii</a></li>
+<li class="nav-item"><a class="nav-link" href="models/fsm_location_person/index.html">fsm.location.person</a></li>
+<li class="nav-item"><a class="nav-link" href="models/fsm_template/index.html">fsm.template</a></li>
+<li class="nav-item"><a class="nav-link" href="models/fsm_order_type/index.html">fsm.order.type</a></li>
+<li class="nav-item"><a class="nav-link" href="models/fsm_route/index.html">fsm.route</a></li>
+<li class="nav-item"><a class="nav-link" href="models/fsm_route_dayroute/index.html">fsm.route.dayroute</a></li>
+<li class="nav-item"><a class="nav-link" href="models/fsm_stage/index.html">fsm.stage</a></li>
+<li class="nav-item"><a class="nav-link" href="models/fsm_tag/index.html">fsm.tag</a></li>
+<li class="nav-item"><a class="nav-link" href="models/fsm_vehicle/index.html">fsm.vehicle</a></li>
+<li class="nav-item"><a class="nav-link" href="models/fsm_category/index.html">fsm.category</a></li>
+<li class="nav-item"><a class="nav-link" href="models/fsm_person_skill/index.html">fsm.person.skill</a></li>
+<li class="nav-item"><a class="nav-link" href="models/html_field_history_mixin/index.html">html.field.history.mixin</a></li>
+<li class="nav-item"><a class="nav-link" href="models/ir_model_fields/index.html">ir.model.fields</a></li>
+<li class="nav-item"><a class="nav-link" href="models/ir_fields_converter/index.html">ir.fields.converter</a></li>
+<li class="nav-item"><a class="nav-link" href="models/ir_model_fields_selection/index.html">ir.model.fields.selection</a></li>
+<li class="nav-item"><a class="nav-link" href="models/ir_binary/index.html">ir.binary</a></li>
+<li class="nav-item"><a class="nav-link" href="models/ir_filters/index.html">ir.filters</a></li>
+<li class="nav-item"><a class="nav-link" href="models/account_fiscal_position/index.html">account.fiscal.position</a></li>
+<li class="nav-item"><a class="nav-link" href="models/fleet_vehicle_cost_report/index.html">fleet.vehicle.cost.report</a></li>
+<li class="nav-item"><a class="nav-link" href="models/fleet_service_type/index.html">fleet.service.type</a></li>
+<li class="nav-item"><a class="nav-link" href="models/sale_pdf_form_field/index.html">sale.pdf.form.field</a></li>
+<li class="nav-item"><a class="nav-link" href="models/snailmail_letter_format_error/index.html">snailmail.letter.format.error</a></li>
+<li class="nav-item"><a class="nav-link" href="models/fsm_model_mixin/index.html">fsm.model.mixin</a></li>
+<li class="nav-item"><a class="nav-link" href="models/account_full_reconcile/index.html">account.full.reconcile</a></li>
+<li class="nav-item"><a class="nav-link" href="models/payment_link_wizard/index.html">payment.link.wizard</a></li>
+<li class="nav-item"><a class="nav-link" href="models/base_geocoder/index.html">base.geocoder</a></li>
+<li class="nav-item"><a class="nav-link" href="models/base_geo_provider/index.html">base.geo_provider</a></li>
+<li class="nav-item"><a class="nav-link" href="models/report_account_report_hash_integrity/index.html">report.account.report_hash_integrity</a></li>
+<li class="nav-item"><a class="nav-link" href="models/google_gmail_mixin/index.html">google.gmail.mixin</a></li>
+<li class="nav-item"><a class="nav-link" href="models/portal_wizard/index.html">portal.wizard</a></li>
+<li class="nav-item"><a class="nav-link" href="models/spreadsheet_dashboard_group/index.html">spreadsheet.dashboard.group</a></li>
+<li class="nav-item"><a class="nav-link" href="models/mail_guest/index.html">mail.guest</a></li>
+<li class="nav-item"><a class="nav-link" href="models/ir_http/index.html">ir.http</a></li>
+<li class="nav-item"><a class="nav-link" href="models/fsm_stress_day/index.html">fsm.stress.day</a></li>
+<li class="nav-item"><a class="nav-link" href="models/hr_manager_department_report/index.html">hr.manager.department.report</a></li>
+<li class="nav-item"><a class="nav-link" href="models/iap_enrich_api/index.html">iap.enrich.api</a></li>
+<li class="nav-item"><a class="nav-link" href="models/iap_autocomplete_api/index.html">iap.autocomplete.api</a></li>
+<li class="nav-item"><a class="nav-link" href="models/iap_service/index.html">iap.service</a></li>
+<li class="nav-item"><a class="nav-link" href="models/mail_ice_server/index.html">mail.ice.server</a></li>
+<li class="nav-item"><a class="nav-link" href="models/image_mixin/index.html">image.mixin</a></li>
+<li class="nav-item"><a class="nav-link" href="models/base_import_module/index.html">base.import.module</a></li>
+<li class="nav-item"><a class="nav-link" href="models/fetchmail_server/index.html">fetchmail.server</a></li>
+<li class="nav-item"><a class="nav-link" href="models/account_incoterms/index.html">account.incoterms</a></li>
+<li class="nav-item"><a class="nav-link" href="models/res_partner_industry/index.html">res.partner.industry</a></li>
+<li class="nav-item"><a class="nav-link" href="models/base_language_install/index.html">base.language.install</a></li>
+<li class="nav-item"><a class="nav-link" href="models/stock_inventory_adjustment_name/index.html">stock.inventory.adjustment.name</a></li>
+<li class="nav-item"><a class="nav-link" href="models/stock_inventory_warning/index.html">stock.inventory.warning</a></li>
+<li class="nav-item"><a class="nav-link" href="models/stock_location/index.html">stock.location</a></li>
+<li class="nav-item"><a class="nav-link" href="models/stock_route/index.html">stock.route</a></li>
+<li class="nav-item"><a class="nav-link" href="models/mail_wizard_invite/index.html">mail.wizard.invite</a></li>
+<li class="nav-item"><a class="nav-link" href="models/account_invoice_report/index.html">account.invoice.report</a></li>
+<li class="nav-item"><a class="nav-link" href="models/account_move_line/index.html">account.move.line</a></li>
+<li class="nav-item"><a class="nav-link" href="models/kpi_provider/index.html">kpi.provider</a></li>
+<li class="nav-item"><a class="nav-link" href="models/base_language_export/index.html">base.language.export</a></li>
+<li class="nav-item"><a class="nav-link" href="models/base_language_import/index.html">base.language.import</a></li>
+<li class="nav-item"><a class="nav-link" href="models/res_lang/index.html">res.lang</a></li>
+<li class="nav-item"><a class="nav-link" href="models/sms_tracker/index.html">sms.tracker</a></li>
+<li class="nav-item"><a class="nav-link" href="models/ir_logging/index.html">ir.logging</a></li>
+<li class="nav-item"><a class="nav-link" href="models/report_stock_label_lot_template_view/index.html">report.stock.label_lot_template_view</a></li>
+<li class="nav-item"><a class="nav-link" href="models/mail_bot/index.html">mail.bot</a></li>
+<li class="nav-item"><a class="nav-link" href="models/mail_composer_mixin/index.html">mail.composer.mixin</a></li>
+<li class="nav-item"><a class="nav-link" href="models/mail_gateway_allowed/index.html">mail.gateway.allowed</a></li>
+<li class="nav-item"><a class="nav-link" href="models/discuss_channel_rtc_session/index.html">discuss.channel.rtc.session</a></li>
+<li class="nav-item"><a class="nav-link" href="models/mail_render_mixin/index.html">mail.render.mixin</a></li>
+<li class="nav-item"><a class="nav-link" href="models/ir_mail_server/index.html">ir.mail_server</a></li>
+<li class="nav-item"><a class="nav-link" href="models/mail_template_reset/index.html">mail.template.reset</a></li>
+<li class="nav-item"><a class="nav-link" href="models/mail_tracking_value/index.html">mail.tracking.value</a></li>
+<li class="nav-item"><a class="nav-link" href="models/maintenance_mixin/index.html">maintenance.mixin</a></li>
+<li class="nav-item"><a class="nav-link" href="models/maintenance_stage/index.html">maintenance.stage</a></li>
+<li class="nav-item"><a class="nav-link" href="models/maintenance_team/index.html">maintenance.team</a></li>
+<li class="nav-item"><a class="nav-link" href="models/account_code_mapping/index.html">account.code.mapping</a></li>
+<li class="nav-item"><a class="nav-link" href="models/ir_ui_menu/index.html">ir.ui.menu</a></li>
+<li class="nav-item"><a class="nav-link" href="models/base_partner_merge_line/index.html">base.partner.merge.line</a></li>
+<li class="nav-item"><a class="nav-link" href="models/base_partner_merge_automatic_wizard/index.html">base.partner.merge.automatic.wizard</a></li>
+<li class="nav-item"><a class="nav-link" href="models/mail_message/index.html">mail.message</a></li>
+<li class="nav-item"><a class="nav-link" href="models/mail_notification/index.html">mail.notification</a></li>
+<li class="nav-item"><a class="nav-link" href="models/mail_message_reaction/index.html">mail.message.reaction</a></li>
+<li class="nav-item"><a class="nav-link" href="models/mail_message_translation/index.html">mail.message.translation</a></li>
+<li class="nav-item"><a class="nav-link" href="models/mail_message_subtype/index.html">mail.message.subtype</a></li>
+<li class="nav-item"><a class="nav-link" href="models/discuss_voice_metadata/index.html">discuss.voice.metadata</a></li>
+<li class="nav-item"><a class="nav-link" href="models/stock_warehouse_orderpoint/index.html">stock.warehouse.orderpoint</a></li>
+<li class="nav-item"><a class="nav-link" href="models/mail_tracking_duration_mixin/index.html">mail.tracking.duration.mixin</a></li>
+<li class="nav-item"><a class="nav-link" href="models/ir_model_access/index.html">ir.model.access</a></li>
+<li class="nav-item"><a class="nav-link" href="models/ir_model_constraint/index.html">ir.model.constraint</a></li>
+<li class="nav-item"><a class="nav-link" href="models/ir_model_data/index.html">ir.model.data</a></li>
+<li class="nav-item"><a class="nav-link" href="models/ir_model_inherit/index.html">ir.model.inherit</a></li>
+<li class="nav-item"><a class="nav-link" href="models/ir_model/index.html">ir.model</a></li>
+<li class="nav-item"><a class="nav-link" href="models/ir_module_module/index.html">ir.module.module</a></li>
+<li class="nav-item"><a class="nav-link" href="models/base_module_install_request/index.html">base.module.install.request</a></li>
+<li class="nav-item"><a class="nav-link" href="models/base_module_install_review/index.html">base.module.install.review</a></li>
+<li class="nav-item"><a class="nav-link" href="models/report_base_report_irmodulereference/index.html">report.base.report_irmodulereference</a></li>
+<li class="nav-item"><a class="nav-link" href="models/base_module_uninstall/index.html">base.module.uninstall</a></li>
+<li class="nav-item"><a class="nav-link" href="models/ir_module_module_dependency/index.html">ir.module.module.dependency</a></li>
+<li class="nav-item"><a class="nav-link" href="models/ir_module_module_exclusion/index.html">ir.module.module.exclusion</a></li>
+<li class="nav-item"><a class="nav-link" href="models/fleet_vehicle_odometer/index.html">fleet.vehicle.odometer</a></li>
+<li class="nav-item"><a class="nav-link" href="models/onboarding_onboarding/index.html">onboarding.onboarding</a></li>
+<li class="nav-item"><a class="nav-link" href="models/onboarding_progress_step/index.html">onboarding.progress.step</a></li>
+<li class="nav-item"><a class="nav-link" href="models/onboarding_progress/index.html">onboarding.progress</a></li>
+<li class="nav-item"><a class="nav-link" href="models/onboarding_onboarding_step/index.html">onboarding.onboarding.step</a></li>
+<li class="nav-item"><a class="nav-link" href="models/account_financial_year_op/index.html">account.financial.year.op</a></li>
+<li class="nav-item"><a class="nav-link" href="models/mail_mail/index.html">mail.mail</a></li>
+<li class="nav-item"><a class="nav-link" href="models/sms_sms/index.html">sms.sms</a></li>
+<li class="nav-item"><a class="nav-link" href="models/stock_quant_package/index.html">stock.quant.package</a></li>
+<li class="nav-item"><a class="nav-link" href="models/report_paperformat/index.html">report.paperformat</a></li>
+<li class="nav-item"><a class="nav-link" href="models/account_partial_reconcile/index.html">account.partial.reconcile</a></li>
+<li class="nav-item"><a class="nav-link" href="models/res_partner_autocomplete_sync/index.html">res.partner.autocomplete.sync</a></li>
+<li class="nav-item"><a class="nav-link" href="models/res_partner_category/index.html">res.partner.category</a></li>
+<li class="nav-item"><a class="nav-link" href="models/res_partner_title/index.html">res.partner.title</a></li>
+<li class="nav-item"><a class="nav-link" href="models/account_reconcile_model_partner_mapping/index.html">account.reconcile.model.partner.mapping</a></li>
+<li class="nav-item"><a class="nav-link" href="models/mail_resend_partner/index.html">mail.resend.partner</a></li>
+<li class="nav-item"><a class="nav-link" href="models/res_users_identitycheck/index.html">res.users.identitycheck</a></li>
+<li class="nav-item"><a class="nav-link" href="models/account_payment_register/index.html">account.payment.register</a></li>
+<li class="nav-item"><a class="nav-link" href="models/payment_capture_wizard/index.html">payment.capture.wizard</a></li>
+<li class="nav-item"><a class="nav-link" href="models/payment_method/index.html">payment.method</a></li>
+<li class="nav-item"><a class="nav-link" href="models/account_payment_method_line/index.html">account.payment.method.line</a></li>
+<li class="nav-item"><a class="nav-link" href="models/account_payment_method/index.html">account.payment.method</a></li>
+<li class="nav-item"><a class="nav-link" href="models/payment_provider/index.html">payment.provider</a></li>
+<li class="nav-item"><a class="nav-link" href="models/payment_refund_wizard/index.html">payment.refund.wizard</a></li>
+<li class="nav-item"><a class="nav-link" href="models/account_payment_term/index.html">account.payment.term</a></li>
+<li class="nav-item"><a class="nav-link" href="models/account_payment_term_line/index.html">account.payment.term.line</a></li>
+<li class="nav-item"><a class="nav-link" href="models/payment_token/index.html">payment.token</a></li>
+<li class="nav-item"><a class="nav-link" href="models/payment_transaction/index.html">payment.transaction</a></li>
+<li class="nav-item"><a class="nav-link" href="models/payment_provider_onboarding_wizard/index.html">payment.provider.onboarding.wizard</a></li>
+<li class="nav-item"><a class="nav-link" href="models/stock_picking_type/index.html">stock.picking.type</a></li>
+<li class="nav-item"><a class="nav-link" href="models/portal_mixin/index.html">portal.mixin</a></li>
+<li class="nav-item"><a class="nav-link" href="models/portal_share/index.html">portal.share</a></li>
+<li class="nav-item"><a class="nav-link" href="models/portal_wizard_user/index.html">portal.wizard.user</a></li>
+<li class="nav-item"><a class="nav-link" href="models/report_product_report_pricelist/index.html">report.product.report_pricelist</a></li>
+<li class="nav-item"><a class="nav-link" href="models/product_pricelist_item/index.html">product.pricelist.item</a></li>
+<li class="nav-item"><a class="nav-link" href="models/hr_employee_cv_wizard/index.html">hr.employee.cv.wizard</a></li>
+<li class="nav-item"><a class="nav-link" href="models/privacy_log/index.html">privacy.log</a></li>
+<li class="nav-item"><a class="nav-link" href="models/privacy_lookup_wizard/index.html">privacy.lookup.wizard</a></li>
+<li class="nav-item"><a class="nav-link" href="models/privacy_lookup_wizard_line/index.html">privacy.lookup.wizard.line</a></li>
+<li class="nav-item"><a class="nav-link" href="models/procurement_group/index.html">procurement.group</a></li>
+<li class="nav-item"><a class="nav-link" href="models/product_attribute/index.html">product.attribute</a></li>
+<li class="nav-item"><a class="nav-link" href="models/product_attribute_custom_value/index.html">product.attribute.custom.value</a></li>
+<li class="nav-item"><a class="nav-link" href="models/product_catalog_mixin/index.html">product.catalog.mixin</a></li>
+<li class="nav-item"><a class="nav-link" href="models/product_combo/index.html">product.combo</a></li>
+<li class="nav-item"><a class="nav-link" href="models/product_combo_item/index.html">product.combo.item</a></li>
+<li class="nav-item"><a class="nav-link" href="models/product_document/index.html">product.document</a></li>
+<li class="nav-item"><a class="nav-link" href="models/report_product_report_producttemplatelabel_dymo/index.html">report.product.report_producttemplatelabel_dymo</a></li>
+<li class="nav-item"><a class="nav-link" href="models/report_stock_label_product_product_view/index.html">report.stock.label_product_product_view</a></li>
+<li class="nav-item"><a class="nav-link" href="models/report_product_report_producttemplatelabel2x7/index.html">report.product.report_producttemplatelabel2x7</a></li>
+<li class="nav-item"><a class="nav-link" href="models/report_product_report_producttemplatelabel4x12/index.html">report.product.report_producttemplatelabel4x12</a></li>
+<li class="nav-item"><a class="nav-link" href="models/report_product_report_producttemplatelabel4x12noprice/index.html">report.product.report_producttemplatelabel4x12noprice</a></li>
+<li class="nav-item"><a class="nav-link" href="models/report_product_report_producttemplatelabel4x7/index.html">report.product.report_producttemplatelabel4x7</a></li>
+<li class="nav-item"><a class="nav-link" href="models/stock_move_line/index.html">stock.move.line</a></li>
+<li class="nav-item"><a class="nav-link" href="models/product_packaging/index.html">product.packaging</a></li>
+<li class="nav-item"><a class="nav-link" href="models/product_replenish/index.html">product.replenish</a></li>
+<li class="nav-item"><a class="nav-link" href="models/stock_replenish_mixin/index.html">stock.replenish.mixin</a></li>
+<li class="nav-item"><a class="nav-link" href="models/product_tag/index.html">product.tag</a></li>
+<li class="nav-item"><a class="nav-link" href="models/product_template_attribute_exclusion/index.html">product.template.attribute.exclusion</a></li>
+<li class="nav-item"><a class="nav-link" href="models/product_template_attribute_line/index.html">product.template.attribute.line</a></li>
+<li class="nav-item"><a class="nav-link" href="models/product_template_attribute_value/index.html">product.template.attribute.value</a></li>
+<li class="nav-item"><a class="nav-link" href="models/uom_uom/index.html">uom.uom</a></li>
+<li class="nav-item"><a class="nav-link" href="models/uom_category/index.html">uom.category</a></li>
+<li class="nav-item"><a class="nav-link" href="models/ir_profile/index.html">ir.profile</a></li>
+<li class="nav-item"><a class="nav-link" href="models/ir_cron_progress/index.html">ir.cron.progress</a></li>
+<li class="nav-item"><a class="nav-link" href="models/hr_employee_public/index.html">hr.employee.public</a></li>
+<li class="nav-item"><a class="nav-link" href="models/publisher_warranty_contract/index.html">publisher_warranty.contract</a></li>
+<li class="nav-item"><a class="nav-link" href="models/mail_push_device/index.html">mail.push.device</a></li>
+<li class="nav-item"><a class="nav-link" href="models/mail_push/index.html">mail.push</a></li>
+<li class="nav-item"><a class="nav-link" href="models/stock_putaway_rule/index.html">stock.putaway.rule</a></li>
+<li class="nav-item"><a class="nav-link" href="models/ir_qweb_field_time/index.html">ir.qweb.field.time</a></li>
+<li class="nav-item"><a class="nav-link" href="models/stock_quant/index.html">stock.quant</a></li>
+<li class="nav-item"><a class="nav-link" href="models/sale_order_template/index.html">sale.order.template</a></li>
+<li class="nav-item"><a class="nav-link" href="models/sale_order_template_line/index.html">sale.order.template.line</a></li>
+<li class="nav-item"><a class="nav-link" href="models/sale_order_template_option/index.html">sale.order.template.option</a></li>
+<li class="nav-item"><a class="nav-link" href="models/quotation_document/index.html">quotation.document</a></li>
+<li class="nav-item"><a class="nav-link" href="models/ir_qweb/index.html">ir.qweb</a></li>
+<li class="nav-item"><a class="nav-link" href="models/ir_qweb_field/index.html">ir.qweb.field</a></li>
+<li class="nav-item"><a class="nav-link" href="models/ir_qweb_field_barcode/index.html">ir.qweb.field.barcode</a></li>
+<li class="nav-item"><a class="nav-link" href="models/ir_qweb_field_contact/index.html">ir.qweb.field.contact</a></li>
+<li class="nav-item"><a class="nav-link" href="models/ir_qweb_field_date/index.html">ir.qweb.field.date</a></li>
+<li class="nav-item"><a class="nav-link" href="models/ir_qweb_field_datetime/index.html">ir.qweb.field.datetime</a></li>
+<li class="nav-item"><a class="nav-link" href="models/ir_qweb_field_duration/index.html">ir.qweb.field.duration</a></li>
+<li class="nav-item"><a class="nav-link" href="models/ir_qweb_field_float/index.html">ir.qweb.field.float</a></li>
+<li class="nav-item"><a class="nav-link" href="models/ir_qweb_field_float_time/index.html">ir.qweb.field.float_time</a></li>
+<li class="nav-item"><a class="nav-link" href="models/ir_qweb_field_html/index.html">ir.qweb.field.html</a></li>
+<li class="nav-item"><a class="nav-link" href="models/ir_qweb_field_image/index.html">ir.qweb.field.image</a></li>
+<li class="nav-item"><a class="nav-link" href="models/ir_qweb_field_image_url/index.html">ir.qweb.field.image_url</a></li>
+<li class="nav-item"><a class="nav-link" href="models/ir_qweb_field_integer/index.html">ir.qweb.field.integer</a></li>
+<li class="nav-item"><a class="nav-link" href="models/ir_qweb_field_many2one/index.html">ir.qweb.field.many2one</a></li>
+<li class="nav-item"><a class="nav-link" href="models/ir_qweb_field_monetary/index.html">ir.qweb.field.monetary</a></li>
+<li class="nav-item"><a class="nav-link" href="models/ir_qweb_field_relative/index.html">ir.qweb.field.relative</a></li>
+<li class="nav-item"><a class="nav-link" href="models/ir_qweb_field_selection/index.html">ir.qweb.field.selection</a></li>
+<li class="nav-item"><a class="nav-link" href="models/ir_qweb_field_text/index.html">ir.qweb.field.text</a></li>
+<li class="nav-item"><a class="nav-link" href="models/ir_qweb_field_qweb/index.html">ir.qweb.field.qweb</a></li>
+<li class="nav-item"><a class="nav-link" href="models/ir_qweb_field_many2many/index.html">ir.qweb.field.many2many</a></li>
+<li class="nav-item"><a class="nav-link" href="models/ir_qweb_field_one2many/index.html">ir.qweb.field.one2many</a></li>
+<li class="nav-item"><a class="nav-link" href="models/ir_rule/index.html">ir.rule</a></li>
+<li class="nav-item"><a class="nav-link" href="models/res_region/index.html">res.region</a></li>
+<li class="nav-item"><a class="nav-link" href="models/ir_model_relation/index.html">ir.model.relation</a></li>
+<li class="nav-item"><a class="nav-link" href="models/account_resequence_wizard/index.html">account.resequence.wizard</a></li>
+<li class="nav-item"><a class="nav-link" href="models/product_removal/index.html">product.removal</a></li>
+<li class="nav-item"><a class="nav-link" href="models/mail_blacklist_remove/index.html">mail.blacklist.remove</a></li>
+<li class="nav-item"><a class="nav-link" href="models/phone_blacklist_remove/index.html">phone.blacklist.remove</a></li>
+<li class="nav-item"><a class="nav-link" href="models/ir_actions_report/index.html">ir.actions.report</a></li>
+<li class="nav-item"><a class="nav-link" href="models/report_layout/index.html">report.layout</a></li>
+<li class="nav-item"><a class="nav-link" href="models/sms_resend_recipient/index.html">sms.resend.recipient</a></li>
+<li class="nav-item"><a class="nav-link" href="models/reset_view_arch_wizard/index.html">reset.view.arch.wizard</a></li>
+<li class="nav-item"><a class="nav-link" href="models/resource_mixin/index.html">resource.mixin</a></li>
+<li class="nav-item"><a class="nav-link" href="models/resource_calendar_leaves/index.html">resource.calendar.leaves</a></li>
+<li class="nav-item"><a class="nav-link" href="models/resource_calendar/index.html">resource.calendar</a></li>
+<li class="nav-item"><a class="nav-link" href="models/resource_resource/index.html">resource.resource</a></li>
+<li class="nav-item"><a class="nav-link" href="models/hr_resume_line/index.html">hr.resume.line</a></li>
+<li class="nav-item"><a class="nav-link" href="models/stock_return_picking/index.html">stock.return.picking</a></li>
+<li class="nav-item"><a class="nav-link" href="models/stock_return_picking_line/index.html">stock.return.picking.line</a></li>
+<li class="nav-item"><a class="nav-link" href="models/fsm_route_day/index.html">fsm.route.day</a></li>
+<li class="nav-item"><a class="nav-link" href="models/account_reconcile_model_line/index.html">account.reconcile.model.line</a></li>
+<li class="nav-item"><a class="nav-link" href="models/account_edi_xml_ubl_sg/index.html">account.edi.xml.ubl_sg</a></li>
+<li class="nav-item"><a class="nav-link" href="models/account_edi_xml_ubl_nl/index.html">account.edi.xml.ubl_nl</a></li>
+<li class="nav-item"><a class="nav-link" href="models/sms_account_phone/index.html">sms.account.phone</a></li>
+<li class="nav-item"><a class="nav-link" href="models/sms_account_sender/index.html">sms.account.sender</a></li>
+<li class="nav-item"><a class="nav-link" href="models/sms_account_code/index.html">sms.account.code</a></li>
+<li class="nav-item"><a class="nav-link" href="models/sms_resend/index.html">sms.resend</a></li>
+<li class="nav-item"><a class="nav-link" href="models/sms_template_preview/index.html">sms.template.preview</a></li>
+<li class="nav-item"><a class="nav-link" href="models/sms_template_reset/index.html">sms.template.reset</a></li>
+<li class="nav-item"><a class="nav-link" href="models/sms_template/index.html">sms.template</a></li>
+<li class="nav-item"><a class="nav-link" href="models/sale_order_option/index.html">sale.order.option</a></li>
+<li class="nav-item"><a class="nav-link" href="models/sale_payment_provider_onboarding_wizard/index.html">sale.payment.provider.onboarding.wizard</a></li>
+<li class="nav-item"><a class="nav-link" href="models/sale_advance_payment_inv/index.html">sale.advance.payment.inv</a></li>
+<li class="nav-item"><a class="nav-link" href="models/sale_report/index.html">sale.report</a></li>
+<li class="nav-item"><a class="nav-link" href="models/sale_order_cancel/index.html">sale.order.cancel</a></li>
+<li class="nav-item"><a class="nav-link" href="models/sale_order_line/index.html">sale.order.line</a></li>
+<li class="nav-item"><a class="nav-link" href="models/discuss_gif_favorite/index.html">discuss.gif.favorite</a></li>
+<li class="nav-item"><a class="nav-link" href="models/ir_cron/index.html">ir.cron</a></li>
+<li class="nav-item"><a class="nav-link" href="models/mail_scheduled_message/index.html">mail.scheduled.message</a></li>
+<li class="nav-item"><a class="nav-link" href="models/mail_message_schedule/index.html">mail.message.schedule</a></li>
+<li class="nav-item"><a class="nav-link" href="models/stock_scrap_reason_tag/index.html">stock.scrap.reason.tag</a></li>
+<li class="nav-item"><a class="nav-link" href="models/account_secure_entries_wizard/index.html">account.secure.entries.wizard</a></li>
+<li class="nav-item"><a class="nav-link" href="models/sms_composer/index.html">sms.composer</a></li>
+<li class="nav-item"><a class="nav-link" href="models/fleet_vehicle_send_mail/index.html">fleet.vehicle.send.mail</a></li>
+<li class="nav-item"><a class="nav-link" href="models/ir_sequence/index.html">ir.sequence</a></li>
+<li class="nav-item"><a class="nav-link" href="models/ir_sequence_date_range/index.html">ir.sequence.date_range</a></li>
+<li class="nav-item"><a class="nav-link" href="models/ir_actions_server/index.html">ir.actions.server</a></li>
+<li class="nav-item"><a class="nav-link" href="models/res_users_apikeys_show/index.html">res.users.apikeys.show</a></li>
+<li class="nav-item"><a class="nav-link" href="models/hr_skill/index.html">hr.skill</a></li>
+<li class="nav-item"><a class="nav-link" href="models/hr_skill_level/index.html">hr.skill.level</a></li>
+<li class="nav-item"><a class="nav-link" href="models/hr_skill_type/index.html">hr.skill.type</a></li>
+<li class="nav-item"><a class="nav-link" href="models/hr_employee_skill/index.html">hr.employee.skill</a></li>
+<li class="nav-item"><a class="nav-link" href="models/hr_employee_skill_log/index.html">hr.employee.skill.log</a></li>
+<li class="nav-item"><a class="nav-link" href="models/snailmail_letter/index.html">snailmail.letter</a></li>
+<li class="nav-item"><a class="nav-link" href="models/stock_orderpoint_snooze/index.html">stock.orderpoint.snooze</a></li>
+<li class="nav-item"><a class="nav-link" href="models/spreadsheet_dashboard/index.html">spreadsheet.dashboard</a></li>
+<li class="nav-item"><a class="nav-link" href="models/spreadsheet_mixin/index.html">spreadsheet.mixin</a></li>
+<li class="nav-item"><a class="nav-link" href="models/stock_move/index.html">stock.move</a></li>
+<li class="nav-item"><a class="nav-link" href="models/stock_package_destination/index.html">stock.package.destination</a></li>
+<li class="nav-item"><a class="nav-link" href="models/stock_package_level/index.html">stock.package_level</a></li>
+<li class="nav-item"><a class="nav-link" href="models/stock_quantity_history/index.html">stock.quantity.history</a></li>
+<li class="nav-item"><a class="nav-link" href="models/stock_quant_relocate/index.html">stock.quant.relocate</a></li>
+<li class="nav-item"><a class="nav-link" href="models/report_stock_quantity/index.html">report.stock.quantity</a></li>
+<li class="nav-item"><a class="nav-link" href="models/report_stock_report_reception/index.html">report.stock.report_reception</a></li>
+<li class="nav-item"><a class="nav-link" href="models/stock_forecasted_product_template/index.html">stock.forecasted_product_template</a></li>
+<li class="nav-item"><a class="nav-link" href="models/stock_forecasted_product_product/index.html">stock.forecasted_product_product</a></li>
+<li class="nav-item"><a class="nav-link" href="models/stock_request_count/index.html">stock.request.count</a></li>
+<li class="nav-item"><a class="nav-link" href="models/stock_rule/index.html">stock.rule</a></li>
+<li class="nav-item"><a class="nav-link" href="models/stock_rules_report/index.html">stock.rules.report</a></li>
+<li class="nav-item"><a class="nav-link" href="models/stock_track_confirmation/index.html">stock.track.confirmation</a></li>
+<li class="nav-item"><a class="nav-link" href="models/stock_track_line/index.html">stock.track.line</a></li>
+<li class="nav-item"><a class="nav-link" href="models/stock_valuation_layer/index.html">stock.valuation.layer</a></li>
+<li class="nav-item"><a class="nav-link" href="models/stock_package_type/index.html">stock.package.type</a></li>
+<li class="nav-item"><a class="nav-link" href="models/report_stock_report_stock_rule/index.html">report.stock.report_stock_rule</a></li>
+<li class="nav-item"><a class="nav-link" href="models/stock_replenishment_info/index.html">stock.replenishment.info</a></li>
+<li class="nav-item"><a class="nav-link" href="models/stock_replenishment_option/index.html">stock.replenishment.option</a></li>
+<li class="nav-item"><a class="nav-link" href="models/stock_storage_category/index.html">stock.storage.category</a></li>
+<li class="nav-item"><a class="nav-link" href="models/stock_storage_category_capacity/index.html">stock.storage.category.capacity</a></li>
+<li class="nav-item"><a class="nav-link" href="models/mail_link_preview/index.html">mail.link.preview</a></li>
+<li class="nav-item"><a class="nav-link" href="models/product_supplierinfo/index.html">product.supplierinfo</a></li>
+<li class="nav-item"><a class="nav-link" href="models/ir_config_parameter/index.html">ir.config_parameter</a></li>
+<li class="nav-item"><a class="nav-link" href="models/account_tax_group/index.html">account.tax.group</a></li>
+<li class="nav-item"><a class="nav-link" href="models/account_fiscal_position_tax/index.html">account.fiscal.position.tax</a></li>
+<li class="nav-item"><a class="nav-link" href="models/account_tax_repartition_line/index.html">account.tax.repartition.line</a></li>
+<li class="nav-item"><a class="nav-link" href="models/template_reset_mixin/index.html">template.reset.mixin</a></li>
+<li class="nav-item"><a class="nav-link" href="models/res_territory/index.html">res.territory</a></li>
+<li class="nav-item"><a class="nav-link" href="models/tier_definition/index.html">tier.definition</a></li>
+<li class="nav-item"><a class="nav-link" href="models/tier_review/index.html">tier.review</a></li>
+<li class="nav-item"><a class="nav-link" href="models/tier_validation/index.html">tier.validation</a></li>
+<li class="nav-item"><a class="nav-link" href="models/tier_validation_exception/index.html">tier.validation.exception</a></li>
+<li class="nav-item"><a class="nav-link" href="models/web_tour_tour_step/index.html">web_tour.tour.step</a></li>
+<li class="nav-item"><a class="nav-link" href="models/web_tour_tour/index.html">web_tour.tour</a></li>
+<li class="nav-item"><a class="nav-link" href="models/stock_traceability_report/index.html">stock.traceability.report</a></li>
+<li class="nav-item"><a class="nav-link" href="models/ir_cron_trigger/index.html">ir.cron.trigger</a></li>
+<li class="nav-item"><a class="nav-link" href="models/hr_resume_line_type/index.html">hr.resume.line.type</a></li>
+<li class="nav-item"><a class="nav-link" href="models/account_edi_xml_ubl_20/index.html">account.edi.xml.ubl_20</a></li>
+<li class="nav-item"><a class="nav-link" href="models/account_edi_xml_ubl_21/index.html">account.edi.xml.ubl_21</a></li>
+<li class="nav-item"><a class="nav-link" href="models/account_edi_xml_ubl_bis3/index.html">account.edi.xml.ubl_bis3</a></li>
+<li class="nav-item"><a class="nav-link" href="models/sale_edi_xml_ubl_bis3/index.html">sale.edi.xml.ubl_bis3</a></li>
+<li class="nav-item"><a class="nav-link" href="models/utm_campaign/index.html">utm.campaign</a></li>
+<li class="nav-item"><a class="nav-link" href="models/utm_medium/index.html">utm.medium</a></li>
+<li class="nav-item"><a class="nav-link" href="models/utm_mixin/index.html">utm.mixin</a></li>
+<li class="nav-item"><a class="nav-link" href="models/utm_source/index.html">utm.source</a></li>
+<li class="nav-item"><a class="nav-link" href="models/utm_source_mixin/index.html">utm.source.mixin</a></li>
+<li class="nav-item"><a class="nav-link" href="models/utm_tag/index.html">utm.tag</a></li>
+<li class="nav-item"><a class="nav-link" href="models/_unknown/index.html">_unknown</a></li>
+<li class="nav-item"><a class="nav-link" href="models/base_module_update/index.html">base.module.update</a></li>
+<li class="nav-item"><a class="nav-link" href="models/snailmail_letter_missing_required_fields/index.html">snailmail.letter.missing.required.fields</a></li>
+<li class="nav-item"><a class="nav-link" href="models/update_product_attribute_value/index.html">update.product.attribute.value</a></li>
+<li class="nav-item"><a class="nav-link" href="models/base_module_upgrade/index.html">base.module.upgrade</a></li>
+<li class="nav-item"><a class="nav-link" href="models/res_users/index.html">res.users</a></li>
+<li class="nav-item"><a class="nav-link" href="models/bus_presence/index.html">bus.presence</a></li>
+<li class="nav-item"><a class="nav-link" href="models/res_users_settings/index.html">res.users.settings</a></li>
+<li class="nav-item"><a class="nav-link" href="models/res_users_settings_volumes/index.html">res.users.settings.volumes</a></li>
+<li class="nav-item"><a class="nav-link" href="models/change_password_user/index.html">change.password.user</a></li>
+<li class="nav-item"><a class="nav-link" href="models/change_password_own/index.html">change.password.own</a></li>
+<li class="nav-item"><a class="nav-link" href="models/res_users_apikeys/index.html">res.users.apikeys</a></li>
+<li class="nav-item"><a class="nav-link" href="models/res_users_deletion/index.html">res.users.deletion</a></li>
+<li class="nav-item"><a class="nav-link" href="models/res_users_log/index.html">res.users.log</a></li>
+<li class="nav-item"><a class="nav-link" href="models/validate_account_move/index.html">validate.account.move</a></li>
+<li class="nav-item"><a class="nav-link" href="models/fleet_vehicle_state/index.html">fleet.vehicle.state</a></li>
+<li class="nav-item"><a class="nav-link" href="models/fleet_vehicle_tag/index.html">fleet.vehicle.tag</a></li>
+<li class="nav-item"><a class="nav-link" href="models/ir_ui_view/index.html">ir.ui.view</a></li>
+<li class="nav-item"><a class="nav-link" href="models/stock_warehouse/index.html">stock.warehouse</a></li>
+<li class="nav-item"><a class="nav-link" href="models/stock_warn_insufficient_qty/index.html">stock.warn.insufficient.qty</a></li>
+<li class="nav-item"><a class="nav-link" href="models/stock_warn_insufficient_qty_scrap/index.html">stock.warn.insufficient.qty.scrap</a></li>
+<li class="nav-item"><a class="nav-link" href="models/web_editor_converter_test_sub/index.html">web_editor.converter.test.sub</a></li>
+<li class="nav-item"><a class="nav-link" href="models/web_editor_converter_test/index.html">web_editor.converter.test</a></li>
+<li class="nav-item"><a class="nav-link" href="models/stock_valuation_layer_revaluation/index.html">stock.valuation.layer.revaluation</a></li>
+<li class="nav-item"><a class="nav-link" href="models/resource_calendar_attendance/index.html">resource.calendar.attendance</a></li>
+<li class="nav-item"><a class="nav-link" href="models/hr_work_location/index.html">hr.work.location</a></li>
+<li class="nav-item"><a class="nav-link" href="models/res_branch/index.html">res.branch</a></li>
+<li class="nav-item"><a class="nav-link" href="models/ir_websocket/index.html">ir.websocket</a></li>
+
+        </ul>
+    </div>
+
+    <!-- Docs Content
+	============================ -->
+    <div class="idocs-content">
+      <div class="container">
+        <h2>ir.model</h2>
+<section id="name" class="card card-body">
+<h4 class="card-title">name</h4>
+<p>
+<strong>change_default:</strong> False<br>
+<strong>company_dependent:</strong> False<br>
+<strong>default_export_compatible:</strong> False<br>
+<strong>depends:</strong> []<br>
+<strong>exportable:</strong> True<br>
+<strong>groupable:</strong> True<br>
+<strong>manual:</strong> False<br>
+<strong>name:</strong> name<br>
+<strong>readonly:</strong> False<br>
+<strong>required:</strong> True<br>
+<strong>searchable:</strong> True<br>
+<strong>sortable:</strong> True<br>
+<strong>store:</strong> True<br>
+<strong>string:</strong> Model Description<br>
+<strong>translate:</strong> True<br>
+<strong>trim:</strong> True<br>
+<strong>type:</strong> char<br>
+</p>
+</section>
+
+<section id="model" class="card card-body">
+<h4 class="card-title">model</h4>
+<p>
+<strong>change_default:</strong> False<br>
+<strong>company_dependent:</strong> False<br>
+<strong>default_export_compatible:</strong> False<br>
+<strong>depends:</strong> []<br>
+<strong>exportable:</strong> True<br>
+<strong>groupable:</strong> True<br>
+<strong>manual:</strong> False<br>
+<strong>name:</strong> model<br>
+<strong>readonly:</strong> False<br>
+<strong>required:</strong> True<br>
+<strong>searchable:</strong> True<br>
+<strong>sortable:</strong> True<br>
+<strong>store:</strong> True<br>
+<strong>string:</strong> Model<br>
+<strong>translate:</strong> False<br>
+<strong>trim:</strong> True<br>
+<strong>type:</strong> char<br>
+</p>
+</section>
+
+<section id="order" class="card card-body">
+<h4 class="card-title">order</h4>
+<p>
+<strong>change_default:</strong> False<br>
+<strong>company_dependent:</strong> False<br>
+<strong>default_export_compatible:</strong> False<br>
+<strong>depends:</strong> []<br>
+<strong>exportable:</strong> True<br>
+<strong>groupable:</strong> True<br>
+<strong>help:</strong> SQL expression for ordering records in the model; e.g. "x_sequence asc, id desc"<br>
+<strong>manual:</strong> False<br>
+<strong>name:</strong> order<br>
+<strong>readonly:</strong> False<br>
+<strong>required:</strong> True<br>
+<strong>searchable:</strong> True<br>
+<strong>sortable:</strong> True<br>
+<strong>store:</strong> True<br>
+<strong>string:</strong> Order<br>
+<strong>translate:</strong> False<br>
+<strong>trim:</strong> True<br>
+<strong>type:</strong> char<br>
+</p>
+</section>
+
+<section id="info" class="card card-body">
+<h4 class="card-title">info</h4>
+<p>
+<strong>change_default:</strong> False<br>
+<strong>company_dependent:</strong> False<br>
+<strong>default_export_compatible:</strong> False<br>
+<strong>depends:</strong> []<br>
+<strong>exportable:</strong> True<br>
+<strong>groupable:</strong> True<br>
+<strong>manual:</strong> False<br>
+<strong>name:</strong> info<br>
+<strong>readonly:</strong> False<br>
+<strong>required:</strong> False<br>
+<strong>searchable:</strong> True<br>
+<strong>sortable:</strong> True<br>
+<strong>store:</strong> True<br>
+<strong>string:</strong> Information<br>
+<strong>translate:</strong> False<br>
+<strong>type:</strong> text<br>
+</p>
+</section>
+
+<section id="field_id" class="card card-body">
+<h4 class="card-title">field_id</h4>
+<p>
+<strong>allow_hierachy_operators:</strong> False<br>
+<strong>change_default:</strong> False<br>
+<strong>company_dependent:</strong> False<br>
+<strong>context:</strong> {}<br>
+<strong>default_export_compatible:</strong> False<br>
+<strong>depends:</strong> []<br>
+<strong>domain:</strong> []<br>
+<strong>exportable:</strong> True<br>
+<strong>groupable:</strong> False<br>
+<strong>manual:</strong> False<br>
+<strong>name:</strong> field_id<br>
+<strong>readonly:</strong> False<br>
+<strong>relation:</strong> <a class="nav-link" href="../ir_model_fields/index.html">ir.model.fields</a><br>
+<strong>relation_field:</strong> model_id<br>
+<strong>required:</strong> True<br>
+<strong>searchable:</strong> True<br>
+<strong>sortable:</strong> False<br>
+<strong>store:</strong> True<br>
+<strong>string:</strong> Fields<br>
+<strong>type:</strong> one2many<br>
+</p>
+</section>
+
+<section id="inherited_model_ids" class="card card-body">
+<h4 class="card-title">inherited_model_ids</h4>
+<p>
+<strong>allow_hierachy_operators:</strong> False<br>
+<strong>change_default:</strong> False<br>
+<strong>company_dependent:</strong> False<br>
+<strong>context:</strong> {}<br>
+<strong>default_export_compatible:</strong> False<br>
+<strong>depends:</strong> []<br>
+<strong>domain:</strong> []<br>
+<strong>exportable:</strong> True<br>
+<strong>groupable:</strong> False<br>
+<strong>help:</strong> The list of models that extends the current model.<br>
+<strong>manual:</strong> False<br>
+<strong>name:</strong> inherited_model_ids<br>
+<strong>readonly:</strong> True<br>
+<strong>relation:</strong> <a class="nav-link" href="../ir_model/index.html">ir.model</a><br>
+<strong>required:</strong> False<br>
+<strong>searchable:</strong> False<br>
+<strong>sortable:</strong> False<br>
+<strong>store:</strong> False<br>
+<strong>string:</strong> Inherited models<br>
+<strong>type:</strong> many2many<br>
+</p>
+</section>
+
+<section id="state" class="card card-body">
+<h4 class="card-title">state</h4>
+<p>
+<strong>change_default:</strong> False<br>
+<strong>company_dependent:</strong> False<br>
+<strong>default_export_compatible:</strong> False<br>
+<strong>depends:</strong> []<br>
+<strong>exportable:</strong> True<br>
+<strong>groupable:</strong> True<br>
+<strong>manual:</strong> False<br>
+<strong>name:</strong> state<br>
+<strong>readonly:</strong> True<br>
+<strong>required:</strong> False<br>
+<strong>searchable:</strong> True<br>
+<strong>selection:</strong> [['manual', 'Custom Object'], ['base', 'Base Object']]<br>
+<strong>sortable:</strong> True<br>
+<strong>store:</strong> True<br>
+<strong>string:</strong> Type<br>
+<strong>type:</strong> selection<br>
+</p>
+</section>
+
+<section id="access_ids" class="card card-body">
+<h4 class="card-title">access_ids</h4>
+<p>
+<strong>allow_hierachy_operators:</strong> False<br>
+<strong>change_default:</strong> False<br>
+<strong>company_dependent:</strong> False<br>
+<strong>context:</strong> {}<br>
+<strong>default_export_compatible:</strong> False<br>
+<strong>depends:</strong> []<br>
+<strong>domain:</strong> []<br>
+<strong>exportable:</strong> True<br>
+<strong>groupable:</strong> False<br>
+<strong>manual:</strong> False<br>
+<strong>name:</strong> access_ids<br>
+<strong>readonly:</strong> False<br>
+<strong>relation:</strong> <a class="nav-link" href="../ir_model_access/index.html">ir.model.access</a><br>
+<strong>relation_field:</strong> model_id<br>
+<strong>required:</strong> False<br>
+<strong>searchable:</strong> True<br>
+<strong>sortable:</strong> False<br>
+<strong>store:</strong> True<br>
+<strong>string:</strong> Access<br>
+<strong>type:</strong> one2many<br>
+</p>
+</section>
+
+<section id="rule_ids" class="card card-body">
+<h4 class="card-title">rule_ids</h4>
+<p>
+<strong>allow_hierachy_operators:</strong> False<br>
+<strong>change_default:</strong> False<br>
+<strong>company_dependent:</strong> False<br>
+<strong>context:</strong> {}<br>
+<strong>default_export_compatible:</strong> False<br>
+<strong>depends:</strong> []<br>
+<strong>domain:</strong> []<br>
+<strong>exportable:</strong> True<br>
+<strong>groupable:</strong> False<br>
+<strong>manual:</strong> False<br>
+<strong>name:</strong> rule_ids<br>
+<strong>readonly:</strong> False<br>
+<strong>relation:</strong> <a class="nav-link" href="../ir_rule/index.html">ir.rule</a><br>
+<strong>relation_field:</strong> model_id<br>
+<strong>required:</strong> False<br>
+<strong>searchable:</strong> True<br>
+<strong>sortable:</strong> False<br>
+<strong>store:</strong> True<br>
+<strong>string:</strong> Record Rules<br>
+<strong>type:</strong> one2many<br>
+</p>
+</section>
+
+<section id="transient" class="card card-body">
+<h4 class="card-title">transient</h4>
+<p>
+<strong>change_default:</strong> False<br>
+<strong>company_dependent:</strong> False<br>
+<strong>default_export_compatible:</strong> False<br>
+<strong>depends:</strong> []<br>
+<strong>exportable:</strong> True<br>
+<strong>groupable:</strong> True<br>
+<strong>manual:</strong> False<br>
+<strong>name:</strong> transient<br>
+<strong>readonly:</strong> False<br>
+<strong>required:</strong> False<br>
+<strong>searchable:</strong> True<br>
+<strong>sortable:</strong> True<br>
+<strong>store:</strong> True<br>
+<strong>string:</strong> Transient Model<br>
+<strong>type:</strong> boolean<br>
+</p>
+</section>
+
+<section id="modules" class="card card-body">
+<h4 class="card-title">modules</h4>
+<p>
+<strong>change_default:</strong> False<br>
+<strong>company_dependent:</strong> False<br>
+<strong>default_export_compatible:</strong> False<br>
+<strong>depends:</strong> []<br>
+<strong>exportable:</strong> True<br>
+<strong>groupable:</strong> False<br>
+<strong>help:</strong> List of modules in which the object is defined or inherited<br>
+<strong>manual:</strong> False<br>
+<strong>name:</strong> modules<br>
+<strong>readonly:</strong> True<br>
+<strong>required:</strong> False<br>
+<strong>searchable:</strong> False<br>
+<strong>sortable:</strong> False<br>
+<strong>store:</strong> False<br>
+<strong>string:</strong> In Apps<br>
+<strong>translate:</strong> False<br>
+<strong>trim:</strong> True<br>
+<strong>type:</strong> char<br>
+</p>
+</section>
+
+<section id="view_ids" class="card card-body">
+<h4 class="card-title">view_ids</h4>
+<p>
+<strong>allow_hierachy_operators:</strong> False<br>
+<strong>change_default:</strong> False<br>
+<strong>company_dependent:</strong> False<br>
+<strong>context:</strong> {}<br>
+<strong>default_export_compatible:</strong> False<br>
+<strong>depends:</strong> []<br>
+<strong>domain:</strong> []<br>
+<strong>exportable:</strong> True<br>
+<strong>groupable:</strong> False<br>
+<strong>manual:</strong> False<br>
+<strong>name:</strong> view_ids<br>
+<strong>readonly:</strong> True<br>
+<strong>relation:</strong> <a class="nav-link" href="../ir_ui_view/index.html">ir.ui.view</a><br>
+<strong>required:</strong> False<br>
+<strong>searchable:</strong> False<br>
+<strong>sortable:</strong> False<br>
+<strong>store:</strong> False<br>
+<strong>string:</strong> Views<br>
+<strong>type:</strong> one2many<br>
+</p>
+</section>
+
+<section id="count" class="card card-body">
+<h4 class="card-title">count</h4>
+<p>
+<strong>change_default:</strong> False<br>
+<strong>company_dependent:</strong> False<br>
+<strong>default_export_compatible:</strong> False<br>
+<strong>depends:</strong> []<br>
+<strong>exportable:</strong> True<br>
+<strong>groupable:</strong> False<br>
+<strong>help:</strong> Total number of records in this model<br>
+<strong>manual:</strong> False<br>
+<strong>name:</strong> count<br>
+<strong>readonly:</strong> True<br>
+<strong>required:</strong> False<br>
+<strong>searchable:</strong> False<br>
+<strong>sortable:</strong> False<br>
+<strong>store:</strong> False<br>
+<strong>string:</strong> Count (Incl. Archived)<br>
+<strong>type:</strong> integer<br>
+</p>
+</section>
+
+<section id="id" class="card card-body">
+<h4 class="card-title">id</h4>
+<p>
+<strong>change_default:</strong> False<br>
+<strong>company_dependent:</strong> False<br>
+<strong>default_export_compatible:</strong> False<br>
+<strong>depends:</strong> []<br>
+<strong>exportable:</strong> True<br>
+<strong>groupable:</strong> True<br>
+<strong>manual:</strong> False<br>
+<strong>name:</strong> id<br>
+<strong>readonly:</strong> True<br>
+<strong>required:</strong> False<br>
+<strong>searchable:</strong> True<br>
+<strong>sortable:</strong> True<br>
+<strong>store:</strong> True<br>
+<strong>string:</strong> ID<br>
+<strong>type:</strong> integer<br>
+</p>
+</section>
+
+<section id="display_name" class="card card-body">
+<h4 class="card-title">display_name</h4>
+<p>
+<strong>change_default:</strong> False<br>
+<strong>company_dependent:</strong> False<br>
+<strong>default_export_compatible:</strong> False<br>
+<strong>depends:</strong> ['name']<br>
+<strong>exportable:</strong> True<br>
+<strong>groupable:</strong> False<br>
+<strong>manual:</strong> False<br>
+<strong>name:</strong> display_name<br>
+<strong>readonly:</strong> True<br>
+<strong>required:</strong> False<br>
+<strong>searchable:</strong> True<br>
+<strong>sortable:</strong> False<br>
+<strong>store:</strong> False<br>
+<strong>string:</strong> Display Name<br>
+<strong>translate:</strong> False<br>
+<strong>trim:</strong> True<br>
+<strong>type:</strong> char<br>
+</p>
+</section>
+
+<section id="create_uid" class="card card-body">
+<h4 class="card-title">create_uid</h4>
+<p>
+<strong>allow_hierachy_operators:</strong> True<br>
+<strong>change_default:</strong> False<br>
+<strong>company_dependent:</strong> False<br>
+<strong>context:</strong> {}<br>
+<strong>default_export_compatible:</strong> False<br>
+<strong>depends:</strong> []<br>
+<strong>domain:</strong> []<br>
+<strong>exportable:</strong> True<br>
+<strong>groupable:</strong> True<br>
+<strong>manual:</strong> False<br>
+<strong>name:</strong> create_uid<br>
+<strong>readonly:</strong> True<br>
+<strong>relation:</strong> <a class="nav-link" href="../res_users/index.html">res.users</a><br>
+<strong>required:</strong> False<br>
+<strong>searchable:</strong> True<br>
+<strong>sortable:</strong> True<br>
+<strong>store:</strong> True<br>
+<strong>string:</strong> Created by<br>
+<strong>type:</strong> many2one<br>
+</p>
+</section>
+
+<section id="create_date" class="card card-body">
+<h4 class="card-title">create_date</h4>
+<p>
+<strong>change_default:</strong> False<br>
+<strong>company_dependent:</strong> False<br>
+<strong>default_export_compatible:</strong> False<br>
+<strong>depends:</strong> []<br>
+<strong>exportable:</strong> True<br>
+<strong>groupable:</strong> True<br>
+<strong>manual:</strong> False<br>
+<strong>name:</strong> create_date<br>
+<strong>readonly:</strong> True<br>
+<strong>required:</strong> False<br>
+<strong>searchable:</strong> True<br>
+<strong>sortable:</strong> True<br>
+<strong>store:</strong> True<br>
+<strong>string:</strong> Created on<br>
+<strong>type:</strong> datetime<br>
+</p>
+</section>
+
+<section id="write_uid" class="card card-body">
+<h4 class="card-title">write_uid</h4>
+<p>
+<strong>allow_hierachy_operators:</strong> True<br>
+<strong>change_default:</strong> False<br>
+<strong>company_dependent:</strong> False<br>
+<strong>context:</strong> {}<br>
+<strong>default_export_compatible:</strong> False<br>
+<strong>depends:</strong> []<br>
+<strong>domain:</strong> []<br>
+<strong>exportable:</strong> True<br>
+<strong>groupable:</strong> True<br>
+<strong>manual:</strong> False<br>
+<strong>name:</strong> write_uid<br>
+<strong>readonly:</strong> True<br>
+<strong>relation:</strong> <a class="nav-link" href="../res_users/index.html">res.users</a><br>
+<strong>required:</strong> False<br>
+<strong>searchable:</strong> True<br>
+<strong>sortable:</strong> True<br>
+<strong>store:</strong> True<br>
+<strong>string:</strong> Last Updated by<br>
+<strong>type:</strong> many2one<br>
+</p>
+</section>
+
+<section id="write_date" class="card card-body">
+<h4 class="card-title">write_date</h4>
+<p>
+<strong>change_default:</strong> False<br>
+<strong>company_dependent:</strong> False<br>
+<strong>default_export_compatible:</strong> False<br>
+<strong>depends:</strong> []<br>
+<strong>exportable:</strong> True<br>
+<strong>groupable:</strong> True<br>
+<strong>manual:</strong> False<br>
+<strong>name:</strong> write_date<br>
+<strong>readonly:</strong> True<br>
+<strong>required:</strong> False<br>
+<strong>searchable:</strong> True<br>
+<strong>sortable:</strong> True<br>
+<strong>store:</strong> True<br>
+<strong>string:</strong> Last Updated on<br>
+<strong>type:</strong> datetime<br>
+</p>
+</section>
+
+<section id="is_mail_thread" class="card card-body">
+<h4 class="card-title">is_mail_thread</h4>
+<p>
+<strong>change_default:</strong> False<br>
+<strong>company_dependent:</strong> False<br>
+<strong>default_export_compatible:</strong> False<br>
+<strong>depends:</strong> []<br>
+<strong>exportable:</strong> True<br>
+<strong>groupable:</strong> True<br>
+<strong>manual:</strong> False<br>
+<strong>name:</strong> is_mail_thread<br>
+<strong>readonly:</strong> False<br>
+<strong>required:</strong> False<br>
+<strong>searchable:</strong> True<br>
+<strong>sortable:</strong> True<br>
+<strong>store:</strong> True<br>
+<strong>string:</strong> Has Mail Thread<br>
+<strong>type:</strong> boolean<br>
+</p>
+</section>
+
+<section id="is_mail_activity" class="card card-body">
+<h4 class="card-title">is_mail_activity</h4>
+<p>
+<strong>change_default:</strong> False<br>
+<strong>company_dependent:</strong> False<br>
+<strong>default_export_compatible:</strong> False<br>
+<strong>depends:</strong> []<br>
+<strong>exportable:</strong> True<br>
+<strong>groupable:</strong> True<br>
+<strong>manual:</strong> False<br>
+<strong>name:</strong> is_mail_activity<br>
+<strong>readonly:</strong> False<br>
+<strong>required:</strong> False<br>
+<strong>searchable:</strong> True<br>
+<strong>sortable:</strong> True<br>
+<strong>store:</strong> True<br>
+<strong>string:</strong> Has Mail Activity<br>
+<strong>type:</strong> boolean<br>
+</p>
+</section>
+
+<section id="is_mail_blacklist" class="card card-body">
+<h4 class="card-title">is_mail_blacklist</h4>
+<p>
+<strong>change_default:</strong> False<br>
+<strong>company_dependent:</strong> False<br>
+<strong>default_export_compatible:</strong> False<br>
+<strong>depends:</strong> []<br>
+<strong>exportable:</strong> True<br>
+<strong>groupable:</strong> True<br>
+<strong>manual:</strong> False<br>
+<strong>name:</strong> is_mail_blacklist<br>
+<strong>readonly:</strong> False<br>
+<strong>required:</strong> False<br>
+<strong>searchable:</strong> True<br>
+<strong>sortable:</strong> True<br>
+<strong>store:</strong> True<br>
+<strong>string:</strong> Has Mail Blacklist<br>
+<strong>type:</strong> boolean<br>
+</p>
+</section>
+
+<section id="is_mail_thread_sms" class="card card-body">
+<h4 class="card-title">is_mail_thread_sms</h4>
+<p>
+<strong>change_default:</strong> False<br>
+<strong>company_dependent:</strong> False<br>
+<strong>default_export_compatible:</strong> False<br>
+<strong>depends:</strong> ['is_mail_thread']<br>
+<strong>exportable:</strong> True<br>
+<strong>groupable:</strong> False<br>
+<strong>help:</strong> Whether this model supports messages and notifications through SMS<br>
+<strong>manual:</strong> False<br>
+<strong>name:</strong> is_mail_thread_sms<br>
+<strong>readonly:</strong> True<br>
+<strong>required:</strong> False<br>
+<strong>searchable:</strong> True<br>
+<strong>sortable:</strong> False<br>
+<strong>store:</strong> False<br>
+<strong>string:</strong> Mail Thread SMS<br>
+<strong>type:</strong> boolean<br>
+</p>
+</section>
+
+
+      </div>
+    </div>
+
+  </div>
+  <!-- Content end -->
+
+  <!-- Footer
+  ============================ -->
+  <footer id="footer" class="section bg-dark footer-text-light">
+    <div class="container">
+      <ul class="social-icons social-icons-lg social-icons-muted justify-content-center mb-3">
+        <li><a data-toggle="tooltip" href="https://twitter.com/harnishdesign/" target="_blank" title=""
+            data-original-title="Twitter"><i class="fab fa-twitter"></i></a></li>
+        <li><a data-toggle="tooltip" href="http://www.facebook.com/harnishdesign/" target="_blank" title=""
+            data-original-title="Facebook"><i class="fab fa-facebook-f"></i></a></li>
+        <li><a data-toggle="tooltip" href="http://www.dribbble.com/harnishdesign/" target="_blank" title=""
+            data-original-title="Dribbble"><i class="fab fa-dribbble"></i></a></li>
+        <li><a data-toggle="tooltip" href="http://www.github.com/" target="_blank" title=""
+            data-original-title="GitHub"><i class="fab fa-github"></i></a></li>
+      </ul>
+      <p class="text-center">Copyright &copy; 2020 <a
+          href="http://www.harnishdesign.net/idocs-one-page-documentation-html-template/">iDocs</a>. All Rights
+        Reserved.</p>
+      <p class="text-2 text-center mb-0">Design &amp; Develop by <a class="btn-link" target="_blank"
+          href="http://www.harnishdesign.net/">HarnishDesign</a>.</p>
+    </div>
+  </footer>
+  <!-- Footer end -->
+
+  </div>
+  <!-- Document Wrapper end -->
+
+  <!-- Back To Top -->
+  <a id="back-to-top" data-toggle="tooltip" title="Back to Top" href="javascript:void(0)"><i
+      class="fa fa-chevron-up"></i></a>
+
+  <!-- JavaScript
+============================ -->
+  <script src="assets/vendor/jquery/jquery.min.js"></script>
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <!-- Highlight JS -->
+  <script src="assets/vendor/highlight.js/highlight.min.js"></script>
+  <!-- Easing -->
+  <script src="assets/vendor/jquery.easing/jquery.easing.min.js"></script>
+  <!-- Magnific Popup -->
+  <script src="assets/vendor/magnific-popup/jquery.magnific-popup.min.js"></script>
+  <!-- Custom Script -->
+  <script src="assets/js/theme.js"></script>
+</body>
+
+</html>

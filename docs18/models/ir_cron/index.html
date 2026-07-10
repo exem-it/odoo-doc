@@ -1,0 +1,1795 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1.0, shrink-to-fit=no">
+  <link href="../../assets/images/odoo_doc.png" rel="icon" />
+  <title>Odoo API Documentation</title>
+  <meta name="description" content="Your ThemeForest item Name and description">
+  <meta name="author" content="harnishdesign.net">
+
+  <!-- Stylesheet
+============================== -->
+  <!-- Bootstrap -->
+  <link rel="stylesheet" type="text/css" href="../../assets/vendor/bootstrap/css/bootstrap.min.css" />
+  <!-- Font Awesome Icon -->
+  <link rel="stylesheet" type="text/css" href="../../assets/vendor/font-awesome/css/all.min.css" />
+  <!-- Magnific Popup -->
+  <link rel="stylesheet" type="text/css" href="../../assets/vendor/magnific-popup/magnific-popup.min.css" />
+  <!-- Highlight Syntax -->
+  <link rel="stylesheet" type="text/css" href="../../assets/vendor/highlight.js/styles/github.css" />
+  <!-- Custom Stylesheet -->
+  <link rel="stylesheet" type="text/css" href="../../assets/css/stylesheet.css" />
+</head>
+
+<body data-spy="scroll" data-target=".idocs-navigation" data-offset="125">
+
+  <!-- Preloader -->
+  <div class="preloader">
+    <div class="lds-ellipsis">
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+    </div>
+  </div>
+  <!-- Preloader End -->
+
+  <!-- Document Wrapper   
+=============================== -->
+  <div id="main-wrapper">
+
+  <!-- Header
+  ============================ -->
+  <header id="header" class="sticky-top">
+    <!-- Navbar -->
+    <nav class="primary-menu navbar navbar-expand-lg navbar-dropdown-dark">
+      <div class="container-fluid">
+        <!-- Sidebar Toggler -->
+		<button id="sidebarCollapse" class="navbar-toggler d-block d-md-none" type="button"><span></span><span class="w-75"></span><span class="w-50"></span></button>
+
+		<!-- Logo -->
+        <a class="logo ml-md-3" href="index.html" title="iDocs Template"> <img src="../../assets/images/odoo_doc.png" alt="iDocs Template"/> </a>
+		<span class="text-2 ml-2">v1.0</span>
+        <!-- Logo End -->
+
+		<!-- Navbar Toggler -->
+		<button class="navbar-toggler ml-auto" type="button" data-toggle="collapse" data-target="#header-nav"><span></span><span></span><span></span></button>
+
+		<div id="header-nav" class="collapse navbar-collapse justify-content-end">
+          <ul class="navbar-nav">
+            <li class="dropdown"> <a class="dropdown-toggle" href="#">Navigation</a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="index.html">ir.model</a></li>
+                <li><a class="dropdown-item" href="odoo_operators.html">operators</a></li>
+              </ul>
+            </li>
+            <li><a target="_blank" href="https://themeforest.net/user/harnishdesign/#contact?ref=HarnishDesign">Support</a></li>
+          </ul>
+        </div>
+        <ul class="social-icons social-icons-sm ml-lg-2 mr-2">
+          <li class="social-icons-twitter"><a data-toggle="tooltip" href="http://www.twitter.com/harnishdesign/" target="_blank" title="" data-original-title="Twitter"><i class="fab fa-twitter"></i></a></li>
+        </ul>
+      </div>
+    </nav>
+    <!-- Navbar End -->
+  </header>
+  <!-- Header End -->
+
+  <!-- Content
+  ============================ -->
+  <div id="content" role="main">
+
+    <!-- Sidebar Navigation
+	============================ -->
+    <div class="idocs-navigation bg-light">
+        <ul class="nav flex-column">
+          <li class="nav-item"><a class="nav-link" href="#ir_actions_server_id">ir_actions_server_id</a></li>
+<li class="nav-item"><a class="nav-link" href="#cron_name">cron_name</a></li>
+<li class="nav-item"><a class="nav-link" href="#user_id">user_id</a></li>
+<li class="nav-item"><a class="nav-link" href="#active">active</a></li>
+<li class="nav-item"><a class="nav-link" href="#interval_number">interval_number</a></li>
+<li class="nav-item"><a class="nav-link" href="#interval_type">interval_type</a></li>
+<li class="nav-item"><a class="nav-link" href="#nextcall">nextcall</a></li>
+<li class="nav-item"><a class="nav-link" href="#lastcall">lastcall</a></li>
+<li class="nav-item"><a class="nav-link" href="#priority">priority</a></li>
+<li class="nav-item"><a class="nav-link" href="#failure_count">failure_count</a></li>
+<li class="nav-item"><a class="nav-link" href="#first_failure_date">first_failure_date</a></li>
+<li class="nav-item"><a class="nav-link" href="#id">id</a></li>
+<li class="nav-item"><a class="nav-link" href="#display_name">display_name</a></li>
+<li class="nav-item"><a class="nav-link" href="#create_uid">create_uid</a></li>
+<li class="nav-item"><a class="nav-link" href="#create_date">create_date</a></li>
+<li class="nav-item"><a class="nav-link" href="#write_uid">write_uid</a></li>
+<li class="nav-item"><a class="nav-link" href="#write_date">write_date</a></li>
+<li class="nav-item"><a class="nav-link" href="#name">name</a></li>
+<li class="nav-item"><a class="nav-link" href="#type">type</a></li>
+<li class="nav-item"><a class="nav-link" href="#xml_id">xml_id</a></li>
+<li class="nav-item"><a class="nav-link" href="#path">path</a></li>
+<li class="nav-item"><a class="nav-link" href="#help">help</a></li>
+<li class="nav-item"><a class="nav-link" href="#binding_model_id">binding_model_id</a></li>
+<li class="nav-item"><a class="nav-link" href="#binding_type">binding_type</a></li>
+<li class="nav-item"><a class="nav-link" href="#binding_view_types">binding_view_types</a></li>
+<li class="nav-item"><a class="nav-link" href="#usage">usage</a></li>
+<li class="nav-item"><a class="nav-link" href="#state">state</a></li>
+<li class="nav-item"><a class="nav-link" href="#sequence">sequence</a></li>
+<li class="nav-item"><a class="nav-link" href="#model_id">model_id</a></li>
+<li class="nav-item"><a class="nav-link" href="#available_model_ids">available_model_ids</a></li>
+<li class="nav-item"><a class="nav-link" href="#model_name">model_name</a></li>
+<li class="nav-item"><a class="nav-link" href="#code">code</a></li>
+<li class="nav-item"><a class="nav-link" href="#child_ids">child_ids</a></li>
+<li class="nav-item"><a class="nav-link" href="#crud_model_id">crud_model_id</a></li>
+<li class="nav-item"><a class="nav-link" href="#crud_model_name">crud_model_name</a></li>
+<li class="nav-item"><a class="nav-link" href="#link_field_id">link_field_id</a></li>
+<li class="nav-item"><a class="nav-link" href="#groups_id">groups_id</a></li>
+<li class="nav-item"><a class="nav-link" href="#update_field_id">update_field_id</a></li>
+<li class="nav-item"><a class="nav-link" href="#update_path">update_path</a></li>
+<li class="nav-item"><a class="nav-link" href="#update_related_model_id">update_related_model_id</a></li>
+<li class="nav-item"><a class="nav-link" href="#update_field_type">update_field_type</a></li>
+<li class="nav-item"><a class="nav-link" href="#update_m2m_operation">update_m2m_operation</a></li>
+<li class="nav-item"><a class="nav-link" href="#update_boolean_value">update_boolean_value</a></li>
+<li class="nav-item"><a class="nav-link" href="#value">value</a></li>
+<li class="nav-item"><a class="nav-link" href="#evaluation_type">evaluation_type</a></li>
+<li class="nav-item"><a class="nav-link" href="#resource_ref">resource_ref</a></li>
+<li class="nav-item"><a class="nav-link" href="#selection_value">selection_value</a></li>
+<li class="nav-item"><a class="nav-link" href="#value_field_to_show">value_field_to_show</a></li>
+<li class="nav-item"><a class="nav-link" href="#webhook_url">webhook_url</a></li>
+<li class="nav-item"><a class="nav-link" href="#webhook_field_ids">webhook_field_ids</a></li>
+<li class="nav-item"><a class="nav-link" href="#webhook_sample_payload">webhook_sample_payload</a></li>
+<li class="nav-item"><a class="nav-link" href="#partner_ids">partner_ids</a></li>
+<li class="nav-item"><a class="nav-link" href="#template_id">template_id</a></li>
+<li class="nav-item"><a class="nav-link" href="#mail_post_autofollow">mail_post_autofollow</a></li>
+<li class="nav-item"><a class="nav-link" href="#mail_post_method">mail_post_method</a></li>
+<li class="nav-item"><a class="nav-link" href="#activity_type_id">activity_type_id</a></li>
+<li class="nav-item"><a class="nav-link" href="#activity_summary">activity_summary</a></li>
+<li class="nav-item"><a class="nav-link" href="#activity_note">activity_note</a></li>
+<li class="nav-item"><a class="nav-link" href="#activity_date_deadline_range">activity_date_deadline_range</a></li>
+<li class="nav-item"><a class="nav-link" href="#activity_date_deadline_range_type">activity_date_deadline_range_type</a></li>
+<li class="nav-item"><a class="nav-link" href="#activity_user_type">activity_user_type</a></li>
+<li class="nav-item"><a class="nav-link" href="#activity_user_id">activity_user_id</a></li>
+<li class="nav-item"><a class="nav-link" href="#activity_user_field_name">activity_user_field_name</a></li>
+<li class="nav-item"><a class="nav-link" href="#sms_template_id">sms_template_id</a></li>
+<li class="nav-item"><a class="nav-link" href="#sms_method">sms_method</a></li>
+
+        </ul>
+    </div>
+
+    <!-- Docs Content
+	============================ -->
+    <div class="idocs-content">
+      <div class="container">
+        <h2>ir.cron</h2>
+<section id="ir_actions_server_id" class="card card-body">
+<h4 class="card-title">ir_actions_server_id</h4>
+<p>
+<strong>allow_hierachy_operators:</strong> False<br>
+<strong>change_default:</strong> False<br>
+<strong>company_dependent:</strong> False<br>
+<strong>context:</strong> {}<br>
+<strong>default_export_compatible:</strong> False<br>
+<strong>depends:</strong> []<br>
+<strong>domain:</strong> []<br>
+<strong>exportable:</strong> True<br>
+<strong>groupable:</strong> True<br>
+<strong>manual:</strong> False<br>
+<strong>name:</strong> ir_actions_server_id<br>
+<strong>readonly:</strong> False<br>
+<strong>relation:</strong> <a class="nav-link" href="../ir_actions_server/index.html">ir.actions.server</a><br>
+<strong>required:</strong> True<br>
+<strong>searchable:</strong> True<br>
+<strong>sortable:</strong> True<br>
+<strong>store:</strong> True<br>
+<strong>string:</strong> Server action<br>
+<strong>type:</strong> many2one<br>
+</p>
+</section>
+
+<section id="cron_name" class="card card-body">
+<h4 class="card-title">cron_name</h4>
+<p>
+<strong>change_default:</strong> False<br>
+<strong>company_dependent:</strong> False<br>
+<strong>default_export_compatible:</strong> False<br>
+<strong>depends:</strong> ['ir_actions_server_id.name']<br>
+<strong>exportable:</strong> True<br>
+<strong>groupable:</strong> True<br>
+<strong>manual:</strong> False<br>
+<strong>name:</strong> cron_name<br>
+<strong>readonly:</strong> True<br>
+<strong>required:</strong> False<br>
+<strong>searchable:</strong> True<br>
+<strong>sortable:</strong> True<br>
+<strong>store:</strong> True<br>
+<strong>string:</strong> Name<br>
+<strong>translate:</strong> False<br>
+<strong>trim:</strong> True<br>
+<strong>type:</strong> char<br>
+</p>
+</section>
+
+<section id="user_id" class="card card-body">
+<h4 class="card-title">user_id</h4>
+<p>
+<strong>allow_hierachy_operators:</strong> True<br>
+<strong>change_default:</strong> False<br>
+<strong>company_dependent:</strong> False<br>
+<strong>context:</strong> {}<br>
+<strong>default_export_compatible:</strong> False<br>
+<strong>depends:</strong> []<br>
+<strong>domain:</strong> []<br>
+<strong>exportable:</strong> True<br>
+<strong>groupable:</strong> True<br>
+<strong>manual:</strong> False<br>
+<strong>name:</strong> user_id<br>
+<strong>readonly:</strong> False<br>
+<strong>relation:</strong> <a class="nav-link" href="../res_users/index.html">res.users</a><br>
+<strong>required:</strong> True<br>
+<strong>searchable:</strong> True<br>
+<strong>sortable:</strong> True<br>
+<strong>store:</strong> True<br>
+<strong>string:</strong> Scheduler User<br>
+<strong>type:</strong> many2one<br>
+</p>
+</section>
+
+<section id="active" class="card card-body">
+<h4 class="card-title">active</h4>
+<p>
+<strong>change_default:</strong> False<br>
+<strong>company_dependent:</strong> False<br>
+<strong>default_export_compatible:</strong> False<br>
+<strong>depends:</strong> []<br>
+<strong>exportable:</strong> True<br>
+<strong>groupable:</strong> True<br>
+<strong>manual:</strong> False<br>
+<strong>name:</strong> active<br>
+<strong>readonly:</strong> False<br>
+<strong>required:</strong> False<br>
+<strong>searchable:</strong> True<br>
+<strong>sortable:</strong> True<br>
+<strong>store:</strong> True<br>
+<strong>string:</strong> Active<br>
+<strong>type:</strong> boolean<br>
+</p>
+</section>
+
+<section id="interval_number" class="card card-body">
+<h4 class="card-title">interval_number</h4>
+<p>
+<strong>change_default:</strong> False<br>
+<strong>company_dependent:</strong> False<br>
+<strong>default_export_compatible:</strong> False<br>
+<strong>depends:</strong> []<br>
+<strong>exportable:</strong> True<br>
+<strong>groupable:</strong> True<br>
+<strong>help:</strong> Repeat every x.<br>
+<strong>manual:</strong> False<br>
+<strong>name:</strong> interval_number<br>
+<strong>readonly:</strong> False<br>
+<strong>required:</strong> True<br>
+<strong>searchable:</strong> True<br>
+<strong>sortable:</strong> True<br>
+<strong>store:</strong> True<br>
+<strong>string:</strong> Interval Number<br>
+<strong>type:</strong> integer<br>
+</p>
+</section>
+
+<section id="interval_type" class="card card-body">
+<h4 class="card-title">interval_type</h4>
+<p>
+<strong>change_default:</strong> False<br>
+<strong>company_dependent:</strong> False<br>
+<strong>default_export_compatible:</strong> False<br>
+<strong>depends:</strong> []<br>
+<strong>exportable:</strong> True<br>
+<strong>groupable:</strong> True<br>
+<strong>manual:</strong> False<br>
+<strong>name:</strong> interval_type<br>
+<strong>readonly:</strong> False<br>
+<strong>required:</strong> True<br>
+<strong>searchable:</strong> True<br>
+<strong>selection:</strong> [['minutes', 'Minutes'], ['hours', 'Hours'], ['days', 'Days'], ['weeks', 'Weeks'], ['months', 'Months']]<br>
+<strong>sortable:</strong> True<br>
+<strong>store:</strong> True<br>
+<strong>string:</strong> Interval Unit<br>
+<strong>type:</strong> selection<br>
+</p>
+</section>
+
+<section id="nextcall" class="card card-body">
+<h4 class="card-title">nextcall</h4>
+<p>
+<strong>change_default:</strong> False<br>
+<strong>company_dependent:</strong> False<br>
+<strong>default_export_compatible:</strong> False<br>
+<strong>depends:</strong> []<br>
+<strong>exportable:</strong> True<br>
+<strong>groupable:</strong> True<br>
+<strong>help:</strong> Next planned execution date for this job.<br>
+<strong>manual:</strong> False<br>
+<strong>name:</strong> nextcall<br>
+<strong>readonly:</strong> False<br>
+<strong>required:</strong> True<br>
+<strong>searchable:</strong> True<br>
+<strong>sortable:</strong> True<br>
+<strong>store:</strong> True<br>
+<strong>string:</strong> Next Execution Date<br>
+<strong>type:</strong> datetime<br>
+</p>
+</section>
+
+<section id="lastcall" class="card card-body">
+<h4 class="card-title">lastcall</h4>
+<p>
+<strong>change_default:</strong> False<br>
+<strong>company_dependent:</strong> False<br>
+<strong>default_export_compatible:</strong> False<br>
+<strong>depends:</strong> []<br>
+<strong>exportable:</strong> True<br>
+<strong>groupable:</strong> True<br>
+<strong>help:</strong> Previous time the cron ran successfully, provided to the job through the context on the `lastcall` key<br>
+<strong>manual:</strong> False<br>
+<strong>name:</strong> lastcall<br>
+<strong>readonly:</strong> False<br>
+<strong>required:</strong> False<br>
+<strong>searchable:</strong> True<br>
+<strong>sortable:</strong> True<br>
+<strong>store:</strong> True<br>
+<strong>string:</strong> Last Execution Date<br>
+<strong>type:</strong> datetime<br>
+</p>
+</section>
+
+<section id="priority" class="card card-body">
+<h4 class="card-title">priority</h4>
+<p>
+<strong>change_default:</strong> False<br>
+<strong>company_dependent:</strong> False<br>
+<strong>default_export_compatible:</strong> False<br>
+<strong>depends:</strong> []<br>
+<strong>exportable:</strong> True<br>
+<strong>groupable:</strong> True<br>
+<strong>help:</strong> The priority of the job, as an integer: 0 means higher priority, 10 means lower priority.<br>
+<strong>manual:</strong> False<br>
+<strong>name:</strong> priority<br>
+<strong>readonly:</strong> False<br>
+<strong>required:</strong> False<br>
+<strong>searchable:</strong> True<br>
+<strong>sortable:</strong> True<br>
+<strong>store:</strong> True<br>
+<strong>string:</strong> Priority<br>
+<strong>type:</strong> integer<br>
+</p>
+</section>
+
+<section id="failure_count" class="card card-body">
+<h4 class="card-title">failure_count</h4>
+<p>
+<strong>aggregator:</strong> sum<br>
+<strong>change_default:</strong> False<br>
+<strong>company_dependent:</strong> False<br>
+<strong>default_export_compatible:</strong> False<br>
+<strong>depends:</strong> []<br>
+<strong>exportable:</strong> True<br>
+<strong>groupable:</strong> True<br>
+<strong>help:</strong> The number of consecutive failures of this job. It is automatically reset on success.<br>
+<strong>manual:</strong> False<br>
+<strong>name:</strong> failure_count<br>
+<strong>readonly:</strong> False<br>
+<strong>required:</strong> False<br>
+<strong>searchable:</strong> True<br>
+<strong>sortable:</strong> True<br>
+<strong>store:</strong> True<br>
+<strong>string:</strong> Failure Count<br>
+<strong>type:</strong> integer<br>
+</p>
+</section>
+
+<section id="first_failure_date" class="card card-body">
+<h4 class="card-title">first_failure_date</h4>
+<p>
+<strong>change_default:</strong> False<br>
+<strong>company_dependent:</strong> False<br>
+<strong>default_export_compatible:</strong> False<br>
+<strong>depends:</strong> []<br>
+<strong>exportable:</strong> True<br>
+<strong>groupable:</strong> True<br>
+<strong>help:</strong> The first time the cron failed. It is automatically reset on success.<br>
+<strong>manual:</strong> False<br>
+<strong>name:</strong> first_failure_date<br>
+<strong>readonly:</strong> False<br>
+<strong>required:</strong> False<br>
+<strong>searchable:</strong> True<br>
+<strong>sortable:</strong> True<br>
+<strong>store:</strong> True<br>
+<strong>string:</strong> First Failure Date<br>
+<strong>type:</strong> datetime<br>
+</p>
+</section>
+
+<section id="id" class="card card-body">
+<h4 class="card-title">id</h4>
+<p>
+<strong>change_default:</strong> False<br>
+<strong>company_dependent:</strong> False<br>
+<strong>default_export_compatible:</strong> False<br>
+<strong>depends:</strong> []<br>
+<strong>exportable:</strong> True<br>
+<strong>groupable:</strong> True<br>
+<strong>manual:</strong> False<br>
+<strong>name:</strong> id<br>
+<strong>readonly:</strong> True<br>
+<strong>required:</strong> False<br>
+<strong>searchable:</strong> True<br>
+<strong>sortable:</strong> True<br>
+<strong>store:</strong> True<br>
+<strong>string:</strong> ID<br>
+<strong>type:</strong> integer<br>
+</p>
+</section>
+
+<section id="display_name" class="card card-body">
+<h4 class="card-title">display_name</h4>
+<p>
+<strong>change_default:</strong> False<br>
+<strong>company_dependent:</strong> False<br>
+<strong>default_export_compatible:</strong> False<br>
+<strong>depends:</strong> ['name']<br>
+<strong>exportable:</strong> True<br>
+<strong>groupable:</strong> False<br>
+<strong>manual:</strong> False<br>
+<strong>name:</strong> display_name<br>
+<strong>readonly:</strong> True<br>
+<strong>required:</strong> False<br>
+<strong>searchable:</strong> True<br>
+<strong>sortable:</strong> False<br>
+<strong>store:</strong> False<br>
+<strong>string:</strong> Display Name<br>
+<strong>translate:</strong> False<br>
+<strong>trim:</strong> True<br>
+<strong>type:</strong> char<br>
+</p>
+</section>
+
+<section id="create_uid" class="card card-body">
+<h4 class="card-title">create_uid</h4>
+<p>
+<strong>allow_hierachy_operators:</strong> True<br>
+<strong>change_default:</strong> False<br>
+<strong>company_dependent:</strong> False<br>
+<strong>context:</strong> {}<br>
+<strong>default_export_compatible:</strong> False<br>
+<strong>depends:</strong> []<br>
+<strong>domain:</strong> []<br>
+<strong>exportable:</strong> True<br>
+<strong>groupable:</strong> True<br>
+<strong>manual:</strong> False<br>
+<strong>name:</strong> create_uid<br>
+<strong>readonly:</strong> True<br>
+<strong>relation:</strong> <a class="nav-link" href="../res_users/index.html">res.users</a><br>
+<strong>required:</strong> False<br>
+<strong>searchable:</strong> True<br>
+<strong>sortable:</strong> True<br>
+<strong>store:</strong> True<br>
+<strong>string:</strong> Created by<br>
+<strong>type:</strong> many2one<br>
+</p>
+</section>
+
+<section id="create_date" class="card card-body">
+<h4 class="card-title">create_date</h4>
+<p>
+<strong>change_default:</strong> False<br>
+<strong>company_dependent:</strong> False<br>
+<strong>default_export_compatible:</strong> False<br>
+<strong>depends:</strong> []<br>
+<strong>exportable:</strong> True<br>
+<strong>groupable:</strong> True<br>
+<strong>manual:</strong> False<br>
+<strong>name:</strong> create_date<br>
+<strong>readonly:</strong> True<br>
+<strong>required:</strong> False<br>
+<strong>searchable:</strong> True<br>
+<strong>sortable:</strong> True<br>
+<strong>store:</strong> True<br>
+<strong>string:</strong> Created on<br>
+<strong>type:</strong> datetime<br>
+</p>
+</section>
+
+<section id="write_uid" class="card card-body">
+<h4 class="card-title">write_uid</h4>
+<p>
+<strong>allow_hierachy_operators:</strong> True<br>
+<strong>change_default:</strong> False<br>
+<strong>company_dependent:</strong> False<br>
+<strong>context:</strong> {}<br>
+<strong>default_export_compatible:</strong> False<br>
+<strong>depends:</strong> []<br>
+<strong>domain:</strong> []<br>
+<strong>exportable:</strong> True<br>
+<strong>groupable:</strong> True<br>
+<strong>manual:</strong> False<br>
+<strong>name:</strong> write_uid<br>
+<strong>readonly:</strong> True<br>
+<strong>relation:</strong> <a class="nav-link" href="../res_users/index.html">res.users</a><br>
+<strong>required:</strong> False<br>
+<strong>searchable:</strong> True<br>
+<strong>sortable:</strong> True<br>
+<strong>store:</strong> True<br>
+<strong>string:</strong> Last Updated by<br>
+<strong>type:</strong> many2one<br>
+</p>
+</section>
+
+<section id="write_date" class="card card-body">
+<h4 class="card-title">write_date</h4>
+<p>
+<strong>change_default:</strong> False<br>
+<strong>company_dependent:</strong> False<br>
+<strong>default_export_compatible:</strong> False<br>
+<strong>depends:</strong> []<br>
+<strong>exportable:</strong> True<br>
+<strong>groupable:</strong> True<br>
+<strong>manual:</strong> False<br>
+<strong>name:</strong> write_date<br>
+<strong>readonly:</strong> True<br>
+<strong>required:</strong> False<br>
+<strong>searchable:</strong> True<br>
+<strong>sortable:</strong> True<br>
+<strong>store:</strong> True<br>
+<strong>string:</strong> Last Updated on<br>
+<strong>type:</strong> datetime<br>
+</p>
+</section>
+
+<section id="name" class="card card-body">
+<h4 class="card-title">name</h4>
+<p>
+<strong>change_default:</strong> False<br>
+<strong>company_dependent:</strong> False<br>
+<strong>default_export_compatible:</strong> False<br>
+<strong>depends:</strong> ['ir_actions_server_id.name']<br>
+<strong>exportable:</strong> True<br>
+<strong>groupable:</strong> True<br>
+<strong>manual:</strong> False<br>
+<strong>name:</strong> name<br>
+<strong>readonly:</strong> False<br>
+<strong>related:</strong> ir_actions_server_id.name<br>
+<strong>required:</strong> True<br>
+<strong>searchable:</strong> True<br>
+<strong>sortable:</strong> True<br>
+<strong>store:</strong> False<br>
+<strong>string:</strong> Action Name<br>
+<strong>translate:</strong> True<br>
+<strong>trim:</strong> True<br>
+<strong>type:</strong> char<br>
+</p>
+</section>
+
+<section id="type" class="card card-body">
+<h4 class="card-title">type</h4>
+<p>
+<strong>change_default:</strong> False<br>
+<strong>company_dependent:</strong> False<br>
+<strong>default_export_compatible:</strong> False<br>
+<strong>depends:</strong> ['ir_actions_server_id.type']<br>
+<strong>exportable:</strong> True<br>
+<strong>groupable:</strong> True<br>
+<strong>manual:</strong> False<br>
+<strong>name:</strong> type<br>
+<strong>readonly:</strong> False<br>
+<strong>related:</strong> ir_actions_server_id.type<br>
+<strong>required:</strong> True<br>
+<strong>searchable:</strong> True<br>
+<strong>sortable:</strong> True<br>
+<strong>store:</strong> False<br>
+<strong>string:</strong> Action Type<br>
+<strong>translate:</strong> False<br>
+<strong>trim:</strong> True<br>
+<strong>type:</strong> char<br>
+</p>
+</section>
+
+<section id="xml_id" class="card card-body">
+<h4 class="card-title">xml_id</h4>
+<p>
+<strong>change_default:</strong> False<br>
+<strong>company_dependent:</strong> False<br>
+<strong>default_export_compatible:</strong> False<br>
+<strong>depends:</strong> ['ir_actions_server_id.xml_id']<br>
+<strong>exportable:</strong> True<br>
+<strong>groupable:</strong> False<br>
+<strong>manual:</strong> False<br>
+<strong>name:</strong> xml_id<br>
+<strong>readonly:</strong> True<br>
+<strong>related:</strong> ir_actions_server_id.xml_id<br>
+<strong>required:</strong> False<br>
+<strong>searchable:</strong> False<br>
+<strong>sortable:</strong> False<br>
+<strong>store:</strong> False<br>
+<strong>string:</strong> External ID<br>
+<strong>translate:</strong> False<br>
+<strong>trim:</strong> True<br>
+<strong>type:</strong> char<br>
+</p>
+</section>
+
+<section id="path" class="card card-body">
+<h4 class="card-title">path</h4>
+<p>
+<strong>change_default:</strong> False<br>
+<strong>company_dependent:</strong> False<br>
+<strong>default_export_compatible:</strong> False<br>
+<strong>depends:</strong> ['ir_actions_server_id.path']<br>
+<strong>exportable:</strong> True<br>
+<strong>groupable:</strong> True<br>
+<strong>manual:</strong> False<br>
+<strong>name:</strong> path<br>
+<strong>readonly:</strong> False<br>
+<strong>related:</strong> ir_actions_server_id.path<br>
+<strong>required:</strong> False<br>
+<strong>searchable:</strong> True<br>
+<strong>sortable:</strong> True<br>
+<strong>store:</strong> False<br>
+<strong>string:</strong> Path to show in the URL<br>
+<strong>translate:</strong> False<br>
+<strong>trim:</strong> True<br>
+<strong>type:</strong> char<br>
+</p>
+</section>
+
+<section id="help" class="card card-body">
+<h4 class="card-title">help</h4>
+<p>
+<strong>change_default:</strong> False<br>
+<strong>company_dependent:</strong> False<br>
+<strong>default_export_compatible:</strong> False<br>
+<strong>depends:</strong> ['ir_actions_server_id.help']<br>
+<strong>exportable:</strong> True<br>
+<strong>groupable:</strong> True<br>
+<strong>help:</strong> Optional help text for the users with a description of the target view, such as its usage and purpose.<br>
+<strong>manual:</strong> False<br>
+<strong>name:</strong> help<br>
+<strong>readonly:</strong> False<br>
+<strong>related:</strong> ir_actions_server_id.help<br>
+<strong>required:</strong> False<br>
+<strong>sanitize:</strong> True<br>
+<strong>sanitize_attributes:</strong> True<br>
+<strong>sanitize_style:</strong> False<br>
+<strong>sanitize_tags:</strong> True<br>
+<strong>searchable:</strong> True<br>
+<strong>sortable:</strong> True<br>
+<strong>store:</strong> False<br>
+<strong>string:</strong> Action Description<br>
+<strong>strip_classes:</strong> False<br>
+<strong>strip_style:</strong> False<br>
+<strong>translate:</strong> True<br>
+<strong>type:</strong> html<br>
+</p>
+</section>
+
+<section id="binding_model_id" class="card card-body">
+<h4 class="card-title">binding_model_id</h4>
+<p>
+<strong>allow_hierachy_operators:</strong> False<br>
+<strong>change_default:</strong> False<br>
+<strong>company_dependent:</strong> False<br>
+<strong>context:</strong> {}<br>
+<strong>default_export_compatible:</strong> False<br>
+<strong>depends:</strong> ['ir_actions_server_id.binding_model_id']<br>
+<strong>domain:</strong> []<br>
+<strong>exportable:</strong> True<br>
+<strong>groupable:</strong> True<br>
+<strong>help:</strong> Setting a value makes this action available in the sidebar for the given model.<br>
+<strong>manual:</strong> False<br>
+<strong>name:</strong> binding_model_id<br>
+<strong>readonly:</strong> False<br>
+<strong>related:</strong> ir_actions_server_id.binding_model_id<br>
+<strong>relation:</strong> <a class="nav-link" href="../ir_model/index.html">ir.model</a><br>
+<strong>required:</strong> False<br>
+<strong>searchable:</strong> True<br>
+<strong>sortable:</strong> True<br>
+<strong>store:</strong> False<br>
+<strong>string:</strong> Binding Model<br>
+<strong>type:</strong> many2one<br>
+</p>
+</section>
+
+<section id="binding_type" class="card card-body">
+<h4 class="card-title">binding_type</h4>
+<p>
+<strong>change_default:</strong> False<br>
+<strong>company_dependent:</strong> False<br>
+<strong>default_export_compatible:</strong> False<br>
+<strong>depends:</strong> ['ir_actions_server_id.binding_type']<br>
+<strong>exportable:</strong> True<br>
+<strong>groupable:</strong> True<br>
+<strong>manual:</strong> False<br>
+<strong>name:</strong> binding_type<br>
+<strong>readonly:</strong> False<br>
+<strong>related:</strong> ir_actions_server_id.binding_type<br>
+<strong>required:</strong> True<br>
+<strong>searchable:</strong> True<br>
+<strong>selection:</strong> [['action', 'Action'], ['report', 'Report']]<br>
+<strong>sortable:</strong> True<br>
+<strong>store:</strong> False<br>
+<strong>string:</strong> Binding Type<br>
+<strong>type:</strong> selection<br>
+</p>
+</section>
+
+<section id="binding_view_types" class="card card-body">
+<h4 class="card-title">binding_view_types</h4>
+<p>
+<strong>change_default:</strong> False<br>
+<strong>company_dependent:</strong> False<br>
+<strong>default_export_compatible:</strong> False<br>
+<strong>depends:</strong> ['ir_actions_server_id.binding_view_types']<br>
+<strong>exportable:</strong> True<br>
+<strong>groupable:</strong> True<br>
+<strong>manual:</strong> False<br>
+<strong>name:</strong> binding_view_types<br>
+<strong>readonly:</strong> False<br>
+<strong>related:</strong> ir_actions_server_id.binding_view_types<br>
+<strong>required:</strong> False<br>
+<strong>searchable:</strong> True<br>
+<strong>sortable:</strong> True<br>
+<strong>store:</strong> False<br>
+<strong>string:</strong> Binding View Types<br>
+<strong>translate:</strong> False<br>
+<strong>trim:</strong> True<br>
+<strong>type:</strong> char<br>
+</p>
+</section>
+
+<section id="usage" class="card card-body">
+<h4 class="card-title">usage</h4>
+<p>
+<strong>change_default:</strong> False<br>
+<strong>company_dependent:</strong> False<br>
+<strong>default_export_compatible:</strong> False<br>
+<strong>depends:</strong> ['ir_actions_server_id.usage']<br>
+<strong>exportable:</strong> True<br>
+<strong>groupable:</strong> True<br>
+<strong>manual:</strong> False<br>
+<strong>name:</strong> usage<br>
+<strong>readonly:</strong> False<br>
+<strong>related:</strong> ir_actions_server_id.usage<br>
+<strong>required:</strong> True<br>
+<strong>searchable:</strong> True<br>
+<strong>selection:</strong> [['ir_actions_server', 'Server Action'], ['ir_cron', 'Scheduled Action']]<br>
+<strong>sortable:</strong> True<br>
+<strong>store:</strong> False<br>
+<strong>string:</strong> Usage<br>
+<strong>type:</strong> selection<br>
+</p>
+</section>
+
+<section id="state" class="card card-body">
+<h4 class="card-title">state</h4>
+<p>
+<strong>change_default:</strong> False<br>
+<strong>company_dependent:</strong> False<br>
+<strong>default_export_compatible:</strong> False<br>
+<strong>depends:</strong> ['ir_actions_server_id.state']<br>
+<strong>exportable:</strong> True<br>
+<strong>groupable:</strong> True<br>
+<strong>help:</strong> Type of server action. The following values are available:
+- 'Update a Record': update the values of a record
+- 'Create Activity': create an activity (Discuss)
+- 'Send Email': post a message, a note or send an email (Discuss)
+- 'Send SMS': send SMS, log them on documents (SMS)- 'Add/Remove Followers': add or remove followers to a record (Discuss)
+- 'Create Record': create a new record with new values
+- 'Execute Code': a block of Python code that will be executed
+- 'Send Webhook Notification': send a POST request to an external system, also known as a Webhook
+- 'Execute Existing Actions': define an action that triggers several other server actions
+<br>
+<strong>manual:</strong> False<br>
+<strong>name:</strong> state<br>
+<strong>readonly:</strong> False<br>
+<strong>related:</strong> ir_actions_server_id.state<br>
+<strong>required:</strong> True<br>
+<strong>searchable:</strong> True<br>
+<strong>selection:</strong> [['object_write', 'Update Record'], ['next_activity', 'Create Activity'], ['mail_post', 'Send Email'], ['sms', 'Send SMS'], ['followers', 'Add Followers'], ['remove_followers', 'Remove Followers'], ['object_create', 'Create Record'], ['code', 'Execute Code'], ['webhook', 'Send Webhook Notification'], ['multi', 'Execute Existing Actions']]<br>
+<strong>sortable:</strong> True<br>
+<strong>store:</strong> False<br>
+<strong>string:</strong> Type<br>
+<strong>type:</strong> selection<br>
+</p>
+</section>
+
+<section id="sequence" class="card card-body">
+<h4 class="card-title">sequence</h4>
+<p>
+<strong>change_default:</strong> False<br>
+<strong>company_dependent:</strong> False<br>
+<strong>default_export_compatible:</strong> False<br>
+<strong>depends:</strong> ['ir_actions_server_id.sequence']<br>
+<strong>exportable:</strong> True<br>
+<strong>groupable:</strong> True<br>
+<strong>help:</strong> When dealing with multiple actions, the execution order is based on the sequence. Low number means high priority.<br>
+<strong>manual:</strong> False<br>
+<strong>name:</strong> sequence<br>
+<strong>readonly:</strong> False<br>
+<strong>related:</strong> ir_actions_server_id.sequence<br>
+<strong>required:</strong> False<br>
+<strong>searchable:</strong> True<br>
+<strong>sortable:</strong> True<br>
+<strong>store:</strong> False<br>
+<strong>string:</strong> Sequence<br>
+<strong>type:</strong> integer<br>
+</p>
+</section>
+
+<section id="model_id" class="card card-body">
+<h4 class="card-title">model_id</h4>
+<p>
+<strong>allow_hierachy_operators:</strong> False<br>
+<strong>change_default:</strong> False<br>
+<strong>company_dependent:</strong> False<br>
+<strong>context:</strong> {}<br>
+<strong>default_export_compatible:</strong> False<br>
+<strong>depends:</strong> ['ir_actions_server_id.model_id']<br>
+<strong>domain:</strong> []<br>
+<strong>exportable:</strong> True<br>
+<strong>groupable:</strong> True<br>
+<strong>help:</strong> Model on which the server action runs.<br>
+<strong>manual:</strong> False<br>
+<strong>name:</strong> model_id<br>
+<strong>readonly:</strong> False<br>
+<strong>related:</strong> ir_actions_server_id.model_id<br>
+<strong>relation:</strong> <a class="nav-link" href="../ir_model/index.html">ir.model</a><br>
+<strong>required:</strong> True<br>
+<strong>searchable:</strong> True<br>
+<strong>sortable:</strong> True<br>
+<strong>store:</strong> False<br>
+<strong>string:</strong> Model<br>
+<strong>type:</strong> many2one<br>
+</p>
+</section>
+
+<section id="available_model_ids" class="card card-body">
+<h4 class="card-title">available_model_ids</h4>
+<p>
+<strong>allow_hierachy_operators:</strong> False<br>
+<strong>change_default:</strong> False<br>
+<strong>company_dependent:</strong> False<br>
+<strong>context:</strong> {}<br>
+<strong>default_export_compatible:</strong> False<br>
+<strong>depends:</strong> ['ir_actions_server_id.available_model_ids']<br>
+<strong>domain:</strong> []<br>
+<strong>exportable:</strong> True<br>
+<strong>groupable:</strong> False<br>
+<strong>manual:</strong> False<br>
+<strong>name:</strong> available_model_ids<br>
+<strong>readonly:</strong> True<br>
+<strong>related:</strong> ir_actions_server_id.available_model_ids<br>
+<strong>relation:</strong> <a class="nav-link" href="../ir_model/index.html">ir.model</a><br>
+<strong>required:</strong> False<br>
+<strong>searchable:</strong> False<br>
+<strong>sortable:</strong> False<br>
+<strong>store:</strong> False<br>
+<strong>string:</strong> Available Models<br>
+<strong>type:</strong> many2many<br>
+</p>
+</section>
+
+<section id="model_name" class="card card-body">
+<h4 class="card-title">model_name</h4>
+<p>
+<strong>change_default:</strong> False<br>
+<strong>company_dependent:</strong> False<br>
+<strong>default_export_compatible:</strong> False<br>
+<strong>depends:</strong> ['ir_actions_server_id.model_name']<br>
+<strong>exportable:</strong> True<br>
+<strong>groupable:</strong> True<br>
+<strong>manual:</strong> False<br>
+<strong>name:</strong> model_name<br>
+<strong>readonly:</strong> True<br>
+<strong>related:</strong> ir_actions_server_id.model_name<br>
+<strong>required:</strong> False<br>
+<strong>searchable:</strong> True<br>
+<strong>sortable:</strong> True<br>
+<strong>store:</strong> False<br>
+<strong>string:</strong> Model Name<br>
+<strong>translate:</strong> False<br>
+<strong>trim:</strong> True<br>
+<strong>type:</strong> char<br>
+</p>
+</section>
+
+<section id="code" class="card card-body">
+<h4 class="card-title">code</h4>
+<p>
+<strong>change_default:</strong> False<br>
+<strong>company_dependent:</strong> False<br>
+<strong>default_export_compatible:</strong> False<br>
+<strong>depends:</strong> ['ir_actions_server_id.code']<br>
+<strong>exportable:</strong> True<br>
+<strong>groupable:</strong> True<br>
+<strong>groups:</strong> base.group_system<br>
+<strong>help:</strong> Write Python code that the action will execute. Some variables are available for use; help about python expression is given in the help tab.<br>
+<strong>manual:</strong> False<br>
+<strong>name:</strong> code<br>
+<strong>readonly:</strong> False<br>
+<strong>related:</strong> ir_actions_server_id.code<br>
+<strong>required:</strong> False<br>
+<strong>searchable:</strong> True<br>
+<strong>sortable:</strong> True<br>
+<strong>store:</strong> False<br>
+<strong>string:</strong> Python Code<br>
+<strong>translate:</strong> False<br>
+<strong>type:</strong> text<br>
+</p>
+</section>
+
+<section id="child_ids" class="card card-body">
+<h4 class="card-title">child_ids</h4>
+<p>
+<strong>allow_hierachy_operators:</strong> False<br>
+<strong>change_default:</strong> False<br>
+<strong>company_dependent:</strong> False<br>
+<strong>context:</strong> {}<br>
+<strong>default_export_compatible:</strong> False<br>
+<strong>depends:</strong> ['ir_actions_server_id.child_ids']<br>
+<strong>domain:</strong> []<br>
+<strong>exportable:</strong> True<br>
+<strong>groupable:</strong> True<br>
+<strong>help:</strong> Child server actions that will be executed. Note that the last return returned action value will be used as global return value.<br>
+<strong>manual:</strong> False<br>
+<strong>name:</strong> child_ids<br>
+<strong>readonly:</strong> False<br>
+<strong>related:</strong> ir_actions_server_id.child_ids<br>
+<strong>relation:</strong> <a class="nav-link" href="../ir_actions_server/index.html">ir.actions.server</a><br>
+<strong>required:</strong> False<br>
+<strong>searchable:</strong> True<br>
+<strong>sortable:</strong> False<br>
+<strong>store:</strong> False<br>
+<strong>string:</strong> Child Actions<br>
+<strong>type:</strong> many2many<br>
+</p>
+</section>
+
+<section id="crud_model_id" class="card card-body">
+<h4 class="card-title">crud_model_id</h4>
+<p>
+<strong>allow_hierachy_operators:</strong> False<br>
+<strong>change_default:</strong> False<br>
+<strong>company_dependent:</strong> False<br>
+<strong>context:</strong> {}<br>
+<strong>default_export_compatible:</strong> False<br>
+<strong>depends:</strong> ['ir_actions_server_id.crud_model_id']<br>
+<strong>domain:</strong> []<br>
+<strong>exportable:</strong> True<br>
+<strong>groupable:</strong> True<br>
+<strong>help:</strong> Specify which kind of record should be created. Set this field only to specify a different model than the base model.<br>
+<strong>manual:</strong> False<br>
+<strong>name:</strong> crud_model_id<br>
+<strong>readonly:</strong> False<br>
+<strong>related:</strong> ir_actions_server_id.crud_model_id<br>
+<strong>relation:</strong> <a class="nav-link" href="../ir_model/index.html">ir.model</a><br>
+<strong>required:</strong> False<br>
+<strong>searchable:</strong> True<br>
+<strong>sortable:</strong> True<br>
+<strong>store:</strong> False<br>
+<strong>string:</strong> Record to Create<br>
+<strong>type:</strong> many2one<br>
+</p>
+</section>
+
+<section id="crud_model_name" class="card card-body">
+<h4 class="card-title">crud_model_name</h4>
+<p>
+<strong>change_default:</strong> False<br>
+<strong>company_dependent:</strong> False<br>
+<strong>default_export_compatible:</strong> False<br>
+<strong>depends:</strong> ['ir_actions_server_id.crud_model_name']<br>
+<strong>exportable:</strong> True<br>
+<strong>groupable:</strong> True<br>
+<strong>manual:</strong> False<br>
+<strong>name:</strong> crud_model_name<br>
+<strong>readonly:</strong> True<br>
+<strong>related:</strong> ir_actions_server_id.crud_model_name<br>
+<strong>required:</strong> False<br>
+<strong>searchable:</strong> True<br>
+<strong>sortable:</strong> True<br>
+<strong>store:</strong> False<br>
+<strong>string:</strong> Target Model Name<br>
+<strong>translate:</strong> False<br>
+<strong>trim:</strong> True<br>
+<strong>type:</strong> char<br>
+</p>
+</section>
+
+<section id="link_field_id" class="card card-body">
+<h4 class="card-title">link_field_id</h4>
+<p>
+<strong>allow_hierachy_operators:</strong> False<br>
+<strong>change_default:</strong> False<br>
+<strong>company_dependent:</strong> False<br>
+<strong>context:</strong> {}<br>
+<strong>default_export_compatible:</strong> False<br>
+<strong>depends:</strong> ['ir_actions_server_id.link_field_id']<br>
+<strong>domain:</strong> []<br>
+<strong>exportable:</strong> True<br>
+<strong>groupable:</strong> True<br>
+<strong>help:</strong> Specify a field used to link the newly created record on the record used by the server action.<br>
+<strong>manual:</strong> False<br>
+<strong>name:</strong> link_field_id<br>
+<strong>readonly:</strong> False<br>
+<strong>related:</strong> ir_actions_server_id.link_field_id<br>
+<strong>relation:</strong> <a class="nav-link" href="../ir_model_fields/index.html">ir.model.fields</a><br>
+<strong>required:</strong> False<br>
+<strong>searchable:</strong> True<br>
+<strong>sortable:</strong> True<br>
+<strong>store:</strong> False<br>
+<strong>string:</strong> Link Field<br>
+<strong>type:</strong> many2one<br>
+</p>
+</section>
+
+<section id="groups_id" class="card card-body">
+<h4 class="card-title">groups_id</h4>
+<p>
+<strong>allow_hierachy_operators:</strong> False<br>
+<strong>change_default:</strong> False<br>
+<strong>company_dependent:</strong> False<br>
+<strong>context:</strong> {}<br>
+<strong>default_export_compatible:</strong> False<br>
+<strong>depends:</strong> ['ir_actions_server_id.groups_id']<br>
+<strong>domain:</strong> []<br>
+<strong>exportable:</strong> True<br>
+<strong>groupable:</strong> True<br>
+<strong>help:</strong> Groups that can execute the server action. Leave empty to allow everybody.<br>
+<strong>manual:</strong> False<br>
+<strong>name:</strong> groups_id<br>
+<strong>readonly:</strong> False<br>
+<strong>related:</strong> ir_actions_server_id.groups_id<br>
+<strong>relation:</strong> <a class="nav-link" href="../res_groups/index.html">res.groups</a><br>
+<strong>required:</strong> False<br>
+<strong>searchable:</strong> True<br>
+<strong>sortable:</strong> False<br>
+<strong>store:</strong> False<br>
+<strong>string:</strong> Allowed Groups<br>
+<strong>type:</strong> many2many<br>
+</p>
+</section>
+
+<section id="update_field_id" class="card card-body">
+<h4 class="card-title">update_field_id</h4>
+<p>
+<strong>allow_hierachy_operators:</strong> False<br>
+<strong>change_default:</strong> False<br>
+<strong>company_dependent:</strong> False<br>
+<strong>context:</strong> {}<br>
+<strong>default_export_compatible:</strong> False<br>
+<strong>depends:</strong> ['ir_actions_server_id.update_field_id']<br>
+<strong>domain:</strong> []<br>
+<strong>exportable:</strong> True<br>
+<strong>groupable:</strong> True<br>
+<strong>manual:</strong> False<br>
+<strong>name:</strong> update_field_id<br>
+<strong>readonly:</strong> False<br>
+<strong>related:</strong> ir_actions_server_id.update_field_id<br>
+<strong>relation:</strong> <a class="nav-link" href="../ir_model_fields/index.html">ir.model.fields</a><br>
+<strong>required:</strong> False<br>
+<strong>searchable:</strong> True<br>
+<strong>sortable:</strong> True<br>
+<strong>store:</strong> False<br>
+<strong>string:</strong> Field to Update<br>
+<strong>type:</strong> many2one<br>
+</p>
+</section>
+
+<section id="update_path" class="card card-body">
+<h4 class="card-title">update_path</h4>
+<p>
+<strong>change_default:</strong> False<br>
+<strong>company_dependent:</strong> False<br>
+<strong>default_export_compatible:</strong> False<br>
+<strong>depends:</strong> ['ir_actions_server_id.update_path']<br>
+<strong>exportable:</strong> True<br>
+<strong>groupable:</strong> True<br>
+<strong>help:</strong> Path to the field to update, e.g. 'partner_id.name'<br>
+<strong>manual:</strong> False<br>
+<strong>name:</strong> update_path<br>
+<strong>readonly:</strong> False<br>
+<strong>related:</strong> ir_actions_server_id.update_path<br>
+<strong>required:</strong> False<br>
+<strong>searchable:</strong> True<br>
+<strong>sortable:</strong> True<br>
+<strong>store:</strong> False<br>
+<strong>string:</strong> Field to Update Path<br>
+<strong>translate:</strong> False<br>
+<strong>trim:</strong> True<br>
+<strong>type:</strong> char<br>
+</p>
+</section>
+
+<section id="update_related_model_id" class="card card-body">
+<h4 class="card-title">update_related_model_id</h4>
+<p>
+<strong>allow_hierachy_operators:</strong> False<br>
+<strong>change_default:</strong> False<br>
+<strong>company_dependent:</strong> False<br>
+<strong>context:</strong> {}<br>
+<strong>default_export_compatible:</strong> False<br>
+<strong>depends:</strong> ['ir_actions_server_id.update_related_model_id']<br>
+<strong>domain:</strong> []<br>
+<strong>exportable:</strong> True<br>
+<strong>groupable:</strong> True<br>
+<strong>manual:</strong> False<br>
+<strong>name:</strong> update_related_model_id<br>
+<strong>readonly:</strong> False<br>
+<strong>related:</strong> ir_actions_server_id.update_related_model_id<br>
+<strong>relation:</strong> <a class="nav-link" href="../ir_model/index.html">ir.model</a><br>
+<strong>required:</strong> False<br>
+<strong>searchable:</strong> True<br>
+<strong>sortable:</strong> True<br>
+<strong>store:</strong> False<br>
+<strong>string:</strong> Update Related Model<br>
+<strong>type:</strong> many2one<br>
+</p>
+</section>
+
+<section id="update_field_type" class="card card-body">
+<h4 class="card-title">update_field_type</h4>
+<p>
+<strong>change_default:</strong> False<br>
+<strong>company_dependent:</strong> False<br>
+<strong>default_export_compatible:</strong> False<br>
+<strong>depends:</strong> ['ir_actions_server_id.update_field_type']<br>
+<strong>exportable:</strong> True<br>
+<strong>groupable:</strong> True<br>
+<strong>manual:</strong> False<br>
+<strong>name:</strong> update_field_type<br>
+<strong>readonly:</strong> True<br>
+<strong>related:</strong> ir_actions_server_id.update_field_type<br>
+<strong>required:</strong> False<br>
+<strong>searchable:</strong> True<br>
+<strong>selection:</strong> [['binary', 'binary'], ['boolean', 'boolean'], ['char', 'char'], ['date', 'date'], ['datetime', 'datetime'], ['float', 'float'], ['html', 'html'], ['integer', 'integer'], ['json', 'json'], ['many2many', 'many2many'], ['many2one', 'many2one'], ['many2one_reference', 'many2one_reference'], ['monetary', 'monetary'], ['one2many', 'one2many'], ['properties', 'properties'], ['properties_definition', 'properties_definition'], ['reference', 'reference'], ['selection', 'selection'], ['text', 'text']]<br>
+<strong>sortable:</strong> True<br>
+<strong>store:</strong> False<br>
+<strong>string:</strong> Field Type<br>
+<strong>type:</strong> selection<br>
+</p>
+</section>
+
+<section id="update_m2m_operation" class="card card-body">
+<h4 class="card-title">update_m2m_operation</h4>
+<p>
+<strong>change_default:</strong> False<br>
+<strong>company_dependent:</strong> False<br>
+<strong>default_export_compatible:</strong> False<br>
+<strong>depends:</strong> ['ir_actions_server_id.update_m2m_operation']<br>
+<strong>exportable:</strong> True<br>
+<strong>groupable:</strong> True<br>
+<strong>manual:</strong> False<br>
+<strong>name:</strong> update_m2m_operation<br>
+<strong>readonly:</strong> False<br>
+<strong>related:</strong> ir_actions_server_id.update_m2m_operation<br>
+<strong>required:</strong> False<br>
+<strong>searchable:</strong> True<br>
+<strong>selection:</strong> [['add', 'Adding'], ['remove', 'Removing'], ['set', 'Setting it to'], ['clear', 'Clearing it']]<br>
+<strong>sortable:</strong> True<br>
+<strong>store:</strong> False<br>
+<strong>string:</strong> Many2many Operations<br>
+<strong>type:</strong> selection<br>
+</p>
+</section>
+
+<section id="update_boolean_value" class="card card-body">
+<h4 class="card-title">update_boolean_value</h4>
+<p>
+<strong>change_default:</strong> False<br>
+<strong>company_dependent:</strong> False<br>
+<strong>default_export_compatible:</strong> False<br>
+<strong>depends:</strong> ['ir_actions_server_id.update_boolean_value']<br>
+<strong>exportable:</strong> True<br>
+<strong>groupable:</strong> True<br>
+<strong>manual:</strong> False<br>
+<strong>name:</strong> update_boolean_value<br>
+<strong>readonly:</strong> False<br>
+<strong>related:</strong> ir_actions_server_id.update_boolean_value<br>
+<strong>required:</strong> False<br>
+<strong>searchable:</strong> True<br>
+<strong>selection:</strong> [['true', 'Yes (True)'], ['false', 'No (False)']]<br>
+<strong>sortable:</strong> True<br>
+<strong>store:</strong> False<br>
+<strong>string:</strong> Boolean Value<br>
+<strong>type:</strong> selection<br>
+</p>
+</section>
+
+<section id="value" class="card card-body">
+<h4 class="card-title">value</h4>
+<p>
+<strong>change_default:</strong> False<br>
+<strong>company_dependent:</strong> False<br>
+<strong>default_export_compatible:</strong> False<br>
+<strong>depends:</strong> ['ir_actions_server_id.value']<br>
+<strong>exportable:</strong> True<br>
+<strong>groupable:</strong> True<br>
+<strong>help:</strong> For Python expressions, this field may hold a Python expression that can use the same values as for the code field on the server action,e.g. `env.user.name` to set the current user's name as the value or `record.id` to set the ID of the record on which the action is run.
+
+For Static values, the value will be used directly without evaluation, e.g.`42` or `My custom name` or the selected record.<br>
+<strong>manual:</strong> False<br>
+<strong>name:</strong> value<br>
+<strong>readonly:</strong> False<br>
+<strong>related:</strong> ir_actions_server_id.value<br>
+<strong>required:</strong> False<br>
+<strong>searchable:</strong> True<br>
+<strong>sortable:</strong> True<br>
+<strong>store:</strong> False<br>
+<strong>string:</strong> Value<br>
+<strong>translate:</strong> False<br>
+<strong>type:</strong> text<br>
+</p>
+</section>
+
+<section id="evaluation_type" class="card card-body">
+<h4 class="card-title">evaluation_type</h4>
+<p>
+<strong>change_default:</strong> False<br>
+<strong>company_dependent:</strong> False<br>
+<strong>default_export_compatible:</strong> False<br>
+<strong>depends:</strong> ['ir_actions_server_id.evaluation_type']<br>
+<strong>exportable:</strong> True<br>
+<strong>groupable:</strong> True<br>
+<strong>manual:</strong> False<br>
+<strong>name:</strong> evaluation_type<br>
+<strong>readonly:</strong> False<br>
+<strong>related:</strong> ir_actions_server_id.evaluation_type<br>
+<strong>required:</strong> False<br>
+<strong>searchable:</strong> True<br>
+<strong>selection:</strong> [['value', 'Update'], ['equation', 'Compute']]<br>
+<strong>sortable:</strong> True<br>
+<strong>store:</strong> False<br>
+<strong>string:</strong> Value Type<br>
+<strong>type:</strong> selection<br>
+</p>
+</section>
+
+<section id="resource_ref" class="card card-body">
+<h4 class="card-title">resource_ref</h4>
+<p>
+<strong>change_default:</strong> False<br>
+<strong>company_dependent:</strong> False<br>
+<strong>default_export_compatible:</strong> False<br>
+<strong>depends:</strong> ['ir_actions_server_id.resource_ref']<br>
+<strong>exportable:</strong> True<br>
+<strong>groupable:</strong> True<br>
+<strong>manual:</strong> False<br>
+<strong>name:</strong> resource_ref<br>
+<strong>readonly:</strong> False<br>
+<strong>related:</strong> ir_actions_server_id.resource_ref<br>
+<strong>required:</strong> False<br>
+<strong>searchable:</strong> True<br>
+<strong>selection:</strong> [['account.account', 'Account'], ['account.analytic.account', 'Analytic Account'], ['res.partner.bank', 'Bank Accounts'], ['calendar.event', 'Calendar Event'], ['res.company', 'Companies'], ['res.partner', 'Contact'], ['hr.department', 'Department'], ['discuss.channel', 'Discussion Channel'], ['mail.thread.cc', 'Email CC management'], ['mail.thread', 'Email Thread'], ['hr.employee', 'Employee'], ['fsm.equipment', 'Field Service Equipment'], ['fsm.location', 'Field Service Location'], ['fsm.order', 'Field Service Order'], ['fsm.team', 'Field Service Team'], ['fsm.person', 'Field Service Worker'], ['iap.account', 'IAP Account'], ['hr.job', 'Job Position'], ['account.journal', 'Journal'], ['account.move', 'Journal Entry'], ['stock.lot', 'Lot/Serial'], ['mail.blacklist', 'Mail Blacklist'], ['mail.thread.blacklist', 'Mail Blacklist mixin'], ['mail.thread.main.attachment', 'Mail Main Attachment management'], ['maintenance.equipment', 'Maintenance Equipment'], ['maintenance.equipment.category', 'Maintenance Equipment Category'], ['maintenance.request', 'Maintenance Request'], ['fleet.vehicle.model', 'Model of a vehicle'], ['account.payment', 'Payments'], ['phone.blacklist', 'Phone Blacklist'], ['mail.thread.phone', 'Phone Blacklist Mixin'], ['account.reconcile.model', 'Preset to create journal entries during a invoices and payments matching'], ['product.pricelist', 'Pricelist'], ['product.template', 'Product'], ['product.category', 'Product Category'], ['product.product', 'Product Variant'], ['sale.order', 'Sales Order'], ['crm.team', 'Sales Team'], ['crm.team.member', 'Sales Team Member'], ['stock.scrap', 'Scrap'], ['fleet.vehicle.log.services', 'Services for vehicles'], ['account.tax', 'Tax'], ['stock.picking', 'Transfer'], ['fleet.vehicle', 'Vehicle'], ['fleet.vehicle.log.contract', 'Vehicle Contract'], ['auth_totp.wizard', '2-Factor Setup Wizard'], ['account.edi.xml.ubl_a_nz', 'A-NZ BIS Billing 3.0'], ['res.users.apikeys.description', 'API Key Description'], ['res.groups', 'Access Groups'], ['account.cash.rounding', 'Account Cash Rounding'], ['account.chart.template', 'Account Chart Template'], ['account.group', 'Account Group'], ['account.journal.group', 'Account Journal Group'], ['account.lock_exception', 'Account Lock Exception'], ['account.move.reversal', 'Account Move Reversal'], ['account.move.send', 'Account Move Send'], ['account.move.send.batch.wizard', 'Account Move Send Batch Wizard'], ['account.move.send.wizard', 'Account Move Send Wizard'], ['account.account.tag', 'Account Tag'], ['account.root', 'Account codes first 2 digits'], ['account.merge.wizard', 'Account merge wizard'], ['account.merge.wizard.line', 'Account merge wizard line'], ['report.account.report_invoice_with_payments', 'Account report with payment lines'], ['report.account.report_invoice', 'Account report without payment lines'], ['account.report', 'Accounting Report'], ['account.report.column', 'Accounting Report Column'], ['account.report.expression', 'Accounting Report Expression'], ['account.report.external.value', 'Accounting Report External Value'], ['account.report.line', 'Accounting Report Line'], ['account.fiscal.position.account', 'Accounts Mapping of Fiscal Position'], ['account.accrued.orders.wizard', 'Accrued Orders Wizard'], ['ir.actions.act_url', 'Action URL'], ['ir.actions.act_window', 'Action Window'], ['ir.actions.act_window_close', 'Action Window Close'], ['ir.actions.act_window.view', 'Action Window View'], ['ir.actions.actions', 'Actions'], ['mail.activity', 'Activity'], ['mail.activity.mixin', 'Activity Mixin'], ['mail.activity.plan', 'Activity Plan'], ['mail.activity.type', 'Activity Type'], ['mail.activity.plan.template', 'Activity plan template'], ['mail.activity.schedule', 'Activity schedule plan Wizard'], ['format.address.mixin', 'Address Format'], ['account.analytic.distribution.model', 'Analytic Distribution Model'], ['account.analytic.line', 'Analytic Line'], ['analytic.mixin', 'Analytic Mixin'], ['analytic.plan.fields.mixin', 'Analytic Plan Fields'], ['account.analytic.applicability', "Analytic Plan's Applicabilities"], ['account.analytic.plan', 'Analytic Plans'], ['ir.module.category', 'Application'], ['ir.asset', 'Asset'], ['web_editor.assets', 'Assets Utils'], ['ir.attachment', 'Attachment'], ['product.attribute.value', 'Attribute Value'], ['auth_totp.device', 'Authentication Device'], ['ir.autovacuum', 'Automatic Vacuum'], ['sequence.mixin', 'Automatic sequence'], ['account.autopost.bills.wizard', 'Autopost Bills Wizard'], ['avatar.mixin', 'Avatar Mixin'], ['account.edi.xml.ubl_de', 'BIS3 DE (XRechnung)'], ['stock.backorder.confirmation', 'Backorder Confirmation'], ['stock.backorder.confirmation.line', 'Backorder Confirmation Line'], ['res.bank', 'Bank'], ['account.bank.statement', 'Bank Statement'], ['account.bank.statement.line', 'Bank Statement Line'], ['account.setup.bank.manual.config', 'Bank setup manual config'], ['barcodes.barcode_events_mixin', 'Barcode Event Mixin'], ['barcode.nomenclature', 'Barcode Nomenclature'], ['barcode.rule', 'Barcode Rule'], ['base', 'Base'], ['base_import.import', 'Base Import'], ['base_import.mapping', 'Base Import Mapping'], ['account.edi.ubl', 'Base helpers for UBL'], ['hr.employee.base', 'Basic Employee'], ['fsm.blackout.day', 'Blackout Days (No Service)'], ['fsm.blackout.group', 'Blackout Group'], ['fleet.vehicle.model.brand', 'Brand of the vehicle'], ['crm.tag', 'CRM Tag'], ['calendar.attendee', 'Calendar Attendee Information'], ['calendar.filters', 'Calendar Filters'], ['calendar.popover.delete.wizard', 'Calendar Popover Delete Wizard'], ['calendar.provider.config', 'Calendar Provider Configuration Wizard'], ['utm.stage', 'Campaign Stage'], ['bus.listener.mixin', 'Can send messages via bus.bus'], ['sale.mass.cancel.orders', 'Cancel multiple quotations'], ['mail.canned.response', 'Canned Response'], ['fleet.vehicle.model.category', 'Category of the model'], ['change.password.wizard', 'Change Password Wizard'], ['stock.change.product.qty', 'Change Product Quantity'], ['discuss.channel.member', 'Channel Member'], ['lot.label.layout', 'Choose the sheet layout to print lot labels'], ['product.label.layout', 'Choose the sheet layout to print the labels'], ['picking.label.type', 'Choose whether to print product or lot/sn labels'], ['ir.actions.client', 'Client Action'], ['comment.wizard', 'Comment Wizard'], ['account.edi.common', 'Common functions for EDI documents: generate the data, the constraints, etc'], ['sale.edi.common', 'Common functions for EDI orders'], ['bus.bus', 'Communication Bus'], ['base.document.layout', 'Company Document Layout'], ['res.config', 'Config'], ['res.config.settings', 'Config Settings'], ['ir.actions.todo', 'Configuration Wizards'], ['confirm.stock.sms', 'Confirm Stock SMS'], ['stock.inventory.conflict', 'Conflict in Inventory'], ['hr.contract.type', 'Contract Type'], ['spreadsheet.dashboard.share', 'Copy of a shared dashboard'], ['res.country', 'Country'], ['res.country.group', 'Country Group'], ['format.vat.label.mixin', 'Country Specific VAT Label'], ['res.country.state', 'Country state'], ['account.automatic.entry.wizard', 'Create Automatic Entries'], ['wizard.ir.model.menu.create', 'Create Menu Wizard'], ['res.currency', 'Currency'], ['res.currency.rate', 'Currency Rate'], ['ir.ui.view.custom', 'Custom View'], ['stock.lot.report', 'Customer Lot Report'], ['decimal.precision', 'Decimal Precision'], ['ir.default', 'Default Values'], ['fsm.delivery.time.range', 'Delivery Time Range'], ['ir.demo', 'Demo'], ['ir.demo_failure.wizard', 'Demo Failure wizard'], ['ir.demo_failure', 'Demo failure'], ['hr.departure.reason', 'Departure Reason'], ['hr.departure.wizard', 'Departure Wizard'], ['res.device.log', 'Device Log'], ['res.device', 'Devices'], ['digest.digest', 'Digest'], ['digest.tip', 'Digest Tips'], ['sale.order.discount', 'Discount Wizard'], ['res.district', 'District'], ['mail.followers', 'Document Followers'], ['fleet.vehicle.assignation.log', 'Drivers history on a vehicle'], ['account.edi.xml.ubl_efff', 'E-FFF (BE)'], ['mail.alias', 'Email Aliases'], ['mail.alias.mixin', 'Email Aliases Mixin'], ['mail.alias.mixin.optional', 'Email Aliases Mixin (light)'], ['mail.alias.domain', 'Email Domain'], ['mail.template.preview', 'Email Template Preview'], ['mail.template', 'Email Templates'], ['mail.compose.message', 'Email composition wizard'], ['mail.resend.message', 'Email resend wizard'], ['ir.embedded.actions', 'Embedded Actions'], ['hr.employee.category', 'Employee Category'], ['report.hr_skills.report_employee_cv', 'Employee Resume'], ['hr.employee.skill.report', 'Employee Skills Report'], ['base.enable.profiling.wizard', 'Enable profiling for some time'], ['calendar.alarm', 'Event Alarm'], ['calendar.alarm_manager', 'Event Alarm Manager'], ['calendar.event.type', 'Event Meeting Type'], ['calendar.recurrence', 'Event Recurrence Rule'], ['ir.exports', 'Exports'], ['ir.exports.line', 'Exports Line'], ['fsm.fleet.wizard', 'FSM Fleet Vehicle Conversion'], ['fsm.order.sign.wizard', 'FSM Order Sign Wizard'], ['fsm.person.calendar.filter', 'FSM Person Calendar Filter'], ['fsm.wizard', 'FSM Record Conversion'], ['account.edi.xml.cii', 'Factur-x/XRechnung CII 2.2.0'], ['fsm.location.person', 'Field Service Location Person Info'], ['fsm.template', 'Field Service Order Template'], ['fsm.order.type', 'Field Service Order Type'], ['fsm.route', 'Field Service Route'], ['fsm.route.dayroute', 'Field Service Route Dayroute'], ['fsm.stage', 'Field Service Stage'], ['fsm.tag', 'Field Service Tag'], ['fsm.vehicle', 'Field Service Vehicle'], ['fsm.category', 'Field Service Worker Category'], ['fsm.person.skill', 'Field Service Worker Skill'], ['html.field.history.mixin', 'Field html History'], ['ir.model.fields', 'Fields'], ['ir.fields.converter', 'Fields Converter'], ['ir.model.fields.selection', 'Fields Selection'], ['ir.binary', 'File streaming helper model for controllers'], ['ir.filters', 'Filters'], ['account.fiscal.position', 'Fiscal Position'], ['fleet.vehicle.cost.report', 'Fleet Analysis Report'], ['fleet.service.type', 'Fleet Service Type'], ['sale.pdf.form.field', 'Form fields of inside quotation documents.'], ['snailmail.letter.format.error', 'Format Error Sending a Snailmail Letter'], ['fsm.model.mixin', 'Fsm Model Mixin'], ['account.full.reconcile', 'Full Reconcile'], ['payment.link.wizard', 'Generate Sales Payment Link'], ['base.geocoder', 'Geo Coder'], ['base.geo_provider', 'Geo Provider'], ['report.account.report_hash_integrity', 'Get hash integrity result as PDF.'], ['google.gmail.mixin', 'Google Gmail Mixin'], ['portal.wizard', 'Grant Portal Access'], ['spreadsheet.dashboard.group', 'Group of dashboards'], ['mail.guest', 'Guest'], ['ir.http', 'HTTP Routing'], ['fsm.stress.day', 'High-Demand Days'], ['hr.manager.department.report', 'Hr Manager Department Report'], ['iap.enrich.api', 'IAP Lead Enrichment API'], ['iap.autocomplete.api', 'IAP Partner Autocomplete API'], ['iap.service', 'IAP Service'], ['mail.ice.server', 'ICE server'], ['image.mixin', 'Image Mixin'], ['base.import.module', 'Import Module'], ['fetchmail.server', 'Incoming Mail Server'], ['account.incoterms', 'Incoterms'], ['res.partner.industry', 'Industry'], ['base.language.install', 'Install Language'], ['stock.inventory.adjustment.name', 'Inventory Adjustment Reference / Reason'], ['stock.inventory.warning', 'Inventory Adjustment Warning'], ['stock.location', 'Inventory Locations'], ['stock.route', 'Inventory Routes'], ['mail.wizard.invite', 'Invite wizard'], ['account.invoice.report', 'Invoices Statistics'], ['account.move.line', 'Journal Item'], ['kpi.provider', 'KPI Provider'], ['base.language.export', 'Language Export'], ['base.language.import', 'Language Import'], ['res.lang', 'Languages'], ['sms.tracker', 'Link SMS to mailing/sms tracking models'], ['ir.logging', 'Logging'], ['report.stock.label_lot_template_view', 'Lot Label Report'], ['mail.bot', 'Mail Bot'], ['mail.composer.mixin', 'Mail Composer Mixin'], ['mail.gateway.allowed', 'Mail Gateway Allowed'], ['discuss.channel.rtc.session', 'Mail RTC session'], ['mail.render.mixin', 'Mail Render Mixin'], ['ir.mail_server', 'Mail Server'], ['mail.template.reset', 'Mail Template Reset'], ['mail.tracking.value', 'Mail Tracking Value'], ['maintenance.mixin', 'Maintenance Maintained Item'], ['maintenance.stage', 'Maintenance Stage'], ['maintenance.team', 'Maintenance Teams'], ['account.code.mapping', 'Mapping of account codes per company'], ['ir.ui.menu', 'Menu'], ['base.partner.merge.line', 'Merge Partner Line'], ['base.partner.merge.automatic.wizard', 'Merge Partner Wizard'], ['mail.message', 'Message'], ['mail.notification', 'Message Notifications'], ['mail.message.reaction', 'Message Reaction'], ['mail.message.translation', 'Message Translation'], ['mail.message.subtype', 'Message subtypes'], ['discuss.voice.metadata', 'Metadata for voice attachments'], ['stock.warehouse.orderpoint', 'Minimum Inventory Rule'], ['mail.tracking.duration.mixin', 'Mixin to compute the time a record has spent in each value a many2one field can take'], ['ir.model.access', 'Model Access'], ['ir.model.constraint', 'Model Constraint'], ['ir.model.data', 'Model Data'], ['ir.model.inherit', 'Model Inheritance Tree'], ['ir.model', 'Models'], ['ir.module.module', 'Module'], ['base.module.install.request', 'Module Activation Request'], ['base.module.install.review', 'Module Activation Review'], ['report.base.report_irmodulereference', 'Module Reference Report (base)'], ['base.module.uninstall', 'Module Uninstall'], ['ir.module.module.dependency', 'Module dependency'], ['ir.module.module.exclusion', 'Module exclusion'], ['fleet.vehicle.odometer', 'Odometer log for a vehicle'], ['onboarding.onboarding', 'Onboarding'], ['onboarding.progress.step', 'Onboarding Progress Step Tracker'], ['onboarding.progress', 'Onboarding Progress Tracker'], ['onboarding.onboarding.step', 'Onboarding Step'], ['account.financial.year.op', 'Opening Balance of Financial Year'], ['mail.mail', 'Outgoing Mails'], ['sms.sms', 'Outgoing SMS'], ['stock.quant.package', 'Packages'], ['report.paperformat', 'Paper Format Config'], ['account.partial.reconcile', 'Partial Reconcile'], ['res.partner.autocomplete.sync', 'Partner Autocomplete Sync'], ['res.partner.category', 'Partner Tags'], ['res.partner.title', 'Partner Title'], ['account.reconcile.model.partner.mapping', 'Partner mapping for reconciliation models'], ['mail.resend.partner', 'Partner with additional information for mail resend'], ['res.users.identitycheck', 'Password Check Wizard'], ['account.payment.register', 'Pay'], ['payment.capture.wizard', 'Payment Capture Wizard'], ['payment.method', 'Payment Method'], ['account.payment.method.line', 'Payment Methods'], ['account.payment.method', 'Payment Methods'], ['payment.provider', 'Payment Provider'], ['payment.refund.wizard', 'Payment Refund Wizard'], ['account.payment.term', 'Payment Terms'], ['account.payment.term.line', 'Payment Terms Line'], ['payment.token', 'Payment Token'], ['payment.transaction', 'Payment Transaction'], ['payment.provider.onboarding.wizard', 'Payment provider onboarding wizard'], ['stock.picking.type', 'Picking Type'], ['portal.mixin', 'Portal Mixin'], ['portal.share', 'Portal Sharing'], ['portal.wizard.user', 'Portal User Config'], ['report.product.report_pricelist', 'Pricelist Report'], ['product.pricelist.item', 'Pricelist Rule'], ['hr.employee.cv.wizard', 'Print Resume'], ['privacy.log', 'Privacy Log'], ['privacy.lookup.wizard', 'Privacy Lookup Wizard'], ['privacy.lookup.wizard.line', 'Privacy Lookup Wizard Line'], ['procurement.group', 'Procurement Group'], ['product.attribute', 'Product Attribute'], ['product.attribute.custom.value', 'Product Attribute Custom Value'], ['product.catalog.mixin', 'Product Catalog Mixin'], ['product.combo', 'Product Combo'], ['product.combo.item', 'Product Combo Item'], ['product.document', 'Product Document'], ['report.product.report_producttemplatelabel_dymo', 'Product Label Report'], ['report.stock.label_product_product_view', 'Product Label Report'], ['report.product.report_producttemplatelabel2x7', 'Product Label Report 2x7'], ['report.product.report_producttemplatelabel4x12', 'Product Label Report 4x12'], ['report.product.report_producttemplatelabel4x12noprice', 'Product Label Report 4x12 No Price'], ['report.product.report_producttemplatelabel4x7', 'Product Label Report 4x7'], ['stock.move.line', 'Product Moves (Stock Move Line)'], ['product.packaging', 'Product Packaging'], ['product.replenish', 'Product Replenish'], ['stock.replenish.mixin', 'Product Replenish Mixin'], ['product.tag', 'Product Tag'], ['product.template.attribute.exclusion', 'Product Template Attribute Exclusion'], ['product.template.attribute.line', 'Product Template Attribute Line'], ['product.template.attribute.value', 'Product Template Attribute Value'], ['uom.uom', 'Product Unit of Measure'], ['uom.category', 'Product UoM Categories'], ['ir.profile', 'Profiling results'], ['ir.cron.progress', 'Progress of Scheduled Actions'], ['hr.employee.public', 'Public Employee'], ['publisher_warranty.contract', 'Publisher Warranty Contract'], ['mail.push.device', 'Push Notification Device'], ['mail.push', 'Push Notifications'], ['stock.putaway.rule', 'Putaway Rule'], ['ir.qweb.field.time', 'QWeb Field Time'], ['stock.quant', 'Quants'], ['sale.order.template', 'Quotation Template'], ['sale.order.template.line', 'Quotation Template Line'], ['sale.order.template.option', 'Quotation Template Option'], ['quotation.document', "Quotation's Headers & Footers"], ['ir.qweb', 'Qweb'], ['ir.qweb.field', 'Qweb Field'], ['ir.qweb.field.barcode', 'Qweb Field Barcode'], ['ir.qweb.field.contact', 'Qweb Field Contact'], ['ir.qweb.field.date', 'Qweb Field Date'], ['ir.qweb.field.datetime', 'Qweb Field Datetime'], ['ir.qweb.field.duration', 'Qweb Field Duration'], ['ir.qweb.field.float', 'Qweb Field Float'], ['ir.qweb.field.float_time', 'Qweb Field Float Time'], ['ir.qweb.field.html', 'Qweb Field HTML'], ['ir.qweb.field.image', 'Qweb Field Image'], ['ir.qweb.field.image_url', 'Qweb Field Image'], ['ir.qweb.field.integer', 'Qweb Field Integer'], ['ir.qweb.field.many2one', 'Qweb Field Many to One'], ['ir.qweb.field.monetary', 'Qweb Field Monetary'], ['ir.qweb.field.relative', 'Qweb Field Relative'], ['ir.qweb.field.selection', 'Qweb Field Selection'], ['ir.qweb.field.text', 'Qweb Field Text'], ['ir.qweb.field.qweb', 'Qweb Field qweb'], ['ir.qweb.field.many2many', 'Qweb field many2many'], ['ir.qweb.field.one2many', 'Qweb field one2many'], ['ir.rule', 'Record Rule'], ['res.region', 'Region'], ['ir.model.relation', 'Relation Model'], ['account.resequence.wizard', 'Remake the sequence of Journal Entries.'], ['product.removal', 'Removal Strategy'], ['mail.blacklist.remove', 'Remove email from blacklist wizard'], ['phone.blacklist.remove', 'Remove phone from blacklist'], ['ir.actions.report', 'Report Action'], ['report.layout', 'Report Layout'], ['sms.resend.recipient', 'Resend Notification'], ['reset.view.arch.wizard', 'Reset View Architecture Wizard'], ['resource.mixin', 'Resource Mixin'], ['resource.calendar.leaves', 'Resource Time Off Detail'], ['resource.calendar', 'Resource Working Time'], ['resource.resource', 'Resources'], ['hr.resume.line', 'Resume line of an employee'], ['stock.return.picking', 'Return Picking'], ['stock.return.picking.line', 'Return Picking Line'], ['fsm.route.day', 'Route Day'], ['account.reconcile.model.line', 'Rules for the reconciliation model'], ['account.edi.xml.ubl_sg', 'SG BIS Billing 3.0'], ['account.edi.xml.ubl_nl', 'SI-UBL 2.0 (NLCIUS)'], ['sms.account.phone', 'SMS Account Registration Phone Number Wizard'], ['sms.account.sender', 'SMS Account Sender Name Wizard'], ['sms.account.code', 'SMS Account Verification Code Wizard'], ['sms.resend', 'SMS Resend'], ['sms.template.preview', 'SMS Template Preview'], ['sms.template.reset', 'SMS Template Reset'], ['sms.template', 'SMS Templates'], ['sale.order.option', 'Sale Options'], ['sale.payment.provider.onboarding.wizard', 'Sale Payment provider onboarding wizard'], ['sale.advance.payment.inv', 'Sales Advance Payment Invoice'], ['sale.report', 'Sales Analysis Report'], ['sale.order.cancel', 'Sales Order Cancel'], ['sale.order.line', 'Sales Order Line'], ['discuss.gif.favorite', 'Save favorite GIF from Tenor API'], ['ir.cron', 'Scheduled Actions'], ['mail.scheduled.message', 'Scheduled Message'], ['mail.message.schedule', 'Scheduled Messages'], ['stock.scrap.reason.tag', 'Scrap Reason Tag'], ['account.secure.entries.wizard', 'Secure Journal Entries'], ['sms.composer', 'Send SMS Wizard'], ['fleet.vehicle.send.mail', 'Send mails to Drivers'], ['ir.sequence', 'Sequence'], ['ir.sequence.date_range', 'Sequence Date Range'], ['ir.actions.server', 'Server Action'], ['res.users.apikeys.show', 'Show API Key'], ['hr.skill', 'Skill'], ['hr.skill.level', 'Skill Level'], ['hr.skill.type', 'Skill Type'], ['hr.employee.skill', 'Skill level for an employee'], ['hr.employee.skill.log', 'Skills History'], ['snailmail.letter', 'Snailmail Letter'], ['stock.orderpoint.snooze', 'Snooze Orderpoint'], ['spreadsheet.dashboard', 'Spreadsheet Dashboard'], ['spreadsheet.mixin', 'Spreadsheet mixin'], ['stock.move', 'Stock Move'], ['stock.package.destination', 'Stock Package Destination'], ['stock.package_level', 'Stock Package Level'], ['stock.quantity.history', 'Stock Quantity History'], ['stock.quant.relocate', 'Stock Quantity Relocation'], ['report.stock.quantity', 'Stock Quantity Report'], ['report.stock.report_reception', 'Stock Reception Report'], ['stock.forecasted_product_template', 'Stock Replenishment Report'], ['stock.forecasted_product_product', 'Stock Replenishment Report'], ['stock.request.count', 'Stock Request an Inventory Count'], ['stock.rule', 'Stock Rule'], ['stock.rules.report', 'Stock Rules report'], ['stock.track.confirmation', 'Stock Track Confirmation'], ['stock.track.line', 'Stock Track Line'], ['stock.valuation.layer', 'Stock Valuation Layer'], ['stock.package.type', 'Stock package type'], ['report.stock.report_stock_rule', 'Stock rule report'], ['stock.replenishment.info', 'Stock supplier replenishment information'], ['stock.replenishment.option', 'Stock warehouse replenishment option'], ['stock.storage.category', 'Storage Category'], ['stock.storage.category.capacity', 'Storage Category Capacity'], ['mail.link.preview', 'Store link preview data'], ['product.supplierinfo', 'Supplier Pricelist'], ['ir.config_parameter', 'System Parameter'], ['account.tax.group', 'Tax Group'], ['account.fiscal.position.tax', 'Tax Mapping of Fiscal Position'], ['account.tax.repartition.line', 'Tax Repartition Line'], ['template.reset.mixin', 'Template Reset Mixin'], ['res.territory', 'Territory'], ['tier.definition', 'Tier Definition'], ['tier.review', 'Tier Review'], ['tier.validation', 'Tier Validation (abstract)'], ['tier.validation.exception', 'Tier Validation Exceptions'], ['web_tour.tour.step', "Tour's step"], ['web_tour.tour', 'Tours'], ['stock.traceability.report', 'Traceability Report'], ['ir.cron.trigger', 'Triggered actions'], ['hr.resume.line.type', 'Type of a resume line'], ['account.edi.xml.ubl_20', 'UBL 2.0'], ['account.edi.xml.ubl_21', 'UBL 2.1'], ['account.edi.xml.ubl_bis3', 'UBL BIS Billing 3.0.12'], ['sale.edi.xml.ubl_bis3', 'UBL BIS Ordering 3.0'], ['utm.campaign', 'UTM Campaign'], ['utm.medium', 'UTM Medium'], ['utm.mixin', 'UTM Mixin'], ['utm.source', 'UTM Source'], ['utm.source.mixin', 'UTM Source Mixin'], ['utm.tag', 'UTM Tag'], ['_unknown', 'Unknown'], ['base.module.update', 'Update Module'], ['snailmail.letter.missing.required.fields', 'Update address of partner'], ['update.product.attribute.value', 'Update product attribute value'], ['base.module.upgrade', 'Upgrade Module'], ['res.users', 'User'], ['bus.presence', 'User Presence'], ['res.users.settings', 'User Settings'], ['res.users.settings.volumes', 'User Settings Volumes'], ['change.password.user', 'User, Change Password Wizard'], ['change.password.own', 'User, change own password wizard'], ['res.users.apikeys', 'Users API Keys'], ['res.users.deletion', 'Users Deletion Request'], ['res.users.log', 'Users Log'], ['validate.account.move', 'Validate Account Move'], ['fleet.vehicle.state', 'Vehicle Status'], ['fleet.vehicle.tag', 'Vehicle Tag'], ['ir.ui.view', 'View'], ['stock.warehouse', 'Warehouse'], ['stock.warn.insufficient.qty', 'Warn Insufficient Quantity'], ['stock.warn.insufficient.qty.scrap', 'Warn Insufficient Scrap Quantity'], ['web_editor.converter.test.sub', 'Web Editor Converter Subtest'], ['web_editor.converter.test', 'Web Editor Converter Test'], ['stock.valuation.layer.revaluation', 'Wizard model to reavaluate a stock inventory for a product'], ['resource.calendar.attendance', 'Work Detail'], ['hr.work.location', 'Work Location'], ['res.branch', 'branch'], ['ir.websocket', 'websocket message handling']]<br>
+<strong>sortable:</strong> True<br>
+<strong>store:</strong> False<br>
+<strong>string:</strong> Record<br>
+<strong>type:</strong> reference<br>
+</p>
+</section>
+
+<section id="selection_value" class="card card-body">
+<h4 class="card-title">selection_value</h4>
+<p>
+<strong>allow_hierachy_operators:</strong> False<br>
+<strong>change_default:</strong> False<br>
+<strong>company_dependent:</strong> False<br>
+<strong>context:</strong> {}<br>
+<strong>default_export_compatible:</strong> False<br>
+<strong>depends:</strong> ['ir_actions_server_id.selection_value']<br>
+<strong>exportable:</strong> True<br>
+<strong>groupable:</strong> True<br>
+<strong>manual:</strong> False<br>
+<strong>name:</strong> selection_value<br>
+<strong>readonly:</strong> False<br>
+<strong>related:</strong> ir_actions_server_id.selection_value<br>
+<strong>relation:</strong> <a class="nav-link" href="../ir_model_fields_selection/index.html">ir.model.fields.selection</a><br>
+<strong>required:</strong> False<br>
+<strong>searchable:</strong> True<br>
+<strong>sortable:</strong> True<br>
+<strong>store:</strong> False<br>
+<strong>string:</strong> Custom Value<br>
+<strong>type:</strong> many2one<br>
+</p>
+</section>
+
+<section id="value_field_to_show" class="card card-body">
+<h4 class="card-title">value_field_to_show</h4>
+<p>
+<strong>change_default:</strong> False<br>
+<strong>company_dependent:</strong> False<br>
+<strong>default_export_compatible:</strong> False<br>
+<strong>depends:</strong> ['ir_actions_server_id.value_field_to_show']<br>
+<strong>exportable:</strong> True<br>
+<strong>groupable:</strong> False<br>
+<strong>manual:</strong> False<br>
+<strong>name:</strong> value_field_to_show<br>
+<strong>readonly:</strong> True<br>
+<strong>related:</strong> ir_actions_server_id.value_field_to_show<br>
+<strong>required:</strong> False<br>
+<strong>searchable:</strong> False<br>
+<strong>selection:</strong> [['value', 'value'], ['resource_ref', 'reference'], ['update_boolean_value', 'update_boolean_value'], ['selection_value', 'selection_value']]<br>
+<strong>sortable:</strong> False<br>
+<strong>store:</strong> False<br>
+<strong>string:</strong> Value Field To Show<br>
+<strong>type:</strong> selection<br>
+</p>
+</section>
+
+<section id="webhook_url" class="card card-body">
+<h4 class="card-title">webhook_url</h4>
+<p>
+<strong>change_default:</strong> False<br>
+<strong>company_dependent:</strong> False<br>
+<strong>default_export_compatible:</strong> False<br>
+<strong>depends:</strong> ['ir_actions_server_id.webhook_url']<br>
+<strong>exportable:</strong> True<br>
+<strong>groupable:</strong> True<br>
+<strong>help:</strong> URL to send the POST request to.<br>
+<strong>manual:</strong> False<br>
+<strong>name:</strong> webhook_url<br>
+<strong>readonly:</strong> False<br>
+<strong>related:</strong> ir_actions_server_id.webhook_url<br>
+<strong>required:</strong> False<br>
+<strong>searchable:</strong> True<br>
+<strong>sortable:</strong> True<br>
+<strong>store:</strong> False<br>
+<strong>string:</strong> Webhook URL<br>
+<strong>translate:</strong> False<br>
+<strong>trim:</strong> True<br>
+<strong>type:</strong> char<br>
+</p>
+</section>
+
+<section id="webhook_field_ids" class="card card-body">
+<h4 class="card-title">webhook_field_ids</h4>
+<p>
+<strong>allow_hierachy_operators:</strong> False<br>
+<strong>change_default:</strong> False<br>
+<strong>company_dependent:</strong> False<br>
+<strong>context:</strong> {}<br>
+<strong>default_export_compatible:</strong> False<br>
+<strong>depends:</strong> ['ir_actions_server_id.webhook_field_ids']<br>
+<strong>domain:</strong> []<br>
+<strong>exportable:</strong> True<br>
+<strong>groupable:</strong> True<br>
+<strong>help:</strong> Fields to send in the POST request. The id and model of the record are always sent as '_id' and '_model'. The name of the action that triggered the webhook is always sent as '_name'.<br>
+<strong>manual:</strong> False<br>
+<strong>name:</strong> webhook_field_ids<br>
+<strong>readonly:</strong> False<br>
+<strong>related:</strong> ir_actions_server_id.webhook_field_ids<br>
+<strong>relation:</strong> <a class="nav-link" href="../ir_model_fields/index.html">ir.model.fields</a><br>
+<strong>required:</strong> False<br>
+<strong>searchable:</strong> True<br>
+<strong>sortable:</strong> False<br>
+<strong>store:</strong> False<br>
+<strong>string:</strong> Webhook Fields<br>
+<strong>type:</strong> many2many<br>
+</p>
+</section>
+
+<section id="webhook_sample_payload" class="card card-body">
+<h4 class="card-title">webhook_sample_payload</h4>
+<p>
+<strong>change_default:</strong> False<br>
+<strong>company_dependent:</strong> False<br>
+<strong>default_export_compatible:</strong> False<br>
+<strong>depends:</strong> ['ir_actions_server_id.webhook_sample_payload']<br>
+<strong>exportable:</strong> True<br>
+<strong>groupable:</strong> False<br>
+<strong>manual:</strong> False<br>
+<strong>name:</strong> webhook_sample_payload<br>
+<strong>readonly:</strong> True<br>
+<strong>related:</strong> ir_actions_server_id.webhook_sample_payload<br>
+<strong>required:</strong> False<br>
+<strong>searchable:</strong> False<br>
+<strong>sortable:</strong> False<br>
+<strong>store:</strong> False<br>
+<strong>string:</strong> Sample Payload<br>
+<strong>translate:</strong> False<br>
+<strong>type:</strong> text<br>
+</p>
+</section>
+
+<section id="partner_ids" class="card card-body">
+<h4 class="card-title">partner_ids</h4>
+<p>
+<strong>allow_hierachy_operators:</strong> True<br>
+<strong>change_default:</strong> False<br>
+<strong>company_dependent:</strong> False<br>
+<strong>context:</strong> {}<br>
+<strong>default_export_compatible:</strong> False<br>
+<strong>depends:</strong> ['ir_actions_server_id.partner_ids']<br>
+<strong>domain:</strong> []<br>
+<strong>exportable:</strong> True<br>
+<strong>groupable:</strong> True<br>
+<strong>manual:</strong> False<br>
+<strong>name:</strong> partner_ids<br>
+<strong>readonly:</strong> False<br>
+<strong>related:</strong> ir_actions_server_id.partner_ids<br>
+<strong>relation:</strong> <a class="nav-link" href="../res_partner/index.html">res.partner</a><br>
+<strong>required:</strong> False<br>
+<strong>searchable:</strong> True<br>
+<strong>sortable:</strong> False<br>
+<strong>store:</strong> False<br>
+<strong>string:</strong> Partner<br>
+<strong>type:</strong> many2many<br>
+</p>
+</section>
+
+<section id="template_id" class="card card-body">
+<h4 class="card-title">template_id</h4>
+<p>
+<strong>allow_hierachy_operators:</strong> False<br>
+<strong>change_default:</strong> False<br>
+<strong>company_dependent:</strong> False<br>
+<strong>context:</strong> {}<br>
+<strong>default_export_compatible:</strong> False<br>
+<strong>depends:</strong> ['ir_actions_server_id.template_id']<br>
+<strong>exportable:</strong> True<br>
+<strong>groupable:</strong> True<br>
+<strong>manual:</strong> False<br>
+<strong>name:</strong> template_id<br>
+<strong>readonly:</strong> False<br>
+<strong>related:</strong> ir_actions_server_id.template_id<br>
+<strong>relation:</strong> <a class="nav-link" href="../mail_template/index.html">mail.template</a><br>
+<strong>required:</strong> False<br>
+<strong>searchable:</strong> True<br>
+<strong>sortable:</strong> True<br>
+<strong>store:</strong> False<br>
+<strong>string:</strong> Email Template<br>
+<strong>type:</strong> many2one<br>
+</p>
+</section>
+
+<section id="mail_post_autofollow" class="card card-body">
+<h4 class="card-title">mail_post_autofollow</h4>
+<p>
+<strong>change_default:</strong> False<br>
+<strong>company_dependent:</strong> False<br>
+<strong>default_export_compatible:</strong> False<br>
+<strong>depends:</strong> ['ir_actions_server_id.mail_post_autofollow']<br>
+<strong>exportable:</strong> True<br>
+<strong>groupable:</strong> True<br>
+<strong>manual:</strong> False<br>
+<strong>name:</strong> mail_post_autofollow<br>
+<strong>readonly:</strong> False<br>
+<strong>related:</strong> ir_actions_server_id.mail_post_autofollow<br>
+<strong>required:</strong> False<br>
+<strong>searchable:</strong> True<br>
+<strong>sortable:</strong> True<br>
+<strong>store:</strong> False<br>
+<strong>string:</strong> Subscribe Recipients<br>
+<strong>type:</strong> boolean<br>
+</p>
+</section>
+
+<section id="mail_post_method" class="card card-body">
+<h4 class="card-title">mail_post_method</h4>
+<p>
+<strong>change_default:</strong> False<br>
+<strong>company_dependent:</strong> False<br>
+<strong>default_export_compatible:</strong> False<br>
+<strong>depends:</strong> ['ir_actions_server_id.mail_post_method']<br>
+<strong>exportable:</strong> True<br>
+<strong>groupable:</strong> True<br>
+<strong>manual:</strong> False<br>
+<strong>name:</strong> mail_post_method<br>
+<strong>readonly:</strong> False<br>
+<strong>related:</strong> ir_actions_server_id.mail_post_method<br>
+<strong>required:</strong> False<br>
+<strong>searchable:</strong> True<br>
+<strong>selection:</strong> [['email', 'Email'], ['comment', 'Message'], ['note', 'Note']]<br>
+<strong>sortable:</strong> True<br>
+<strong>store:</strong> False<br>
+<strong>string:</strong> Send Email As<br>
+<strong>type:</strong> selection<br>
+</p>
+</section>
+
+<section id="activity_type_id" class="card card-body">
+<h4 class="card-title">activity_type_id</h4>
+<p>
+<strong>allow_hierachy_operators:</strong> False<br>
+<strong>change_default:</strong> False<br>
+<strong>company_dependent:</strong> False<br>
+<strong>context:</strong> {}<br>
+<strong>default_export_compatible:</strong> False<br>
+<strong>depends:</strong> ['ir_actions_server_id.activity_type_id']<br>
+<strong>exportable:</strong> True<br>
+<strong>groupable:</strong> True<br>
+<strong>manual:</strong> False<br>
+<strong>name:</strong> activity_type_id<br>
+<strong>readonly:</strong> False<br>
+<strong>related:</strong> ir_actions_server_id.activity_type_id<br>
+<strong>relation:</strong> <a class="nav-link" href="../mail_activity_type/index.html">mail.activity.type</a><br>
+<strong>required:</strong> False<br>
+<strong>searchable:</strong> True<br>
+<strong>sortable:</strong> True<br>
+<strong>store:</strong> False<br>
+<strong>string:</strong> Activity Type<br>
+<strong>type:</strong> many2one<br>
+</p>
+</section>
+
+<section id="activity_summary" class="card card-body">
+<h4 class="card-title">activity_summary</h4>
+<p>
+<strong>change_default:</strong> False<br>
+<strong>company_dependent:</strong> False<br>
+<strong>default_export_compatible:</strong> False<br>
+<strong>depends:</strong> ['ir_actions_server_id.activity_summary']<br>
+<strong>exportable:</strong> True<br>
+<strong>groupable:</strong> True<br>
+<strong>manual:</strong> False<br>
+<strong>name:</strong> activity_summary<br>
+<strong>readonly:</strong> False<br>
+<strong>related:</strong> ir_actions_server_id.activity_summary<br>
+<strong>required:</strong> False<br>
+<strong>searchable:</strong> True<br>
+<strong>sortable:</strong> True<br>
+<strong>store:</strong> False<br>
+<strong>string:</strong> Title<br>
+<strong>translate:</strong> False<br>
+<strong>trim:</strong> True<br>
+<strong>type:</strong> char<br>
+</p>
+</section>
+
+<section id="activity_note" class="card card-body">
+<h4 class="card-title">activity_note</h4>
+<p>
+<strong>change_default:</strong> False<br>
+<strong>company_dependent:</strong> False<br>
+<strong>default_export_compatible:</strong> False<br>
+<strong>depends:</strong> ['ir_actions_server_id.activity_note']<br>
+<strong>exportable:</strong> True<br>
+<strong>groupable:</strong> True<br>
+<strong>manual:</strong> False<br>
+<strong>name:</strong> activity_note<br>
+<strong>readonly:</strong> False<br>
+<strong>related:</strong> ir_actions_server_id.activity_note<br>
+<strong>required:</strong> False<br>
+<strong>sanitize:</strong> True<br>
+<strong>sanitize_attributes:</strong> True<br>
+<strong>sanitize_style:</strong> False<br>
+<strong>sanitize_tags:</strong> True<br>
+<strong>searchable:</strong> True<br>
+<strong>sortable:</strong> True<br>
+<strong>store:</strong> False<br>
+<strong>string:</strong> Note<br>
+<strong>strip_classes:</strong> False<br>
+<strong>strip_style:</strong> False<br>
+<strong>translate:</strong> False<br>
+<strong>type:</strong> html<br>
+</p>
+</section>
+
+<section id="activity_date_deadline_range" class="card card-body">
+<h4 class="card-title">activity_date_deadline_range</h4>
+<p>
+<strong>aggregator:</strong> sum<br>
+<strong>change_default:</strong> False<br>
+<strong>company_dependent:</strong> False<br>
+<strong>default_export_compatible:</strong> False<br>
+<strong>depends:</strong> ['ir_actions_server_id.activity_date_deadline_range']<br>
+<strong>exportable:</strong> True<br>
+<strong>groupable:</strong> True<br>
+<strong>manual:</strong> False<br>
+<strong>name:</strong> activity_date_deadline_range<br>
+<strong>readonly:</strong> False<br>
+<strong>related:</strong> ir_actions_server_id.activity_date_deadline_range<br>
+<strong>required:</strong> False<br>
+<strong>searchable:</strong> True<br>
+<strong>sortable:</strong> True<br>
+<strong>store:</strong> False<br>
+<strong>string:</strong> Due Date In<br>
+<strong>type:</strong> integer<br>
+</p>
+</section>
+
+<section id="activity_date_deadline_range_type" class="card card-body">
+<h4 class="card-title">activity_date_deadline_range_type</h4>
+<p>
+<strong>change_default:</strong> False<br>
+<strong>company_dependent:</strong> False<br>
+<strong>default_export_compatible:</strong> False<br>
+<strong>depends:</strong> ['ir_actions_server_id.activity_date_deadline_range_type']<br>
+<strong>exportable:</strong> True<br>
+<strong>groupable:</strong> True<br>
+<strong>manual:</strong> False<br>
+<strong>name:</strong> activity_date_deadline_range_type<br>
+<strong>readonly:</strong> False<br>
+<strong>related:</strong> ir_actions_server_id.activity_date_deadline_range_type<br>
+<strong>required:</strong> False<br>
+<strong>searchable:</strong> True<br>
+<strong>selection:</strong> [['days', 'Days'], ['weeks', 'Weeks'], ['months', 'Months']]<br>
+<strong>sortable:</strong> True<br>
+<strong>store:</strong> False<br>
+<strong>string:</strong> Due type<br>
+<strong>type:</strong> selection<br>
+</p>
+</section>
+
+<section id="activity_user_type" class="card card-body">
+<h4 class="card-title">activity_user_type</h4>
+<p>
+<strong>change_default:</strong> False<br>
+<strong>company_dependent:</strong> False<br>
+<strong>default_export_compatible:</strong> False<br>
+<strong>depends:</strong> ['ir_actions_server_id.activity_user_type']<br>
+<strong>exportable:</strong> True<br>
+<strong>groupable:</strong> True<br>
+<strong>help:</strong> Use 'Specific User' to always assign the same user on the next activity. Use 'Dynamic User' to specify the field name of the user to choose on the record.<br>
+<strong>manual:</strong> False<br>
+<strong>name:</strong> activity_user_type<br>
+<strong>readonly:</strong> False<br>
+<strong>related:</strong> ir_actions_server_id.activity_user_type<br>
+<strong>required:</strong> False<br>
+<strong>searchable:</strong> True<br>
+<strong>selection:</strong> [['specific', 'Specific User'], ['generic', 'Dynamic User (based on record)']]<br>
+<strong>sortable:</strong> True<br>
+<strong>store:</strong> False<br>
+<strong>string:</strong> User Type<br>
+<strong>type:</strong> selection<br>
+</p>
+</section>
+
+<section id="activity_user_id" class="card card-body">
+<h4 class="card-title">activity_user_id</h4>
+<p>
+<strong>allow_hierachy_operators:</strong> True<br>
+<strong>change_default:</strong> False<br>
+<strong>company_dependent:</strong> False<br>
+<strong>context:</strong> {}<br>
+<strong>default_export_compatible:</strong> False<br>
+<strong>depends:</strong> ['ir_actions_server_id.activity_user_id']<br>
+<strong>domain:</strong> []<br>
+<strong>exportable:</strong> True<br>
+<strong>groupable:</strong> True<br>
+<strong>manual:</strong> False<br>
+<strong>name:</strong> activity_user_id<br>
+<strong>readonly:</strong> False<br>
+<strong>related:</strong> ir_actions_server_id.activity_user_id<br>
+<strong>relation:</strong> <a class="nav-link" href="../res_users/index.html">res.users</a><br>
+<strong>required:</strong> False<br>
+<strong>searchable:</strong> True<br>
+<strong>sortable:</strong> True<br>
+<strong>store:</strong> False<br>
+<strong>string:</strong> Responsible<br>
+<strong>type:</strong> many2one<br>
+</p>
+</section>
+
+<section id="activity_user_field_name" class="card card-body">
+<h4 class="card-title">activity_user_field_name</h4>
+<p>
+<strong>change_default:</strong> False<br>
+<strong>company_dependent:</strong> False<br>
+<strong>default_export_compatible:</strong> False<br>
+<strong>depends:</strong> ['ir_actions_server_id.activity_user_field_name']<br>
+<strong>exportable:</strong> True<br>
+<strong>groupable:</strong> True<br>
+<strong>manual:</strong> False<br>
+<strong>name:</strong> activity_user_field_name<br>
+<strong>readonly:</strong> False<br>
+<strong>related:</strong> ir_actions_server_id.activity_user_field_name<br>
+<strong>required:</strong> False<br>
+<strong>searchable:</strong> True<br>
+<strong>sortable:</strong> True<br>
+<strong>store:</strong> False<br>
+<strong>string:</strong> User Field<br>
+<strong>translate:</strong> False<br>
+<strong>trim:</strong> True<br>
+<strong>type:</strong> char<br>
+</p>
+</section>
+
+<section id="sms_template_id" class="card card-body">
+<h4 class="card-title">sms_template_id</h4>
+<p>
+<strong>allow_hierachy_operators:</strong> False<br>
+<strong>change_default:</strong> False<br>
+<strong>company_dependent:</strong> False<br>
+<strong>context:</strong> {}<br>
+<strong>default_export_compatible:</strong> False<br>
+<strong>depends:</strong> ['ir_actions_server_id.sms_template_id']<br>
+<strong>exportable:</strong> True<br>
+<strong>groupable:</strong> True<br>
+<strong>manual:</strong> False<br>
+<strong>name:</strong> sms_template_id<br>
+<strong>readonly:</strong> False<br>
+<strong>related:</strong> ir_actions_server_id.sms_template_id<br>
+<strong>relation:</strong> <a class="nav-link" href="../sms_template/index.html">sms.template</a><br>
+<strong>required:</strong> False<br>
+<strong>searchable:</strong> True<br>
+<strong>sortable:</strong> True<br>
+<strong>store:</strong> False<br>
+<strong>string:</strong> SMS Template<br>
+<strong>type:</strong> many2one<br>
+</p>
+</section>
+
+<section id="sms_method" class="card card-body">
+<h4 class="card-title">sms_method</h4>
+<p>
+<strong>change_default:</strong> False<br>
+<strong>company_dependent:</strong> False<br>
+<strong>default_export_compatible:</strong> False<br>
+<strong>depends:</strong> ['ir_actions_server_id.sms_method']<br>
+<strong>exportable:</strong> True<br>
+<strong>groupable:</strong> True<br>
+<strong>manual:</strong> False<br>
+<strong>name:</strong> sms_method<br>
+<strong>readonly:</strong> False<br>
+<strong>related:</strong> ir_actions_server_id.sms_method<br>
+<strong>required:</strong> False<br>
+<strong>searchable:</strong> True<br>
+<strong>selection:</strong> [['sms', 'SMS (without note)'], ['comment', 'SMS (with note)'], ['note', 'Note only']]<br>
+<strong>sortable:</strong> True<br>
+<strong>store:</strong> False<br>
+<strong>string:</strong> Send SMS As<br>
+<strong>type:</strong> selection<br>
+</p>
+</section>
+
+
+      </div>
+    </div>
+
+  </div>
+  <!-- Content end -->
+
+  <!-- Footer
+  ============================ -->
+  <footer id="footer" class="section bg-dark footer-text-light">
+    <div class="container">
+      <ul class="social-icons social-icons-lg social-icons-muted justify-content-center mb-3">
+        <li><a data-toggle="tooltip" href="https://twitter.com/harnishdesign/" target="_blank" title=""
+            data-original-title="Twitter"><i class="fab fa-twitter"></i></a></li>
+        <li><a data-toggle="tooltip" href="http://www.facebook.com/harnishdesign/" target="_blank" title=""
+            data-original-title="Facebook"><i class="fab fa-facebook-f"></i></a></li>
+        <li><a data-toggle="tooltip" href="http://www.dribbble.com/harnishdesign/" target="_blank" title=""
+            data-original-title="Dribbble"><i class="fab fa-dribbble"></i></a></li>
+        <li><a data-toggle="tooltip" href="http://www.github.com/" target="_blank" title=""
+            data-original-title="GitHub"><i class="fab fa-github"></i></a></li>
+      </ul>
+      <p class="text-center">Copyright &copy; 2020 <a
+          href="http://www.harnishdesign.net/idocs-one-page-documentation-html-template/">iDocs</a>. All Rights
+        Reserved.</p>
+      <p class="text-2 text-center mb-0">Design &amp; Develop by <a class="btn-link" target="_blank"
+          href="http://www.harnishdesign.net/">HarnishDesign</a>.</p>
+    </div>
+  </footer>
+  <!-- Footer end -->
+
+  </div>
+  <!-- Document Wrapper end -->
+
+  <!-- Back To Top -->
+  <a id="back-to-top" data-toggle="tooltip" title="Back to Top" href="javascript:void(0)"><i
+      class="fa fa-chevron-up"></i></a>
+
+  <!-- JavaScript
+============================ -->
+  <script src="../../assets/vendor/jquery/jquery.min.js"></script>
+  <script src="../../assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <!-- Highlight JS -->
+  <script src="../../assets/vendor/highlight.js/highlight.min.js"></script>
+  <!-- Easing -->
+  <script src="../../assets/vendor/jquery.easing/jquery.easing.min.js"></script>
+  <!-- Magnific Popup -->
+  <script src="../../assets/vendor/magnific-popup/jquery.magnific-popup.min.js"></script>
+  <!-- Custom Script -->
+  <script src="../../assets/js/theme.js"></script>
+</body>
+
+</html>

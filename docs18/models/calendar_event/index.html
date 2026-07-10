@@ -1,0 +1,2150 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1.0, shrink-to-fit=no">
+  <link href="../../assets/images/odoo_doc.png" rel="icon" />
+  <title>Odoo API Documentation</title>
+  <meta name="description" content="Your ThemeForest item Name and description">
+  <meta name="author" content="harnishdesign.net">
+
+  <!-- Stylesheet
+============================== -->
+  <!-- Bootstrap -->
+  <link rel="stylesheet" type="text/css" href="../../assets/vendor/bootstrap/css/bootstrap.min.css" />
+  <!-- Font Awesome Icon -->
+  <link rel="stylesheet" type="text/css" href="../../assets/vendor/font-awesome/css/all.min.css" />
+  <!-- Magnific Popup -->
+  <link rel="stylesheet" type="text/css" href="../../assets/vendor/magnific-popup/magnific-popup.min.css" />
+  <!-- Highlight Syntax -->
+  <link rel="stylesheet" type="text/css" href="../../assets/vendor/highlight.js/styles/github.css" />
+  <!-- Custom Stylesheet -->
+  <link rel="stylesheet" type="text/css" href="../../assets/css/stylesheet.css" />
+</head>
+
+<body data-spy="scroll" data-target=".idocs-navigation" data-offset="125">
+
+  <!-- Preloader -->
+  <div class="preloader">
+    <div class="lds-ellipsis">
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+    </div>
+  </div>
+  <!-- Preloader End -->
+
+  <!-- Document Wrapper   
+=============================== -->
+  <div id="main-wrapper">
+
+  <!-- Header
+  ============================ -->
+  <header id="header" class="sticky-top">
+    <!-- Navbar -->
+    <nav class="primary-menu navbar navbar-expand-lg navbar-dropdown-dark">
+      <div class="container-fluid">
+        <!-- Sidebar Toggler -->
+		<button id="sidebarCollapse" class="navbar-toggler d-block d-md-none" type="button"><span></span><span class="w-75"></span><span class="w-50"></span></button>
+
+		<!-- Logo -->
+        <a class="logo ml-md-3" href="index.html" title="iDocs Template"> <img src="../../assets/images/odoo_doc.png" alt="iDocs Template"/> </a>
+		<span class="text-2 ml-2">v1.0</span>
+        <!-- Logo End -->
+
+		<!-- Navbar Toggler -->
+		<button class="navbar-toggler ml-auto" type="button" data-toggle="collapse" data-target="#header-nav"><span></span><span></span><span></span></button>
+
+		<div id="header-nav" class="collapse navbar-collapse justify-content-end">
+          <ul class="navbar-nav">
+            <li class="dropdown"> <a class="dropdown-toggle" href="#">Navigation</a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="index.html">ir.model</a></li>
+                <li><a class="dropdown-item" href="odoo_operators.html">operators</a></li>
+              </ul>
+            </li>
+            <li><a target="_blank" href="https://themeforest.net/user/harnishdesign/#contact?ref=HarnishDesign">Support</a></li>
+          </ul>
+        </div>
+        <ul class="social-icons social-icons-sm ml-lg-2 mr-2">
+          <li class="social-icons-twitter"><a data-toggle="tooltip" href="http://www.twitter.com/harnishdesign/" target="_blank" title="" data-original-title="Twitter"><i class="fab fa-twitter"></i></a></li>
+        </ul>
+      </div>
+    </nav>
+    <!-- Navbar End -->
+  </header>
+  <!-- Header End -->
+
+  <!-- Content
+  ============================ -->
+  <div id="content" role="main">
+
+    <!-- Sidebar Navigation
+	============================ -->
+    <div class="idocs-navigation bg-light">
+        <ul class="nav flex-column">
+          <li class="nav-item"><a class="nav-link" href="#message_is_follower">message_is_follower</a></li>
+<li class="nav-item"><a class="nav-link" href="#message_follower_ids">message_follower_ids</a></li>
+<li class="nav-item"><a class="nav-link" href="#message_partner_ids">message_partner_ids</a></li>
+<li class="nav-item"><a class="nav-link" href="#message_ids">message_ids</a></li>
+<li class="nav-item"><a class="nav-link" href="#has_message">has_message</a></li>
+<li class="nav-item"><a class="nav-link" href="#message_needaction">message_needaction</a></li>
+<li class="nav-item"><a class="nav-link" href="#message_needaction_counter">message_needaction_counter</a></li>
+<li class="nav-item"><a class="nav-link" href="#message_has_error">message_has_error</a></li>
+<li class="nav-item"><a class="nav-link" href="#message_has_error_counter">message_has_error_counter</a></li>
+<li class="nav-item"><a class="nav-link" href="#message_attachment_count">message_attachment_count</a></li>
+<li class="nav-item"><a class="nav-link" href="#website_message_ids">website_message_ids</a></li>
+<li class="nav-item"><a class="nav-link" href="#message_has_sms_error">message_has_sms_error</a></li>
+<li class="nav-item"><a class="nav-link" href="#name">name</a></li>
+<li class="nav-item"><a class="nav-link" href="#description">description</a></li>
+<li class="nav-item"><a class="nav-link" href="#user_id">user_id</a></li>
+<li class="nav-item"><a class="nav-link" href="#partner_id">partner_id</a></li>
+<li class="nav-item"><a class="nav-link" href="#location">location</a></li>
+<li class="nav-item"><a class="nav-link" href="#videocall_location">videocall_location</a></li>
+<li class="nav-item"><a class="nav-link" href="#access_token">access_token</a></li>
+<li class="nav-item"><a class="nav-link" href="#videocall_source">videocall_source</a></li>
+<li class="nav-item"><a class="nav-link" href="#videocall_channel_id">videocall_channel_id</a></li>
+<li class="nav-item"><a class="nav-link" href="#privacy">privacy</a></li>
+<li class="nav-item"><a class="nav-link" href="#show_as">show_as</a></li>
+<li class="nav-item"><a class="nav-link" href="#is_highlighted">is_highlighted</a></li>
+<li class="nav-item"><a class="nav-link" href="#is_organizer_alone">is_organizer_alone</a></li>
+<li class="nav-item"><a class="nav-link" href="#active">active</a></li>
+<li class="nav-item"><a class="nav-link" href="#categ_ids">categ_ids</a></li>
+<li class="nav-item"><a class="nav-link" href="#start">start</a></li>
+<li class="nav-item"><a class="nav-link" href="#stop">stop</a></li>
+<li class="nav-item"><a class="nav-link" href="#display_time">display_time</a></li>
+<li class="nav-item"><a class="nav-link" href="#allday">allday</a></li>
+<li class="nav-item"><a class="nav-link" href="#start_date">start_date</a></li>
+<li class="nav-item"><a class="nav-link" href="#stop_date">stop_date</a></li>
+<li class="nav-item"><a class="nav-link" href="#duration">duration</a></li>
+<li class="nav-item"><a class="nav-link" href="#res_id">res_id</a></li>
+<li class="nav-item"><a class="nav-link" href="#res_model_id">res_model_id</a></li>
+<li class="nav-item"><a class="nav-link" href="#res_model">res_model</a></li>
+<li class="nav-item"><a class="nav-link" href="#res_model_name">res_model_name</a></li>
+<li class="nav-item"><a class="nav-link" href="#activity_ids">activity_ids</a></li>
+<li class="nav-item"><a class="nav-link" href="#attendee_ids">attendee_ids</a></li>
+<li class="nav-item"><a class="nav-link" href="#current_attendee">current_attendee</a></li>
+<li class="nav-item"><a class="nav-link" href="#current_status">current_status</a></li>
+<li class="nav-item"><a class="nav-link" href="#should_show_status">should_show_status</a></li>
+<li class="nav-item"><a class="nav-link" href="#partner_ids">partner_ids</a></li>
+<li class="nav-item"><a class="nav-link" href="#invalid_email_partner_ids">invalid_email_partner_ids</a></li>
+<li class="nav-item"><a class="nav-link" href="#alarm_ids">alarm_ids</a></li>
+<li class="nav-item"><a class="nav-link" href="#recurrency">recurrency</a></li>
+<li class="nav-item"><a class="nav-link" href="#recurrence_id">recurrence_id</a></li>
+<li class="nav-item"><a class="nav-link" href="#follow_recurrence">follow_recurrence</a></li>
+<li class="nav-item"><a class="nav-link" href="#recurrence_update">recurrence_update</a></li>
+<li class="nav-item"><a class="nav-link" href="#rrule">rrule</a></li>
+<li class="nav-item"><a class="nav-link" href="#rrule_type_ui">rrule_type_ui</a></li>
+<li class="nav-item"><a class="nav-link" href="#rrule_type">rrule_type</a></li>
+<li class="nav-item"><a class="nav-link" href="#event_tz">event_tz</a></li>
+<li class="nav-item"><a class="nav-link" href="#end_type">end_type</a></li>
+<li class="nav-item"><a class="nav-link" href="#interval">interval</a></li>
+<li class="nav-item"><a class="nav-link" href="#count">count</a></li>
+<li class="nav-item"><a class="nav-link" href="#mon">mon</a></li>
+<li class="nav-item"><a class="nav-link" href="#tue">tue</a></li>
+<li class="nav-item"><a class="nav-link" href="#wed">wed</a></li>
+<li class="nav-item"><a class="nav-link" href="#thu">thu</a></li>
+<li class="nav-item"><a class="nav-link" href="#fri">fri</a></li>
+<li class="nav-item"><a class="nav-link" href="#sat">sat</a></li>
+<li class="nav-item"><a class="nav-link" href="#sun">sun</a></li>
+<li class="nav-item"><a class="nav-link" href="#month_by">month_by</a></li>
+<li class="nav-item"><a class="nav-link" href="#day">day</a></li>
+<li class="nav-item"><a class="nav-link" href="#weekday">weekday</a></li>
+<li class="nav-item"><a class="nav-link" href="#byday">byday</a></li>
+<li class="nav-item"><a class="nav-link" href="#until">until</a></li>
+<li class="nav-item"><a class="nav-link" href="#display_description">display_description</a></li>
+<li class="nav-item"><a class="nav-link" href="#attendees_count">attendees_count</a></li>
+<li class="nav-item"><a class="nav-link" href="#accepted_count">accepted_count</a></li>
+<li class="nav-item"><a class="nav-link" href="#declined_count">declined_count</a></li>
+<li class="nav-item"><a class="nav-link" href="#tentative_count">tentative_count</a></li>
+<li class="nav-item"><a class="nav-link" href="#awaiting_count">awaiting_count</a></li>
+<li class="nav-item"><a class="nav-link" href="#user_can_edit">user_can_edit</a></li>
+<li class="nav-item"><a class="nav-link" href="#id">id</a></li>
+<li class="nav-item"><a class="nav-link" href="#display_name">display_name</a></li>
+<li class="nav-item"><a class="nav-link" href="#create_uid">create_uid</a></li>
+<li class="nav-item"><a class="nav-link" href="#create_date">create_date</a></li>
+<li class="nav-item"><a class="nav-link" href="#write_uid">write_uid</a></li>
+<li class="nav-item"><a class="nav-link" href="#write_date">write_date</a></li>
+<li class="nav-item"><a class="nav-link" href="#fsm_order_id">fsm_order_id</a></li>
+<li class="nav-item"><a class="nav-link" href="#unavailable_partner_ids">unavailable_partner_ids</a></li>
+
+        </ul>
+    </div>
+
+    <!-- Docs Content
+	============================ -->
+    <div class="idocs-content">
+      <div class="container">
+        <h2>calendar.event</h2>
+<section id="message_is_follower" class="card card-body">
+<h4 class="card-title">message_is_follower</h4>
+<p>
+<strong>change_default:</strong> False<br>
+<strong>company_dependent:</strong> False<br>
+<strong>default_export_compatible:</strong> False<br>
+<strong>depends:</strong> ['message_follower_ids']<br>
+<strong>exportable:</strong> True<br>
+<strong>groupable:</strong> False<br>
+<strong>manual:</strong> False<br>
+<strong>name:</strong> message_is_follower<br>
+<strong>readonly:</strong> True<br>
+<strong>required:</strong> False<br>
+<strong>searchable:</strong> True<br>
+<strong>sortable:</strong> False<br>
+<strong>store:</strong> False<br>
+<strong>string:</strong> Is Follower<br>
+<strong>type:</strong> boolean<br>
+</p>
+</section>
+
+<section id="message_follower_ids" class="card card-body">
+<h4 class="card-title">message_follower_ids</h4>
+<p>
+<strong>allow_hierachy_operators:</strong> False<br>
+<strong>change_default:</strong> False<br>
+<strong>company_dependent:</strong> False<br>
+<strong>context:</strong> {}<br>
+<strong>default_export_compatible:</strong> False<br>
+<strong>depends:</strong> []<br>
+<strong>domain:</strong> []<br>
+<strong>exportable:</strong> True<br>
+<strong>groupable:</strong> False<br>
+<strong>groups:</strong> base.group_user<br>
+<strong>manual:</strong> False<br>
+<strong>name:</strong> message_follower_ids<br>
+<strong>readonly:</strong> False<br>
+<strong>relation:</strong> <a class="nav-link" href="../mail_followers/index.html">mail.followers</a><br>
+<strong>relation_field:</strong> res_id<br>
+<strong>required:</strong> False<br>
+<strong>searchable:</strong> True<br>
+<strong>sortable:</strong> False<br>
+<strong>store:</strong> True<br>
+<strong>string:</strong> Followers<br>
+<strong>type:</strong> one2many<br>
+</p>
+</section>
+
+<section id="message_partner_ids" class="card card-body">
+<h4 class="card-title">message_partner_ids</h4>
+<p>
+<strong>allow_hierachy_operators:</strong> True<br>
+<strong>change_default:</strong> False<br>
+<strong>company_dependent:</strong> False<br>
+<strong>context:</strong> {}<br>
+<strong>default_export_compatible:</strong> False<br>
+<strong>depends:</strong> ['message_follower_ids']<br>
+<strong>domain:</strong> []<br>
+<strong>exportable:</strong> True<br>
+<strong>groupable:</strong> False<br>
+<strong>groups:</strong> base.group_user<br>
+<strong>manual:</strong> False<br>
+<strong>name:</strong> message_partner_ids<br>
+<strong>readonly:</strong> False<br>
+<strong>relation:</strong> <a class="nav-link" href="../res_partner/index.html">res.partner</a><br>
+<strong>required:</strong> False<br>
+<strong>searchable:</strong> True<br>
+<strong>sortable:</strong> False<br>
+<strong>store:</strong> False<br>
+<strong>string:</strong> Followers (Partners)<br>
+<strong>type:</strong> many2many<br>
+</p>
+</section>
+
+<section id="message_ids" class="card card-body">
+<h4 class="card-title">message_ids</h4>
+<p>
+<strong>allow_hierachy_operators:</strong> True<br>
+<strong>change_default:</strong> False<br>
+<strong>company_dependent:</strong> False<br>
+<strong>context:</strong> {}<br>
+<strong>default_export_compatible:</strong> False<br>
+<strong>depends:</strong> []<br>
+<strong>domain:</strong> [['message_type', '!=', 'user_notification']]<br>
+<strong>exportable:</strong> True<br>
+<strong>groupable:</strong> False<br>
+<strong>manual:</strong> False<br>
+<strong>name:</strong> message_ids<br>
+<strong>readonly:</strong> False<br>
+<strong>relation:</strong> <a class="nav-link" href="../mail_message/index.html">mail.message</a><br>
+<strong>relation_field:</strong> res_id<br>
+<strong>required:</strong> False<br>
+<strong>searchable:</strong> True<br>
+<strong>sortable:</strong> False<br>
+<strong>store:</strong> True<br>
+<strong>string:</strong> Messages<br>
+<strong>type:</strong> one2many<br>
+</p>
+</section>
+
+<section id="has_message" class="card card-body">
+<h4 class="card-title">has_message</h4>
+<p>
+<strong>change_default:</strong> False<br>
+<strong>company_dependent:</strong> False<br>
+<strong>default_export_compatible:</strong> False<br>
+<strong>depends:</strong> []<br>
+<strong>exportable:</strong> True<br>
+<strong>groupable:</strong> False<br>
+<strong>manual:</strong> False<br>
+<strong>name:</strong> has_message<br>
+<strong>readonly:</strong> True<br>
+<strong>required:</strong> False<br>
+<strong>searchable:</strong> True<br>
+<strong>sortable:</strong> False<br>
+<strong>store:</strong> False<br>
+<strong>string:</strong> Has Message<br>
+<strong>type:</strong> boolean<br>
+</p>
+</section>
+
+<section id="message_needaction" class="card card-body">
+<h4 class="card-title">message_needaction</h4>
+<p>
+<strong>change_default:</strong> False<br>
+<strong>company_dependent:</strong> False<br>
+<strong>default_export_compatible:</strong> False<br>
+<strong>depends:</strong> []<br>
+<strong>exportable:</strong> True<br>
+<strong>groupable:</strong> False<br>
+<strong>help:</strong> If checked, new messages require your attention.<br>
+<strong>manual:</strong> False<br>
+<strong>name:</strong> message_needaction<br>
+<strong>readonly:</strong> True<br>
+<strong>required:</strong> False<br>
+<strong>searchable:</strong> True<br>
+<strong>sortable:</strong> False<br>
+<strong>store:</strong> False<br>
+<strong>string:</strong> Action Needed<br>
+<strong>type:</strong> boolean<br>
+</p>
+</section>
+
+<section id="message_needaction_counter" class="card card-body">
+<h4 class="card-title">message_needaction_counter</h4>
+<p>
+<strong>change_default:</strong> False<br>
+<strong>company_dependent:</strong> False<br>
+<strong>default_export_compatible:</strong> False<br>
+<strong>depends:</strong> []<br>
+<strong>exportable:</strong> True<br>
+<strong>groupable:</strong> False<br>
+<strong>help:</strong> Number of messages requiring action<br>
+<strong>manual:</strong> False<br>
+<strong>name:</strong> message_needaction_counter<br>
+<strong>readonly:</strong> True<br>
+<strong>required:</strong> False<br>
+<strong>searchable:</strong> False<br>
+<strong>sortable:</strong> False<br>
+<strong>store:</strong> False<br>
+<strong>string:</strong> Number of Actions<br>
+<strong>type:</strong> integer<br>
+</p>
+</section>
+
+<section id="message_has_error" class="card card-body">
+<h4 class="card-title">message_has_error</h4>
+<p>
+<strong>change_default:</strong> False<br>
+<strong>company_dependent:</strong> False<br>
+<strong>default_export_compatible:</strong> False<br>
+<strong>depends:</strong> []<br>
+<strong>exportable:</strong> True<br>
+<strong>groupable:</strong> False<br>
+<strong>help:</strong> If checked, some messages have a delivery error.<br>
+<strong>manual:</strong> False<br>
+<strong>name:</strong> message_has_error<br>
+<strong>readonly:</strong> True<br>
+<strong>required:</strong> False<br>
+<strong>searchable:</strong> True<br>
+<strong>sortable:</strong> False<br>
+<strong>store:</strong> False<br>
+<strong>string:</strong> Message Delivery error<br>
+<strong>type:</strong> boolean<br>
+</p>
+</section>
+
+<section id="message_has_error_counter" class="card card-body">
+<h4 class="card-title">message_has_error_counter</h4>
+<p>
+<strong>change_default:</strong> False<br>
+<strong>company_dependent:</strong> False<br>
+<strong>default_export_compatible:</strong> False<br>
+<strong>depends:</strong> []<br>
+<strong>exportable:</strong> True<br>
+<strong>groupable:</strong> False<br>
+<strong>help:</strong> Number of messages with delivery error<br>
+<strong>manual:</strong> False<br>
+<strong>name:</strong> message_has_error_counter<br>
+<strong>readonly:</strong> True<br>
+<strong>required:</strong> False<br>
+<strong>searchable:</strong> False<br>
+<strong>sortable:</strong> False<br>
+<strong>store:</strong> False<br>
+<strong>string:</strong> Number of errors<br>
+<strong>type:</strong> integer<br>
+</p>
+</section>
+
+<section id="message_attachment_count" class="card card-body">
+<h4 class="card-title">message_attachment_count</h4>
+<p>
+<strong>change_default:</strong> False<br>
+<strong>company_dependent:</strong> False<br>
+<strong>default_export_compatible:</strong> False<br>
+<strong>depends:</strong> []<br>
+<strong>exportable:</strong> True<br>
+<strong>groupable:</strong> False<br>
+<strong>groups:</strong> base.group_user<br>
+<strong>manual:</strong> False<br>
+<strong>name:</strong> message_attachment_count<br>
+<strong>readonly:</strong> True<br>
+<strong>required:</strong> False<br>
+<strong>searchable:</strong> False<br>
+<strong>sortable:</strong> False<br>
+<strong>store:</strong> False<br>
+<strong>string:</strong> Attachment Count<br>
+<strong>type:</strong> integer<br>
+</p>
+</section>
+
+<section id="website_message_ids" class="card card-body">
+<h4 class="card-title">website_message_ids</h4>
+<p>
+<strong>allow_hierachy_operators:</strong> True<br>
+<strong>change_default:</strong> False<br>
+<strong>company_dependent:</strong> False<br>
+<strong>context:</strong> {}<br>
+<strong>default_export_compatible:</strong> False<br>
+<strong>depends:</strong> []<br>
+<strong>domain:</strong> [['model', '=', 'calendar.event'], ['message_type', 'in', ['comment', 'email', 'email_outgoing', 'auto_comment']]]<br>
+<strong>exportable:</strong> True<br>
+<strong>groupable:</strong> False<br>
+<strong>help:</strong> Website communication history<br>
+<strong>manual:</strong> False<br>
+<strong>name:</strong> website_message_ids<br>
+<strong>readonly:</strong> False<br>
+<strong>relation:</strong> <a class="nav-link" href="../mail_message/index.html">mail.message</a><br>
+<strong>relation_field:</strong> res_id<br>
+<strong>required:</strong> False<br>
+<strong>searchable:</strong> True<br>
+<strong>sortable:</strong> False<br>
+<strong>store:</strong> True<br>
+<strong>string:</strong> Website Messages<br>
+<strong>type:</strong> one2many<br>
+</p>
+</section>
+
+<section id="message_has_sms_error" class="card card-body">
+<h4 class="card-title">message_has_sms_error</h4>
+<p>
+<strong>change_default:</strong> False<br>
+<strong>company_dependent:</strong> False<br>
+<strong>default_export_compatible:</strong> False<br>
+<strong>depends:</strong> []<br>
+<strong>exportable:</strong> True<br>
+<strong>groupable:</strong> False<br>
+<strong>help:</strong> If checked, some messages have a delivery error.<br>
+<strong>manual:</strong> False<br>
+<strong>name:</strong> message_has_sms_error<br>
+<strong>readonly:</strong> True<br>
+<strong>required:</strong> False<br>
+<strong>searchable:</strong> True<br>
+<strong>sortable:</strong> False<br>
+<strong>store:</strong> False<br>
+<strong>string:</strong> SMS Delivery error<br>
+<strong>type:</strong> boolean<br>
+</p>
+</section>
+
+<section id="name" class="card card-body">
+<h4 class="card-title">name</h4>
+<p>
+<strong>change_default:</strong> False<br>
+<strong>company_dependent:</strong> False<br>
+<strong>default_export_compatible:</strong> False<br>
+<strong>depends:</strong> []<br>
+<strong>exportable:</strong> True<br>
+<strong>groupable:</strong> True<br>
+<strong>manual:</strong> False<br>
+<strong>name:</strong> name<br>
+<strong>readonly:</strong> False<br>
+<strong>required:</strong> True<br>
+<strong>searchable:</strong> True<br>
+<strong>sortable:</strong> True<br>
+<strong>store:</strong> True<br>
+<strong>string:</strong> Meeting Subject<br>
+<strong>translate:</strong> False<br>
+<strong>trim:</strong> True<br>
+<strong>type:</strong> char<br>
+</p>
+</section>
+
+<section id="description" class="card card-body">
+<h4 class="card-title">description</h4>
+<p>
+<strong>change_default:</strong> False<br>
+<strong>company_dependent:</strong> False<br>
+<strong>default_export_compatible:</strong> False<br>
+<strong>depends:</strong> []<br>
+<strong>exportable:</strong> True<br>
+<strong>groupable:</strong> True<br>
+<strong>manual:</strong> False<br>
+<strong>name:</strong> description<br>
+<strong>readonly:</strong> False<br>
+<strong>required:</strong> False<br>
+<strong>sanitize:</strong> True<br>
+<strong>sanitize_attributes:</strong> True<br>
+<strong>sanitize_style:</strong> False<br>
+<strong>sanitize_tags:</strong> True<br>
+<strong>searchable:</strong> True<br>
+<strong>sortable:</strong> True<br>
+<strong>store:</strong> True<br>
+<strong>string:</strong> Description<br>
+<strong>strip_classes:</strong> False<br>
+<strong>strip_style:</strong> False<br>
+<strong>translate:</strong> False<br>
+<strong>type:</strong> html<br>
+</p>
+</section>
+
+<section id="user_id" class="card card-body">
+<h4 class="card-title">user_id</h4>
+<p>
+<strong>allow_hierachy_operators:</strong> True<br>
+<strong>change_default:</strong> False<br>
+<strong>company_dependent:</strong> False<br>
+<strong>context:</strong> {}<br>
+<strong>default_export_compatible:</strong> False<br>
+<strong>depends:</strong> []<br>
+<strong>domain:</strong> []<br>
+<strong>exportable:</strong> True<br>
+<strong>groupable:</strong> True<br>
+<strong>manual:</strong> False<br>
+<strong>name:</strong> user_id<br>
+<strong>readonly:</strong> False<br>
+<strong>relation:</strong> <a class="nav-link" href="../res_users/index.html">res.users</a><br>
+<strong>required:</strong> False<br>
+<strong>searchable:</strong> True<br>
+<strong>sortable:</strong> True<br>
+<strong>store:</strong> True<br>
+<strong>string:</strong> Organizer<br>
+<strong>type:</strong> many2one<br>
+</p>
+</section>
+
+<section id="partner_id" class="card card-body">
+<h4 class="card-title">partner_id</h4>
+<p>
+<strong>allow_hierachy_operators:</strong> True<br>
+<strong>change_default:</strong> False<br>
+<strong>company_dependent:</strong> False<br>
+<strong>context:</strong> {}<br>
+<strong>default_export_compatible:</strong> False<br>
+<strong>depends:</strong> ['user_id.partner_id']<br>
+<strong>domain:</strong> []<br>
+<strong>exportable:</strong> True<br>
+<strong>groupable:</strong> True<br>
+<strong>help:</strong> Partner-related data of the user<br>
+<strong>manual:</strong> False<br>
+<strong>name:</strong> partner_id<br>
+<strong>readonly:</strong> True<br>
+<strong>related:</strong> user_id.partner_id<br>
+<strong>relation:</strong> <a class="nav-link" href="../res_partner/index.html">res.partner</a><br>
+<strong>required:</strong> False<br>
+<strong>searchable:</strong> True<br>
+<strong>sortable:</strong> True<br>
+<strong>store:</strong> False<br>
+<strong>string:</strong> Scheduled by<br>
+<strong>type:</strong> many2one<br>
+</p>
+</section>
+
+<section id="location" class="card card-body">
+<h4 class="card-title">location</h4>
+<p>
+<strong>change_default:</strong> False<br>
+<strong>company_dependent:</strong> False<br>
+<strong>default_export_compatible:</strong> False<br>
+<strong>depends:</strong> []<br>
+<strong>exportable:</strong> True<br>
+<strong>groupable:</strong> True<br>
+<strong>manual:</strong> False<br>
+<strong>name:</strong> location<br>
+<strong>readonly:</strong> False<br>
+<strong>required:</strong> False<br>
+<strong>searchable:</strong> True<br>
+<strong>sortable:</strong> True<br>
+<strong>store:</strong> True<br>
+<strong>string:</strong> Location<br>
+<strong>translate:</strong> False<br>
+<strong>trim:</strong> True<br>
+<strong>type:</strong> char<br>
+</p>
+</section>
+
+<section id="videocall_location" class="card card-body">
+<h4 class="card-title">videocall_location</h4>
+<p>
+<strong>change_default:</strong> False<br>
+<strong>company_dependent:</strong> False<br>
+<strong>default_export_compatible:</strong> False<br>
+<strong>depends:</strong> ['videocall_source', 'access_token']<br>
+<strong>exportable:</strong> True<br>
+<strong>groupable:</strong> True<br>
+<strong>manual:</strong> False<br>
+<strong>name:</strong> videocall_location<br>
+<strong>readonly:</strong> True<br>
+<strong>required:</strong> False<br>
+<strong>searchable:</strong> True<br>
+<strong>sortable:</strong> True<br>
+<strong>store:</strong> True<br>
+<strong>string:</strong> Meeting URL<br>
+<strong>translate:</strong> False<br>
+<strong>trim:</strong> True<br>
+<strong>type:</strong> char<br>
+</p>
+</section>
+
+<section id="access_token" class="card card-body">
+<h4 class="card-title">access_token</h4>
+<p>
+<strong>change_default:</strong> False<br>
+<strong>company_dependent:</strong> False<br>
+<strong>default_export_compatible:</strong> False<br>
+<strong>depends:</strong> []<br>
+<strong>exportable:</strong> True<br>
+<strong>groupable:</strong> True<br>
+<strong>manual:</strong> False<br>
+<strong>name:</strong> access_token<br>
+<strong>readonly:</strong> False<br>
+<strong>required:</strong> False<br>
+<strong>searchable:</strong> True<br>
+<strong>sortable:</strong> True<br>
+<strong>store:</strong> True<br>
+<strong>string:</strong> Invitation Token<br>
+<strong>translate:</strong> False<br>
+<strong>trim:</strong> True<br>
+<strong>type:</strong> char<br>
+</p>
+</section>
+
+<section id="videocall_source" class="card card-body">
+<h4 class="card-title">videocall_source</h4>
+<p>
+<strong>change_default:</strong> False<br>
+<strong>company_dependent:</strong> False<br>
+<strong>default_export_compatible:</strong> False<br>
+<strong>depends:</strong> ['videocall_location']<br>
+<strong>exportable:</strong> True<br>
+<strong>groupable:</strong> False<br>
+<strong>manual:</strong> False<br>
+<strong>name:</strong> videocall_source<br>
+<strong>readonly:</strong> True<br>
+<strong>required:</strong> False<br>
+<strong>searchable:</strong> False<br>
+<strong>selection:</strong> [['discuss', 'Discuss'], ['custom', 'Custom']]<br>
+<strong>sortable:</strong> False<br>
+<strong>store:</strong> False<br>
+<strong>string:</strong> Videocall Source<br>
+<strong>type:</strong> selection<br>
+</p>
+</section>
+
+<section id="videocall_channel_id" class="card card-body">
+<h4 class="card-title">videocall_channel_id</h4>
+<p>
+<strong>allow_hierachy_operators:</strong> False<br>
+<strong>change_default:</strong> False<br>
+<strong>company_dependent:</strong> False<br>
+<strong>context:</strong> {}<br>
+<strong>default_export_compatible:</strong> False<br>
+<strong>depends:</strong> []<br>
+<strong>domain:</strong> []<br>
+<strong>exportable:</strong> True<br>
+<strong>groupable:</strong> True<br>
+<strong>manual:</strong> False<br>
+<strong>name:</strong> videocall_channel_id<br>
+<strong>readonly:</strong> False<br>
+<strong>relation:</strong> <a class="nav-link" href="../discuss_channel/index.html">discuss.channel</a><br>
+<strong>required:</strong> False<br>
+<strong>searchable:</strong> True<br>
+<strong>sortable:</strong> True<br>
+<strong>store:</strong> True<br>
+<strong>string:</strong> Discuss Channel<br>
+<strong>type:</strong> many2one<br>
+</p>
+</section>
+
+<section id="privacy" class="card card-body">
+<h4 class="card-title">privacy</h4>
+<p>
+<strong>change_default:</strong> False<br>
+<strong>company_dependent:</strong> False<br>
+<strong>default_export_compatible:</strong> False<br>
+<strong>depends:</strong> []<br>
+<strong>exportable:</strong> True<br>
+<strong>groupable:</strong> True<br>
+<strong>help:</strong> People to whom this event will be visible.<br>
+<strong>manual:</strong> False<br>
+<strong>name:</strong> privacy<br>
+<strong>readonly:</strong> False<br>
+<strong>required:</strong> False<br>
+<strong>searchable:</strong> True<br>
+<strong>selection:</strong> [['public', 'Public'], ['private', 'Private'], ['confidential', 'Only internal users']]<br>
+<strong>sortable:</strong> True<br>
+<strong>store:</strong> True<br>
+<strong>string:</strong> Privacy<br>
+<strong>type:</strong> selection<br>
+</p>
+</section>
+
+<section id="show_as" class="card card-body">
+<h4 class="card-title">show_as</h4>
+<p>
+<strong>change_default:</strong> False<br>
+<strong>company_dependent:</strong> False<br>
+<strong>default_export_compatible:</strong> False<br>
+<strong>depends:</strong> []<br>
+<strong>exportable:</strong> True<br>
+<strong>groupable:</strong> True<br>
+<strong>help:</strong> If the time is shown as 'busy', this event will be visible to other people with either the full         information or simply 'busy' written depending on its privacy. Use this option to let other people know         that you are unavailable during that period of time. 
+ If the event is shown as 'free', other users know         that you are available during that period of time.<br>
+<strong>manual:</strong> False<br>
+<strong>name:</strong> show_as<br>
+<strong>readonly:</strong> False<br>
+<strong>required:</strong> True<br>
+<strong>searchable:</strong> True<br>
+<strong>selection:</strong> [['free', 'Available'], ['busy', 'Busy']]<br>
+<strong>sortable:</strong> True<br>
+<strong>store:</strong> True<br>
+<strong>string:</strong> Show as<br>
+<strong>type:</strong> selection<br>
+</p>
+</section>
+
+<section id="is_highlighted" class="card card-body">
+<h4 class="card-title">is_highlighted</h4>
+<p>
+<strong>change_default:</strong> False<br>
+<strong>company_dependent:</strong> False<br>
+<strong>default_export_compatible:</strong> False<br>
+<strong>depends:</strong> []<br>
+<strong>exportable:</strong> True<br>
+<strong>groupable:</strong> False<br>
+<strong>manual:</strong> False<br>
+<strong>name:</strong> is_highlighted<br>
+<strong>readonly:</strong> True<br>
+<strong>required:</strong> False<br>
+<strong>searchable:</strong> False<br>
+<strong>sortable:</strong> False<br>
+<strong>store:</strong> False<br>
+<strong>string:</strong> Is the Event Highlighted<br>
+<strong>type:</strong> boolean<br>
+</p>
+</section>
+
+<section id="is_organizer_alone" class="card card-body">
+<h4 class="card-title">is_organizer_alone</h4>
+<p>
+<strong>change_default:</strong> False<br>
+<strong>company_dependent:</strong> False<br>
+<strong>default_export_compatible:</strong> False<br>
+<strong>depends:</strong> ['partner_id', 'attendee_ids']<br>
+<strong>exportable:</strong> True<br>
+<strong>groupable:</strong> False<br>
+<strong>help:</strong> Check if the organizer is alone in the event, i.e. if the organizer is the only one that hasn't declined
+        the event (only if the organizer is not the only attendee)<br>
+<strong>manual:</strong> False<br>
+<strong>name:</strong> is_organizer_alone<br>
+<strong>readonly:</strong> True<br>
+<strong>required:</strong> False<br>
+<strong>searchable:</strong> False<br>
+<strong>sortable:</strong> False<br>
+<strong>store:</strong> False<br>
+<strong>string:</strong> Is the Organizer Alone<br>
+<strong>type:</strong> boolean<br>
+</p>
+</section>
+
+<section id="active" class="card card-body">
+<h4 class="card-title">active</h4>
+<p>
+<strong>change_default:</strong> False<br>
+<strong>company_dependent:</strong> False<br>
+<strong>default_export_compatible:</strong> False<br>
+<strong>depends:</strong> []<br>
+<strong>exportable:</strong> True<br>
+<strong>groupable:</strong> True<br>
+<strong>help:</strong> If the active field is set to false, it will allow you to hide the event alarm information without removing it.<br>
+<strong>manual:</strong> False<br>
+<strong>name:</strong> active<br>
+<strong>readonly:</strong> False<br>
+<strong>required:</strong> False<br>
+<strong>searchable:</strong> True<br>
+<strong>sortable:</strong> True<br>
+<strong>store:</strong> True<br>
+<strong>string:</strong> Active<br>
+<strong>type:</strong> boolean<br>
+</p>
+</section>
+
+<section id="categ_ids" class="card card-body">
+<h4 class="card-title">categ_ids</h4>
+<p>
+<strong>allow_hierachy_operators:</strong> False<br>
+<strong>change_default:</strong> False<br>
+<strong>company_dependent:</strong> False<br>
+<strong>context:</strong> {}<br>
+<strong>default_export_compatible:</strong> False<br>
+<strong>depends:</strong> []<br>
+<strong>domain:</strong> []<br>
+<strong>exportable:</strong> True<br>
+<strong>groupable:</strong> True<br>
+<strong>manual:</strong> False<br>
+<strong>name:</strong> categ_ids<br>
+<strong>readonly:</strong> False<br>
+<strong>relation:</strong> <a class="nav-link" href="../calendar_event_type/index.html">calendar.event.type</a><br>
+<strong>required:</strong> False<br>
+<strong>searchable:</strong> True<br>
+<strong>sortable:</strong> False<br>
+<strong>store:</strong> True<br>
+<strong>string:</strong> Tags<br>
+<strong>type:</strong> many2many<br>
+</p>
+</section>
+
+<section id="start" class="card card-body">
+<h4 class="card-title">start</h4>
+<p>
+<strong>change_default:</strong> False<br>
+<strong>company_dependent:</strong> False<br>
+<strong>default_export_compatible:</strong> False<br>
+<strong>depends:</strong> []<br>
+<strong>exportable:</strong> True<br>
+<strong>groupable:</strong> True<br>
+<strong>help:</strong> Start date of an event, without time for full days events<br>
+<strong>manual:</strong> False<br>
+<strong>name:</strong> start<br>
+<strong>readonly:</strong> False<br>
+<strong>required:</strong> True<br>
+<strong>searchable:</strong> True<br>
+<strong>sortable:</strong> True<br>
+<strong>store:</strong> True<br>
+<strong>string:</strong> Start<br>
+<strong>type:</strong> datetime<br>
+</p>
+</section>
+
+<section id="stop" class="card card-body">
+<h4 class="card-title">stop</h4>
+<p>
+<strong>change_default:</strong> False<br>
+<strong>company_dependent:</strong> False<br>
+<strong>default_export_compatible:</strong> False<br>
+<strong>depends:</strong> ['start', 'duration']<br>
+<strong>exportable:</strong> True<br>
+<strong>groupable:</strong> True<br>
+<strong>help:</strong> Stop date of an event, without time for full days events<br>
+<strong>manual:</strong> False<br>
+<strong>name:</strong> stop<br>
+<strong>readonly:</strong> False<br>
+<strong>required:</strong> True<br>
+<strong>searchable:</strong> True<br>
+<strong>sortable:</strong> True<br>
+<strong>store:</strong> True<br>
+<strong>string:</strong> Stop<br>
+<strong>type:</strong> datetime<br>
+</p>
+</section>
+
+<section id="display_time" class="card card-body">
+<h4 class="card-title">display_time</h4>
+<p>
+<strong>change_default:</strong> False<br>
+<strong>company_dependent:</strong> False<br>
+<strong>default_export_compatible:</strong> False<br>
+<strong>depends:</strong> []<br>
+<strong>exportable:</strong> True<br>
+<strong>groupable:</strong> False<br>
+<strong>manual:</strong> False<br>
+<strong>name:</strong> display_time<br>
+<strong>readonly:</strong> True<br>
+<strong>required:</strong> False<br>
+<strong>searchable:</strong> False<br>
+<strong>sortable:</strong> False<br>
+<strong>store:</strong> False<br>
+<strong>string:</strong> Event Time<br>
+<strong>translate:</strong> False<br>
+<strong>trim:</strong> True<br>
+<strong>type:</strong> char<br>
+</p>
+</section>
+
+<section id="allday" class="card card-body">
+<h4 class="card-title">allday</h4>
+<p>
+<strong>change_default:</strong> False<br>
+<strong>company_dependent:</strong> False<br>
+<strong>default_export_compatible:</strong> False<br>
+<strong>depends:</strong> []<br>
+<strong>exportable:</strong> True<br>
+<strong>groupable:</strong> True<br>
+<strong>manual:</strong> False<br>
+<strong>name:</strong> allday<br>
+<strong>readonly:</strong> False<br>
+<strong>required:</strong> False<br>
+<strong>searchable:</strong> True<br>
+<strong>sortable:</strong> True<br>
+<strong>store:</strong> True<br>
+<strong>string:</strong> All Day<br>
+<strong>type:</strong> boolean<br>
+</p>
+</section>
+
+<section id="start_date" class="card card-body">
+<h4 class="card-title">start_date</h4>
+<p>
+<strong>change_default:</strong> False<br>
+<strong>company_dependent:</strong> False<br>
+<strong>default_export_compatible:</strong> False<br>
+<strong>depends:</strong> ['allday', 'start', 'stop']<br>
+<strong>exportable:</strong> True<br>
+<strong>groupable:</strong> True<br>
+<strong>manual:</strong> False<br>
+<strong>name:</strong> start_date<br>
+<strong>readonly:</strong> False<br>
+<strong>required:</strong> False<br>
+<strong>searchable:</strong> True<br>
+<strong>sortable:</strong> True<br>
+<strong>store:</strong> True<br>
+<strong>string:</strong> Start Date<br>
+<strong>type:</strong> date<br>
+</p>
+</section>
+
+<section id="stop_date" class="card card-body">
+<h4 class="card-title">stop_date</h4>
+<p>
+<strong>change_default:</strong> False<br>
+<strong>company_dependent:</strong> False<br>
+<strong>default_export_compatible:</strong> False<br>
+<strong>depends:</strong> ['allday', 'start', 'stop']<br>
+<strong>exportable:</strong> True<br>
+<strong>groupable:</strong> True<br>
+<strong>manual:</strong> False<br>
+<strong>name:</strong> stop_date<br>
+<strong>readonly:</strong> False<br>
+<strong>required:</strong> False<br>
+<strong>searchable:</strong> True<br>
+<strong>sortable:</strong> True<br>
+<strong>store:</strong> True<br>
+<strong>string:</strong> End Date<br>
+<strong>type:</strong> date<br>
+</p>
+</section>
+
+<section id="duration" class="card card-body">
+<h4 class="card-title">duration</h4>
+<p>
+<strong>aggregator:</strong> sum<br>
+<strong>change_default:</strong> False<br>
+<strong>company_dependent:</strong> False<br>
+<strong>default_export_compatible:</strong> False<br>
+<strong>depends:</strong> ['stop', 'start']<br>
+<strong>exportable:</strong> True<br>
+<strong>groupable:</strong> True<br>
+<strong>manual:</strong> False<br>
+<strong>name:</strong> duration<br>
+<strong>readonly:</strong> False<br>
+<strong>required:</strong> False<br>
+<strong>searchable:</strong> True<br>
+<strong>sortable:</strong> True<br>
+<strong>store:</strong> True<br>
+<strong>string:</strong> Duration<br>
+<strong>type:</strong> float<br>
+</p>
+</section>
+
+<section id="res_id" class="card card-body">
+<h4 class="card-title">res_id</h4>
+<p>
+<strong>change_default:</strong> False<br>
+<strong>company_dependent:</strong> False<br>
+<strong>default_export_compatible:</strong> False<br>
+<strong>depends:</strong> []<br>
+<strong>exportable:</strong> True<br>
+<strong>groupable:</strong> True<br>
+<strong>manual:</strong> False<br>
+<strong>model_field:</strong> res_model<br>
+<strong>name:</strong> res_id<br>
+<strong>readonly:</strong> False<br>
+<strong>required:</strong> False<br>
+<strong>searchable:</strong> True<br>
+<strong>sortable:</strong> True<br>
+<strong>store:</strong> True<br>
+<strong>string:</strong> Document ID<br>
+<strong>type:</strong> many2one_reference<br>
+</p>
+</section>
+
+<section id="res_model_id" class="card card-body">
+<h4 class="card-title">res_model_id</h4>
+<p>
+<strong>allow_hierachy_operators:</strong> False<br>
+<strong>change_default:</strong> False<br>
+<strong>company_dependent:</strong> False<br>
+<strong>context:</strong> {}<br>
+<strong>default_export_compatible:</strong> False<br>
+<strong>depends:</strong> []<br>
+<strong>domain:</strong> []<br>
+<strong>exportable:</strong> True<br>
+<strong>groupable:</strong> True<br>
+<strong>manual:</strong> False<br>
+<strong>name:</strong> res_model_id<br>
+<strong>readonly:</strong> False<br>
+<strong>relation:</strong> <a class="nav-link" href="../ir_model/index.html">ir.model</a><br>
+<strong>required:</strong> False<br>
+<strong>searchable:</strong> True<br>
+<strong>sortable:</strong> True<br>
+<strong>store:</strong> True<br>
+<strong>string:</strong> Document Model<br>
+<strong>type:</strong> many2one<br>
+</p>
+</section>
+
+<section id="res_model" class="card card-body">
+<h4 class="card-title">res_model</h4>
+<p>
+<strong>change_default:</strong> False<br>
+<strong>company_dependent:</strong> False<br>
+<strong>default_export_compatible:</strong> False<br>
+<strong>depends:</strong> ['res_model_id.model']<br>
+<strong>exportable:</strong> True<br>
+<strong>groupable:</strong> True<br>
+<strong>manual:</strong> False<br>
+<strong>name:</strong> res_model<br>
+<strong>readonly:</strong> True<br>
+<strong>related:</strong> res_model_id.model<br>
+<strong>required:</strong> False<br>
+<strong>searchable:</strong> True<br>
+<strong>sortable:</strong> True<br>
+<strong>store:</strong> True<br>
+<strong>string:</strong> Document Model Name<br>
+<strong>translate:</strong> False<br>
+<strong>trim:</strong> True<br>
+<strong>type:</strong> char<br>
+</p>
+</section>
+
+<section id="res_model_name" class="card card-body">
+<h4 class="card-title">res_model_name</h4>
+<p>
+<strong>change_default:</strong> False<br>
+<strong>company_dependent:</strong> False<br>
+<strong>default_export_compatible:</strong> False<br>
+<strong>depends:</strong> ['res_model_id.name']<br>
+<strong>exportable:</strong> True<br>
+<strong>groupable:</strong> True<br>
+<strong>manual:</strong> False<br>
+<strong>name:</strong> res_model_name<br>
+<strong>readonly:</strong> True<br>
+<strong>related:</strong> res_model_id.name<br>
+<strong>required:</strong> False<br>
+<strong>searchable:</strong> True<br>
+<strong>sortable:</strong> True<br>
+<strong>store:</strong> False<br>
+<strong>string:</strong> Model Description<br>
+<strong>translate:</strong> True<br>
+<strong>trim:</strong> True<br>
+<strong>type:</strong> char<br>
+</p>
+</section>
+
+<section id="activity_ids" class="card card-body">
+<h4 class="card-title">activity_ids</h4>
+<p>
+<strong>allow_hierachy_operators:</strong> False<br>
+<strong>change_default:</strong> False<br>
+<strong>company_dependent:</strong> False<br>
+<strong>context:</strong> {}<br>
+<strong>default_export_compatible:</strong> False<br>
+<strong>depends:</strong> []<br>
+<strong>domain:</strong> []<br>
+<strong>exportable:</strong> True<br>
+<strong>groupable:</strong> False<br>
+<strong>manual:</strong> False<br>
+<strong>name:</strong> activity_ids<br>
+<strong>readonly:</strong> False<br>
+<strong>relation:</strong> <a class="nav-link" href="../mail_activity/index.html">mail.activity</a><br>
+<strong>relation_field:</strong> calendar_event_id<br>
+<strong>required:</strong> False<br>
+<strong>searchable:</strong> True<br>
+<strong>sortable:</strong> False<br>
+<strong>store:</strong> True<br>
+<strong>string:</strong> Activities<br>
+<strong>type:</strong> one2many<br>
+</p>
+</section>
+
+<section id="attendee_ids" class="card card-body">
+<h4 class="card-title">attendee_ids</h4>
+<p>
+<strong>allow_hierachy_operators:</strong> False<br>
+<strong>change_default:</strong> False<br>
+<strong>company_dependent:</strong> False<br>
+<strong>context:</strong> {}<br>
+<strong>default_export_compatible:</strong> False<br>
+<strong>depends:</strong> []<br>
+<strong>domain:</strong> []<br>
+<strong>exportable:</strong> True<br>
+<strong>groupable:</strong> False<br>
+<strong>manual:</strong> False<br>
+<strong>name:</strong> attendee_ids<br>
+<strong>readonly:</strong> False<br>
+<strong>relation:</strong> <a class="nav-link" href="../calendar_attendee/index.html">calendar.attendee</a><br>
+<strong>relation_field:</strong> event_id<br>
+<strong>required:</strong> False<br>
+<strong>searchable:</strong> True<br>
+<strong>sortable:</strong> False<br>
+<strong>store:</strong> True<br>
+<strong>string:</strong> Participant<br>
+<strong>type:</strong> one2many<br>
+</p>
+</section>
+
+<section id="current_attendee" class="card card-body">
+<h4 class="card-title">current_attendee</h4>
+<p>
+<strong>allow_hierachy_operators:</strong> False<br>
+<strong>change_default:</strong> False<br>
+<strong>company_dependent:</strong> False<br>
+<strong>context:</strong> {}<br>
+<strong>default_export_compatible:</strong> False<br>
+<strong>depends:</strong> ['attendee_ids', 'attendee_ids.state']<br>
+<strong>domain:</strong> []<br>
+<strong>exportable:</strong> True<br>
+<strong>groupable:</strong> False<br>
+<strong>manual:</strong> False<br>
+<strong>name:</strong> current_attendee<br>
+<strong>readonly:</strong> True<br>
+<strong>relation:</strong> <a class="nav-link" href="../calendar_attendee/index.html">calendar.attendee</a><br>
+<strong>required:</strong> False<br>
+<strong>searchable:</strong> True<br>
+<strong>sortable:</strong> False<br>
+<strong>store:</strong> False<br>
+<strong>string:</strong> Current Attendee<br>
+<strong>type:</strong> many2one<br>
+</p>
+</section>
+
+<section id="current_status" class="card card-body">
+<h4 class="card-title">current_status</h4>
+<p>
+<strong>change_default:</strong> False<br>
+<strong>company_dependent:</strong> False<br>
+<strong>default_export_compatible:</strong> False<br>
+<strong>depends:</strong> ['current_attendee.state']<br>
+<strong>exportable:</strong> True<br>
+<strong>groupable:</strong> False<br>
+<strong>manual:</strong> False<br>
+<strong>name:</strong> current_status<br>
+<strong>readonly:</strong> False<br>
+<strong>related:</strong> current_attendee.state<br>
+<strong>required:</strong> False<br>
+<strong>searchable:</strong> True<br>
+<strong>selection:</strong> [['needsAction', 'Needs Action'], ['tentative', 'Maybe'], ['declined', 'No'], ['accepted', 'Yes']]<br>
+<strong>sortable:</strong> False<br>
+<strong>store:</strong> False<br>
+<strong>string:</strong> Attending?<br>
+<strong>type:</strong> selection<br>
+</p>
+</section>
+
+<section id="should_show_status" class="card card-body">
+<h4 class="card-title">should_show_status</h4>
+<p>
+<strong>change_default:</strong> False<br>
+<strong>company_dependent:</strong> False<br>
+<strong>default_export_compatible:</strong> False<br>
+<strong>depends:</strong> ['attendee_ids']<br>
+<strong>exportable:</strong> True<br>
+<strong>groupable:</strong> False<br>
+<strong>manual:</strong> False<br>
+<strong>name:</strong> should_show_status<br>
+<strong>readonly:</strong> True<br>
+<strong>required:</strong> False<br>
+<strong>searchable:</strong> False<br>
+<strong>sortable:</strong> False<br>
+<strong>store:</strong> False<br>
+<strong>string:</strong> Should Show Status<br>
+<strong>type:</strong> boolean<br>
+</p>
+</section>
+
+<section id="partner_ids" class="card card-body">
+<h4 class="card-title">partner_ids</h4>
+<p>
+<strong>allow_hierachy_operators:</strong> True<br>
+<strong>change_default:</strong> False<br>
+<strong>company_dependent:</strong> False<br>
+<strong>context:</strong> {}<br>
+<strong>default_export_compatible:</strong> False<br>
+<strong>depends:</strong> []<br>
+<strong>domain:</strong> []<br>
+<strong>exportable:</strong> True<br>
+<strong>groupable:</strong> True<br>
+<strong>manual:</strong> False<br>
+<strong>name:</strong> partner_ids<br>
+<strong>readonly:</strong> False<br>
+<strong>relation:</strong> <a class="nav-link" href="../res_partner/index.html">res.partner</a><br>
+<strong>required:</strong> False<br>
+<strong>searchable:</strong> True<br>
+<strong>sortable:</strong> False<br>
+<strong>store:</strong> True<br>
+<strong>string:</strong> Attendees<br>
+<strong>type:</strong> many2many<br>
+</p>
+</section>
+
+<section id="invalid_email_partner_ids" class="card card-body">
+<h4 class="card-title">invalid_email_partner_ids</h4>
+<p>
+<strong>allow_hierachy_operators:</strong> True<br>
+<strong>change_default:</strong> False<br>
+<strong>company_dependent:</strong> False<br>
+<strong>context:</strong> {}<br>
+<strong>default_export_compatible:</strong> False<br>
+<strong>depends:</strong> ['partner_ids']<br>
+<strong>domain:</strong> []<br>
+<strong>exportable:</strong> True<br>
+<strong>groupable:</strong> False<br>
+<strong>manual:</strong> False<br>
+<strong>name:</strong> invalid_email_partner_ids<br>
+<strong>readonly:</strong> True<br>
+<strong>relation:</strong> <a class="nav-link" href="../res_partner/index.html">res.partner</a><br>
+<strong>required:</strong> False<br>
+<strong>searchable:</strong> False<br>
+<strong>sortable:</strong> False<br>
+<strong>store:</strong> False<br>
+<strong>string:</strong> Invalid Email Partner<br>
+<strong>type:</strong> many2many<br>
+</p>
+</section>
+
+<section id="alarm_ids" class="card card-body">
+<h4 class="card-title">alarm_ids</h4>
+<p>
+<strong>allow_hierachy_operators:</strong> False<br>
+<strong>change_default:</strong> False<br>
+<strong>company_dependent:</strong> False<br>
+<strong>context:</strong> {}<br>
+<strong>default_export_compatible:</strong> False<br>
+<strong>depends:</strong> []<br>
+<strong>domain:</strong> []<br>
+<strong>exportable:</strong> True<br>
+<strong>groupable:</strong> True<br>
+<strong>help:</strong> Notifications sent to all attendees to remind of the meeting.<br>
+<strong>manual:</strong> False<br>
+<strong>name:</strong> alarm_ids<br>
+<strong>readonly:</strong> False<br>
+<strong>relation:</strong> <a class="nav-link" href="../calendar_alarm/index.html">calendar.alarm</a><br>
+<strong>required:</strong> False<br>
+<strong>searchable:</strong> True<br>
+<strong>sortable:</strong> False<br>
+<strong>store:</strong> True<br>
+<strong>string:</strong> Reminders<br>
+<strong>type:</strong> many2many<br>
+</p>
+</section>
+
+<section id="recurrency" class="card card-body">
+<h4 class="card-title">recurrency</h4>
+<p>
+<strong>change_default:</strong> False<br>
+<strong>company_dependent:</strong> False<br>
+<strong>default_export_compatible:</strong> False<br>
+<strong>depends:</strong> []<br>
+<strong>exportable:</strong> True<br>
+<strong>groupable:</strong> True<br>
+<strong>manual:</strong> False<br>
+<strong>name:</strong> recurrency<br>
+<strong>readonly:</strong> False<br>
+<strong>required:</strong> False<br>
+<strong>searchable:</strong> True<br>
+<strong>sortable:</strong> True<br>
+<strong>store:</strong> True<br>
+<strong>string:</strong> Recurrent<br>
+<strong>type:</strong> boolean<br>
+</p>
+</section>
+
+<section id="recurrence_id" class="card card-body">
+<h4 class="card-title">recurrence_id</h4>
+<p>
+<strong>allow_hierachy_operators:</strong> False<br>
+<strong>change_default:</strong> False<br>
+<strong>company_dependent:</strong> False<br>
+<strong>context:</strong> {}<br>
+<strong>default_export_compatible:</strong> False<br>
+<strong>depends:</strong> []<br>
+<strong>domain:</strong> []<br>
+<strong>exportable:</strong> True<br>
+<strong>groupable:</strong> True<br>
+<strong>manual:</strong> False<br>
+<strong>name:</strong> recurrence_id<br>
+<strong>readonly:</strong> False<br>
+<strong>relation:</strong> <a class="nav-link" href="../calendar_recurrence/index.html">calendar.recurrence</a><br>
+<strong>required:</strong> False<br>
+<strong>searchable:</strong> True<br>
+<strong>sortable:</strong> True<br>
+<strong>store:</strong> True<br>
+<strong>string:</strong> Recurrence Rule<br>
+<strong>type:</strong> many2one<br>
+</p>
+</section>
+
+<section id="follow_recurrence" class="card card-body">
+<h4 class="card-title">follow_recurrence</h4>
+<p>
+<strong>change_default:</strong> False<br>
+<strong>company_dependent:</strong> False<br>
+<strong>default_export_compatible:</strong> False<br>
+<strong>depends:</strong> []<br>
+<strong>exportable:</strong> True<br>
+<strong>groupable:</strong> True<br>
+<strong>manual:</strong> False<br>
+<strong>name:</strong> follow_recurrence<br>
+<strong>readonly:</strong> False<br>
+<strong>required:</strong> False<br>
+<strong>searchable:</strong> True<br>
+<strong>sortable:</strong> True<br>
+<strong>store:</strong> True<br>
+<strong>string:</strong> Follow Recurrence<br>
+<strong>type:</strong> boolean<br>
+</p>
+</section>
+
+<section id="recurrence_update" class="card card-body">
+<h4 class="card-title">recurrence_update</h4>
+<p>
+<strong>change_default:</strong> False<br>
+<strong>company_dependent:</strong> False<br>
+<strong>default_export_compatible:</strong> False<br>
+<strong>depends:</strong> []<br>
+<strong>exportable:</strong> True<br>
+<strong>groupable:</strong> False<br>
+<strong>help:</strong> Choose what to do with other events in the recurrence. Updating All Events is not allowed when dates or time is modified<br>
+<strong>manual:</strong> False<br>
+<strong>name:</strong> recurrence_update<br>
+<strong>readonly:</strong> False<br>
+<strong>required:</strong> False<br>
+<strong>searchable:</strong> False<br>
+<strong>selection:</strong> [['self_only', 'This event'], ['future_events', 'This and following events'], ['all_events', 'All events']]<br>
+<strong>sortable:</strong> False<br>
+<strong>store:</strong> False<br>
+<strong>string:</strong> Recurrence Update<br>
+<strong>type:</strong> selection<br>
+</p>
+</section>
+
+<section id="rrule" class="card card-body">
+<h4 class="card-title">rrule</h4>
+<p>
+<strong>change_default:</strong> False<br>
+<strong>company_dependent:</strong> False<br>
+<strong>default_export_compatible:</strong> False<br>
+<strong>depends:</strong> ['recurrence_id', 'recurrency', 'rrule_type_ui']<br>
+<strong>exportable:</strong> True<br>
+<strong>groupable:</strong> False<br>
+<strong>manual:</strong> False<br>
+<strong>name:</strong> rrule<br>
+<strong>readonly:</strong> False<br>
+<strong>required:</strong> False<br>
+<strong>searchable:</strong> False<br>
+<strong>sortable:</strong> False<br>
+<strong>store:</strong> False<br>
+<strong>string:</strong> Recurrent Rule<br>
+<strong>translate:</strong> False<br>
+<strong>trim:</strong> True<br>
+<strong>type:</strong> char<br>
+</p>
+</section>
+
+<section id="rrule_type_ui" class="card card-body">
+<h4 class="card-title">rrule_type_ui</h4>
+<p>
+<strong>change_default:</strong> False<br>
+<strong>company_dependent:</strong> False<br>
+<strong>default_export_compatible:</strong> False<br>
+<strong>depends:</strong> ['recurrence_id', 'recurrency']<br>
+<strong>exportable:</strong> True<br>
+<strong>groupable:</strong> False<br>
+<strong>help:</strong> Let the event automatically repeat at that interval<br>
+<strong>manual:</strong> False<br>
+<strong>name:</strong> rrule_type_ui<br>
+<strong>readonly:</strong> False<br>
+<strong>required:</strong> False<br>
+<strong>searchable:</strong> False<br>
+<strong>selection:</strong> [['daily', 'Daily'], ['weekly', 'Weekly'], ['monthly', 'Monthly'], ['yearly', 'Yearly'], ['custom', 'Custom']]<br>
+<strong>sortable:</strong> False<br>
+<strong>store:</strong> False<br>
+<strong>string:</strong> Repeat<br>
+<strong>type:</strong> selection<br>
+</p>
+</section>
+
+<section id="rrule_type" class="card card-body">
+<h4 class="card-title">rrule_type</h4>
+<p>
+<strong>change_default:</strong> False<br>
+<strong>company_dependent:</strong> False<br>
+<strong>default_export_compatible:</strong> False<br>
+<strong>depends:</strong> ['recurrence_id', 'recurrency', 'rrule_type_ui']<br>
+<strong>exportable:</strong> True<br>
+<strong>groupable:</strong> False<br>
+<strong>help:</strong> Let the event automatically repeat at that interval<br>
+<strong>manual:</strong> False<br>
+<strong>name:</strong> rrule_type<br>
+<strong>readonly:</strong> False<br>
+<strong>required:</strong> False<br>
+<strong>searchable:</strong> False<br>
+<strong>selection:</strong> [['daily', 'Days'], ['weekly', 'Weeks'], ['monthly', 'Months'], ['yearly', 'Years']]<br>
+<strong>sortable:</strong> False<br>
+<strong>store:</strong> False<br>
+<strong>string:</strong> Recurrence<br>
+<strong>type:</strong> selection<br>
+</p>
+</section>
+
+<section id="event_tz" class="card card-body">
+<h4 class="card-title">event_tz</h4>
+<p>
+<strong>change_default:</strong> False<br>
+<strong>company_dependent:</strong> False<br>
+<strong>default_export_compatible:</strong> False<br>
+<strong>depends:</strong> ['recurrence_id', 'recurrency', 'rrule_type_ui']<br>
+<strong>exportable:</strong> True<br>
+<strong>groupable:</strong> False<br>
+<strong>manual:</strong> False<br>
+<strong>name:</strong> event_tz<br>
+<strong>readonly:</strong> False<br>
+<strong>required:</strong> False<br>
+<strong>searchable:</strong> False<br>
+<strong>selection:</strong> [['Africa/Abidjan', 'Africa/Abidjan'], ['Africa/Accra', 'Africa/Accra'], ['Africa/Addis_Ababa', 'Africa/Addis_Ababa'], ['Africa/Algiers', 'Africa/Algiers'], ['Africa/Asmara', 'Africa/Asmara'], ['Africa/Asmera', 'Africa/Asmera'], ['Africa/Bamako', 'Africa/Bamako'], ['Africa/Bangui', 'Africa/Bangui'], ['Africa/Banjul', 'Africa/Banjul'], ['Africa/Bissau', 'Africa/Bissau'], ['Africa/Blantyre', 'Africa/Blantyre'], ['Africa/Brazzaville', 'Africa/Brazzaville'], ['Africa/Bujumbura', 'Africa/Bujumbura'], ['Africa/Cairo', 'Africa/Cairo'], ['Africa/Casablanca', 'Africa/Casablanca'], ['Africa/Ceuta', 'Africa/Ceuta'], ['Africa/Conakry', 'Africa/Conakry'], ['Africa/Dakar', 'Africa/Dakar'], ['Africa/Dar_es_Salaam', 'Africa/Dar_es_Salaam'], ['Africa/Djibouti', 'Africa/Djibouti'], ['Africa/Douala', 'Africa/Douala'], ['Africa/El_Aaiun', 'Africa/El_Aaiun'], ['Africa/Freetown', 'Africa/Freetown'], ['Africa/Gaborone', 'Africa/Gaborone'], ['Africa/Harare', 'Africa/Harare'], ['Africa/Johannesburg', 'Africa/Johannesburg'], ['Africa/Juba', 'Africa/Juba'], ['Africa/Kampala', 'Africa/Kampala'], ['Africa/Khartoum', 'Africa/Khartoum'], ['Africa/Kigali', 'Africa/Kigali'], ['Africa/Kinshasa', 'Africa/Kinshasa'], ['Africa/Lagos', 'Africa/Lagos'], ['Africa/Libreville', 'Africa/Libreville'], ['Africa/Lome', 'Africa/Lome'], ['Africa/Luanda', 'Africa/Luanda'], ['Africa/Lubumbashi', 'Africa/Lubumbashi'], ['Africa/Lusaka', 'Africa/Lusaka'], ['Africa/Malabo', 'Africa/Malabo'], ['Africa/Maputo', 'Africa/Maputo'], ['Africa/Maseru', 'Africa/Maseru'], ['Africa/Mbabane', 'Africa/Mbabane'], ['Africa/Mogadishu', 'Africa/Mogadishu'], ['Africa/Monrovia', 'Africa/Monrovia'], ['Africa/Nairobi', 'Africa/Nairobi'], ['Africa/Ndjamena', 'Africa/Ndjamena'], ['Africa/Niamey', 'Africa/Niamey'], ['Africa/Nouakchott', 'Africa/Nouakchott'], ['Africa/Ouagadougou', 'Africa/Ouagadougou'], ['Africa/Porto-Novo', 'Africa/Porto-Novo'], ['Africa/Sao_Tome', 'Africa/Sao_Tome'], ['Africa/Timbuktu', 'Africa/Timbuktu'], ['Africa/Tripoli', 'Africa/Tripoli'], ['Africa/Tunis', 'Africa/Tunis'], ['Africa/Windhoek', 'Africa/Windhoek'], ['America/Adak', 'America/Adak'], ['America/Anchorage', 'America/Anchorage'], ['America/Anguilla', 'America/Anguilla'], ['America/Antigua', 'America/Antigua'], ['America/Araguaina', 'America/Araguaina'], ['America/Argentina/Buenos_Aires', 'America/Argentina/Buenos_Aires'], ['America/Argentina/Catamarca', 'America/Argentina/Catamarca'], ['America/Argentina/ComodRivadavia', 'America/Argentina/ComodRivadavia'], ['America/Argentina/Cordoba', 'America/Argentina/Cordoba'], ['America/Argentina/Jujuy', 'America/Argentina/Jujuy'], ['America/Argentina/La_Rioja', 'America/Argentina/La_Rioja'], ['America/Argentina/Mendoza', 'America/Argentina/Mendoza'], ['America/Argentina/Rio_Gallegos', 'America/Argentina/Rio_Gallegos'], ['America/Argentina/Salta', 'America/Argentina/Salta'], ['America/Argentina/San_Juan', 'America/Argentina/San_Juan'], ['America/Argentina/San_Luis', 'America/Argentina/San_Luis'], ['America/Argentina/Tucuman', 'America/Argentina/Tucuman'], ['America/Argentina/Ushuaia', 'America/Argentina/Ushuaia'], ['America/Aruba', 'America/Aruba'], ['America/Asuncion', 'America/Asuncion'], ['America/Atikokan', 'America/Atikokan'], ['America/Atka', 'America/Atka'], ['America/Bahia', 'America/Bahia'], ['America/Bahia_Banderas', 'America/Bahia_Banderas'], ['America/Barbados', 'America/Barbados'], ['America/Belem', 'America/Belem'], ['America/Belize', 'America/Belize'], ['America/Blanc-Sablon', 'America/Blanc-Sablon'], ['America/Boa_Vista', 'America/Boa_Vista'], ['America/Bogota', 'America/Bogota'], ['America/Boise', 'America/Boise'], ['America/Buenos_Aires', 'America/Buenos_Aires'], ['America/Cambridge_Bay', 'America/Cambridge_Bay'], ['America/Campo_Grande', 'America/Campo_Grande'], ['America/Cancun', 'America/Cancun'], ['America/Caracas', 'America/Caracas'], ['America/Catamarca', 'America/Catamarca'], ['America/Cayenne', 'America/Cayenne'], ['America/Cayman', 'America/Cayman'], ['America/Chicago', 'America/Chicago'], ['America/Chihuahua', 'America/Chihuahua'], ['America/Ciudad_Juarez', 'America/Ciudad_Juarez'], ['America/Coral_Harbour', 'America/Coral_Harbour'], ['America/Cordoba', 'America/Cordoba'], ['America/Costa_Rica', 'America/Costa_Rica'], ['America/Coyhaique', 'America/Coyhaique'], ['America/Creston', 'America/Creston'], ['America/Cuiaba', 'America/Cuiaba'], ['America/Curacao', 'America/Curacao'], ['America/Danmarkshavn', 'America/Danmarkshavn'], ['America/Dawson', 'America/Dawson'], ['America/Dawson_Creek', 'America/Dawson_Creek'], ['America/Denver', 'America/Denver'], ['America/Detroit', 'America/Detroit'], ['America/Dominica', 'America/Dominica'], ['America/Edmonton', 'America/Edmonton'], ['America/Eirunepe', 'America/Eirunepe'], ['America/El_Salvador', 'America/El_Salvador'], ['America/Ensenada', 'America/Ensenada'], ['America/Fort_Nelson', 'America/Fort_Nelson'], ['America/Fort_Wayne', 'America/Fort_Wayne'], ['America/Fortaleza', 'America/Fortaleza'], ['America/Glace_Bay', 'America/Glace_Bay'], ['America/Godthab', 'America/Godthab'], ['America/Goose_Bay', 'America/Goose_Bay'], ['America/Grand_Turk', 'America/Grand_Turk'], ['America/Grenada', 'America/Grenada'], ['America/Guadeloupe', 'America/Guadeloupe'], ['America/Guatemala', 'America/Guatemala'], ['America/Guayaquil', 'America/Guayaquil'], ['America/Guyana', 'America/Guyana'], ['America/Halifax', 'America/Halifax'], ['America/Havana', 'America/Havana'], ['America/Hermosillo', 'America/Hermosillo'], ['America/Indiana/Indianapolis', 'America/Indiana/Indianapolis'], ['America/Indiana/Knox', 'America/Indiana/Knox'], ['America/Indiana/Marengo', 'America/Indiana/Marengo'], ['America/Indiana/Petersburg', 'America/Indiana/Petersburg'], ['America/Indiana/Tell_City', 'America/Indiana/Tell_City'], ['America/Indiana/Vevay', 'America/Indiana/Vevay'], ['America/Indiana/Vincennes', 'America/Indiana/Vincennes'], ['America/Indiana/Winamac', 'America/Indiana/Winamac'], ['America/Indianapolis', 'America/Indianapolis'], ['America/Inuvik', 'America/Inuvik'], ['America/Iqaluit', 'America/Iqaluit'], ['America/Jamaica', 'America/Jamaica'], ['America/Jujuy', 'America/Jujuy'], ['America/Juneau', 'America/Juneau'], ['America/Kentucky/Louisville', 'America/Kentucky/Louisville'], ['America/Kentucky/Monticello', 'America/Kentucky/Monticello'], ['America/Knox_IN', 'America/Knox_IN'], ['America/Kralendijk', 'America/Kralendijk'], ['America/La_Paz', 'America/La_Paz'], ['America/Lima', 'America/Lima'], ['America/Los_Angeles', 'America/Los_Angeles'], ['America/Louisville', 'America/Louisville'], ['America/Lower_Princes', 'America/Lower_Princes'], ['America/Maceio', 'America/Maceio'], ['America/Managua', 'America/Managua'], ['America/Manaus', 'America/Manaus'], ['America/Marigot', 'America/Marigot'], ['America/Martinique', 'America/Martinique'], ['America/Matamoros', 'America/Matamoros'], ['America/Mazatlan', 'America/Mazatlan'], ['America/Mendoza', 'America/Mendoza'], ['America/Menominee', 'America/Menominee'], ['America/Merida', 'America/Merida'], ['America/Metlakatla', 'America/Metlakatla'], ['America/Mexico_City', 'America/Mexico_City'], ['America/Miquelon', 'America/Miquelon'], ['America/Moncton', 'America/Moncton'], ['America/Monterrey', 'America/Monterrey'], ['America/Montevideo', 'America/Montevideo'], ['America/Montreal', 'America/Montreal'], ['America/Montserrat', 'America/Montserrat'], ['America/Nassau', 'America/Nassau'], ['America/New_York', 'America/New_York'], ['America/Nipigon', 'America/Nipigon'], ['America/Nome', 'America/Nome'], ['America/Noronha', 'America/Noronha'], ['America/North_Dakota/Beulah', 'America/North_Dakota/Beulah'], ['America/North_Dakota/Center', 'America/North_Dakota/Center'], ['America/North_Dakota/New_Salem', 'America/North_Dakota/New_Salem'], ['America/Nuuk', 'America/Nuuk'], ['America/Ojinaga', 'America/Ojinaga'], ['America/Panama', 'America/Panama'], ['America/Pangnirtung', 'America/Pangnirtung'], ['America/Paramaribo', 'America/Paramaribo'], ['America/Phoenix', 'America/Phoenix'], ['America/Port-au-Prince', 'America/Port-au-Prince'], ['America/Port_of_Spain', 'America/Port_of_Spain'], ['America/Porto_Acre', 'America/Porto_Acre'], ['America/Porto_Velho', 'America/Porto_Velho'], ['America/Puerto_Rico', 'America/Puerto_Rico'], ['America/Punta_Arenas', 'America/Punta_Arenas'], ['America/Rainy_River', 'America/Rainy_River'], ['America/Rankin_Inlet', 'America/Rankin_Inlet'], ['America/Recife', 'America/Recife'], ['America/Regina', 'America/Regina'], ['America/Resolute', 'America/Resolute'], ['America/Rio_Branco', 'America/Rio_Branco'], ['America/Rosario', 'America/Rosario'], ['America/Santa_Isabel', 'America/Santa_Isabel'], ['America/Santarem', 'America/Santarem'], ['America/Santiago', 'America/Santiago'], ['America/Santo_Domingo', 'America/Santo_Domingo'], ['America/Sao_Paulo', 'America/Sao_Paulo'], ['America/Scoresbysund', 'America/Scoresbysund'], ['America/Shiprock', 'America/Shiprock'], ['America/Sitka', 'America/Sitka'], ['America/St_Barthelemy', 'America/St_Barthelemy'], ['America/St_Johns', 'America/St_Johns'], ['America/St_Kitts', 'America/St_Kitts'], ['America/St_Lucia', 'America/St_Lucia'], ['America/St_Thomas', 'America/St_Thomas'], ['America/St_Vincent', 'America/St_Vincent'], ['America/Swift_Current', 'America/Swift_Current'], ['America/Tegucigalpa', 'America/Tegucigalpa'], ['America/Thule', 'America/Thule'], ['America/Thunder_Bay', 'America/Thunder_Bay'], ['America/Tijuana', 'America/Tijuana'], ['America/Toronto', 'America/Toronto'], ['America/Tortola', 'America/Tortola'], ['America/Vancouver', 'America/Vancouver'], ['America/Virgin', 'America/Virgin'], ['America/Whitehorse', 'America/Whitehorse'], ['America/Winnipeg', 'America/Winnipeg'], ['America/Yakutat', 'America/Yakutat'], ['America/Yellowknife', 'America/Yellowknife'], ['Antarctica/Casey', 'Antarctica/Casey'], ['Antarctica/Davis', 'Antarctica/Davis'], ['Antarctica/DumontDUrville', 'Antarctica/DumontDUrville'], ['Antarctica/Macquarie', 'Antarctica/Macquarie'], ['Antarctica/Mawson', 'Antarctica/Mawson'], ['Antarctica/McMurdo', 'Antarctica/McMurdo'], ['Antarctica/Palmer', 'Antarctica/Palmer'], ['Antarctica/Rothera', 'Antarctica/Rothera'], ['Antarctica/South_Pole', 'Antarctica/South_Pole'], ['Antarctica/Syowa', 'Antarctica/Syowa'], ['Antarctica/Troll', 'Antarctica/Troll'], ['Antarctica/Vostok', 'Antarctica/Vostok'], ['Arctic/Longyearbyen', 'Arctic/Longyearbyen'], ['Asia/Aden', 'Asia/Aden'], ['Asia/Almaty', 'Asia/Almaty'], ['Asia/Amman', 'Asia/Amman'], ['Asia/Anadyr', 'Asia/Anadyr'], ['Asia/Aqtau', 'Asia/Aqtau'], ['Asia/Aqtobe', 'Asia/Aqtobe'], ['Asia/Ashgabat', 'Asia/Ashgabat'], ['Asia/Ashkhabad', 'Asia/Ashkhabad'], ['Asia/Atyrau', 'Asia/Atyrau'], ['Asia/Baghdad', 'Asia/Baghdad'], ['Asia/Bahrain', 'Asia/Bahrain'], ['Asia/Baku', 'Asia/Baku'], ['Asia/Bangkok', 'Asia/Bangkok'], ['Asia/Barnaul', 'Asia/Barnaul'], ['Asia/Beirut', 'Asia/Beirut'], ['Asia/Bishkek', 'Asia/Bishkek'], ['Asia/Brunei', 'Asia/Brunei'], ['Asia/Calcutta', 'Asia/Calcutta'], ['Asia/Chita', 'Asia/Chita'], ['Asia/Choibalsan', 'Asia/Choibalsan'], ['Asia/Chongqing', 'Asia/Chongqing'], ['Asia/Chungking', 'Asia/Chungking'], ['Asia/Colombo', 'Asia/Colombo'], ['Asia/Dacca', 'Asia/Dacca'], ['Asia/Damascus', 'Asia/Damascus'], ['Asia/Dhaka', 'Asia/Dhaka'], ['Asia/Dili', 'Asia/Dili'], ['Asia/Dubai', 'Asia/Dubai'], ['Asia/Dushanbe', 'Asia/Dushanbe'], ['Asia/Famagusta', 'Asia/Famagusta'], ['Asia/Gaza', 'Asia/Gaza'], ['Asia/Harbin', 'Asia/Harbin'], ['Asia/Hebron', 'Asia/Hebron'], ['Asia/Ho_Chi_Minh', 'Asia/Ho_Chi_Minh'], ['Asia/Hong_Kong', 'Asia/Hong_Kong'], ['Asia/Hovd', 'Asia/Hovd'], ['Asia/Irkutsk', 'Asia/Irkutsk'], ['Asia/Istanbul', 'Asia/Istanbul'], ['Asia/Jakarta', 'Asia/Jakarta'], ['Asia/Jayapura', 'Asia/Jayapura'], ['Asia/Jerusalem', 'Asia/Jerusalem'], ['Asia/Kabul', 'Asia/Kabul'], ['Asia/Kamchatka', 'Asia/Kamchatka'], ['Asia/Karachi', 'Asia/Karachi'], ['Asia/Kashgar', 'Asia/Kashgar'], ['Asia/Kathmandu', 'Asia/Kathmandu'], ['Asia/Katmandu', 'Asia/Katmandu'], ['Asia/Khandyga', 'Asia/Khandyga'], ['Asia/Kolkata', 'Asia/Kolkata'], ['Asia/Krasnoyarsk', 'Asia/Krasnoyarsk'], ['Asia/Kuala_Lumpur', 'Asia/Kuala_Lumpur'], ['Asia/Kuching', 'Asia/Kuching'], ['Asia/Kuwait', 'Asia/Kuwait'], ['Asia/Macao', 'Asia/Macao'], ['Asia/Macau', 'Asia/Macau'], ['Asia/Magadan', 'Asia/Magadan'], ['Asia/Makassar', 'Asia/Makassar'], ['Asia/Manila', 'Asia/Manila'], ['Asia/Muscat', 'Asia/Muscat'], ['Asia/Nicosia', 'Asia/Nicosia'], ['Asia/Novokuznetsk', 'Asia/Novokuznetsk'], ['Asia/Novosibirsk', 'Asia/Novosibirsk'], ['Asia/Omsk', 'Asia/Omsk'], ['Asia/Oral', 'Asia/Oral'], ['Asia/Phnom_Penh', 'Asia/Phnom_Penh'], ['Asia/Pontianak', 'Asia/Pontianak'], ['Asia/Pyongyang', 'Asia/Pyongyang'], ['Asia/Qatar', 'Asia/Qatar'], ['Asia/Qostanay', 'Asia/Qostanay'], ['Asia/Qyzylorda', 'Asia/Qyzylorda'], ['Asia/Rangoon', 'Asia/Rangoon'], ['Asia/Riyadh', 'Asia/Riyadh'], ['Asia/Saigon', 'Asia/Saigon'], ['Asia/Sakhalin', 'Asia/Sakhalin'], ['Asia/Samarkand', 'Asia/Samarkand'], ['Asia/Seoul', 'Asia/Seoul'], ['Asia/Shanghai', 'Asia/Shanghai'], ['Asia/Singapore', 'Asia/Singapore'], ['Asia/Srednekolymsk', 'Asia/Srednekolymsk'], ['Asia/Taipei', 'Asia/Taipei'], ['Asia/Tashkent', 'Asia/Tashkent'], ['Asia/Tbilisi', 'Asia/Tbilisi'], ['Asia/Tehran', 'Asia/Tehran'], ['Asia/Tel_Aviv', 'Asia/Tel_Aviv'], ['Asia/Thimbu', 'Asia/Thimbu'], ['Asia/Thimphu', 'Asia/Thimphu'], ['Asia/Tokyo', 'Asia/Tokyo'], ['Asia/Tomsk', 'Asia/Tomsk'], ['Asia/Ujung_Pandang', 'Asia/Ujung_Pandang'], ['Asia/Ulaanbaatar', 'Asia/Ulaanbaatar'], ['Asia/Ulan_Bator', 'Asia/Ulan_Bator'], ['Asia/Urumqi', 'Asia/Urumqi'], ['Asia/Ust-Nera', 'Asia/Ust-Nera'], ['Asia/Vientiane', 'Asia/Vientiane'], ['Asia/Vladivostok', 'Asia/Vladivostok'], ['Asia/Yakutsk', 'Asia/Yakutsk'], ['Asia/Yangon', 'Asia/Yangon'], ['Asia/Yekaterinburg', 'Asia/Yekaterinburg'], ['Asia/Yerevan', 'Asia/Yerevan'], ['Atlantic/Azores', 'Atlantic/Azores'], ['Atlantic/Bermuda', 'Atlantic/Bermuda'], ['Atlantic/Canary', 'Atlantic/Canary'], ['Atlantic/Cape_Verde', 'Atlantic/Cape_Verde'], ['Atlantic/Faeroe', 'Atlantic/Faeroe'], ['Atlantic/Faroe', 'Atlantic/Faroe'], ['Atlantic/Jan_Mayen', 'Atlantic/Jan_Mayen'], ['Atlantic/Madeira', 'Atlantic/Madeira'], ['Atlantic/Reykjavik', 'Atlantic/Reykjavik'], ['Atlantic/South_Georgia', 'Atlantic/South_Georgia'], ['Atlantic/St_Helena', 'Atlantic/St_Helena'], ['Atlantic/Stanley', 'Atlantic/Stanley'], ['Australia/ACT', 'Australia/ACT'], ['Australia/Adelaide', 'Australia/Adelaide'], ['Australia/Brisbane', 'Australia/Brisbane'], ['Australia/Broken_Hill', 'Australia/Broken_Hill'], ['Australia/Canberra', 'Australia/Canberra'], ['Australia/Currie', 'Australia/Currie'], ['Australia/Darwin', 'Australia/Darwin'], ['Australia/Eucla', 'Australia/Eucla'], ['Australia/Hobart', 'Australia/Hobart'], ['Australia/LHI', 'Australia/LHI'], ['Australia/Lindeman', 'Australia/Lindeman'], ['Australia/Lord_Howe', 'Australia/Lord_Howe'], ['Australia/Melbourne', 'Australia/Melbourne'], ['Australia/NSW', 'Australia/NSW'], ['Australia/North', 'Australia/North'], ['Australia/Perth', 'Australia/Perth'], ['Australia/Queensland', 'Australia/Queensland'], ['Australia/South', 'Australia/South'], ['Australia/Sydney', 'Australia/Sydney'], ['Australia/Tasmania', 'Australia/Tasmania'], ['Australia/Victoria', 'Australia/Victoria'], ['Australia/West', 'Australia/West'], ['Australia/Yancowinna', 'Australia/Yancowinna'], ['Brazil/Acre', 'Brazil/Acre'], ['Brazil/DeNoronha', 'Brazil/DeNoronha'], ['Brazil/East', 'Brazil/East'], ['Brazil/West', 'Brazil/West'], ['CET', 'CET'], ['CST6CDT', 'CST6CDT'], ['Canada/Atlantic', 'Canada/Atlantic'], ['Canada/Central', 'Canada/Central'], ['Canada/Eastern', 'Canada/Eastern'], ['Canada/Mountain', 'Canada/Mountain'], ['Canada/Newfoundland', 'Canada/Newfoundland'], ['Canada/Pacific', 'Canada/Pacific'], ['Canada/Saskatchewan', 'Canada/Saskatchewan'], ['Canada/Yukon', 'Canada/Yukon'], ['Chile/Continental', 'Chile/Continental'], ['Chile/EasterIsland', 'Chile/EasterIsland'], ['Cuba', 'Cuba'], ['EET', 'EET'], ['EST', 'EST'], ['EST5EDT', 'EST5EDT'], ['Egypt', 'Egypt'], ['Eire', 'Eire'], ['Europe/Amsterdam', 'Europe/Amsterdam'], ['Europe/Andorra', 'Europe/Andorra'], ['Europe/Astrakhan', 'Europe/Astrakhan'], ['Europe/Athens', 'Europe/Athens'], ['Europe/Belfast', 'Europe/Belfast'], ['Europe/Belgrade', 'Europe/Belgrade'], ['Europe/Berlin', 'Europe/Berlin'], ['Europe/Bratislava', 'Europe/Bratislava'], ['Europe/Brussels', 'Europe/Brussels'], ['Europe/Bucharest', 'Europe/Bucharest'], ['Europe/Budapest', 'Europe/Budapest'], ['Europe/Busingen', 'Europe/Busingen'], ['Europe/Chisinau', 'Europe/Chisinau'], ['Europe/Copenhagen', 'Europe/Copenhagen'], ['Europe/Dublin', 'Europe/Dublin'], ['Europe/Gibraltar', 'Europe/Gibraltar'], ['Europe/Guernsey', 'Europe/Guernsey'], ['Europe/Helsinki', 'Europe/Helsinki'], ['Europe/Isle_of_Man', 'Europe/Isle_of_Man'], ['Europe/Istanbul', 'Europe/Istanbul'], ['Europe/Jersey', 'Europe/Jersey'], ['Europe/Kaliningrad', 'Europe/Kaliningrad'], ['Europe/Kiev', 'Europe/Kiev'], ['Europe/Kirov', 'Europe/Kirov'], ['Europe/Kyiv', 'Europe/Kyiv'], ['Europe/Lisbon', 'Europe/Lisbon'], ['Europe/Ljubljana', 'Europe/Ljubljana'], ['Europe/London', 'Europe/London'], ['Europe/Luxembourg', 'Europe/Luxembourg'], ['Europe/Madrid', 'Europe/Madrid'], ['Europe/Malta', 'Europe/Malta'], ['Europe/Mariehamn', 'Europe/Mariehamn'], ['Europe/Minsk', 'Europe/Minsk'], ['Europe/Monaco', 'Europe/Monaco'], ['Europe/Moscow', 'Europe/Moscow'], ['Europe/Nicosia', 'Europe/Nicosia'], ['Europe/Oslo', 'Europe/Oslo'], ['Europe/Paris', 'Europe/Paris'], ['Europe/Podgorica', 'Europe/Podgorica'], ['Europe/Prague', 'Europe/Prague'], ['Europe/Riga', 'Europe/Riga'], ['Europe/Rome', 'Europe/Rome'], ['Europe/Samara', 'Europe/Samara'], ['Europe/San_Marino', 'Europe/San_Marino'], ['Europe/Sarajevo', 'Europe/Sarajevo'], ['Europe/Saratov', 'Europe/Saratov'], ['Europe/Simferopol', 'Europe/Simferopol'], ['Europe/Skopje', 'Europe/Skopje'], ['Europe/Sofia', 'Europe/Sofia'], ['Europe/Stockholm', 'Europe/Stockholm'], ['Europe/Tallinn', 'Europe/Tallinn'], ['Europe/Tirane', 'Europe/Tirane'], ['Europe/Tiraspol', 'Europe/Tiraspol'], ['Europe/Ulyanovsk', 'Europe/Ulyanovsk'], ['Europe/Uzhgorod', 'Europe/Uzhgorod'], ['Europe/Vaduz', 'Europe/Vaduz'], ['Europe/Vatican', 'Europe/Vatican'], ['Europe/Vienna', 'Europe/Vienna'], ['Europe/Vilnius', 'Europe/Vilnius'], ['Europe/Volgograd', 'Europe/Volgograd'], ['Europe/Warsaw', 'Europe/Warsaw'], ['Europe/Zagreb', 'Europe/Zagreb'], ['Europe/Zaporozhye', 'Europe/Zaporozhye'], ['Europe/Zurich', 'Europe/Zurich'], ['GB', 'GB'], ['GB-Eire', 'GB-Eire'], ['GMT', 'GMT'], ['GMT+0', 'GMT+0'], ['GMT-0', 'GMT-0'], ['GMT0', 'GMT0'], ['Greenwich', 'Greenwich'], ['HST', 'HST'], ['Hongkong', 'Hongkong'], ['Iceland', 'Iceland'], ['Indian/Antananarivo', 'Indian/Antananarivo'], ['Indian/Chagos', 'Indian/Chagos'], ['Indian/Christmas', 'Indian/Christmas'], ['Indian/Cocos', 'Indian/Cocos'], ['Indian/Comoro', 'Indian/Comoro'], ['Indian/Kerguelen', 'Indian/Kerguelen'], ['Indian/Mahe', 'Indian/Mahe'], ['Indian/Maldives', 'Indian/Maldives'], ['Indian/Mauritius', 'Indian/Mauritius'], ['Indian/Mayotte', 'Indian/Mayotte'], ['Indian/Reunion', 'Indian/Reunion'], ['Iran', 'Iran'], ['Israel', 'Israel'], ['Jamaica', 'Jamaica'], ['Japan', 'Japan'], ['Kwajalein', 'Kwajalein'], ['Libya', 'Libya'], ['MET', 'MET'], ['MST', 'MST'], ['MST7MDT', 'MST7MDT'], ['Mexico/BajaNorte', 'Mexico/BajaNorte'], ['Mexico/BajaSur', 'Mexico/BajaSur'], ['Mexico/General', 'Mexico/General'], ['NZ', 'NZ'], ['NZ-CHAT', 'NZ-CHAT'], ['Navajo', 'Navajo'], ['PRC', 'PRC'], ['PST8PDT', 'PST8PDT'], ['Pacific/Apia', 'Pacific/Apia'], ['Pacific/Auckland', 'Pacific/Auckland'], ['Pacific/Bougainville', 'Pacific/Bougainville'], ['Pacific/Chatham', 'Pacific/Chatham'], ['Pacific/Chuuk', 'Pacific/Chuuk'], ['Pacific/Easter', 'Pacific/Easter'], ['Pacific/Efate', 'Pacific/Efate'], ['Pacific/Enderbury', 'Pacific/Enderbury'], ['Pacific/Fakaofo', 'Pacific/Fakaofo'], ['Pacific/Fiji', 'Pacific/Fiji'], ['Pacific/Funafuti', 'Pacific/Funafuti'], ['Pacific/Galapagos', 'Pacific/Galapagos'], ['Pacific/Gambier', 'Pacific/Gambier'], ['Pacific/Guadalcanal', 'Pacific/Guadalcanal'], ['Pacific/Guam', 'Pacific/Guam'], ['Pacific/Honolulu', 'Pacific/Honolulu'], ['Pacific/Johnston', 'Pacific/Johnston'], ['Pacific/Kanton', 'Pacific/Kanton'], ['Pacific/Kiritimati', 'Pacific/Kiritimati'], ['Pacific/Kosrae', 'Pacific/Kosrae'], ['Pacific/Kwajalein', 'Pacific/Kwajalein'], ['Pacific/Majuro', 'Pacific/Majuro'], ['Pacific/Marquesas', 'Pacific/Marquesas'], ['Pacific/Midway', 'Pacific/Midway'], ['Pacific/Nauru', 'Pacific/Nauru'], ['Pacific/Niue', 'Pacific/Niue'], ['Pacific/Norfolk', 'Pacific/Norfolk'], ['Pacific/Noumea', 'Pacific/Noumea'], ['Pacific/Pago_Pago', 'Pacific/Pago_Pago'], ['Pacific/Palau', 'Pacific/Palau'], ['Pacific/Pitcairn', 'Pacific/Pitcairn'], ['Pacific/Pohnpei', 'Pacific/Pohnpei'], ['Pacific/Ponape', 'Pacific/Ponape'], ['Pacific/Port_Moresby', 'Pacific/Port_Moresby'], ['Pacific/Rarotonga', 'Pacific/Rarotonga'], ['Pacific/Saipan', 'Pacific/Saipan'], ['Pacific/Samoa', 'Pacific/Samoa'], ['Pacific/Tahiti', 'Pacific/Tahiti'], ['Pacific/Tarawa', 'Pacific/Tarawa'], ['Pacific/Tongatapu', 'Pacific/Tongatapu'], ['Pacific/Truk', 'Pacific/Truk'], ['Pacific/Wake', 'Pacific/Wake'], ['Pacific/Wallis', 'Pacific/Wallis'], ['Pacific/Yap', 'Pacific/Yap'], ['Poland', 'Poland'], ['Portugal', 'Portugal'], ['ROC', 'ROC'], ['ROK', 'ROK'], ['Singapore', 'Singapore'], ['Turkey', 'Turkey'], ['UCT', 'UCT'], ['US/Alaska', 'US/Alaska'], ['US/Aleutian', 'US/Aleutian'], ['US/Arizona', 'US/Arizona'], ['US/Central', 'US/Central'], ['US/East-Indiana', 'US/East-Indiana'], ['US/Eastern', 'US/Eastern'], ['US/Hawaii', 'US/Hawaii'], ['US/Indiana-Starke', 'US/Indiana-Starke'], ['US/Michigan', 'US/Michigan'], ['US/Mountain', 'US/Mountain'], ['US/Pacific', 'US/Pacific'], ['US/Samoa', 'US/Samoa'], ['UTC', 'UTC'], ['Universal', 'Universal'], ['W-SU', 'W-SU'], ['WET', 'WET'], ['Zulu', 'Zulu'], ['Etc/GMT', 'Etc/GMT'], ['Etc/GMT+0', 'Etc/GMT+0'], ['Etc/GMT+1', 'Etc/GMT+1'], ['Etc/GMT+10', 'Etc/GMT+10'], ['Etc/GMT+11', 'Etc/GMT+11'], ['Etc/GMT+12', 'Etc/GMT+12'], ['Etc/GMT+2', 'Etc/GMT+2'], ['Etc/GMT+3', 'Etc/GMT+3'], ['Etc/GMT+4', 'Etc/GMT+4'], ['Etc/GMT+5', 'Etc/GMT+5'], ['Etc/GMT+6', 'Etc/GMT+6'], ['Etc/GMT+7', 'Etc/GMT+7'], ['Etc/GMT+8', 'Etc/GMT+8'], ['Etc/GMT+9', 'Etc/GMT+9'], ['Etc/GMT-0', 'Etc/GMT-0'], ['Etc/GMT-1', 'Etc/GMT-1'], ['Etc/GMT-10', 'Etc/GMT-10'], ['Etc/GMT-11', 'Etc/GMT-11'], ['Etc/GMT-12', 'Etc/GMT-12'], ['Etc/GMT-13', 'Etc/GMT-13'], ['Etc/GMT-14', 'Etc/GMT-14'], ['Etc/GMT-2', 'Etc/GMT-2'], ['Etc/GMT-3', 'Etc/GMT-3'], ['Etc/GMT-4', 'Etc/GMT-4'], ['Etc/GMT-5', 'Etc/GMT-5'], ['Etc/GMT-6', 'Etc/GMT-6'], ['Etc/GMT-7', 'Etc/GMT-7'], ['Etc/GMT-8', 'Etc/GMT-8'], ['Etc/GMT-9', 'Etc/GMT-9'], ['Etc/GMT0', 'Etc/GMT0'], ['Etc/Greenwich', 'Etc/Greenwich'], ['Etc/UCT', 'Etc/UCT'], ['Etc/UTC', 'Etc/UTC'], ['Etc/Universal', 'Etc/Universal'], ['Etc/Zulu', 'Etc/Zulu']]<br>
+<strong>sortable:</strong> False<br>
+<strong>store:</strong> False<br>
+<strong>string:</strong> Timezone<br>
+<strong>type:</strong> selection<br>
+</p>
+</section>
+
+<section id="end_type" class="card card-body">
+<h4 class="card-title">end_type</h4>
+<p>
+<strong>change_default:</strong> False<br>
+<strong>company_dependent:</strong> False<br>
+<strong>default_export_compatible:</strong> False<br>
+<strong>depends:</strong> ['recurrence_id', 'recurrency', 'rrule_type_ui']<br>
+<strong>exportable:</strong> True<br>
+<strong>groupable:</strong> False<br>
+<strong>manual:</strong> False<br>
+<strong>name:</strong> end_type<br>
+<strong>readonly:</strong> False<br>
+<strong>required:</strong> False<br>
+<strong>searchable:</strong> False<br>
+<strong>selection:</strong> [['count', 'Number of repetitions'], ['end_date', 'End date'], ['forever', 'Forever']]<br>
+<strong>sortable:</strong> False<br>
+<strong>store:</strong> False<br>
+<strong>string:</strong> Recurrence Termination<br>
+<strong>type:</strong> selection<br>
+</p>
+</section>
+
+<section id="interval" class="card card-body">
+<h4 class="card-title">interval</h4>
+<p>
+<strong>change_default:</strong> False<br>
+<strong>company_dependent:</strong> False<br>
+<strong>default_export_compatible:</strong> False<br>
+<strong>depends:</strong> ['recurrence_id', 'recurrency', 'rrule_type_ui']<br>
+<strong>exportable:</strong> True<br>
+<strong>groupable:</strong> False<br>
+<strong>help:</strong> Repeat every (Days/Week/Month/Year)<br>
+<strong>manual:</strong> False<br>
+<strong>name:</strong> interval<br>
+<strong>readonly:</strong> False<br>
+<strong>required:</strong> False<br>
+<strong>searchable:</strong> False<br>
+<strong>sortable:</strong> False<br>
+<strong>store:</strong> False<br>
+<strong>string:</strong> Repeat On<br>
+<strong>type:</strong> integer<br>
+</p>
+</section>
+
+<section id="count" class="card card-body">
+<h4 class="card-title">count</h4>
+<p>
+<strong>change_default:</strong> False<br>
+<strong>company_dependent:</strong> False<br>
+<strong>default_export_compatible:</strong> False<br>
+<strong>depends:</strong> ['recurrence_id', 'recurrency', 'rrule_type_ui']<br>
+<strong>exportable:</strong> True<br>
+<strong>groupable:</strong> False<br>
+<strong>help:</strong> Repeat x times<br>
+<strong>manual:</strong> False<br>
+<strong>name:</strong> count<br>
+<strong>readonly:</strong> False<br>
+<strong>required:</strong> False<br>
+<strong>searchable:</strong> False<br>
+<strong>sortable:</strong> False<br>
+<strong>store:</strong> False<br>
+<strong>string:</strong> Number of Repetitions<br>
+<strong>type:</strong> integer<br>
+</p>
+</section>
+
+<section id="mon" class="card card-body">
+<h4 class="card-title">mon</h4>
+<p>
+<strong>change_default:</strong> False<br>
+<strong>company_dependent:</strong> False<br>
+<strong>default_export_compatible:</strong> False<br>
+<strong>depends:</strong> ['recurrence_id', 'recurrency', 'rrule_type_ui']<br>
+<strong>exportable:</strong> True<br>
+<strong>groupable:</strong> False<br>
+<strong>manual:</strong> False<br>
+<strong>name:</strong> mon<br>
+<strong>readonly:</strong> False<br>
+<strong>required:</strong> False<br>
+<strong>searchable:</strong> False<br>
+<strong>sortable:</strong> False<br>
+<strong>store:</strong> False<br>
+<strong>string:</strong> Mon<br>
+<strong>type:</strong> boolean<br>
+</p>
+</section>
+
+<section id="tue" class="card card-body">
+<h4 class="card-title">tue</h4>
+<p>
+<strong>change_default:</strong> False<br>
+<strong>company_dependent:</strong> False<br>
+<strong>default_export_compatible:</strong> False<br>
+<strong>depends:</strong> ['recurrence_id', 'recurrency', 'rrule_type_ui']<br>
+<strong>exportable:</strong> True<br>
+<strong>groupable:</strong> False<br>
+<strong>manual:</strong> False<br>
+<strong>name:</strong> tue<br>
+<strong>readonly:</strong> False<br>
+<strong>required:</strong> False<br>
+<strong>searchable:</strong> False<br>
+<strong>sortable:</strong> False<br>
+<strong>store:</strong> False<br>
+<strong>string:</strong> Tue<br>
+<strong>type:</strong> boolean<br>
+</p>
+</section>
+
+<section id="wed" class="card card-body">
+<h4 class="card-title">wed</h4>
+<p>
+<strong>change_default:</strong> False<br>
+<strong>company_dependent:</strong> False<br>
+<strong>default_export_compatible:</strong> False<br>
+<strong>depends:</strong> ['recurrence_id', 'recurrency', 'rrule_type_ui']<br>
+<strong>exportable:</strong> True<br>
+<strong>groupable:</strong> False<br>
+<strong>manual:</strong> False<br>
+<strong>name:</strong> wed<br>
+<strong>readonly:</strong> False<br>
+<strong>required:</strong> False<br>
+<strong>searchable:</strong> False<br>
+<strong>sortable:</strong> False<br>
+<strong>store:</strong> False<br>
+<strong>string:</strong> Wed<br>
+<strong>type:</strong> boolean<br>
+</p>
+</section>
+
+<section id="thu" class="card card-body">
+<h4 class="card-title">thu</h4>
+<p>
+<strong>change_default:</strong> False<br>
+<strong>company_dependent:</strong> False<br>
+<strong>default_export_compatible:</strong> False<br>
+<strong>depends:</strong> ['recurrence_id', 'recurrency', 'rrule_type_ui']<br>
+<strong>exportable:</strong> True<br>
+<strong>groupable:</strong> False<br>
+<strong>manual:</strong> False<br>
+<strong>name:</strong> thu<br>
+<strong>readonly:</strong> False<br>
+<strong>required:</strong> False<br>
+<strong>searchable:</strong> False<br>
+<strong>sortable:</strong> False<br>
+<strong>store:</strong> False<br>
+<strong>string:</strong> Thu<br>
+<strong>type:</strong> boolean<br>
+</p>
+</section>
+
+<section id="fri" class="card card-body">
+<h4 class="card-title">fri</h4>
+<p>
+<strong>change_default:</strong> False<br>
+<strong>company_dependent:</strong> False<br>
+<strong>default_export_compatible:</strong> False<br>
+<strong>depends:</strong> ['recurrence_id', 'recurrency', 'rrule_type_ui']<br>
+<strong>exportable:</strong> True<br>
+<strong>groupable:</strong> False<br>
+<strong>manual:</strong> False<br>
+<strong>name:</strong> fri<br>
+<strong>readonly:</strong> False<br>
+<strong>required:</strong> False<br>
+<strong>searchable:</strong> False<br>
+<strong>sortable:</strong> False<br>
+<strong>store:</strong> False<br>
+<strong>string:</strong> Fri<br>
+<strong>type:</strong> boolean<br>
+</p>
+</section>
+
+<section id="sat" class="card card-body">
+<h4 class="card-title">sat</h4>
+<p>
+<strong>change_default:</strong> False<br>
+<strong>company_dependent:</strong> False<br>
+<strong>default_export_compatible:</strong> False<br>
+<strong>depends:</strong> ['recurrence_id', 'recurrency', 'rrule_type_ui']<br>
+<strong>exportable:</strong> True<br>
+<strong>groupable:</strong> False<br>
+<strong>manual:</strong> False<br>
+<strong>name:</strong> sat<br>
+<strong>readonly:</strong> False<br>
+<strong>required:</strong> False<br>
+<strong>searchable:</strong> False<br>
+<strong>sortable:</strong> False<br>
+<strong>store:</strong> False<br>
+<strong>string:</strong> Sat<br>
+<strong>type:</strong> boolean<br>
+</p>
+</section>
+
+<section id="sun" class="card card-body">
+<h4 class="card-title">sun</h4>
+<p>
+<strong>change_default:</strong> False<br>
+<strong>company_dependent:</strong> False<br>
+<strong>default_export_compatible:</strong> False<br>
+<strong>depends:</strong> ['recurrence_id', 'recurrency', 'rrule_type_ui']<br>
+<strong>exportable:</strong> True<br>
+<strong>groupable:</strong> False<br>
+<strong>manual:</strong> False<br>
+<strong>name:</strong> sun<br>
+<strong>readonly:</strong> False<br>
+<strong>required:</strong> False<br>
+<strong>searchable:</strong> False<br>
+<strong>sortable:</strong> False<br>
+<strong>store:</strong> False<br>
+<strong>string:</strong> Sun<br>
+<strong>type:</strong> boolean<br>
+</p>
+</section>
+
+<section id="month_by" class="card card-body">
+<h4 class="card-title">month_by</h4>
+<p>
+<strong>change_default:</strong> False<br>
+<strong>company_dependent:</strong> False<br>
+<strong>default_export_compatible:</strong> False<br>
+<strong>depends:</strong> ['recurrence_id', 'recurrency', 'rrule_type_ui']<br>
+<strong>exportable:</strong> True<br>
+<strong>groupable:</strong> False<br>
+<strong>manual:</strong> False<br>
+<strong>name:</strong> month_by<br>
+<strong>readonly:</strong> False<br>
+<strong>required:</strong> False<br>
+<strong>searchable:</strong> False<br>
+<strong>selection:</strong> [['date', 'Date of month'], ['day', 'Day of month']]<br>
+<strong>sortable:</strong> False<br>
+<strong>store:</strong> False<br>
+<strong>string:</strong> Option<br>
+<strong>type:</strong> selection<br>
+</p>
+</section>
+
+<section id="day" class="card card-body">
+<h4 class="card-title">day</h4>
+<p>
+<strong>change_default:</strong> False<br>
+<strong>company_dependent:</strong> False<br>
+<strong>default_export_compatible:</strong> False<br>
+<strong>depends:</strong> ['recurrence_id', 'recurrency', 'rrule_type_ui']<br>
+<strong>exportable:</strong> True<br>
+<strong>groupable:</strong> False<br>
+<strong>manual:</strong> False<br>
+<strong>name:</strong> day<br>
+<strong>readonly:</strong> False<br>
+<strong>required:</strong> False<br>
+<strong>searchable:</strong> False<br>
+<strong>sortable:</strong> False<br>
+<strong>store:</strong> False<br>
+<strong>string:</strong> Date of month<br>
+<strong>type:</strong> integer<br>
+</p>
+</section>
+
+<section id="weekday" class="card card-body">
+<h4 class="card-title">weekday</h4>
+<p>
+<strong>change_default:</strong> False<br>
+<strong>company_dependent:</strong> False<br>
+<strong>default_export_compatible:</strong> False<br>
+<strong>depends:</strong> ['recurrence_id', 'recurrency', 'rrule_type_ui']<br>
+<strong>exportable:</strong> True<br>
+<strong>groupable:</strong> False<br>
+<strong>manual:</strong> False<br>
+<strong>name:</strong> weekday<br>
+<strong>readonly:</strong> False<br>
+<strong>required:</strong> False<br>
+<strong>searchable:</strong> False<br>
+<strong>selection:</strong> [['MON', 'Monday'], ['TUE', 'Tuesday'], ['WED', 'Wednesday'], ['THU', 'Thursday'], ['FRI', 'Friday'], ['SAT', 'Saturday'], ['SUN', 'Sunday']]<br>
+<strong>sortable:</strong> False<br>
+<strong>store:</strong> False<br>
+<strong>string:</strong> Weekday<br>
+<strong>type:</strong> selection<br>
+</p>
+</section>
+
+<section id="byday" class="card card-body">
+<h4 class="card-title">byday</h4>
+<p>
+<strong>change_default:</strong> False<br>
+<strong>company_dependent:</strong> False<br>
+<strong>default_export_compatible:</strong> False<br>
+<strong>depends:</strong> ['recurrence_id', 'recurrency', 'rrule_type_ui']<br>
+<strong>exportable:</strong> True<br>
+<strong>groupable:</strong> False<br>
+<strong>manual:</strong> False<br>
+<strong>name:</strong> byday<br>
+<strong>readonly:</strong> False<br>
+<strong>required:</strong> False<br>
+<strong>searchable:</strong> False<br>
+<strong>selection:</strong> [['1', 'First'], ['2', 'Second'], ['3', 'Third'], ['4', 'Fourth'], ['-1', 'Last']]<br>
+<strong>sortable:</strong> False<br>
+<strong>store:</strong> False<br>
+<strong>string:</strong> By day<br>
+<strong>type:</strong> selection<br>
+</p>
+</section>
+
+<section id="until" class="card card-body">
+<h4 class="card-title">until</h4>
+<p>
+<strong>change_default:</strong> False<br>
+<strong>company_dependent:</strong> False<br>
+<strong>default_export_compatible:</strong> False<br>
+<strong>depends:</strong> ['recurrence_id', 'recurrency', 'rrule_type_ui']<br>
+<strong>exportable:</strong> True<br>
+<strong>groupable:</strong> False<br>
+<strong>manual:</strong> False<br>
+<strong>name:</strong> until<br>
+<strong>readonly:</strong> False<br>
+<strong>required:</strong> False<br>
+<strong>searchable:</strong> False<br>
+<strong>sortable:</strong> False<br>
+<strong>store:</strong> False<br>
+<strong>string:</strong> Until<br>
+<strong>type:</strong> date<br>
+</p>
+</section>
+
+<section id="display_description" class="card card-body">
+<h4 class="card-title">display_description</h4>
+<p>
+<strong>change_default:</strong> False<br>
+<strong>company_dependent:</strong> False<br>
+<strong>default_export_compatible:</strong> False<br>
+<strong>depends:</strong> ['description']<br>
+<strong>exportable:</strong> True<br>
+<strong>groupable:</strong> False<br>
+<strong>manual:</strong> False<br>
+<strong>name:</strong> display_description<br>
+<strong>readonly:</strong> True<br>
+<strong>required:</strong> False<br>
+<strong>searchable:</strong> False<br>
+<strong>sortable:</strong> False<br>
+<strong>store:</strong> False<br>
+<strong>string:</strong> Display Description<br>
+<strong>type:</strong> boolean<br>
+</p>
+</section>
+
+<section id="attendees_count" class="card card-body">
+<h4 class="card-title">attendees_count</h4>
+<p>
+<strong>change_default:</strong> False<br>
+<strong>company_dependent:</strong> False<br>
+<strong>default_export_compatible:</strong> False<br>
+<strong>depends:</strong> ['attendee_ids', 'attendee_ids.state', 'partner_ids']<br>
+<strong>exportable:</strong> True<br>
+<strong>groupable:</strong> False<br>
+<strong>manual:</strong> False<br>
+<strong>name:</strong> attendees_count<br>
+<strong>readonly:</strong> True<br>
+<strong>required:</strong> False<br>
+<strong>searchable:</strong> False<br>
+<strong>sortable:</strong> False<br>
+<strong>store:</strong> False<br>
+<strong>string:</strong> Attendees Count<br>
+<strong>type:</strong> integer<br>
+</p>
+</section>
+
+<section id="accepted_count" class="card card-body">
+<h4 class="card-title">accepted_count</h4>
+<p>
+<strong>change_default:</strong> False<br>
+<strong>company_dependent:</strong> False<br>
+<strong>default_export_compatible:</strong> False<br>
+<strong>depends:</strong> ['attendee_ids', 'attendee_ids.state', 'partner_ids']<br>
+<strong>exportable:</strong> True<br>
+<strong>groupable:</strong> False<br>
+<strong>manual:</strong> False<br>
+<strong>name:</strong> accepted_count<br>
+<strong>readonly:</strong> True<br>
+<strong>required:</strong> False<br>
+<strong>searchable:</strong> False<br>
+<strong>sortable:</strong> False<br>
+<strong>store:</strong> False<br>
+<strong>string:</strong> Accepted Count<br>
+<strong>type:</strong> integer<br>
+</p>
+</section>
+
+<section id="declined_count" class="card card-body">
+<h4 class="card-title">declined_count</h4>
+<p>
+<strong>change_default:</strong> False<br>
+<strong>company_dependent:</strong> False<br>
+<strong>default_export_compatible:</strong> False<br>
+<strong>depends:</strong> ['attendee_ids', 'attendee_ids.state', 'partner_ids']<br>
+<strong>exportable:</strong> True<br>
+<strong>groupable:</strong> False<br>
+<strong>manual:</strong> False<br>
+<strong>name:</strong> declined_count<br>
+<strong>readonly:</strong> True<br>
+<strong>required:</strong> False<br>
+<strong>searchable:</strong> False<br>
+<strong>sortable:</strong> False<br>
+<strong>store:</strong> False<br>
+<strong>string:</strong> Declined Count<br>
+<strong>type:</strong> integer<br>
+</p>
+</section>
+
+<section id="tentative_count" class="card card-body">
+<h4 class="card-title">tentative_count</h4>
+<p>
+<strong>change_default:</strong> False<br>
+<strong>company_dependent:</strong> False<br>
+<strong>default_export_compatible:</strong> False<br>
+<strong>depends:</strong> ['attendee_ids', 'attendee_ids.state', 'partner_ids']<br>
+<strong>exportable:</strong> True<br>
+<strong>groupable:</strong> False<br>
+<strong>manual:</strong> False<br>
+<strong>name:</strong> tentative_count<br>
+<strong>readonly:</strong> True<br>
+<strong>required:</strong> False<br>
+<strong>searchable:</strong> False<br>
+<strong>sortable:</strong> False<br>
+<strong>store:</strong> False<br>
+<strong>string:</strong> Tentative Count<br>
+<strong>type:</strong> integer<br>
+</p>
+</section>
+
+<section id="awaiting_count" class="card card-body">
+<h4 class="card-title">awaiting_count</h4>
+<p>
+<strong>change_default:</strong> False<br>
+<strong>company_dependent:</strong> False<br>
+<strong>default_export_compatible:</strong> False<br>
+<strong>depends:</strong> ['attendee_ids', 'attendee_ids.state', 'partner_ids']<br>
+<strong>exportable:</strong> True<br>
+<strong>groupable:</strong> False<br>
+<strong>manual:</strong> False<br>
+<strong>name:</strong> awaiting_count<br>
+<strong>readonly:</strong> True<br>
+<strong>required:</strong> False<br>
+<strong>searchable:</strong> False<br>
+<strong>sortable:</strong> False<br>
+<strong>store:</strong> False<br>
+<strong>string:</strong> Awaiting Count<br>
+<strong>type:</strong> integer<br>
+</p>
+</section>
+
+<section id="user_can_edit" class="card card-body">
+<h4 class="card-title">user_can_edit</h4>
+<p>
+<strong>change_default:</strong> False<br>
+<strong>company_dependent:</strong> False<br>
+<strong>default_export_compatible:</strong> False<br>
+<strong>depends:</strong> ['partner_ids']<br>
+<strong>exportable:</strong> True<br>
+<strong>groupable:</strong> False<br>
+<strong>manual:</strong> False<br>
+<strong>name:</strong> user_can_edit<br>
+<strong>readonly:</strong> True<br>
+<strong>required:</strong> False<br>
+<strong>searchable:</strong> False<br>
+<strong>sortable:</strong> False<br>
+<strong>store:</strong> False<br>
+<strong>string:</strong> User Can Edit<br>
+<strong>type:</strong> boolean<br>
+</p>
+</section>
+
+<section id="id" class="card card-body">
+<h4 class="card-title">id</h4>
+<p>
+<strong>change_default:</strong> False<br>
+<strong>company_dependent:</strong> False<br>
+<strong>default_export_compatible:</strong> False<br>
+<strong>depends:</strong> []<br>
+<strong>exportable:</strong> True<br>
+<strong>groupable:</strong> True<br>
+<strong>manual:</strong> False<br>
+<strong>name:</strong> id<br>
+<strong>readonly:</strong> True<br>
+<strong>required:</strong> False<br>
+<strong>searchable:</strong> True<br>
+<strong>sortable:</strong> True<br>
+<strong>store:</strong> True<br>
+<strong>string:</strong> ID<br>
+<strong>type:</strong> integer<br>
+</p>
+</section>
+
+<section id="display_name" class="card card-body">
+<h4 class="card-title">display_name</h4>
+<p>
+<strong>change_default:</strong> False<br>
+<strong>company_dependent:</strong> False<br>
+<strong>default_export_compatible:</strong> False<br>
+<strong>depends:</strong> ['privacy', 'user_id', 'name']<br>
+<strong>exportable:</strong> True<br>
+<strong>groupable:</strong> False<br>
+<strong>manual:</strong> False<br>
+<strong>name:</strong> display_name<br>
+<strong>readonly:</strong> True<br>
+<strong>required:</strong> False<br>
+<strong>searchable:</strong> True<br>
+<strong>sortable:</strong> False<br>
+<strong>store:</strong> False<br>
+<strong>string:</strong> Display Name<br>
+<strong>translate:</strong> False<br>
+<strong>trim:</strong> True<br>
+<strong>type:</strong> char<br>
+</p>
+</section>
+
+<section id="create_uid" class="card card-body">
+<h4 class="card-title">create_uid</h4>
+<p>
+<strong>allow_hierachy_operators:</strong> True<br>
+<strong>change_default:</strong> False<br>
+<strong>company_dependent:</strong> False<br>
+<strong>context:</strong> {}<br>
+<strong>default_export_compatible:</strong> False<br>
+<strong>depends:</strong> []<br>
+<strong>domain:</strong> []<br>
+<strong>exportable:</strong> True<br>
+<strong>groupable:</strong> True<br>
+<strong>manual:</strong> False<br>
+<strong>name:</strong> create_uid<br>
+<strong>readonly:</strong> True<br>
+<strong>relation:</strong> <a class="nav-link" href="../res_users/index.html">res.users</a><br>
+<strong>required:</strong> False<br>
+<strong>searchable:</strong> True<br>
+<strong>sortable:</strong> True<br>
+<strong>store:</strong> True<br>
+<strong>string:</strong> Created by<br>
+<strong>type:</strong> many2one<br>
+</p>
+</section>
+
+<section id="create_date" class="card card-body">
+<h4 class="card-title">create_date</h4>
+<p>
+<strong>change_default:</strong> False<br>
+<strong>company_dependent:</strong> False<br>
+<strong>default_export_compatible:</strong> False<br>
+<strong>depends:</strong> []<br>
+<strong>exportable:</strong> True<br>
+<strong>groupable:</strong> True<br>
+<strong>manual:</strong> False<br>
+<strong>name:</strong> create_date<br>
+<strong>readonly:</strong> True<br>
+<strong>required:</strong> False<br>
+<strong>searchable:</strong> True<br>
+<strong>sortable:</strong> True<br>
+<strong>store:</strong> True<br>
+<strong>string:</strong> Created on<br>
+<strong>type:</strong> datetime<br>
+</p>
+</section>
+
+<section id="write_uid" class="card card-body">
+<h4 class="card-title">write_uid</h4>
+<p>
+<strong>allow_hierachy_operators:</strong> True<br>
+<strong>change_default:</strong> False<br>
+<strong>company_dependent:</strong> False<br>
+<strong>context:</strong> {}<br>
+<strong>default_export_compatible:</strong> False<br>
+<strong>depends:</strong> []<br>
+<strong>domain:</strong> []<br>
+<strong>exportable:</strong> True<br>
+<strong>groupable:</strong> True<br>
+<strong>manual:</strong> False<br>
+<strong>name:</strong> write_uid<br>
+<strong>readonly:</strong> True<br>
+<strong>relation:</strong> <a class="nav-link" href="../res_users/index.html">res.users</a><br>
+<strong>required:</strong> False<br>
+<strong>searchable:</strong> True<br>
+<strong>sortable:</strong> True<br>
+<strong>store:</strong> True<br>
+<strong>string:</strong> Last Updated by<br>
+<strong>type:</strong> many2one<br>
+</p>
+</section>
+
+<section id="write_date" class="card card-body">
+<h4 class="card-title">write_date</h4>
+<p>
+<strong>change_default:</strong> False<br>
+<strong>company_dependent:</strong> False<br>
+<strong>default_export_compatible:</strong> False<br>
+<strong>depends:</strong> []<br>
+<strong>exportable:</strong> True<br>
+<strong>groupable:</strong> True<br>
+<strong>manual:</strong> False<br>
+<strong>name:</strong> write_date<br>
+<strong>readonly:</strong> True<br>
+<strong>required:</strong> False<br>
+<strong>searchable:</strong> True<br>
+<strong>sortable:</strong> True<br>
+<strong>store:</strong> True<br>
+<strong>string:</strong> Last Updated on<br>
+<strong>type:</strong> datetime<br>
+</p>
+</section>
+
+<section id="fsm_order_id" class="card card-body">
+<h4 class="card-title">fsm_order_id</h4>
+<p>
+<strong>allow_hierachy_operators:</strong> False<br>
+<strong>change_default:</strong> False<br>
+<strong>company_dependent:</strong> False<br>
+<strong>context:</strong> {}<br>
+<strong>default_export_compatible:</strong> False<br>
+<strong>depends:</strong> []<br>
+<strong>domain:</strong> []<br>
+<strong>exportable:</strong> True<br>
+<strong>groupable:</strong> False<br>
+<strong>manual:</strong> False<br>
+<strong>name:</strong> fsm_order_id<br>
+<strong>readonly:</strong> False<br>
+<strong>relation:</strong> <a class="nav-link" href="../fsm_order/index.html">fsm.order</a><br>
+<strong>relation_field:</strong> calendar_event_id<br>
+<strong>required:</strong> False<br>
+<strong>searchable:</strong> True<br>
+<strong>sortable:</strong> False<br>
+<strong>store:</strong> True<br>
+<strong>string:</strong> Order id<br>
+<strong>type:</strong> one2many<br>
+</p>
+</section>
+
+<section id="unavailable_partner_ids" class="card card-body">
+<h4 class="card-title">unavailable_partner_ids</h4>
+<p>
+<strong>allow_hierachy_operators:</strong> True<br>
+<strong>change_default:</strong> False<br>
+<strong>company_dependent:</strong> False<br>
+<strong>context:</strong> {}<br>
+<strong>default_export_compatible:</strong> False<br>
+<strong>depends:</strong> ['partner_ids', 'start', 'stop', 'allday']<br>
+<strong>domain:</strong> []<br>
+<strong>exportable:</strong> True<br>
+<strong>groupable:</strong> False<br>
+<strong>manual:</strong> False<br>
+<strong>name:</strong> unavailable_partner_ids<br>
+<strong>readonly:</strong> True<br>
+<strong>relation:</strong> <a class="nav-link" href="../res_partner/index.html">res.partner</a><br>
+<strong>required:</strong> False<br>
+<strong>searchable:</strong> False<br>
+<strong>sortable:</strong> False<br>
+<strong>store:</strong> False<br>
+<strong>string:</strong> Unavailable Partner<br>
+<strong>type:</strong> many2many<br>
+</p>
+</section>
+
+
+      </div>
+    </div>
+
+  </div>
+  <!-- Content end -->
+
+  <!-- Footer
+  ============================ -->
+  <footer id="footer" class="section bg-dark footer-text-light">
+    <div class="container">
+      <ul class="social-icons social-icons-lg social-icons-muted justify-content-center mb-3">
+        <li><a data-toggle="tooltip" href="https://twitter.com/harnishdesign/" target="_blank" title=""
+            data-original-title="Twitter"><i class="fab fa-twitter"></i></a></li>
+        <li><a data-toggle="tooltip" href="http://www.facebook.com/harnishdesign/" target="_blank" title=""
+            data-original-title="Facebook"><i class="fab fa-facebook-f"></i></a></li>
+        <li><a data-toggle="tooltip" href="http://www.dribbble.com/harnishdesign/" target="_blank" title=""
+            data-original-title="Dribbble"><i class="fab fa-dribbble"></i></a></li>
+        <li><a data-toggle="tooltip" href="http://www.github.com/" target="_blank" title=""
+            data-original-title="GitHub"><i class="fab fa-github"></i></a></li>
+      </ul>
+      <p class="text-center">Copyright &copy; 2020 <a
+          href="http://www.harnishdesign.net/idocs-one-page-documentation-html-template/">iDocs</a>. All Rights
+        Reserved.</p>
+      <p class="text-2 text-center mb-0">Design &amp; Develop by <a class="btn-link" target="_blank"
+          href="http://www.harnishdesign.net/">HarnishDesign</a>.</p>
+    </div>
+  </footer>
+  <!-- Footer end -->
+
+  </div>
+  <!-- Document Wrapper end -->
+
+  <!-- Back To Top -->
+  <a id="back-to-top" data-toggle="tooltip" title="Back to Top" href="javascript:void(0)"><i
+      class="fa fa-chevron-up"></i></a>
+
+  <!-- JavaScript
+============================ -->
+  <script src="../../assets/vendor/jquery/jquery.min.js"></script>
+  <script src="../../assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <!-- Highlight JS -->
+  <script src="../../assets/vendor/highlight.js/highlight.min.js"></script>
+  <!-- Easing -->
+  <script src="../../assets/vendor/jquery.easing/jquery.easing.min.js"></script>
+  <!-- Magnific Popup -->
+  <script src="../../assets/vendor/magnific-popup/jquery.magnific-popup.min.js"></script>
+  <!-- Custom Script -->
+  <script src="../../assets/js/theme.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,459 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1.0, shrink-to-fit=no">
+  <link href="../../assets/images/odoo_doc.png" rel="icon" />
+  <title>Odoo API Documentation</title>
+  <meta name="description" content="Your ThemeForest item Name and description">
+  <meta name="author" content="harnishdesign.net">
+
+  <!-- Stylesheet
+============================== -->
+  <!-- Bootstrap -->
+  <link rel="stylesheet" type="text/css" href="../../assets/vendor/bootstrap/css/bootstrap.min.css" />
+  <!-- Font Awesome Icon -->
+  <link rel="stylesheet" type="text/css" href="../../assets/vendor/font-awesome/css/all.min.css" />
+  <!-- Magnific Popup -->
+  <link rel="stylesheet" type="text/css" href="../../assets/vendor/magnific-popup/magnific-popup.min.css" />
+  <!-- Highlight Syntax -->
+  <link rel="stylesheet" type="text/css" href="../../assets/vendor/highlight.js/styles/github.css" />
+  <!-- Custom Stylesheet -->
+  <link rel="stylesheet" type="text/css" href="../../assets/css/stylesheet.css" />
+</head>
+
+<body data-spy="scroll" data-target=".idocs-navigation" data-offset="125">
+
+  <!-- Preloader -->
+  <div class="preloader">
+    <div class="lds-ellipsis">
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+    </div>
+  </div>
+  <!-- Preloader End -->
+
+  <!-- Document Wrapper   
+=============================== -->
+  <div id="main-wrapper">
+
+  <!-- Header
+  ============================ -->
+  <header id="header" class="sticky-top">
+    <!-- Navbar -->
+    <nav class="primary-menu navbar navbar-expand-lg navbar-dropdown-dark">
+      <div class="container-fluid">
+        <!-- Sidebar Toggler -->
+		<button id="sidebarCollapse" class="navbar-toggler d-block d-md-none" type="button"><span></span><span class="w-75"></span><span class="w-50"></span></button>
+
+		<!-- Logo -->
+        <a class="logo ml-md-3" href="index.html" title="iDocs Template"> <img src="../../assets/images/odoo_doc.png" alt="iDocs Template"/> </a>
+		<span class="text-2 ml-2">v1.0</span>
+        <!-- Logo End -->
+
+		<!-- Navbar Toggler -->
+		<button class="navbar-toggler ml-auto" type="button" data-toggle="collapse" data-target="#header-nav"><span></span><span></span><span></span></button>
+
+		<div id="header-nav" class="collapse navbar-collapse justify-content-end">
+          <ul class="navbar-nav">
+            <li class="dropdown"> <a class="dropdown-toggle" href="#">Navigation</a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="index.html">ir.model</a></li>
+                <li><a class="dropdown-item" href="odoo_operators.html">operators</a></li>
+              </ul>
+            </li>
+            <li><a target="_blank" href="https://themeforest.net/user/harnishdesign/#contact?ref=HarnishDesign">Support</a></li>
+          </ul>
+        </div>
+        <ul class="social-icons social-icons-sm ml-lg-2 mr-2">
+          <li class="social-icons-twitter"><a data-toggle="tooltip" href="http://www.twitter.com/harnishdesign/" target="_blank" title="" data-original-title="Twitter"><i class="fab fa-twitter"></i></a></li>
+        </ul>
+      </div>
+    </nav>
+    <!-- Navbar End -->
+  </header>
+  <!-- Header End -->
+
+  <!-- Content
+  ============================ -->
+  <div id="content" role="main">
+
+    <!-- Sidebar Navigation
+	============================ -->
+    <div class="idocs-navigation bg-light">
+        <ul class="nav flex-column">
+          <li class="nav-item"><a class="nav-link" href="#name">name</a></li>
+<li class="nav-item"><a class="nav-link" href="#user_id">user_id</a></li>
+<li class="nav-item"><a class="nav-link" href="#domain">domain</a></li>
+<li class="nav-item"><a class="nav-link" href="#context">context</a></li>
+<li class="nav-item"><a class="nav-link" href="#sort">sort</a></li>
+<li class="nav-item"><a class="nav-link" href="#model_id">model_id</a></li>
+<li class="nav-item"><a class="nav-link" href="#is_default">is_default</a></li>
+<li class="nav-item"><a class="nav-link" href="#action_id">action_id</a></li>
+<li class="nav-item"><a class="nav-link" href="#active">active</a></li>
+<li class="nav-item"><a class="nav-link" href="#id">id</a></li>
+<li class="nav-item"><a class="nav-link" href="#display_name">display_name</a></li>
+<li class="nav-item"><a class="nav-link" href="#create_uid">create_uid</a></li>
+<li class="nav-item"><a class="nav-link" href="#create_date">create_date</a></li>
+<li class="nav-item"><a class="nav-link" href="#write_uid">write_uid</a></li>
+<li class="nav-item"><a class="nav-link" href="#write_date">write_date</a></li>
+<li class="nav-item"><a class="nav-link" href="#__last_update">__last_update</a></li>
+
+        </ul>
+    </div>
+
+    <!-- Docs Content
+	============================ -->
+    <div class="idocs-content">
+      <div class="container">
+        <h2>ir.filters</h2>
+<section id="name" class="card card-body">
+<h4 class="card-title">name</h4>
+<p>
+<strong>type:</strong> char<br>
+<strong>change_default:</strong> False<br>
+<strong>company_dependent:</strong> False<br>
+<strong>depends:</strong> []<br>
+<strong>manual:</strong> False<br>
+<strong>readonly:</strong> False<br>
+<strong>required:</strong> True<br>
+<strong>searchable:</strong> True<br>
+<strong>sortable:</strong> True<br>
+<strong>store:</strong> True<br>
+<strong>string:</strong> Filter Name<br>
+<strong>translate:</strong> True<br>
+<strong>trim:</strong> True<br>
+</p>
+</section>
+
+<section id="user_id" class="card card-body">
+<h4 class="card-title">user_id</h4>
+<p>
+<strong>type:</strong> many2one<br>
+<strong>change_default:</strong> False<br>
+<strong>company_dependent:</strong> False<br>
+<strong>context:</strong> {}<br>
+<strong>depends:</strong> []<br>
+<strong>domain:</strong> []<br>
+<strong>help:</strong> The user this filter is private to. When left empty the filter is public and available to all users.<br>
+<strong>manual:</strong> False<br>
+<strong>readonly:</strong> False<br>
+<strong>relation:</strong> <a class="nav-link" href="../res_users/index.html">res.users</a><br>
+<strong>required:</strong> False<br>
+<strong>searchable:</strong> True<br>
+<strong>sortable:</strong> True<br>
+<strong>store:</strong> True<br>
+<strong>string:</strong> User<br>
+</p>
+</section>
+
+<section id="domain" class="card card-body">
+<h4 class="card-title">domain</h4>
+<p>
+<strong>type:</strong> text<br>
+<strong>change_default:</strong> False<br>
+<strong>company_dependent:</strong> False<br>
+<strong>depends:</strong> []<br>
+<strong>manual:</strong> False<br>
+<strong>readonly:</strong> False<br>
+<strong>required:</strong> True<br>
+<strong>searchable:</strong> True<br>
+<strong>sortable:</strong> True<br>
+<strong>store:</strong> True<br>
+<strong>string:</strong> Domain<br>
+<strong>translate:</strong> False<br>
+</p>
+</section>
+
+<section id="context" class="card card-body">
+<h4 class="card-title">context</h4>
+<p>
+<strong>type:</strong> text<br>
+<strong>change_default:</strong> False<br>
+<strong>company_dependent:</strong> False<br>
+<strong>depends:</strong> []<br>
+<strong>manual:</strong> False<br>
+<strong>readonly:</strong> False<br>
+<strong>required:</strong> True<br>
+<strong>searchable:</strong> True<br>
+<strong>sortable:</strong> True<br>
+<strong>store:</strong> True<br>
+<strong>string:</strong> Context<br>
+<strong>translate:</strong> False<br>
+</p>
+</section>
+
+<section id="sort" class="card card-body">
+<h4 class="card-title">sort</h4>
+<p>
+<strong>type:</strong> text<br>
+<strong>change_default:</strong> False<br>
+<strong>company_dependent:</strong> False<br>
+<strong>depends:</strong> []<br>
+<strong>manual:</strong> False<br>
+<strong>readonly:</strong> False<br>
+<strong>required:</strong> True<br>
+<strong>searchable:</strong> True<br>
+<strong>sortable:</strong> True<br>
+<strong>store:</strong> True<br>
+<strong>string:</strong> Sort<br>
+<strong>translate:</strong> False<br>
+</p>
+</section>
+
+<section id="model_id" class="card card-body">
+<h4 class="card-title">model_id</h4>
+<p>
+<strong>type:</strong> selection<br>
+<strong>change_default:</strong> False<br>
+<strong>company_dependent:</strong> False<br>
+<strong>depends:</strong> []<br>
+<strong>manual:</strong> False<br>
+<strong>readonly:</strong> False<br>
+<strong>required:</strong> True<br>
+<strong>searchable:</strong> True<br>
+<strong>selection:</strong> [['res.groups', 'Access Groups'], ['muk_security.mixins.access_rights', 'Access Mixin'], ['account.account', 'Account'], ['account.cash.rounding', 'Account Cash Rounding'], ['account.chart.template', 'Account Chart Template'], ['account.common.report', 'Account Common Report'], ['account.group', 'Account Group'], ['account.invoice.send', 'Account Invoice Send'], ['report.account.report_journal', 'Account Journal Report'], ['account.move.reversal', 'Account Move Reversal'], ['account.print.journal', 'Account Print Journal'], ['account.reconciliation.widget', 'Account Reconciliation widget'], ['account.account.tag', 'Account Tag'], ['account.account.type', 'Account Type'], ['account.unreconcile', 'Account Unreconcile'], ['report.account.report_invoice_with_payments', 'Account report with payment lines'], ['account.fiscal.position.account.template', 'Accounts Mapping Template of Fiscal Position'], ['account.fiscal.position.account', 'Accounts Mapping of Fiscal Position'], ['ir.actions.act_url', 'Action URL'], ['ir.actions.act_window', 'Action Window'], ['ir.actions.act_window_close', 'Action Window Close'], ['ir.actions.act_window.view', 'Action Window View'], ['ir.actions.actions', 'Actions'], ['mail.activity', 'Activity'], ['mail.activity.mixin', 'Activity Mixin'], ['mail.activity.type', 'Activity Type'], ['report.account.report_agedpartnerbalance', 'Aged Partner Balance Report'], ['account.analytic.account', 'Analytic Account'], ['account.analytic.distribution', 'Analytic Account Distribution'], ['account.analytic.group', 'Analytic Categories'], ['account.analytic.line', 'Analytic Line'], ['account.analytic.tag', 'Analytic Tags'], ['ir.module.category', 'Application'], ['ir.attachment', 'Attachment'], ['product.attribute.value', 'Attribute Value'], ['muk_autovacuum.rules', 'Auto Vacuum Rules'], ['base.automation', 'Automated Action'], ['base.automation.line.test', 'Automated Rule Line Test'], ['base.automation.lead.test', 'Automated Rule Test'], ['ir.autovacuum', 'Automatic Vacuum'], ['report.mrp.report_bom_structure', 'BOM Structure Report'], ['stock.backorder.confirmation', 'Backorder Confirmation'], ['res.bank', 'Bank'], ['res.partner.bank', 'Bank Accounts'], ['account.bank.statement', 'Bank Statement'], ['account.bank.statement.cashbox', 'Bank Statement Cashbox'], ['account.bank.statement.closebalance', 'Bank Statement Closing Balance'], ['account.bank.statement.line', 'Bank Statement Line'], ['account.setup.bank.manual.config', 'Bank setup manual config'], ['barcodes.barcode_events_mixin', 'Barcode Event Mixin'], ['barcode.nomenclature', 'Barcode Nomenclature'], ['barcode.rule', 'Barcode Rule'], ['base', 'Base'], ['base_import.import', 'Base Import'], ['base_import.mapping', 'Base Import Mapping'], ['mrp.bom', 'Bill of Material'], ['mrp.bom.line', 'Bill of Material Line'], ['board.board', 'Board'], ['fleet.vehicle.model.brand', 'Brand of the vehicle'], ['calendar.attendee', 'Calendar Attendee Information'], ['calendar.contacts', 'Calendar Contacts'], ['exem.cancel.popup', 'Cancel Popup Model'], ['cancel.popup.wizard', 'Cancel Popup Wizard'], ['repair.cancel', 'Cancel Repair'], ['mail.shortcode', 'Canned Response / Shortcode'], ['cash.box.in', 'Cash Box In'], ['cash.box.out', 'Cash Box Out'], ['account.cashbox.line', 'CashBox Line'], ['exem.exem.metrologie.outil.certificat', 'Certificat metrologique JPG'], ['change.password.wizard', 'Change Password Wizard'], ['stock.change.product.qty', 'Change Product Quantity'], ['change.production.qty', 'Change Production Qty'], ['stock.change.standard.price', 'Change Standard Price'], ['mail.moderation', 'Channel black/white list'], ['res.city', 'City'], ['res.city.zip', 'City/locations completion object'], ['ir.actions.client', 'Client Action'], ['account.common.journal.report', 'Common Journal Report'], ['bus.bus', 'Communication Bus'], ['res.company', 'Companies'], ['ir.property', 'Company Property'], ['exem.metrologie.tool', 'Compatibilite ancien modele metrologie'], ['res.config', 'Config'], ['res.config.installer', 'Config Installer'], ['res.config.settings', 'Config Settings'], ['ir.actions.todo', 'Configuration Wizards'], ['account.invoice.confirm', 'Confirm the selected invoices'], ['res.partner', 'Contact'], ['infos.contact.mesure', 'Contact mesure / rapport'], ['account.abstract.payment', 'Contains the logic shared between models which allows to register payments'], ['hr.contract', 'Contract'], ['hr.contract.type', 'Contract Type'], ['fleet.vehicle.log.contract', 'Contract information on a vehicle'], ['cpy.mrp.popup.wizard', 'Copy mesure popup'], ['fleet.vehicle.cost', 'Cost related to a vehicle'], ['res.country', 'Country'], ['res.country.group', 'Country Group'], ['res.country.state', 'Country state'], ['repair.order.make_invoice', 'Create Mass Invoice (repair)'], ['wizard.ir.model.menu.create', 'Create Menu Wizard'], ['account.invoice.refund', 'Credit Note'], ['res.currency', 'Currency'], ['res.currency.rate', 'Currency Rate'], ['ir.ui.view.custom', 'Custom View'], ['decimal.precision', 'Decimal Precision'], ['decimal.precision.test', 'Decimal Precision Test'], ['ir.default', 'Default Values'], ['ir.demo', 'Demo'], ['ir.demo_failure.wizard', 'Demo Failure wizard'], ['ir.demo_failure', 'Demo failure'], ['digest.digest', 'Digest'], ['digest.tip', 'Digest Tips'], ['mail.channel', 'Discussion Channel'], ['mail.resend.cancel', 'Dismiss notification for resend by model'], ['mail.followers', 'Document Followers'], ['exem.metrologie.document', 'Document metrologique'], ['exem.exem.metrologie.outil.donnees', 'Donnees metrologiques XML'], ['fleet.vehicle.assignation.log', 'Drivers history on a vehicle'], ['rdc.rapport', 'Edition du rapport de mesure Exem'], ['mail.alias', 'Email Aliases'], ['mail.alias.mixin', 'Email Aliases Mixin'], ['email_template.preview', 'Email Template Preview'], ['mail.template', 'Email Templates'], ['mail.thread', 'Email Thread'], ['mail.compose.message', 'Email composition wizard'], ['survey.mail.compose.message', 'Email composition wizard for Survey'], ['mail.resend.message', 'Email resend wizard'], ['exem.emetteur', 'Emetteur Exem'], ['hr.employee', 'Employee'], ['hr.employee.category', 'Employee Category'], ['calendar.event', 'Event'], ['calendar.alarm', 'Event Alarm'], ['calendar.alarm_manager', 'Event Alarm Manager'], ['calendar.event.type', 'Event Meeting Type'], ['ir.exports', 'Exports'], ['ir.exports.line', 'Exports Line'], ['mesure.destinataire', 'Fiche contact mesure / rapport'], ['account.fr.fec', 'Ficher Echange Informatise'], ['ir.model.fields', 'Fields'], ['ir.fields.converter', 'Fields Converter'], ['ir.filters', 'Filters'], ['account.fiscal.position', 'Fiscal Position'], ['account.fiscal.year', 'Fiscal Year'], ['stock.fixed.putaway.strat', 'Fixed Putaway Strategy on Location'], ['fleet.service.type', 'Fleet Service Type'], ['format.address.mixin', 'Fomat Address'], ['fleet.vehicle.log.fuel', 'Fuel log for vehicles'], ['account.full.reconcile', 'Full Reconcile'], ['exem.uuid', 'Gestion des UUID'], ['google.service', 'Google Service'], ['portal.wizard', 'Grant Portal Access'], ['muk_security.mixins.access_groups', 'Group Access Mixin'], ['muk_utils.mixins.groups', 'Group Mixin'], ['hr.department', 'HR Department'], ['hr.holidays.summary.dept', 'HR Leaves Summary Report By Department'], ['hr.holidays.summary.employee', 'HR Leaves Summary Report By Employee'], ['ir.http', 'HTTP Routing'], ['muk_utils.mixins.hierarchy', 'Hierarchy Mixin'], ['report.hr_holidays.report_holidayssummary', 'Holidays Summary Report'], ['iap.account', 'IAP Account'], ['stock.immediate.transfer', 'Immediate Transfer'], ['account.bank.statement.import', 'Import Bank Statement'], ['account.invoice.import.wizard', 'Import Your Vendor Bills from Files.'], ['fetchmail.server', 'Incoming Mail Server'], ['account.incoterms', 'Incoterms'], ['res.partner.industry', 'Industry'], ['base.language.install', 'Install Language'], ['stock.inventory', 'Inventory'], ['stock.inventory.line', 'Inventory Line'], ['stock.location', 'Inventory Locations'], ['stock.location.route', 'Inventory Routes'], ['mail.wizard.invite', 'Invite wizard'], ['account.invoice', 'Invoice'], ['account.invoice.line', 'Invoice Line'], ['account.invoice.tax', 'Invoice Tax'], ['account.invoice.report', 'Invoices Statistics'], ['hr.job', 'Job Position'], ['account.journal', 'Journal'], ['account.bank.statement.import.journal.creation', 'Journal Creation on Bank Statement Import'], ['account.move', 'Journal Entries'], ['account.move.line', 'Journal Item'], ['base.language.export', 'Language Export'], ['base.language.import', 'Language Import'], ['res.lang', 'Languages'], ['hr.leave', 'Leave'], ['hr.leave.report', 'Leave Summary / Report'], ['hr.leave.type', 'Leave Type'], ['hr.leave.allocation', 'Leaves Allocation'], ['type.commentaire', 'Les différents type de commentaire qui peuvent être associés sur une mesure'], ['exem.exem.metrologie.outil.donnees.tableau.etalonnage.ligne', "Ligne d'un tableau d'etalonnage"], ['exem.exem.metrologie.outil.donnees.tableau.incertitude.ligne', "Ligne d'un tableau d'incertitudes"], ['type.lieu', 'Liste des types de lieu'], ['type.voie', 'Liste des types de voie disponible pour une adresse'], ['mail.channel.partner', 'Listeners of a Channel'], ['muk_security.mixins.locking', 'Locking Mixin'], ['ir.logging', 'Logging'], ['stock.production.lot', 'Lot/Serial'], ['mrp.workcenter.productivity.loss.type', 'MRP Workorder productivity losses'], ['mail.blacklist', 'Mail Blacklist'], ['mail.blacklist.mixin', 'Mail Blacklist mixin'], ['mail.bot', 'Mail Bot'], ['ir.mail_server', 'Mail Server'], ['mail.tracking.value', 'Mail Tracking Value'], ['maintenance.equipment', 'Maintenance Equipment'], ['maintenance.equipment.category', 'Maintenance Equipment Category'], ['maintenance.request', 'Maintenance Request'], ['maintenance.stage', 'Maintenance Stage'], ['maintenance.team', 'Maintenance Teams'], ['ir.ui.menu', 'Menu'], ['base.partner.merge.line', 'Merge Partner Line'], ['base.partner.merge.automatic.wizard', 'Merge Partner Wizard'], ['mail.message', 'Message'], ['mail.notification', 'Message Notifications'], ['mail.message.subtype', 'Message subtypes'], ['stock.warehouse.orderpoint', 'Minimum Inventory Rule'], ['ir.model.access', 'Model Access'], ['ir.model.constraint', 'Model Constraint'], ['ir.model.data', 'Model Data'], ['fleet.vehicle.model', 'Model of a vehicle'], ['ir.model', 'Models'], ['ir.module.module', 'Module'], ['report.base.report_irmodulereference', 'Module Reference Report (base)'], ['base.module.uninstall', 'Module Uninstall'], ['ir.module.module.dependency', 'Module dependency'], ['ir.module.module.exclusion', 'Module exclusion'], ['exem.methode', 'Méthodes pour les mesures'], ['commande.lot', 'Numero de lot de la commande'], ['mesure.info.ligne.ute', 'Nécessaire pour les mesures UTE'], ['fleet.vehicle.odometer', 'Odometer log for a vehicle'], ['account.financial.year.op', 'Opening Balance of Financial Year'], ['mail.mail', 'Outgoing Mails'], ['exem.metrologie.outil', 'Outil metrologique'], ['stock.quant.package', 'Packages'], ['report.paperformat', 'Paper Format Config'], ['account.partial.reconcile', 'Partial Reconcile'], ['res.partner.category', 'Partner Tags'], ['res.partner.title', 'Partner Title'], ['mail.resend.partner', 'Partner with additionnal information for mail resend'], ['payment.acquirer', 'Payment Acquirer'], ['payment.icon', 'Payment Icon'], ['account.payment.method', 'Payment Methods'], ['account.payment_methods', 'Payment Methods'], ['account.payment.term', 'Payment Terms'], ['account.payment.term.line', 'Payment Terms Line'], ['payment.token', 'Payment Token'], ['payment.transaction', 'Payment Transaction'], ['payment.acquirer.onboarding.wizard', 'Payment acquire onboarding wizard'], ['account.payment', 'Payments'], ['type.mesure', 'Permet de définir des types de mesure'], ['stock.picking.type', 'Picking Type'], ['pipedrive.deal', 'Pipedrive Deal'], ['pipedrive.deal.line', 'Pipedrive deal line'], ['portal.mixin', 'Portal Mixin'], ['portal.share', 'Portal Sharing'], ['portal.wizard.user', 'Portal User Config'], ['account.reconcile.model', 'Preset to create journal entries during a invoices and payments matching'], ['product.pricelist', 'Pricelist'], ['product.pricelist.item', 'Pricelist Item'], ['procurement.group', 'Procurement Group'], ['product.product', 'Product'], ['product.attribute', 'Product Attribute'], ['product.attribute.custom.value', 'Product Attribute Custom Value'], ['product.template.attribute.value', 'Product Attribute Value'], ['product.category', 'Product Category'], ['stock.move.line', 'Product Moves (Stock Move Line)'], ['product.packaging', 'Product Packaging'], ['product.price.history', 'Product Price List History'], ['report.product.report_pricelist', 'Product Price List Report'], ['product.price_list', 'Product Price per Unit Based on Pricelist Version'], ['product.replenish', 'Product Replenish'], ['product.template', 'Product Template'], ['product.template.attribute.exclusion', 'Product Template Attribute Exclusion'], ['product.template.attribute.line', 'Product Template Attribute Line'], ['uom.uom', 'Product Unit of Measure'], ['uom.category', 'Product UoM Categories'], ['mrp.document', 'Production Document'], ['mrp.production', 'Production Order'], ['report.sale.report_saleproforma', 'Proforma Report'], ['publisher_warranty.contract', 'Publisher Warranty Contract'], ['purchase.order', 'Purchase Order'], ['purchase.order.line', 'Purchase Order Line'], ['purchase.report', 'Purchase Report'], ['purchase.bill.union', 'Purchases & Bills Union'], ['product.putaway', 'Put Away Strategy'], ['muk_quality_docs.document', 'QMS Document'], ['muk_quality_docs.groups', 'QMS Groups'], ['muk_quality_docs.read', 'QMS Reading Information'], ['muk_quality_docs.stage', 'QMS Stage'], ['muk_quality_docs.template', 'QMS Template'], ['stock.quant', 'Quants'], ['sale.order.template', 'Quotation Template'], ['sale.order.template.line', 'Quotation Template Line'], ['sale.order.template.option', 'Quotation Template Option'], ['ir.qweb', 'Qweb'], ['ir.qweb.field', 'Qweb Field'], ['ir.qweb.field.barcode', 'Qweb Field Barcode'], ['ir.qweb.field.contact', 'Qweb Field Contact'], ['ir.qweb.field.date', 'Qweb Field Date'], ['ir.qweb.field.datetime', 'Qweb Field Datetime'], ['ir.qweb.field.duration', 'Qweb Field Duration'], ['ir.qweb.field.float', 'Qweb Field Float'], ['ir.qweb.field.float_time', 'Qweb Field Float Time'], ['ir.qweb.field.html', 'Qweb Field HTML'], ['ir.qweb.field.image', 'Qweb Field Image'], ['ir.qweb.field.integer', 'Qweb Field Integer'], ['ir.qweb.field.many2one', 'Qweb Field Many to One'], ['ir.qweb.field.monetary', 'Qweb Field Monerary'], ['ir.qweb.field.relative', 'Qweb Field Relative'], ['ir.qweb.field.selection', 'Qweb Field Selection'], ['ir.qweb.field.text', 'Qweb Field Text'], ['ir.qweb.field.qweb', 'Qweb Field qweb'], ['ir.qweb.field.many2many', 'Qweb field many2many'], ['account.reconcile.model.template', 'Reconcile Model Template'], ['muk_security.access_groups', 'Record Access Groups'], ['mrp.product.produce', 'Record Production'], ['mrp.product.produce.line', 'Record Production Line'], ['ir.rule', 'Record Rule'], ['account.register.payments', 'Register Payments'], ['ir.model.relation', 'Relation Model'], ['product.removal', 'Removal Strategy'], ['repair.fee', 'Repair Fees'], ['repair.line', 'Repair Line (parts)'], ['repair.order', 'Repair Order'], ['ir.actions.report', 'Report Action'], ['report.layout', 'Report Layout'], ['resource.calendar.leaves', 'Resource Leaves Detail'], ['resource.mixin', 'Resource Mixin'], ['resource.calendar', 'Resource Working Time'], ['resource.resource', 'Resources'], ['stock.return.picking', 'Return Picking'], ['stock.return.picking.line', 'Return Picking Line'], ['mrp.routing', 'Routings'], ['stock.scheduler.compute', 'Run Scheduler Manually'], ['res.country.region', 'Région'], ['rdc.revision', 'Révision de rapport Exem'], ['sms.api', 'SMS API'], ['sale.order.option', 'Sale Options'], ['sale.order', 'Sale Order'], ['sale.payment.acquirer.onboarding.wizard', 'Sale Payment acquire onboarding wizard'], ['sale.product.configurator', 'Sale Product Configurator'], ['sale.advance.payment.inv', 'Sales Advance Payment Invoice'], ['sale.report', 'Sales Analysis Report'], ['sale.order.line', 'Sales Order Line'], ['crm.team', 'Sales Team'], ['report.all.channels.sales', 'Sales by Channel (All in One)'], ['ir.cron', 'Scheduled Actions'], ['stock.scrap', 'Scrap'], ['muk_utils.scss_editor', 'Scss Editor'], ['sms.send_sms', 'Send SMS'], ['ir.sequence', 'Sequence'], ['ir.sequence.date_range', 'Sequence Date Range'], ['ir.actions.server', 'Server Action'], ['ir.server.object.lines', 'Server Action value mapping'], ['fleet.vehicle.log.services', 'Services for vehicles'], ['snailmail.letter', 'Snailmail Letter'], ['report.stock.forecast', 'Stock Forecast Report'], ['stock.move', 'Stock Move'], ['stock.package.destination', 'Stock Package Destination'], ['stock.package_level', 'Stock Package Level'], ['stock.quantity.history', 'Stock Quantity History'], ['stock.report.quantity.by.location', 'Stock Report By Location'], ['stock.report.quantity.by.location.prepare', 'Stock Report Quantity By Location Prepare'], ['stock.rule', 'Stock Rule'], ['stock.rules.report', 'Stock Rules report'], ['stock.track.confirmation', 'Stock Track Confirmation'], ['stock.track.line', 'Stock Track Line'], ['report.stock.report_stock_rule', 'Stock rule report'], ['product.supplierinfo', 'Supplier Pricelist'], ['exem.support', 'Support Exem'], ['survey.survey', 'Survey'], ['survey.label', 'Survey Label'], ['survey.page', 'Survey Page'], ['survey.question', 'Survey Question'], ['survey.stage', 'Survey Stage'], ['survey.user_input', 'Survey User Input'], ['survey.user_input_line', 'Survey User Input Line'], ['ir.config_parameter', 'System Parameter'], ['exem.exem.metrologie.outil.donnees.tableau.etalonnage', "Tableau d'etalonnage"], ['exem.exem.metrologie.outil.donnees.tableau.incertitude', "Tableau d'incertitudes"], ['account.tax', 'Tax'], ['tax.adjustments.wizard', 'Tax Adjustments Wizard'], ['account.tax.group', 'Tax Group'], ['account.fiscal.position.tax.template', 'Tax Mapping Template of Fiscal Position'], ['account.fiscal.position.tax', 'Tax Mapping of Fiscal Position'], ['account.fiscal.position.template', 'Template for Fiscal Position'], ['account.account.template', 'Templates for Accounts'], ['account.tax.template', 'Templates for Taxes'], ['resource.test', 'Test Resource Model'], ['base_import.tests.models.preview', 'Tests : Base Import Model Preview'], ['base_import.tests.models.char', 'Tests : Base Import Model, Character'], ['base_import.tests.models.char.noreadonly', 'Tests : Base Import Model, Character No readonly'], ['base_import.tests.models.char.readonly', 'Tests : Base Import Model, Character readonly'], ['base_import.tests.models.char.required', 'Tests : Base Import Model, Character required'], ['base_import.tests.models.char.states', 'Tests : Base Import Model, Character states'], ['base_import.tests.models.char.stillreadonly', 'Tests : Base Import Model, Character still readonly'], ['base_import.tests.models.m2o', 'Tests : Base Import Model, Many to One'], ['base_import.tests.models.m2o.related', 'Tests : Base Import Model, Many to One related'], ['base_import.tests.models.m2o.required', 'Tests : Base Import Model, Many to One required'], ['base_import.tests.models.m2o.required.related', 'Tests : Base Import Model, Many to One required related'], ['base_import.tests.models.o2m', 'Tests : Base Import Model, One to Many'], ['base_import.tests.models.o2m.child', 'Tests : Base Import Model, One to Many child'], ['base_import.tests.models.complex', 'Tests: Base Import Model Complex'], ['base_import.tests.models.float', 'Tests: Base Import Model Float'], ['web_tour.tour', 'Tours'], ['stock.traceability.report', 'Traceability Report'], ['stock.picking', 'Transfer'], ['stock.overprocessed.transfer', 'Transfer Over Processed Stock'], ['ir.translation', 'Translation'], ['type.destinataire', 'Type de contact'], ['mrp.unbuild', 'Unbuild Order'], ['_unknown', 'Unknown'], ['base.module.update', 'Update Module'], ['base.update.translations', 'Update Translations'], ['base.module.upgrade', 'Upgrade Module'], ['bus.presence', 'User Presence'], ['change.password.user', 'User, Change Password Wizard'], ['res.users', 'Users'], ['res.users.log', 'Users Log'], ['validate.account.move', 'Validate Account Move'], ['fleet.vehicle', 'Vehicle'], ['fleet.vehicle.state', 'Vehicle Status'], ['fleet.vehicle.tag', 'Vehicle Tag'], ['ir.ui.view', 'View'], ['stock.warehouse', 'Warehouse'], ['stock.warn.insufficient.qty', 'Warn Insufficient Quantity'], ['stock.warn.insufficient.qty.repair', 'Warn Insufficient Repair Quantity'], ['stock.warn.insufficient.qty.scrap', 'Warn Insufficient Scrap Quantity'], ['stock.warn.insufficient.qty.unbuild', 'Warn Insufficient Unbuild Quantity'], ['web_editor.converter.test.sub', 'Web Editor Converter Subtest'], ['web_editor.converter.test', 'Web Editor Converter Test'], ['bundle.wizard', "Wizard permettant l'ajout des produits d'un bundle au stock picking"], ['mrp.workcenter', 'Work Center'], ['mrp.routing.workcenter', 'Work Center Usage'], ['resource.calendar.attendance', 'Work Detail'], ['mrp.workorder', 'Work Order'], ['mrp.workcenter.productivity', 'Workcenter Productivity Log'], ['mrp.workcenter.productivity.loss', 'Workcenter Productivity Losses'], ['contact.mesure', 'contact.mesure'], ['exem.habilitation', 'habilitations des méthodes par technicien'], ['bundle.line', 'produit associé à un autre produit'], ['wizard_message', 'wizard message'], ['wizard.emetteur.import', 'wizard.emetteur.import'], ['wizard.revision.modif', 'wizard.revision.modif']]<br>
+<strong>sortable:</strong> True<br>
+<strong>store:</strong> True<br>
+<strong>string:</strong> Model<br>
+</p>
+</section>
+
+<section id="is_default" class="card card-body">
+<h4 class="card-title">is_default</h4>
+<p>
+<strong>type:</strong> boolean<br>
+<strong>change_default:</strong> False<br>
+<strong>company_dependent:</strong> False<br>
+<strong>depends:</strong> []<br>
+<strong>manual:</strong> False<br>
+<strong>readonly:</strong> False<br>
+<strong>required:</strong> False<br>
+<strong>searchable:</strong> True<br>
+<strong>sortable:</strong> True<br>
+<strong>store:</strong> True<br>
+<strong>string:</strong> Default Filter<br>
+</p>
+</section>
+
+<section id="action_id" class="card card-body">
+<h4 class="card-title">action_id</h4>
+<p>
+<strong>type:</strong> many2one<br>
+<strong>change_default:</strong> False<br>
+<strong>company_dependent:</strong> False<br>
+<strong>context:</strong> {}<br>
+<strong>depends:</strong> []<br>
+<strong>domain:</strong> []<br>
+<strong>help:</strong> The menu action this filter applies to. When left empty the filter applies to all menus for this model.<br>
+<strong>manual:</strong> False<br>
+<strong>readonly:</strong> False<br>
+<strong>relation:</strong> <a class="nav-link" href="../ir_actions_actions/index.html">ir.actions.actions</a><br>
+<strong>required:</strong> False<br>
+<strong>searchable:</strong> True<br>
+<strong>sortable:</strong> True<br>
+<strong>store:</strong> True<br>
+<strong>string:</strong> Action<br>
+</p>
+</section>
+
+<section id="active" class="card card-body">
+<h4 class="card-title">active</h4>
+<p>
+<strong>type:</strong> boolean<br>
+<strong>change_default:</strong> False<br>
+<strong>company_dependent:</strong> False<br>
+<strong>depends:</strong> []<br>
+<strong>manual:</strong> False<br>
+<strong>readonly:</strong> False<br>
+<strong>required:</strong> False<br>
+<strong>searchable:</strong> True<br>
+<strong>sortable:</strong> True<br>
+<strong>store:</strong> True<br>
+<strong>string:</strong> Active<br>
+</p>
+</section>
+
+<section id="id" class="card card-body">
+<h4 class="card-title">id</h4>
+<p>
+<strong>type:</strong> integer<br>
+<strong>change_default:</strong> False<br>
+<strong>company_dependent:</strong> False<br>
+<strong>depends:</strong> []<br>
+<strong>manual:</strong> False<br>
+<strong>readonly:</strong> True<br>
+<strong>required:</strong> False<br>
+<strong>searchable:</strong> True<br>
+<strong>sortable:</strong> True<br>
+<strong>store:</strong> True<br>
+<strong>string:</strong> ID<br>
+</p>
+</section>
+
+<section id="display_name" class="card card-body">
+<h4 class="card-title">display_name</h4>
+<p>
+<strong>type:</strong> char<br>
+<strong>change_default:</strong> False<br>
+<strong>company_dependent:</strong> False<br>
+<strong>depends:</strong> ['name']<br>
+<strong>manual:</strong> False<br>
+<strong>readonly:</strong> True<br>
+<strong>required:</strong> False<br>
+<strong>searchable:</strong> False<br>
+<strong>sortable:</strong> False<br>
+<strong>store:</strong> False<br>
+<strong>string:</strong> Display Name<br>
+<strong>translate:</strong> False<br>
+<strong>trim:</strong> True<br>
+</p>
+</section>
+
+<section id="create_uid" class="card card-body">
+<h4 class="card-title">create_uid</h4>
+<p>
+<strong>type:</strong> many2one<br>
+<strong>change_default:</strong> False<br>
+<strong>company_dependent:</strong> False<br>
+<strong>context:</strong> {}<br>
+<strong>depends:</strong> []<br>
+<strong>domain:</strong> []<br>
+<strong>manual:</strong> False<br>
+<strong>readonly:</strong> True<br>
+<strong>relation:</strong> <a class="nav-link" href="../res_users/index.html">res.users</a><br>
+<strong>required:</strong> False<br>
+<strong>searchable:</strong> True<br>
+<strong>sortable:</strong> True<br>
+<strong>store:</strong> True<br>
+<strong>string:</strong> Created by<br>
+</p>
+</section>
+
+<section id="create_date" class="card card-body">
+<h4 class="card-title">create_date</h4>
+<p>
+<strong>type:</strong> datetime<br>
+<strong>change_default:</strong> False<br>
+<strong>company_dependent:</strong> False<br>
+<strong>depends:</strong> []<br>
+<strong>manual:</strong> False<br>
+<strong>readonly:</strong> True<br>
+<strong>required:</strong> False<br>
+<strong>searchable:</strong> True<br>
+<strong>sortable:</strong> True<br>
+<strong>store:</strong> True<br>
+<strong>string:</strong> Created on<br>
+</p>
+</section>
+
+<section id="write_uid" class="card card-body">
+<h4 class="card-title">write_uid</h4>
+<p>
+<strong>type:</strong> many2one<br>
+<strong>change_default:</strong> False<br>
+<strong>company_dependent:</strong> False<br>
+<strong>context:</strong> {}<br>
+<strong>depends:</strong> []<br>
+<strong>domain:</strong> []<br>
+<strong>manual:</strong> False<br>
+<strong>readonly:</strong> True<br>
+<strong>relation:</strong> <a class="nav-link" href="../res_users/index.html">res.users</a><br>
+<strong>required:</strong> False<br>
+<strong>searchable:</strong> True<br>
+<strong>sortable:</strong> True<br>
+<strong>store:</strong> True<br>
+<strong>string:</strong> Last Updated by<br>
+</p>
+</section>
+
+<section id="write_date" class="card card-body">
+<h4 class="card-title">write_date</h4>
+<p>
+<strong>type:</strong> datetime<br>
+<strong>change_default:</strong> False<br>
+<strong>company_dependent:</strong> False<br>
+<strong>depends:</strong> []<br>
+<strong>manual:</strong> False<br>
+<strong>readonly:</strong> True<br>
+<strong>required:</strong> False<br>
+<strong>searchable:</strong> True<br>
+<strong>sortable:</strong> True<br>
+<strong>store:</strong> True<br>
+<strong>string:</strong> Last Updated on<br>
+</p>
+</section>
+
+<section id="__last_update" class="card card-body">
+<h4 class="card-title">__last_update</h4>
+<p>
+<strong>type:</strong> datetime<br>
+<strong>change_default:</strong> False<br>
+<strong>company_dependent:</strong> False<br>
+<strong>depends:</strong> ['create_date', 'write_date']<br>
+<strong>manual:</strong> False<br>
+<strong>readonly:</strong> True<br>
+<strong>required:</strong> False<br>
+<strong>searchable:</strong> False<br>
+<strong>sortable:</strong> False<br>
+<strong>store:</strong> False<br>
+<strong>string:</strong> Last Modified on<br>
+</p>
+</section>
+
+
+      </div>
+    </div>
+
+  </div>
+  <!-- Content end -->
+
+  <!-- Footer
+  ============================ -->
+  <footer id="footer" class="section bg-dark footer-text-light">
+    <div class="container">
+      <ul class="social-icons social-icons-lg social-icons-muted justify-content-center mb-3">
+        <li><a data-toggle="tooltip" href="https://twitter.com/harnishdesign/" target="_blank" title=""
+            data-original-title="Twitter"><i class="fab fa-twitter"></i></a></li>
+        <li><a data-toggle="tooltip" href="http://www.facebook.com/harnishdesign/" target="_blank" title=""
+            data-original-title="Facebook"><i class="fab fa-facebook-f"></i></a></li>
+        <li><a data-toggle="tooltip" href="http://www.dribbble.com/harnishdesign/" target="_blank" title=""
+            data-original-title="Dribbble"><i class="fab fa-dribbble"></i></a></li>
+        <li><a data-toggle="tooltip" href="http://www.github.com/" target="_blank" title=""
+            data-original-title="GitHub"><i class="fab fa-github"></i></a></li>
+      </ul>
+      <p class="text-center">Copyright &copy; 2020 <a
+          href="http://www.harnishdesign.net/idocs-one-page-documentation-html-template/">iDocs</a>. All Rights
+        Reserved.</p>
+      <p class="text-2 text-center mb-0">Design &amp; Develop by <a class="btn-link" target="_blank"
+          href="http://www.harnishdesign.net/">HarnishDesign</a>.</p>
+    </div>
+  </footer>
+  <!-- Footer end -->
+
+  </div>
+  <!-- Document Wrapper end -->
+
+  <!-- Back To Top -->
+  <a id="back-to-top" data-toggle="tooltip" title="Back to Top" href="javascript:void(0)"><i
+      class="fa fa-chevron-up"></i></a>
+
+  <!-- JavaScript
+============================ -->
+  <script src="../../assets/vendor/jquery/jquery.min.js"></script>
+  <script src="../../assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <!-- Highlight JS -->
+  <script src="../../assets/vendor/highlight.js/highlight.min.js"></script>
+  <!-- Easing -->
+  <script src="../../assets/vendor/jquery.easing/jquery.easing.min.js"></script>
+  <!-- Magnific Popup -->
+  <script src="../../assets/vendor/magnific-popup/jquery.magnific-popup.min.js"></script>
+  <!-- Custom Script -->
+  <script src="../../assets/js/theme.js"></script>
+</body>
+
+</html>

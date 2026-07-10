@@ -1,0 +1,2405 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1.0, shrink-to-fit=no">
+  <link href="../../assets/images/odoo_doc.png" rel="icon" />
+  <title>Odoo API Documentation</title>
+  <meta name="description" content="Your ThemeForest item Name and description">
+  <meta name="author" content="harnishdesign.net">
+
+  <!-- Stylesheet
+============================== -->
+  <!-- Bootstrap -->
+  <link rel="stylesheet" type="text/css" href="../../assets/vendor/bootstrap/css/bootstrap.min.css" />
+  <!-- Font Awesome Icon -->
+  <link rel="stylesheet" type="text/css" href="../../assets/vendor/font-awesome/css/all.min.css" />
+  <!-- Magnific Popup -->
+  <link rel="stylesheet" type="text/css" href="../../assets/vendor/magnific-popup/magnific-popup.min.css" />
+  <!-- Highlight Syntax -->
+  <link rel="stylesheet" type="text/css" href="../../assets/vendor/highlight.js/styles/github.css" />
+  <!-- Custom Stylesheet -->
+  <link rel="stylesheet" type="text/css" href="../../assets/css/stylesheet.css" />
+</head>
+
+<body data-spy="scroll" data-target=".idocs-navigation" data-offset="125">
+
+  <!-- Preloader -->
+  <div class="preloader">
+    <div class="lds-ellipsis">
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+    </div>
+  </div>
+  <!-- Preloader End -->
+
+  <!-- Document Wrapper   
+=============================== -->
+  <div id="main-wrapper">
+
+  <!-- Header
+  ============================ -->
+  <header id="header" class="sticky-top">
+    <!-- Navbar -->
+    <nav class="primary-menu navbar navbar-expand-lg navbar-dropdown-dark">
+      <div class="container-fluid">
+        <!-- Sidebar Toggler -->
+		<button id="sidebarCollapse" class="navbar-toggler d-block d-md-none" type="button"><span></span><span class="w-75"></span><span class="w-50"></span></button>
+
+		<!-- Logo -->
+        <a class="logo ml-md-3" href="index.html" title="iDocs Template"> <img src="../../assets/images/odoo_doc.png" alt="iDocs Template"/> </a>
+		<span class="text-2 ml-2">v1.0</span>
+        <!-- Logo End -->
+
+		<!-- Navbar Toggler -->
+		<button class="navbar-toggler ml-auto" type="button" data-toggle="collapse" data-target="#header-nav"><span></span><span></span><span></span></button>
+
+		<div id="header-nav" class="collapse navbar-collapse justify-content-end">
+          <ul class="navbar-nav">
+            <li class="dropdown"> <a class="dropdown-toggle" href="#">Navigation</a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="index.html">ir.model</a></li>
+                <li><a class="dropdown-item" href="odoo_operators.html">operators</a></li>
+              </ul>
+            </li>
+            <li><a target="_blank" href="https://themeforest.net/user/harnishdesign/#contact?ref=HarnishDesign">Support</a></li>
+          </ul>
+        </div>
+        <ul class="social-icons social-icons-sm ml-lg-2 mr-2">
+          <li class="social-icons-twitter"><a data-toggle="tooltip" href="http://www.twitter.com/harnishdesign/" target="_blank" title="" data-original-title="Twitter"><i class="fab fa-twitter"></i></a></li>
+        </ul>
+      </div>
+    </nav>
+    <!-- Navbar End -->
+  </header>
+  <!-- Header End -->
+
+  <!-- Content
+  ============================ -->
+  <div id="content" role="main">
+
+    <!-- Sidebar Navigation
+	============================ -->
+    <div class="idocs-navigation bg-light">
+        <ul class="nav flex-column">
+          <li class="nav-item"><a class="nav-link" href="#activity_ids">activity_ids</a></li>
+<li class="nav-item"><a class="nav-link" href="#activity_state">activity_state</a></li>
+<li class="nav-item"><a class="nav-link" href="#activity_user_id">activity_user_id</a></li>
+<li class="nav-item"><a class="nav-link" href="#activity_type_id">activity_type_id</a></li>
+<li class="nav-item"><a class="nav-link" href="#activity_type_icon">activity_type_icon</a></li>
+<li class="nav-item"><a class="nav-link" href="#activity_date_deadline">activity_date_deadline</a></li>
+<li class="nav-item"><a class="nav-link" href="#my_activity_date_deadline">my_activity_date_deadline</a></li>
+<li class="nav-item"><a class="nav-link" href="#activity_summary">activity_summary</a></li>
+<li class="nav-item"><a class="nav-link" href="#activity_exception_decoration">activity_exception_decoration</a></li>
+<li class="nav-item"><a class="nav-link" href="#activity_exception_icon">activity_exception_icon</a></li>
+<li class="nav-item"><a class="nav-link" href="#activity_calendar_event_id">activity_calendar_event_id</a></li>
+<li class="nav-item"><a class="nav-link" href="#message_is_follower">message_is_follower</a></li>
+<li class="nav-item"><a class="nav-link" href="#message_follower_ids">message_follower_ids</a></li>
+<li class="nav-item"><a class="nav-link" href="#message_partner_ids">message_partner_ids</a></li>
+<li class="nav-item"><a class="nav-link" href="#message_ids">message_ids</a></li>
+<li class="nav-item"><a class="nav-link" href="#has_message">has_message</a></li>
+<li class="nav-item"><a class="nav-link" href="#message_needaction">message_needaction</a></li>
+<li class="nav-item"><a class="nav-link" href="#message_needaction_counter">message_needaction_counter</a></li>
+<li class="nav-item"><a class="nav-link" href="#message_has_error">message_has_error</a></li>
+<li class="nav-item"><a class="nav-link" href="#message_has_error_counter">message_has_error_counter</a></li>
+<li class="nav-item"><a class="nav-link" href="#message_attachment_count">message_attachment_count</a></li>
+<li class="nav-item"><a class="nav-link" href="#website_message_ids">website_message_ids</a></li>
+<li class="nav-item"><a class="nav-link" href="#message_has_sms_error">message_has_sms_error</a></li>
+<li class="nav-item"><a class="nav-link" href="#name">name</a></li>
+<li class="nav-item"><a class="nav-link" href="#origin">origin</a></li>
+<li class="nav-item"><a class="nav-link" href="#note">note</a></li>
+<li class="nav-item"><a class="nav-link" href="#backorder_id">backorder_id</a></li>
+<li class="nav-item"><a class="nav-link" href="#backorder_ids">backorder_ids</a></li>
+<li class="nav-item"><a class="nav-link" href="#return_id">return_id</a></li>
+<li class="nav-item"><a class="nav-link" href="#return_ids">return_ids</a></li>
+<li class="nav-item"><a class="nav-link" href="#return_count">return_count</a></li>
+<li class="nav-item"><a class="nav-link" href="#move_type">move_type</a></li>
+<li class="nav-item"><a class="nav-link" href="#state">state</a></li>
+<li class="nav-item"><a class="nav-link" href="#group_id">group_id</a></li>
+<li class="nav-item"><a class="nav-link" href="#priority">priority</a></li>
+<li class="nav-item"><a class="nav-link" href="#scheduled_date">scheduled_date</a></li>
+<li class="nav-item"><a class="nav-link" href="#date_deadline">date_deadline</a></li>
+<li class="nav-item"><a class="nav-link" href="#has_deadline_issue">has_deadline_issue</a></li>
+<li class="nav-item"><a class="nav-link" href="#date">date</a></li>
+<li class="nav-item"><a class="nav-link" href="#date_done">date_done</a></li>
+<li class="nav-item"><a class="nav-link" href="#delay_alert_date">delay_alert_date</a></li>
+<li class="nav-item"><a class="nav-link" href="#json_popover">json_popover</a></li>
+<li class="nav-item"><a class="nav-link" href="#location_id">location_id</a></li>
+<li class="nav-item"><a class="nav-link" href="#location_dest_id">location_dest_id</a></li>
+<li class="nav-item"><a class="nav-link" href="#move_ids">move_ids</a></li>
+<li class="nav-item"><a class="nav-link" href="#move_ids_without_package">move_ids_without_package</a></li>
+<li class="nav-item"><a class="nav-link" href="#has_scrap_move">has_scrap_move</a></li>
+<li class="nav-item"><a class="nav-link" href="#picking_type_id">picking_type_id</a></li>
+<li class="nav-item"><a class="nav-link" href="#warehouse_address_id">warehouse_address_id</a></li>
+<li class="nav-item"><a class="nav-link" href="#picking_type_code">picking_type_code</a></li>
+<li class="nav-item"><a class="nav-link" href="#picking_type_entire_packs">picking_type_entire_packs</a></li>
+<li class="nav-item"><a class="nav-link" href="#use_create_lots">use_create_lots</a></li>
+<li class="nav-item"><a class="nav-link" href="#use_existing_lots">use_existing_lots</a></li>
+<li class="nav-item"><a class="nav-link" href="#partner_id">partner_id</a></li>
+<li class="nav-item"><a class="nav-link" href="#company_id">company_id</a></li>
+<li class="nav-item"><a class="nav-link" href="#user_id">user_id</a></li>
+<li class="nav-item"><a class="nav-link" href="#move_line_ids">move_line_ids</a></li>
+<li class="nav-item"><a class="nav-link" href="#move_line_ids_without_package">move_line_ids_without_package</a></li>
+<li class="nav-item"><a class="nav-link" href="#move_line_exist">move_line_exist</a></li>
+<li class="nav-item"><a class="nav-link" href="#has_packages">has_packages</a></li>
+<li class="nav-item"><a class="nav-link" href="#show_check_availability">show_check_availability</a></li>
+<li class="nav-item"><a class="nav-link" href="#show_allocation">show_allocation</a></li>
+<li class="nav-item"><a class="nav-link" href="#owner_id">owner_id</a></li>
+<li class="nav-item"><a class="nav-link" href="#printed">printed</a></li>
+<li class="nav-item"><a class="nav-link" href="#signature">signature</a></li>
+<li class="nav-item"><a class="nav-link" href="#is_signed">is_signed</a></li>
+<li class="nav-item"><a class="nav-link" href="#is_locked">is_locked</a></li>
+<li class="nav-item"><a class="nav-link" href="#weight_bulk">weight_bulk</a></li>
+<li class="nav-item"><a class="nav-link" href="#shipping_weight">shipping_weight</a></li>
+<li class="nav-item"><a class="nav-link" href="#shipping_volume">shipping_volume</a></li>
+<li class="nav-item"><a class="nav-link" href="#product_id">product_id</a></li>
+<li class="nav-item"><a class="nav-link" href="#lot_id">lot_id</a></li>
+<li class="nav-item"><a class="nav-link" href="#show_operations">show_operations</a></li>
+<li class="nav-item"><a class="nav-link" href="#show_lots_text">show_lots_text</a></li>
+<li class="nav-item"><a class="nav-link" href="#has_tracking">has_tracking</a></li>
+<li class="nav-item"><a class="nav-link" href="#package_level_ids">package_level_ids</a></li>
+<li class="nav-item"><a class="nav-link" href="#package_level_ids_details">package_level_ids_details</a></li>
+<li class="nav-item"><a class="nav-link" href="#products_availability">products_availability</a></li>
+<li class="nav-item"><a class="nav-link" href="#products_availability_state">products_availability_state</a></li>
+<li class="nav-item"><a class="nav-link" href="#picking_properties">picking_properties</a></li>
+<li class="nav-item"><a class="nav-link" href="#show_next_pickings">show_next_pickings</a></li>
+<li class="nav-item"><a class="nav-link" href="#search_date_category">search_date_category</a></li>
+<li class="nav-item"><a class="nav-link" href="#id">id</a></li>
+<li class="nav-item"><a class="nav-link" href="#display_name">display_name</a></li>
+<li class="nav-item"><a class="nav-link" href="#create_uid">create_uid</a></li>
+<li class="nav-item"><a class="nav-link" href="#create_date">create_date</a></li>
+<li class="nav-item"><a class="nav-link" href="#write_uid">write_uid</a></li>
+<li class="nav-item"><a class="nav-link" href="#write_date">write_date</a></li>
+<li class="nav-item"><a class="nav-link" href="#fsm_order_id">fsm_order_id</a></li>
+<li class="nav-item"><a class="nav-link" href="#country_code">country_code</a></li>
+<li class="nav-item"><a class="nav-link" href="#sale_id">sale_id</a></li>
+
+        </ul>
+    </div>
+
+    <!-- Docs Content
+	============================ -->
+    <div class="idocs-content">
+      <div class="container">
+        <h2>stock.picking</h2>
+<section id="activity_ids" class="card card-body">
+<h4 class="card-title">activity_ids</h4>
+<p>
+<strong>allow_hierachy_operators:</strong> False<br>
+<strong>change_default:</strong> False<br>
+<strong>company_dependent:</strong> False<br>
+<strong>context:</strong> {}<br>
+<strong>default_export_compatible:</strong> False<br>
+<strong>depends:</strong> []<br>
+<strong>domain:</strong> []<br>
+<strong>exportable:</strong> True<br>
+<strong>groupable:</strong> False<br>
+<strong>groups:</strong> base.group_user<br>
+<strong>manual:</strong> False<br>
+<strong>name:</strong> activity_ids<br>
+<strong>readonly:</strong> False<br>
+<strong>relation:</strong> <a class="nav-link" href="../mail_activity/index.html">mail.activity</a><br>
+<strong>relation_field:</strong> res_id<br>
+<strong>required:</strong> False<br>
+<strong>searchable:</strong> True<br>
+<strong>sortable:</strong> False<br>
+<strong>store:</strong> True<br>
+<strong>string:</strong> Activities<br>
+<strong>type:</strong> one2many<br>
+</p>
+</section>
+
+<section id="activity_state" class="card card-body">
+<h4 class="card-title">activity_state</h4>
+<p>
+<strong>change_default:</strong> False<br>
+<strong>company_dependent:</strong> False<br>
+<strong>default_export_compatible:</strong> False<br>
+<strong>depends:</strong> ['activity_ids.state']<br>
+<strong>exportable:</strong> True<br>
+<strong>groupable:</strong> True<br>
+<strong>groups:</strong> base.group_user<br>
+<strong>help:</strong> Status based on activities
+Overdue: Due date is already passed
+Today: Activity date is today
+Planned: Future activities.<br>
+<strong>manual:</strong> False<br>
+<strong>name:</strong> activity_state<br>
+<strong>readonly:</strong> True<br>
+<strong>required:</strong> False<br>
+<strong>searchable:</strong> True<br>
+<strong>selection:</strong> [['overdue', 'Overdue'], ['today', 'Today'], ['planned', 'Planned']]<br>
+<strong>sortable:</strong> False<br>
+<strong>store:</strong> False<br>
+<strong>string:</strong> Activity State<br>
+<strong>type:</strong> selection<br>
+</p>
+</section>
+
+<section id="activity_user_id" class="card card-body">
+<h4 class="card-title">activity_user_id</h4>
+<p>
+<strong>allow_hierachy_operators:</strong> True<br>
+<strong>change_default:</strong> False<br>
+<strong>company_dependent:</strong> False<br>
+<strong>context:</strong> {}<br>
+<strong>default_export_compatible:</strong> False<br>
+<strong>depends:</strong> ['activity_ids.user_id']<br>
+<strong>domain:</strong> []<br>
+<strong>exportable:</strong> True<br>
+<strong>groupable:</strong> False<br>
+<strong>groups:</strong> base.group_user<br>
+<strong>manual:</strong> False<br>
+<strong>name:</strong> activity_user_id<br>
+<strong>readonly:</strong> True<br>
+<strong>relation:</strong> <a class="nav-link" href="../res_users/index.html">res.users</a><br>
+<strong>required:</strong> False<br>
+<strong>searchable:</strong> True<br>
+<strong>sortable:</strong> False<br>
+<strong>store:</strong> False<br>
+<strong>string:</strong> Responsible User<br>
+<strong>type:</strong> many2one<br>
+</p>
+</section>
+
+<section id="activity_type_id" class="card card-body">
+<h4 class="card-title">activity_type_id</h4>
+<p>
+<strong>allow_hierachy_operators:</strong> False<br>
+<strong>change_default:</strong> False<br>
+<strong>company_dependent:</strong> False<br>
+<strong>context:</strong> {}<br>
+<strong>default_export_compatible:</strong> False<br>
+<strong>depends:</strong> ['activity_ids.activity_type_id']<br>
+<strong>exportable:</strong> True<br>
+<strong>groupable:</strong> False<br>
+<strong>groups:</strong> base.group_user<br>
+<strong>manual:</strong> False<br>
+<strong>name:</strong> activity_type_id<br>
+<strong>readonly:</strong> False<br>
+<strong>related:</strong> activity_ids.activity_type_id<br>
+<strong>relation:</strong> <a class="nav-link" href="../mail_activity_type/index.html">mail.activity.type</a><br>
+<strong>required:</strong> False<br>
+<strong>searchable:</strong> True<br>
+<strong>sortable:</strong> False<br>
+<strong>store:</strong> False<br>
+<strong>string:</strong> Next Activity Type<br>
+<strong>type:</strong> many2one<br>
+</p>
+</section>
+
+<section id="activity_type_icon" class="card card-body">
+<h4 class="card-title">activity_type_icon</h4>
+<p>
+<strong>change_default:</strong> False<br>
+<strong>company_dependent:</strong> False<br>
+<strong>default_export_compatible:</strong> False<br>
+<strong>depends:</strong> ['activity_ids.icon']<br>
+<strong>exportable:</strong> True<br>
+<strong>groupable:</strong> False<br>
+<strong>help:</strong> Font awesome icon e.g. fa-tasks<br>
+<strong>manual:</strong> False<br>
+<strong>name:</strong> activity_type_icon<br>
+<strong>readonly:</strong> True<br>
+<strong>related:</strong> activity_ids.icon<br>
+<strong>required:</strong> False<br>
+<strong>searchable:</strong> True<br>
+<strong>sortable:</strong> False<br>
+<strong>store:</strong> False<br>
+<strong>string:</strong> Activity Type Icon<br>
+<strong>translate:</strong> False<br>
+<strong>trim:</strong> True<br>
+<strong>type:</strong> char<br>
+</p>
+</section>
+
+<section id="activity_date_deadline" class="card card-body">
+<h4 class="card-title">activity_date_deadline</h4>
+<p>
+<strong>change_default:</strong> False<br>
+<strong>company_dependent:</strong> False<br>
+<strong>default_export_compatible:</strong> False<br>
+<strong>depends:</strong> ['activity_ids.date_deadline']<br>
+<strong>exportable:</strong> True<br>
+<strong>groupable:</strong> False<br>
+<strong>groups:</strong> base.group_user<br>
+<strong>manual:</strong> False<br>
+<strong>name:</strong> activity_date_deadline<br>
+<strong>readonly:</strong> True<br>
+<strong>required:</strong> False<br>
+<strong>searchable:</strong> True<br>
+<strong>sortable:</strong> False<br>
+<strong>store:</strong> False<br>
+<strong>string:</strong> Next Activity Deadline<br>
+<strong>type:</strong> date<br>
+</p>
+</section>
+
+<section id="my_activity_date_deadline" class="card card-body">
+<h4 class="card-title">my_activity_date_deadline</h4>
+<p>
+<strong>change_default:</strong> False<br>
+<strong>company_dependent:</strong> False<br>
+<strong>default_export_compatible:</strong> False<br>
+<strong>depends:</strong> ['activity_ids.date_deadline', 'activity_ids.user_id']<br>
+<strong>exportable:</strong> True<br>
+<strong>groupable:</strong> False<br>
+<strong>groups:</strong> base.group_user<br>
+<strong>manual:</strong> False<br>
+<strong>name:</strong> my_activity_date_deadline<br>
+<strong>readonly:</strong> True<br>
+<strong>required:</strong> False<br>
+<strong>searchable:</strong> True<br>
+<strong>sortable:</strong> False<br>
+<strong>store:</strong> False<br>
+<strong>string:</strong> My Activity Deadline<br>
+<strong>type:</strong> date<br>
+</p>
+</section>
+
+<section id="activity_summary" class="card card-body">
+<h4 class="card-title">activity_summary</h4>
+<p>
+<strong>change_default:</strong> False<br>
+<strong>company_dependent:</strong> False<br>
+<strong>default_export_compatible:</strong> False<br>
+<strong>depends:</strong> ['activity_ids.summary']<br>
+<strong>exportable:</strong> True<br>
+<strong>groupable:</strong> False<br>
+<strong>groups:</strong> base.group_user<br>
+<strong>manual:</strong> False<br>
+<strong>name:</strong> activity_summary<br>
+<strong>readonly:</strong> False<br>
+<strong>related:</strong> activity_ids.summary<br>
+<strong>required:</strong> False<br>
+<strong>searchable:</strong> True<br>
+<strong>sortable:</strong> False<br>
+<strong>store:</strong> False<br>
+<strong>string:</strong> Next Activity Summary<br>
+<strong>translate:</strong> False<br>
+<strong>trim:</strong> True<br>
+<strong>type:</strong> char<br>
+</p>
+</section>
+
+<section id="activity_exception_decoration" class="card card-body">
+<h4 class="card-title">activity_exception_decoration</h4>
+<p>
+<strong>change_default:</strong> False<br>
+<strong>company_dependent:</strong> False<br>
+<strong>default_export_compatible:</strong> False<br>
+<strong>depends:</strong> ['activity_ids.activity_type_id.decoration_type', 'activity_ids.activity_type_id.icon']<br>
+<strong>exportable:</strong> True<br>
+<strong>groupable:</strong> False<br>
+<strong>help:</strong> Type of the exception activity on record.<br>
+<strong>manual:</strong> False<br>
+<strong>name:</strong> activity_exception_decoration<br>
+<strong>readonly:</strong> True<br>
+<strong>required:</strong> False<br>
+<strong>searchable:</strong> True<br>
+<strong>selection:</strong> [['warning', 'Alert'], ['danger', 'Error']]<br>
+<strong>sortable:</strong> False<br>
+<strong>store:</strong> False<br>
+<strong>string:</strong> Activity Exception Decoration<br>
+<strong>type:</strong> selection<br>
+</p>
+</section>
+
+<section id="activity_exception_icon" class="card card-body">
+<h4 class="card-title">activity_exception_icon</h4>
+<p>
+<strong>change_default:</strong> False<br>
+<strong>company_dependent:</strong> False<br>
+<strong>default_export_compatible:</strong> False<br>
+<strong>depends:</strong> ['activity_ids.activity_type_id.decoration_type', 'activity_ids.activity_type_id.icon']<br>
+<strong>exportable:</strong> True<br>
+<strong>groupable:</strong> False<br>
+<strong>help:</strong> Icon to indicate an exception activity.<br>
+<strong>manual:</strong> False<br>
+<strong>name:</strong> activity_exception_icon<br>
+<strong>readonly:</strong> True<br>
+<strong>required:</strong> False<br>
+<strong>searchable:</strong> False<br>
+<strong>sortable:</strong> False<br>
+<strong>store:</strong> False<br>
+<strong>string:</strong> Icon<br>
+<strong>translate:</strong> False<br>
+<strong>trim:</strong> True<br>
+<strong>type:</strong> char<br>
+</p>
+</section>
+
+<section id="activity_calendar_event_id" class="card card-body">
+<h4 class="card-title">activity_calendar_event_id</h4>
+<p>
+<strong>allow_hierachy_operators:</strong> False<br>
+<strong>change_default:</strong> False<br>
+<strong>company_dependent:</strong> False<br>
+<strong>context:</strong> {}<br>
+<strong>default_export_compatible:</strong> False<br>
+<strong>depends:</strong> ['activity_ids.calendar_event_id']<br>
+<strong>domain:</strong> []<br>
+<strong>exportable:</strong> True<br>
+<strong>groupable:</strong> False<br>
+<strong>groups:</strong> base.group_user<br>
+<strong>manual:</strong> False<br>
+<strong>name:</strong> activity_calendar_event_id<br>
+<strong>readonly:</strong> True<br>
+<strong>relation:</strong> <a class="nav-link" href="../calendar_event/index.html">calendar.event</a><br>
+<strong>required:</strong> False<br>
+<strong>searchable:</strong> False<br>
+<strong>sortable:</strong> False<br>
+<strong>store:</strong> False<br>
+<strong>string:</strong> Next Activity Calendar Event<br>
+<strong>type:</strong> many2one<br>
+</p>
+</section>
+
+<section id="message_is_follower" class="card card-body">
+<h4 class="card-title">message_is_follower</h4>
+<p>
+<strong>change_default:</strong> False<br>
+<strong>company_dependent:</strong> False<br>
+<strong>default_export_compatible:</strong> False<br>
+<strong>depends:</strong> ['message_follower_ids']<br>
+<strong>exportable:</strong> True<br>
+<strong>groupable:</strong> False<br>
+<strong>manual:</strong> False<br>
+<strong>name:</strong> message_is_follower<br>
+<strong>readonly:</strong> True<br>
+<strong>required:</strong> False<br>
+<strong>searchable:</strong> True<br>
+<strong>sortable:</strong> False<br>
+<strong>store:</strong> False<br>
+<strong>string:</strong> Is Follower<br>
+<strong>type:</strong> boolean<br>
+</p>
+</section>
+
+<section id="message_follower_ids" class="card card-body">
+<h4 class="card-title">message_follower_ids</h4>
+<p>
+<strong>allow_hierachy_operators:</strong> False<br>
+<strong>change_default:</strong> False<br>
+<strong>company_dependent:</strong> False<br>
+<strong>context:</strong> {}<br>
+<strong>default_export_compatible:</strong> False<br>
+<strong>depends:</strong> []<br>
+<strong>domain:</strong> []<br>
+<strong>exportable:</strong> True<br>
+<strong>groupable:</strong> False<br>
+<strong>groups:</strong> base.group_user<br>
+<strong>manual:</strong> False<br>
+<strong>name:</strong> message_follower_ids<br>
+<strong>readonly:</strong> False<br>
+<strong>relation:</strong> <a class="nav-link" href="../mail_followers/index.html">mail.followers</a><br>
+<strong>relation_field:</strong> res_id<br>
+<strong>required:</strong> False<br>
+<strong>searchable:</strong> True<br>
+<strong>sortable:</strong> False<br>
+<strong>store:</strong> True<br>
+<strong>string:</strong> Followers<br>
+<strong>type:</strong> one2many<br>
+</p>
+</section>
+
+<section id="message_partner_ids" class="card card-body">
+<h4 class="card-title">message_partner_ids</h4>
+<p>
+<strong>allow_hierachy_operators:</strong> True<br>
+<strong>change_default:</strong> False<br>
+<strong>company_dependent:</strong> False<br>
+<strong>context:</strong> {}<br>
+<strong>default_export_compatible:</strong> False<br>
+<strong>depends:</strong> ['message_follower_ids']<br>
+<strong>domain:</strong> []<br>
+<strong>exportable:</strong> True<br>
+<strong>groupable:</strong> False<br>
+<strong>groups:</strong> base.group_user<br>
+<strong>manual:</strong> False<br>
+<strong>name:</strong> message_partner_ids<br>
+<strong>readonly:</strong> False<br>
+<strong>relation:</strong> <a class="nav-link" href="../res_partner/index.html">res.partner</a><br>
+<strong>required:</strong> False<br>
+<strong>searchable:</strong> True<br>
+<strong>sortable:</strong> False<br>
+<strong>store:</strong> False<br>
+<strong>string:</strong> Followers (Partners)<br>
+<strong>type:</strong> many2many<br>
+</p>
+</section>
+
+<section id="message_ids" class="card card-body">
+<h4 class="card-title">message_ids</h4>
+<p>
+<strong>allow_hierachy_operators:</strong> True<br>
+<strong>change_default:</strong> False<br>
+<strong>company_dependent:</strong> False<br>
+<strong>context:</strong> {}<br>
+<strong>default_export_compatible:</strong> False<br>
+<strong>depends:</strong> []<br>
+<strong>domain:</strong> [['message_type', '!=', 'user_notification']]<br>
+<strong>exportable:</strong> True<br>
+<strong>groupable:</strong> False<br>
+<strong>manual:</strong> False<br>
+<strong>name:</strong> message_ids<br>
+<strong>readonly:</strong> False<br>
+<strong>relation:</strong> <a class="nav-link" href="../mail_message/index.html">mail.message</a><br>
+<strong>relation_field:</strong> res_id<br>
+<strong>required:</strong> False<br>
+<strong>searchable:</strong> True<br>
+<strong>sortable:</strong> False<br>
+<strong>store:</strong> True<br>
+<strong>string:</strong> Messages<br>
+<strong>type:</strong> one2many<br>
+</p>
+</section>
+
+<section id="has_message" class="card card-body">
+<h4 class="card-title">has_message</h4>
+<p>
+<strong>change_default:</strong> False<br>
+<strong>company_dependent:</strong> False<br>
+<strong>default_export_compatible:</strong> False<br>
+<strong>depends:</strong> []<br>
+<strong>exportable:</strong> True<br>
+<strong>groupable:</strong> False<br>
+<strong>manual:</strong> False<br>
+<strong>name:</strong> has_message<br>
+<strong>readonly:</strong> True<br>
+<strong>required:</strong> False<br>
+<strong>searchable:</strong> True<br>
+<strong>sortable:</strong> False<br>
+<strong>store:</strong> False<br>
+<strong>string:</strong> Has Message<br>
+<strong>type:</strong> boolean<br>
+</p>
+</section>
+
+<section id="message_needaction" class="card card-body">
+<h4 class="card-title">message_needaction</h4>
+<p>
+<strong>change_default:</strong> False<br>
+<strong>company_dependent:</strong> False<br>
+<strong>default_export_compatible:</strong> False<br>
+<strong>depends:</strong> []<br>
+<strong>exportable:</strong> True<br>
+<strong>groupable:</strong> False<br>
+<strong>help:</strong> If checked, new messages require your attention.<br>
+<strong>manual:</strong> False<br>
+<strong>name:</strong> message_needaction<br>
+<strong>readonly:</strong> True<br>
+<strong>required:</strong> False<br>
+<strong>searchable:</strong> True<br>
+<strong>sortable:</strong> False<br>
+<strong>store:</strong> False<br>
+<strong>string:</strong> Action Needed<br>
+<strong>type:</strong> boolean<br>
+</p>
+</section>
+
+<section id="message_needaction_counter" class="card card-body">
+<h4 class="card-title">message_needaction_counter</h4>
+<p>
+<strong>change_default:</strong> False<br>
+<strong>company_dependent:</strong> False<br>
+<strong>default_export_compatible:</strong> False<br>
+<strong>depends:</strong> []<br>
+<strong>exportable:</strong> True<br>
+<strong>groupable:</strong> False<br>
+<strong>help:</strong> Number of messages requiring action<br>
+<strong>manual:</strong> False<br>
+<strong>name:</strong> message_needaction_counter<br>
+<strong>readonly:</strong> True<br>
+<strong>required:</strong> False<br>
+<strong>searchable:</strong> False<br>
+<strong>sortable:</strong> False<br>
+<strong>store:</strong> False<br>
+<strong>string:</strong> Number of Actions<br>
+<strong>type:</strong> integer<br>
+</p>
+</section>
+
+<section id="message_has_error" class="card card-body">
+<h4 class="card-title">message_has_error</h4>
+<p>
+<strong>change_default:</strong> False<br>
+<strong>company_dependent:</strong> False<br>
+<strong>default_export_compatible:</strong> False<br>
+<strong>depends:</strong> []<br>
+<strong>exportable:</strong> True<br>
+<strong>groupable:</strong> False<br>
+<strong>help:</strong> If checked, some messages have a delivery error.<br>
+<strong>manual:</strong> False<br>
+<strong>name:</strong> message_has_error<br>
+<strong>readonly:</strong> True<br>
+<strong>required:</strong> False<br>
+<strong>searchable:</strong> True<br>
+<strong>sortable:</strong> False<br>
+<strong>store:</strong> False<br>
+<strong>string:</strong> Message Delivery error<br>
+<strong>type:</strong> boolean<br>
+</p>
+</section>
+
+<section id="message_has_error_counter" class="card card-body">
+<h4 class="card-title">message_has_error_counter</h4>
+<p>
+<strong>change_default:</strong> False<br>
+<strong>company_dependent:</strong> False<br>
+<strong>default_export_compatible:</strong> False<br>
+<strong>depends:</strong> []<br>
+<strong>exportable:</strong> True<br>
+<strong>groupable:</strong> False<br>
+<strong>help:</strong> Number of messages with delivery error<br>
+<strong>manual:</strong> False<br>
+<strong>name:</strong> message_has_error_counter<br>
+<strong>readonly:</strong> True<br>
+<strong>required:</strong> False<br>
+<strong>searchable:</strong> False<br>
+<strong>sortable:</strong> False<br>
+<strong>store:</strong> False<br>
+<strong>string:</strong> Number of errors<br>
+<strong>type:</strong> integer<br>
+</p>
+</section>
+
+<section id="message_attachment_count" class="card card-body">
+<h4 class="card-title">message_attachment_count</h4>
+<p>
+<strong>change_default:</strong> False<br>
+<strong>company_dependent:</strong> False<br>
+<strong>default_export_compatible:</strong> False<br>
+<strong>depends:</strong> []<br>
+<strong>exportable:</strong> True<br>
+<strong>groupable:</strong> False<br>
+<strong>groups:</strong> base.group_user<br>
+<strong>manual:</strong> False<br>
+<strong>name:</strong> message_attachment_count<br>
+<strong>readonly:</strong> True<br>
+<strong>required:</strong> False<br>
+<strong>searchable:</strong> False<br>
+<strong>sortable:</strong> False<br>
+<strong>store:</strong> False<br>
+<strong>string:</strong> Attachment Count<br>
+<strong>type:</strong> integer<br>
+</p>
+</section>
+
+<section id="website_message_ids" class="card card-body">
+<h4 class="card-title">website_message_ids</h4>
+<p>
+<strong>allow_hierachy_operators:</strong> True<br>
+<strong>change_default:</strong> False<br>
+<strong>company_dependent:</strong> False<br>
+<strong>context:</strong> {}<br>
+<strong>default_export_compatible:</strong> False<br>
+<strong>depends:</strong> []<br>
+<strong>domain:</strong> [['model', '=', 'stock.picking'], ['message_type', 'in', ['comment', 'email', 'email_outgoing', 'auto_comment']]]<br>
+<strong>exportable:</strong> True<br>
+<strong>groupable:</strong> False<br>
+<strong>help:</strong> Website communication history<br>
+<strong>manual:</strong> False<br>
+<strong>name:</strong> website_message_ids<br>
+<strong>readonly:</strong> False<br>
+<strong>relation:</strong> <a class="nav-link" href="../mail_message/index.html">mail.message</a><br>
+<strong>relation_field:</strong> res_id<br>
+<strong>required:</strong> False<br>
+<strong>searchable:</strong> True<br>
+<strong>sortable:</strong> False<br>
+<strong>store:</strong> True<br>
+<strong>string:</strong> Website Messages<br>
+<strong>type:</strong> one2many<br>
+</p>
+</section>
+
+<section id="message_has_sms_error" class="card card-body">
+<h4 class="card-title">message_has_sms_error</h4>
+<p>
+<strong>change_default:</strong> False<br>
+<strong>company_dependent:</strong> False<br>
+<strong>default_export_compatible:</strong> False<br>
+<strong>depends:</strong> []<br>
+<strong>exportable:</strong> True<br>
+<strong>groupable:</strong> False<br>
+<strong>help:</strong> If checked, some messages have a delivery error.<br>
+<strong>manual:</strong> False<br>
+<strong>name:</strong> message_has_sms_error<br>
+<strong>readonly:</strong> True<br>
+<strong>required:</strong> False<br>
+<strong>searchable:</strong> True<br>
+<strong>sortable:</strong> False<br>
+<strong>store:</strong> False<br>
+<strong>string:</strong> SMS Delivery error<br>
+<strong>type:</strong> boolean<br>
+</p>
+</section>
+
+<section id="name" class="card card-body">
+<h4 class="card-title">name</h4>
+<p>
+<strong>change_default:</strong> False<br>
+<strong>company_dependent:</strong> False<br>
+<strong>default_export_compatible:</strong> False<br>
+<strong>depends:</strong> []<br>
+<strong>exportable:</strong> True<br>
+<strong>groupable:</strong> True<br>
+<strong>manual:</strong> False<br>
+<strong>name:</strong> name<br>
+<strong>readonly:</strong> True<br>
+<strong>required:</strong> False<br>
+<strong>searchable:</strong> True<br>
+<strong>sortable:</strong> True<br>
+<strong>store:</strong> True<br>
+<strong>string:</strong> Reference<br>
+<strong>translate:</strong> False<br>
+<strong>trim:</strong> True<br>
+<strong>type:</strong> char<br>
+</p>
+</section>
+
+<section id="origin" class="card card-body">
+<h4 class="card-title">origin</h4>
+<p>
+<strong>change_default:</strong> False<br>
+<strong>company_dependent:</strong> False<br>
+<strong>default_export_compatible:</strong> False<br>
+<strong>depends:</strong> []<br>
+<strong>exportable:</strong> True<br>
+<strong>groupable:</strong> True<br>
+<strong>help:</strong> Reference of the document<br>
+<strong>manual:</strong> False<br>
+<strong>name:</strong> origin<br>
+<strong>readonly:</strong> False<br>
+<strong>required:</strong> False<br>
+<strong>searchable:</strong> True<br>
+<strong>sortable:</strong> True<br>
+<strong>store:</strong> True<br>
+<strong>string:</strong> Source Document<br>
+<strong>translate:</strong> False<br>
+<strong>trim:</strong> True<br>
+<strong>type:</strong> char<br>
+</p>
+</section>
+
+<section id="note" class="card card-body">
+<h4 class="card-title">note</h4>
+<p>
+<strong>change_default:</strong> False<br>
+<strong>company_dependent:</strong> False<br>
+<strong>default_export_compatible:</strong> False<br>
+<strong>depends:</strong> []<br>
+<strong>exportable:</strong> True<br>
+<strong>groupable:</strong> True<br>
+<strong>manual:</strong> False<br>
+<strong>name:</strong> note<br>
+<strong>readonly:</strong> False<br>
+<strong>required:</strong> False<br>
+<strong>sanitize:</strong> True<br>
+<strong>sanitize_attributes:</strong> True<br>
+<strong>sanitize_style:</strong> False<br>
+<strong>sanitize_tags:</strong> True<br>
+<strong>searchable:</strong> True<br>
+<strong>sortable:</strong> True<br>
+<strong>store:</strong> True<br>
+<strong>string:</strong> Notes<br>
+<strong>strip_classes:</strong> False<br>
+<strong>strip_style:</strong> False<br>
+<strong>translate:</strong> False<br>
+<strong>type:</strong> html<br>
+</p>
+</section>
+
+<section id="backorder_id" class="card card-body">
+<h4 class="card-title">backorder_id</h4>
+<p>
+<strong>allow_hierachy_operators:</strong> False<br>
+<strong>change_default:</strong> False<br>
+<strong>company_dependent:</strong> False<br>
+<strong>context:</strong> {}<br>
+<strong>default_export_compatible:</strong> False<br>
+<strong>depends:</strong> []<br>
+<strong>domain:</strong> (company_id and [('company_id', 'in', [company_id] + [False])] or [('company_id', '=', False)]) + ([])<br>
+<strong>exportable:</strong> True<br>
+<strong>groupable:</strong> True<br>
+<strong>help:</strong> If this shipment was split, then this field links to the shipment which contains the already processed part.<br>
+<strong>manual:</strong> False<br>
+<strong>name:</strong> backorder_id<br>
+<strong>readonly:</strong> True<br>
+<strong>relation:</strong> <a class="nav-link" href="../stock_picking/index.html">stock.picking</a><br>
+<strong>required:</strong> False<br>
+<strong>searchable:</strong> True<br>
+<strong>sortable:</strong> True<br>
+<strong>store:</strong> True<br>
+<strong>string:</strong> Back Order of<br>
+<strong>type:</strong> many2one<br>
+</p>
+</section>
+
+<section id="backorder_ids" class="card card-body">
+<h4 class="card-title">backorder_ids</h4>
+<p>
+<strong>allow_hierachy_operators:</strong> False<br>
+<strong>change_default:</strong> False<br>
+<strong>company_dependent:</strong> False<br>
+<strong>context:</strong> {}<br>
+<strong>default_export_compatible:</strong> False<br>
+<strong>depends:</strong> []<br>
+<strong>domain:</strong> []<br>
+<strong>exportable:</strong> True<br>
+<strong>groupable:</strong> False<br>
+<strong>manual:</strong> False<br>
+<strong>name:</strong> backorder_ids<br>
+<strong>readonly:</strong> False<br>
+<strong>relation:</strong> <a class="nav-link" href="../stock_picking/index.html">stock.picking</a><br>
+<strong>relation_field:</strong> backorder_id<br>
+<strong>required:</strong> False<br>
+<strong>searchable:</strong> True<br>
+<strong>sortable:</strong> False<br>
+<strong>store:</strong> True<br>
+<strong>string:</strong> Back Orders<br>
+<strong>type:</strong> one2many<br>
+</p>
+</section>
+
+<section id="return_id" class="card card-body">
+<h4 class="card-title">return_id</h4>
+<p>
+<strong>allow_hierachy_operators:</strong> False<br>
+<strong>change_default:</strong> False<br>
+<strong>company_dependent:</strong> False<br>
+<strong>context:</strong> {}<br>
+<strong>default_export_compatible:</strong> False<br>
+<strong>depends:</strong> []<br>
+<strong>domain:</strong> (company_id and [('company_id', 'in', [company_id] + [False])] or [('company_id', '=', False)]) + ([])<br>
+<strong>exportable:</strong> True<br>
+<strong>groupable:</strong> True<br>
+<strong>help:</strong> If this picking was created as a return of another picking, this field links to the original picking.<br>
+<strong>manual:</strong> False<br>
+<strong>name:</strong> return_id<br>
+<strong>readonly:</strong> True<br>
+<strong>relation:</strong> <a class="nav-link" href="../stock_picking/index.html">stock.picking</a><br>
+<strong>required:</strong> False<br>
+<strong>searchable:</strong> True<br>
+<strong>sortable:</strong> True<br>
+<strong>store:</strong> True<br>
+<strong>string:</strong> Return of<br>
+<strong>type:</strong> many2one<br>
+</p>
+</section>
+
+<section id="return_ids" class="card card-body">
+<h4 class="card-title">return_ids</h4>
+<p>
+<strong>allow_hierachy_operators:</strong> False<br>
+<strong>change_default:</strong> False<br>
+<strong>company_dependent:</strong> False<br>
+<strong>context:</strong> {}<br>
+<strong>default_export_compatible:</strong> False<br>
+<strong>depends:</strong> []<br>
+<strong>domain:</strong> []<br>
+<strong>exportable:</strong> True<br>
+<strong>groupable:</strong> False<br>
+<strong>manual:</strong> False<br>
+<strong>name:</strong> return_ids<br>
+<strong>readonly:</strong> False<br>
+<strong>relation:</strong> <a class="nav-link" href="../stock_picking/index.html">stock.picking</a><br>
+<strong>relation_field:</strong> return_id<br>
+<strong>required:</strong> False<br>
+<strong>searchable:</strong> True<br>
+<strong>sortable:</strong> False<br>
+<strong>store:</strong> True<br>
+<strong>string:</strong> Returns<br>
+<strong>type:</strong> one2many<br>
+</p>
+</section>
+
+<section id="return_count" class="card card-body">
+<h4 class="card-title">return_count</h4>
+<p>
+<strong>change_default:</strong> False<br>
+<strong>company_dependent:</strong> False<br>
+<strong>default_export_compatible:</strong> False<br>
+<strong>depends:</strong> ['return_ids']<br>
+<strong>exportable:</strong> True<br>
+<strong>groupable:</strong> False<br>
+<strong>manual:</strong> False<br>
+<strong>name:</strong> return_count<br>
+<strong>readonly:</strong> True<br>
+<strong>required:</strong> False<br>
+<strong>searchable:</strong> False<br>
+<strong>sortable:</strong> False<br>
+<strong>store:</strong> False<br>
+<strong>string:</strong> # Returns<br>
+<strong>type:</strong> integer<br>
+</p>
+</section>
+
+<section id="move_type" class="card card-body">
+<h4 class="card-title">move_type</h4>
+<p>
+<strong>change_default:</strong> False<br>
+<strong>company_dependent:</strong> False<br>
+<strong>default_export_compatible:</strong> False<br>
+<strong>depends:</strong> ['picking_type_id']<br>
+<strong>exportable:</strong> True<br>
+<strong>groupable:</strong> True<br>
+<strong>help:</strong> It specifies goods to be deliver partially or all at once<br>
+<strong>manual:</strong> False<br>
+<strong>name:</strong> move_type<br>
+<strong>readonly:</strong> False<br>
+<strong>required:</strong> True<br>
+<strong>searchable:</strong> True<br>
+<strong>selection:</strong> [['direct', 'As soon as possible'], ['one', 'When all products are ready']]<br>
+<strong>sortable:</strong> True<br>
+<strong>store:</strong> True<br>
+<strong>string:</strong> Shipping Policy<br>
+<strong>type:</strong> selection<br>
+</p>
+</section>
+
+<section id="state" class="card card-body">
+<h4 class="card-title">state</h4>
+<p>
+<strong>change_default:</strong> False<br>
+<strong>company_dependent:</strong> False<br>
+<strong>default_export_compatible:</strong> False<br>
+<strong>depends:</strong> ['move_type', 'move_ids.state', 'move_ids.picking_id']<br>
+<strong>exportable:</strong> True<br>
+<strong>groupable:</strong> True<br>
+<strong>help:</strong>  * Draft: The transfer is not confirmed yet. Reservation doesn't apply.
+ * Waiting another operation: This transfer is waiting for another operation before being ready.
+ * Waiting: The transfer is waiting for the availability of some products.
+(a) The shipping policy is "As soon as possible": no product could be reserved.
+(b) The shipping policy is "When all products are ready": not all the products could be reserved.
+ * Ready: The transfer is ready to be processed.
+(a) The shipping policy is "As soon as possible": at least one product has been reserved.
+(b) The shipping policy is "When all products are ready": all product have been reserved.
+ * Done: The transfer has been processed.
+ * Cancelled: The transfer has been cancelled.<br>
+<strong>manual:</strong> False<br>
+<strong>name:</strong> state<br>
+<strong>readonly:</strong> True<br>
+<strong>required:</strong> False<br>
+<strong>searchable:</strong> True<br>
+<strong>selection:</strong> [['draft', 'Draft'], ['waiting', 'Waiting Another Operation'], ['confirmed', 'Waiting'], ['assigned', 'Ready'], ['done', 'Done'], ['cancel', 'Cancelled']]<br>
+<strong>sortable:</strong> True<br>
+<strong>store:</strong> True<br>
+<strong>string:</strong> Status<br>
+<strong>type:</strong> selection<br>
+</p>
+</section>
+
+<section id="group_id" class="card card-body">
+<h4 class="card-title">group_id</h4>
+<p>
+<strong>allow_hierachy_operators:</strong> False<br>
+<strong>change_default:</strong> False<br>
+<strong>company_dependent:</strong> False<br>
+<strong>context:</strong> {}<br>
+<strong>default_export_compatible:</strong> False<br>
+<strong>depends:</strong> ['move_ids.group_id']<br>
+<strong>domain:</strong> []<br>
+<strong>exportable:</strong> True<br>
+<strong>groupable:</strong> True<br>
+<strong>manual:</strong> False<br>
+<strong>name:</strong> group_id<br>
+<strong>readonly:</strong> True<br>
+<strong>related:</strong> move_ids.group_id<br>
+<strong>relation:</strong> <a class="nav-link" href="../procurement_group/index.html">procurement.group</a><br>
+<strong>required:</strong> False<br>
+<strong>searchable:</strong> True<br>
+<strong>sortable:</strong> True<br>
+<strong>store:</strong> True<br>
+<strong>string:</strong> Procurement Group<br>
+<strong>type:</strong> many2one<br>
+</p>
+</section>
+
+<section id="priority" class="card card-body">
+<h4 class="card-title">priority</h4>
+<p>
+<strong>change_default:</strong> False<br>
+<strong>company_dependent:</strong> False<br>
+<strong>default_export_compatible:</strong> False<br>
+<strong>depends:</strong> []<br>
+<strong>exportable:</strong> True<br>
+<strong>groupable:</strong> True<br>
+<strong>help:</strong> Products will be reserved first for the transfers with the highest priorities.<br>
+<strong>manual:</strong> False<br>
+<strong>name:</strong> priority<br>
+<strong>readonly:</strong> False<br>
+<strong>required:</strong> False<br>
+<strong>searchable:</strong> True<br>
+<strong>selection:</strong> [['0', 'Normal'], ['1', 'Urgent']]<br>
+<strong>sortable:</strong> True<br>
+<strong>store:</strong> True<br>
+<strong>string:</strong> Priority<br>
+<strong>type:</strong> selection<br>
+</p>
+</section>
+
+<section id="scheduled_date" class="card card-body">
+<h4 class="card-title">scheduled_date</h4>
+<p>
+<strong>change_default:</strong> False<br>
+<strong>company_dependent:</strong> False<br>
+<strong>default_export_compatible:</strong> False<br>
+<strong>depends:</strong> ['move_ids.state', 'move_ids.date', 'move_type']<br>
+<strong>exportable:</strong> True<br>
+<strong>groupable:</strong> True<br>
+<strong>help:</strong> Scheduled time for the first part of the shipment to be processed. Setting manually a value here would set it as expected date for all the stock moves.<br>
+<strong>manual:</strong> False<br>
+<strong>name:</strong> scheduled_date<br>
+<strong>readonly:</strong> False<br>
+<strong>required:</strong> False<br>
+<strong>searchable:</strong> True<br>
+<strong>sortable:</strong> True<br>
+<strong>store:</strong> True<br>
+<strong>string:</strong> Scheduled Date<br>
+<strong>type:</strong> datetime<br>
+</p>
+</section>
+
+<section id="date_deadline" class="card card-body">
+<h4 class="card-title">date_deadline</h4>
+<p>
+<strong>change_default:</strong> False<br>
+<strong>company_dependent:</strong> False<br>
+<strong>default_export_compatible:</strong> False<br>
+<strong>depends:</strong> ['move_ids.date_deadline', 'move_type']<br>
+<strong>exportable:</strong> True<br>
+<strong>groupable:</strong> True<br>
+<strong>help:</strong> In case of outgoing flow, validate the transfer before this date to allow to deliver at promised date to the customer.
+        In case of incoming flow, validate the transfer before this date in order to have these products in stock at the date promised by the supplier<br>
+<strong>manual:</strong> False<br>
+<strong>name:</strong> date_deadline<br>
+<strong>readonly:</strong> True<br>
+<strong>required:</strong> False<br>
+<strong>searchable:</strong> True<br>
+<strong>sortable:</strong> True<br>
+<strong>store:</strong> True<br>
+<strong>string:</strong> Deadline<br>
+<strong>type:</strong> datetime<br>
+</p>
+</section>
+
+<section id="has_deadline_issue" class="card card-body">
+<h4 class="card-title">has_deadline_issue</h4>
+<p>
+<strong>change_default:</strong> False<br>
+<strong>company_dependent:</strong> False<br>
+<strong>default_export_compatible:</strong> False<br>
+<strong>depends:</strong> ['date_deadline', 'scheduled_date']<br>
+<strong>exportable:</strong> True<br>
+<strong>groupable:</strong> True<br>
+<strong>help:</strong> Is late or will be late depending on the deadline and scheduled date<br>
+<strong>manual:</strong> False<br>
+<strong>name:</strong> has_deadline_issue<br>
+<strong>readonly:</strong> True<br>
+<strong>required:</strong> False<br>
+<strong>searchable:</strong> True<br>
+<strong>sortable:</strong> True<br>
+<strong>store:</strong> True<br>
+<strong>string:</strong> Is late<br>
+<strong>type:</strong> boolean<br>
+</p>
+</section>
+
+<section id="date" class="card card-body">
+<h4 class="card-title">date</h4>
+<p>
+<strong>change_default:</strong> False<br>
+<strong>company_dependent:</strong> False<br>
+<strong>default_export_compatible:</strong> False<br>
+<strong>depends:</strong> []<br>
+<strong>exportable:</strong> True<br>
+<strong>groupable:</strong> True<br>
+<strong>help:</strong> Creation Date, usually the time of the order<br>
+<strong>manual:</strong> False<br>
+<strong>name:</strong> date<br>
+<strong>readonly:</strong> False<br>
+<strong>required:</strong> False<br>
+<strong>searchable:</strong> True<br>
+<strong>sortable:</strong> True<br>
+<strong>store:</strong> True<br>
+<strong>string:</strong> Creation Date<br>
+<strong>type:</strong> datetime<br>
+</p>
+</section>
+
+<section id="date_done" class="card card-body">
+<h4 class="card-title">date_done</h4>
+<p>
+<strong>change_default:</strong> False<br>
+<strong>company_dependent:</strong> False<br>
+<strong>default_export_compatible:</strong> False<br>
+<strong>depends:</strong> []<br>
+<strong>exportable:</strong> True<br>
+<strong>groupable:</strong> True<br>
+<strong>help:</strong> Date at which the transfer has been processed or cancelled.<br>
+<strong>manual:</strong> False<br>
+<strong>name:</strong> date_done<br>
+<strong>readonly:</strong> True<br>
+<strong>required:</strong> False<br>
+<strong>searchable:</strong> True<br>
+<strong>sortable:</strong> True<br>
+<strong>store:</strong> True<br>
+<strong>string:</strong> Date of Transfer<br>
+<strong>type:</strong> datetime<br>
+</p>
+</section>
+
+<section id="delay_alert_date" class="card card-body">
+<h4 class="card-title">delay_alert_date</h4>
+<p>
+<strong>change_default:</strong> False<br>
+<strong>company_dependent:</strong> False<br>
+<strong>default_export_compatible:</strong> False<br>
+<strong>depends:</strong> ['move_ids.delay_alert_date']<br>
+<strong>exportable:</strong> True<br>
+<strong>groupable:</strong> False<br>
+<strong>manual:</strong> False<br>
+<strong>name:</strong> delay_alert_date<br>
+<strong>readonly:</strong> True<br>
+<strong>required:</strong> False<br>
+<strong>searchable:</strong> True<br>
+<strong>sortable:</strong> False<br>
+<strong>store:</strong> False<br>
+<strong>string:</strong> Delay Alert Date<br>
+<strong>type:</strong> datetime<br>
+</p>
+</section>
+
+<section id="json_popover" class="card card-body">
+<h4 class="card-title">json_popover</h4>
+<p>
+<strong>change_default:</strong> False<br>
+<strong>company_dependent:</strong> False<br>
+<strong>default_export_compatible:</strong> False<br>
+<strong>depends:</strong> []<br>
+<strong>exportable:</strong> True<br>
+<strong>groupable:</strong> False<br>
+<strong>manual:</strong> False<br>
+<strong>name:</strong> json_popover<br>
+<strong>readonly:</strong> True<br>
+<strong>required:</strong> False<br>
+<strong>searchable:</strong> False<br>
+<strong>sortable:</strong> False<br>
+<strong>store:</strong> False<br>
+<strong>string:</strong> JSON data for the popover widget<br>
+<strong>translate:</strong> False<br>
+<strong>trim:</strong> True<br>
+<strong>type:</strong> char<br>
+</p>
+</section>
+
+<section id="location_id" class="card card-body">
+<h4 class="card-title">location_id</h4>
+<p>
+<strong>allow_hierachy_operators:</strong> True<br>
+<strong>change_default:</strong> False<br>
+<strong>company_dependent:</strong> False<br>
+<strong>context:</strong> {}<br>
+<strong>default_export_compatible:</strong> False<br>
+<strong>depends:</strong> ['picking_type_id', 'partner_id']<br>
+<strong>domain:</strong> (company_id and [('company_id', 'in', [company_id] + [False])] or [('company_id', '=', False)]) + ([])<br>
+<strong>exportable:</strong> True<br>
+<strong>groupable:</strong> True<br>
+<strong>manual:</strong> False<br>
+<strong>name:</strong> location_id<br>
+<strong>readonly:</strong> False<br>
+<strong>relation:</strong> <a class="nav-link" href="../stock_location/index.html">stock.location</a><br>
+<strong>required:</strong> True<br>
+<strong>searchable:</strong> True<br>
+<strong>sortable:</strong> True<br>
+<strong>store:</strong> True<br>
+<strong>string:</strong> Source Location<br>
+<strong>type:</strong> many2one<br>
+</p>
+</section>
+
+<section id="location_dest_id" class="card card-body">
+<h4 class="card-title">location_dest_id</h4>
+<p>
+<strong>allow_hierachy_operators:</strong> True<br>
+<strong>change_default:</strong> False<br>
+<strong>company_dependent:</strong> False<br>
+<strong>context:</strong> {}<br>
+<strong>default_export_compatible:</strong> False<br>
+<strong>depends:</strong> ['picking_type_id', 'partner_id']<br>
+<strong>domain:</strong> (company_id and [('company_id', 'in', [company_id] + [False])] or [('company_id', '=', False)]) + ([])<br>
+<strong>exportable:</strong> True<br>
+<strong>groupable:</strong> True<br>
+<strong>manual:</strong> False<br>
+<strong>name:</strong> location_dest_id<br>
+<strong>readonly:</strong> False<br>
+<strong>relation:</strong> <a class="nav-link" href="../stock_location/index.html">stock.location</a><br>
+<strong>required:</strong> True<br>
+<strong>searchable:</strong> True<br>
+<strong>sortable:</strong> True<br>
+<strong>store:</strong> True<br>
+<strong>string:</strong> Destination Location<br>
+<strong>type:</strong> many2one<br>
+</p>
+</section>
+
+<section id="move_ids" class="card card-body">
+<h4 class="card-title">move_ids</h4>
+<p>
+<strong>allow_hierachy_operators:</strong> False<br>
+<strong>change_default:</strong> False<br>
+<strong>company_dependent:</strong> False<br>
+<strong>context:</strong> {}<br>
+<strong>default_export_compatible:</strong> False<br>
+<strong>depends:</strong> []<br>
+<strong>domain:</strong> []<br>
+<strong>exportable:</strong> True<br>
+<strong>groupable:</strong> False<br>
+<strong>manual:</strong> False<br>
+<strong>name:</strong> move_ids<br>
+<strong>readonly:</strong> False<br>
+<strong>relation:</strong> <a class="nav-link" href="../stock_move/index.html">stock.move</a><br>
+<strong>relation_field:</strong> picking_id<br>
+<strong>required:</strong> False<br>
+<strong>searchable:</strong> True<br>
+<strong>sortable:</strong> False<br>
+<strong>store:</strong> True<br>
+<strong>string:</strong> Stock Moves<br>
+<strong>type:</strong> one2many<br>
+</p>
+</section>
+
+<section id="move_ids_without_package" class="card card-body">
+<h4 class="card-title">move_ids_without_package</h4>
+<p>
+<strong>allow_hierachy_operators:</strong> False<br>
+<strong>change_default:</strong> False<br>
+<strong>company_dependent:</strong> False<br>
+<strong>context:</strong> {}<br>
+<strong>default_export_compatible:</strong> False<br>
+<strong>depends:</strong> ['move_ids_without_package.package_level_id', 'move_ids_without_package.picking_type_entire_packs']<br>
+<strong>domain:</strong> ['|', ['package_level_id', '=', False], ['picking_type_entire_packs', '=', False]]<br>
+<strong>exportable:</strong> True<br>
+<strong>groupable:</strong> False<br>
+<strong>manual:</strong> False<br>
+<strong>name:</strong> move_ids_without_package<br>
+<strong>readonly:</strong> False<br>
+<strong>relation:</strong> <a class="nav-link" href="../stock_move/index.html">stock.move</a><br>
+<strong>relation_field:</strong> picking_id<br>
+<strong>required:</strong> False<br>
+<strong>searchable:</strong> True<br>
+<strong>sortable:</strong> False<br>
+<strong>store:</strong> True<br>
+<strong>string:</strong> Stock move<br>
+<strong>type:</strong> one2many<br>
+</p>
+</section>
+
+<section id="has_scrap_move" class="card card-body">
+<h4 class="card-title">has_scrap_move</h4>
+<p>
+<strong>change_default:</strong> False<br>
+<strong>company_dependent:</strong> False<br>
+<strong>default_export_compatible:</strong> False<br>
+<strong>depends:</strong> []<br>
+<strong>exportable:</strong> True<br>
+<strong>groupable:</strong> False<br>
+<strong>manual:</strong> False<br>
+<strong>name:</strong> has_scrap_move<br>
+<strong>readonly:</strong> True<br>
+<strong>required:</strong> False<br>
+<strong>searchable:</strong> False<br>
+<strong>sortable:</strong> False<br>
+<strong>store:</strong> False<br>
+<strong>string:</strong> Has Scrap Moves<br>
+<strong>type:</strong> boolean<br>
+</p>
+</section>
+
+<section id="picking_type_id" class="card card-body">
+<h4 class="card-title">picking_type_id</h4>
+<p>
+<strong>allow_hierachy_operators:</strong> False<br>
+<strong>change_default:</strong> False<br>
+<strong>company_dependent:</strong> False<br>
+<strong>context:</strong> {}<br>
+<strong>default_export_compatible:</strong> False<br>
+<strong>depends:</strong> []<br>
+<strong>domain:</strong> []<br>
+<strong>exportable:</strong> True<br>
+<strong>groupable:</strong> True<br>
+<strong>manual:</strong> False<br>
+<strong>name:</strong> picking_type_id<br>
+<strong>readonly:</strong> False<br>
+<strong>relation:</strong> <a class="nav-link" href="../stock_picking_type/index.html">stock.picking.type</a><br>
+<strong>required:</strong> True<br>
+<strong>searchable:</strong> True<br>
+<strong>sortable:</strong> True<br>
+<strong>store:</strong> True<br>
+<strong>string:</strong> Operation Type<br>
+<strong>type:</strong> many2one<br>
+</p>
+</section>
+
+<section id="warehouse_address_id" class="card card-body">
+<h4 class="card-title">warehouse_address_id</h4>
+<p>
+<strong>allow_hierachy_operators:</strong> True<br>
+<strong>change_default:</strong> False<br>
+<strong>company_dependent:</strong> False<br>
+<strong>context:</strong> {}<br>
+<strong>default_export_compatible:</strong> False<br>
+<strong>depends:</strong> ['picking_type_id.warehouse_id.partner_id']<br>
+<strong>domain:</strong> []<br>
+<strong>exportable:</strong> True<br>
+<strong>groupable:</strong> True<br>
+<strong>manual:</strong> False<br>
+<strong>name:</strong> warehouse_address_id<br>
+<strong>readonly:</strong> True<br>
+<strong>related:</strong> picking_type_id.warehouse_id.partner_id<br>
+<strong>relation:</strong> <a class="nav-link" href="../res_partner/index.html">res.partner</a><br>
+<strong>required:</strong> False<br>
+<strong>searchable:</strong> True<br>
+<strong>sortable:</strong> True<br>
+<strong>store:</strong> False<br>
+<strong>string:</strong> Address<br>
+<strong>type:</strong> many2one<br>
+</p>
+</section>
+
+<section id="picking_type_code" class="card card-body">
+<h4 class="card-title">picking_type_code</h4>
+<p>
+<strong>change_default:</strong> False<br>
+<strong>company_dependent:</strong> False<br>
+<strong>default_export_compatible:</strong> False<br>
+<strong>depends:</strong> ['picking_type_id.code']<br>
+<strong>exportable:</strong> True<br>
+<strong>groupable:</strong> True<br>
+<strong>manual:</strong> False<br>
+<strong>name:</strong> picking_type_code<br>
+<strong>readonly:</strong> True<br>
+<strong>related:</strong> picking_type_id.code<br>
+<strong>required:</strong> False<br>
+<strong>searchable:</strong> True<br>
+<strong>selection:</strong> [['incoming', 'Receipt'], ['outgoing', 'Delivery'], ['internal', 'Internal Transfer']]<br>
+<strong>sortable:</strong> True<br>
+<strong>store:</strong> False<br>
+<strong>string:</strong> Type of Operation<br>
+<strong>type:</strong> selection<br>
+</p>
+</section>
+
+<section id="picking_type_entire_packs" class="card card-body">
+<h4 class="card-title">picking_type_entire_packs</h4>
+<p>
+<strong>change_default:</strong> False<br>
+<strong>company_dependent:</strong> False<br>
+<strong>default_export_compatible:</strong> False<br>
+<strong>depends:</strong> ['picking_type_id.show_entire_packs']<br>
+<strong>exportable:</strong> True<br>
+<strong>groupable:</strong> True<br>
+<strong>help:</strong> If ticked, you will be able to select entire packages to move<br>
+<strong>manual:</strong> False<br>
+<strong>name:</strong> picking_type_entire_packs<br>
+<strong>readonly:</strong> True<br>
+<strong>related:</strong> picking_type_id.show_entire_packs<br>
+<strong>required:</strong> False<br>
+<strong>searchable:</strong> True<br>
+<strong>sortable:</strong> True<br>
+<strong>store:</strong> False<br>
+<strong>string:</strong> Move Entire Packages<br>
+<strong>type:</strong> boolean<br>
+</p>
+</section>
+
+<section id="use_create_lots" class="card card-body">
+<h4 class="card-title">use_create_lots</h4>
+<p>
+<strong>change_default:</strong> False<br>
+<strong>company_dependent:</strong> False<br>
+<strong>default_export_compatible:</strong> False<br>
+<strong>depends:</strong> ['picking_type_id.use_create_lots']<br>
+<strong>exportable:</strong> True<br>
+<strong>groupable:</strong> True<br>
+<strong>help:</strong> If this is checked only, it will suppose you want to create new Lots/Serial Numbers, so you can provide them in a text field. <br>
+<strong>manual:</strong> False<br>
+<strong>name:</strong> use_create_lots<br>
+<strong>readonly:</strong> True<br>
+<strong>related:</strong> picking_type_id.use_create_lots<br>
+<strong>required:</strong> False<br>
+<strong>searchable:</strong> True<br>
+<strong>sortable:</strong> True<br>
+<strong>store:</strong> False<br>
+<strong>string:</strong> Create New Lots/Serial Numbers<br>
+<strong>type:</strong> boolean<br>
+</p>
+</section>
+
+<section id="use_existing_lots" class="card card-body">
+<h4 class="card-title">use_existing_lots</h4>
+<p>
+<strong>change_default:</strong> False<br>
+<strong>company_dependent:</strong> False<br>
+<strong>default_export_compatible:</strong> False<br>
+<strong>depends:</strong> ['picking_type_id.use_existing_lots']<br>
+<strong>exportable:</strong> True<br>
+<strong>groupable:</strong> True<br>
+<strong>help:</strong> If this is checked, you will be able to choose the Lots/Serial Numbers. You can also decide to not put lots in this operation type.  This means it will create stock with no lot or not put a restriction on the lot taken. <br>
+<strong>manual:</strong> False<br>
+<strong>name:</strong> use_existing_lots<br>
+<strong>readonly:</strong> True<br>
+<strong>related:</strong> picking_type_id.use_existing_lots<br>
+<strong>required:</strong> False<br>
+<strong>searchable:</strong> True<br>
+<strong>sortable:</strong> True<br>
+<strong>store:</strong> False<br>
+<strong>string:</strong> Use Existing Lots/Serial Numbers<br>
+<strong>type:</strong> boolean<br>
+</p>
+</section>
+
+<section id="partner_id" class="card card-body">
+<h4 class="card-title">partner_id</h4>
+<p>
+<strong>allow_hierachy_operators:</strong> True<br>
+<strong>change_default:</strong> False<br>
+<strong>company_dependent:</strong> False<br>
+<strong>context:</strong> {}<br>
+<strong>default_export_compatible:</strong> False<br>
+<strong>depends:</strong> []<br>
+<strong>domain:</strong> (company_id and ['|', ('company_id', '=', False), ('company_id', 'parent_of', [company_id])] or ['|', ('company_id', '=', False), ('company_id', 'parent_of', '')]) + ([])<br>
+<strong>exportable:</strong> True<br>
+<strong>groupable:</strong> True<br>
+<strong>manual:</strong> False<br>
+<strong>name:</strong> partner_id<br>
+<strong>readonly:</strong> False<br>
+<strong>relation:</strong> <a class="nav-link" href="../res_partner/index.html">res.partner</a><br>
+<strong>required:</strong> False<br>
+<strong>searchable:</strong> True<br>
+<strong>sortable:</strong> True<br>
+<strong>store:</strong> True<br>
+<strong>string:</strong> Contact<br>
+<strong>type:</strong> many2one<br>
+</p>
+</section>
+
+<section id="company_id" class="card card-body">
+<h4 class="card-title">company_id</h4>
+<p>
+<strong>allow_hierachy_operators:</strong> True<br>
+<strong>change_default:</strong> False<br>
+<strong>company_dependent:</strong> False<br>
+<strong>context:</strong> {}<br>
+<strong>default_export_compatible:</strong> False<br>
+<strong>depends:</strong> ['picking_type_id.company_id']<br>
+<strong>domain:</strong> []<br>
+<strong>exportable:</strong> True<br>
+<strong>groupable:</strong> True<br>
+<strong>manual:</strong> False<br>
+<strong>name:</strong> company_id<br>
+<strong>readonly:</strong> True<br>
+<strong>related:</strong> picking_type_id.company_id<br>
+<strong>relation:</strong> <a class="nav-link" href="../res_company/index.html">res.company</a><br>
+<strong>required:</strong> False<br>
+<strong>searchable:</strong> True<br>
+<strong>sortable:</strong> True<br>
+<strong>store:</strong> True<br>
+<strong>string:</strong> Company<br>
+<strong>type:</strong> many2one<br>
+</p>
+</section>
+
+<section id="user_id" class="card card-body">
+<h4 class="card-title">user_id</h4>
+<p>
+<strong>allow_hierachy_operators:</strong> True<br>
+<strong>change_default:</strong> False<br>
+<strong>company_dependent:</strong> False<br>
+<strong>context:</strong> {}<br>
+<strong>default_export_compatible:</strong> False<br>
+<strong>depends:</strong> []<br>
+<strong>domain:</strong> [['groups_id', 'in', 49]]<br>
+<strong>exportable:</strong> True<br>
+<strong>groupable:</strong> True<br>
+<strong>manual:</strong> False<br>
+<strong>name:</strong> user_id<br>
+<strong>readonly:</strong> False<br>
+<strong>relation:</strong> <a class="nav-link" href="../res_users/index.html">res.users</a><br>
+<strong>required:</strong> False<br>
+<strong>searchable:</strong> True<br>
+<strong>sortable:</strong> True<br>
+<strong>store:</strong> True<br>
+<strong>string:</strong> Responsible<br>
+<strong>type:</strong> many2one<br>
+</p>
+</section>
+
+<section id="move_line_ids" class="card card-body">
+<h4 class="card-title">move_line_ids</h4>
+<p>
+<strong>allow_hierachy_operators:</strong> False<br>
+<strong>change_default:</strong> False<br>
+<strong>company_dependent:</strong> False<br>
+<strong>context:</strong> {}<br>
+<strong>default_export_compatible:</strong> False<br>
+<strong>depends:</strong> []<br>
+<strong>domain:</strong> []<br>
+<strong>exportable:</strong> True<br>
+<strong>groupable:</strong> False<br>
+<strong>manual:</strong> False<br>
+<strong>name:</strong> move_line_ids<br>
+<strong>readonly:</strong> False<br>
+<strong>relation:</strong> <a class="nav-link" href="../stock_move_line/index.html">stock.move.line</a><br>
+<strong>relation_field:</strong> picking_id<br>
+<strong>required:</strong> False<br>
+<strong>searchable:</strong> True<br>
+<strong>sortable:</strong> False<br>
+<strong>store:</strong> True<br>
+<strong>string:</strong> Operations<br>
+<strong>type:</strong> one2many<br>
+</p>
+</section>
+
+<section id="move_line_ids_without_package" class="card card-body">
+<h4 class="card-title">move_line_ids_without_package</h4>
+<p>
+<strong>allow_hierachy_operators:</strong> False<br>
+<strong>change_default:</strong> False<br>
+<strong>company_dependent:</strong> False<br>
+<strong>context:</strong> {}<br>
+<strong>default_export_compatible:</strong> False<br>
+<strong>depends:</strong> ['move_line_ids_without_package.package_level_id', 'move_line_ids_without_package.picking_type_entire_packs']<br>
+<strong>domain:</strong> ['|', ['package_level_id', '=', False], ['picking_type_entire_packs', '=', False]]<br>
+<strong>exportable:</strong> True<br>
+<strong>groupable:</strong> False<br>
+<strong>manual:</strong> False<br>
+<strong>name:</strong> move_line_ids_without_package<br>
+<strong>readonly:</strong> False<br>
+<strong>relation:</strong> <a class="nav-link" href="../stock_move_line/index.html">stock.move.line</a><br>
+<strong>relation_field:</strong> picking_id<br>
+<strong>required:</strong> False<br>
+<strong>searchable:</strong> True<br>
+<strong>sortable:</strong> False<br>
+<strong>store:</strong> True<br>
+<strong>string:</strong> Operations without package<br>
+<strong>type:</strong> one2many<br>
+</p>
+</section>
+
+<section id="move_line_exist" class="card card-body">
+<h4 class="card-title">move_line_exist</h4>
+<p>
+<strong>change_default:</strong> False<br>
+<strong>company_dependent:</strong> False<br>
+<strong>default_export_compatible:</strong> False<br>
+<strong>depends:</strong> []<br>
+<strong>exportable:</strong> True<br>
+<strong>groupable:</strong> False<br>
+<strong>help:</strong> Check the existence of pack operation on the picking<br>
+<strong>manual:</strong> False<br>
+<strong>name:</strong> move_line_exist<br>
+<strong>readonly:</strong> True<br>
+<strong>required:</strong> False<br>
+<strong>searchable:</strong> False<br>
+<strong>sortable:</strong> False<br>
+<strong>store:</strong> False<br>
+<strong>string:</strong> Has Pack Operations<br>
+<strong>type:</strong> boolean<br>
+</p>
+</section>
+
+<section id="has_packages" class="card card-body">
+<h4 class="card-title">has_packages</h4>
+<p>
+<strong>change_default:</strong> False<br>
+<strong>company_dependent:</strong> False<br>
+<strong>default_export_compatible:</strong> False<br>
+<strong>depends:</strong> []<br>
+<strong>exportable:</strong> True<br>
+<strong>groupable:</strong> False<br>
+<strong>help:</strong> Check the existence of destination packages on move lines<br>
+<strong>manual:</strong> False<br>
+<strong>name:</strong> has_packages<br>
+<strong>readonly:</strong> True<br>
+<strong>required:</strong> False<br>
+<strong>searchable:</strong> False<br>
+<strong>sortable:</strong> False<br>
+<strong>store:</strong> False<br>
+<strong>string:</strong> Has Packages<br>
+<strong>type:</strong> boolean<br>
+</p>
+</section>
+
+<section id="show_check_availability" class="card card-body">
+<h4 class="card-title">show_check_availability</h4>
+<p>
+<strong>change_default:</strong> False<br>
+<strong>company_dependent:</strong> False<br>
+<strong>default_export_compatible:</strong> False<br>
+<strong>depends:</strong> ['state', 'move_ids.product_uom_qty', 'picking_type_code']<br>
+<strong>exportable:</strong> True<br>
+<strong>groupable:</strong> False<br>
+<strong>help:</strong> Technical field used to compute whether the button "Check Availability" should be displayed.<br>
+<strong>manual:</strong> False<br>
+<strong>name:</strong> show_check_availability<br>
+<strong>readonly:</strong> True<br>
+<strong>required:</strong> False<br>
+<strong>searchable:</strong> False<br>
+<strong>sortable:</strong> False<br>
+<strong>store:</strong> False<br>
+<strong>string:</strong> Show Check Availability<br>
+<strong>type:</strong> boolean<br>
+</p>
+</section>
+
+<section id="show_allocation" class="card card-body">
+<h4 class="card-title">show_allocation</h4>
+<p>
+<strong>change_default:</strong> False<br>
+<strong>company_dependent:</strong> False<br>
+<strong>default_export_compatible:</strong> False<br>
+<strong>depends:</strong> ['state', 'move_ids', 'picking_type_id']<br>
+<strong>exportable:</strong> True<br>
+<strong>groupable:</strong> False<br>
+<strong>help:</strong> Technical Field used to decide whether the button "Allocation" should be displayed.<br>
+<strong>manual:</strong> False<br>
+<strong>name:</strong> show_allocation<br>
+<strong>readonly:</strong> True<br>
+<strong>required:</strong> False<br>
+<strong>searchable:</strong> False<br>
+<strong>sortable:</strong> False<br>
+<strong>store:</strong> False<br>
+<strong>string:</strong> Show Allocation<br>
+<strong>type:</strong> boolean<br>
+</p>
+</section>
+
+<section id="owner_id" class="card card-body">
+<h4 class="card-title">owner_id</h4>
+<p>
+<strong>allow_hierachy_operators:</strong> True<br>
+<strong>change_default:</strong> False<br>
+<strong>company_dependent:</strong> False<br>
+<strong>context:</strong> {}<br>
+<strong>default_export_compatible:</strong> False<br>
+<strong>depends:</strong> []<br>
+<strong>domain:</strong> (company_id and ['|', ('company_id', '=', False), ('company_id', 'parent_of', [company_id])] or ['|', ('company_id', '=', False), ('company_id', 'parent_of', '')]) + ([])<br>
+<strong>exportable:</strong> True<br>
+<strong>groupable:</strong> True<br>
+<strong>help:</strong> When validating the transfer, the products will be assigned to this owner.<br>
+<strong>manual:</strong> False<br>
+<strong>name:</strong> owner_id<br>
+<strong>readonly:</strong> False<br>
+<strong>relation:</strong> <a class="nav-link" href="../res_partner/index.html">res.partner</a><br>
+<strong>required:</strong> False<br>
+<strong>searchable:</strong> True<br>
+<strong>sortable:</strong> True<br>
+<strong>store:</strong> True<br>
+<strong>string:</strong> Assign Owner<br>
+<strong>type:</strong> many2one<br>
+</p>
+</section>
+
+<section id="printed" class="card card-body">
+<h4 class="card-title">printed</h4>
+<p>
+<strong>change_default:</strong> False<br>
+<strong>company_dependent:</strong> False<br>
+<strong>default_export_compatible:</strong> False<br>
+<strong>depends:</strong> []<br>
+<strong>exportable:</strong> True<br>
+<strong>groupable:</strong> True<br>
+<strong>manual:</strong> False<br>
+<strong>name:</strong> printed<br>
+<strong>readonly:</strong> False<br>
+<strong>required:</strong> False<br>
+<strong>searchable:</strong> True<br>
+<strong>sortable:</strong> True<br>
+<strong>store:</strong> True<br>
+<strong>string:</strong> Printed<br>
+<strong>type:</strong> boolean<br>
+</p>
+</section>
+
+<section id="signature" class="card card-body">
+<h4 class="card-title">signature</h4>
+<p>
+<strong>attachment:</strong> True<br>
+<strong>change_default:</strong> False<br>
+<strong>company_dependent:</strong> False<br>
+<strong>default_export_compatible:</strong> False<br>
+<strong>depends:</strong> []<br>
+<strong>exportable:</strong> True<br>
+<strong>groupable:</strong> False<br>
+<strong>help:</strong> Signature<br>
+<strong>manual:</strong> False<br>
+<strong>name:</strong> signature<br>
+<strong>readonly:</strong> False<br>
+<strong>required:</strong> False<br>
+<strong>searchable:</strong> True<br>
+<strong>sortable:</strong> False<br>
+<strong>store:</strong> True<br>
+<strong>string:</strong> Signature<br>
+<strong>type:</strong> binary<br>
+</p>
+</section>
+
+<section id="is_signed" class="card card-body">
+<h4 class="card-title">is_signed</h4>
+<p>
+<strong>change_default:</strong> False<br>
+<strong>company_dependent:</strong> False<br>
+<strong>default_export_compatible:</strong> False<br>
+<strong>depends:</strong> ['signature']<br>
+<strong>exportable:</strong> True<br>
+<strong>groupable:</strong> False<br>
+<strong>manual:</strong> False<br>
+<strong>name:</strong> is_signed<br>
+<strong>readonly:</strong> True<br>
+<strong>required:</strong> False<br>
+<strong>searchable:</strong> False<br>
+<strong>sortable:</strong> False<br>
+<strong>store:</strong> False<br>
+<strong>string:</strong> Is Signed<br>
+<strong>type:</strong> boolean<br>
+</p>
+</section>
+
+<section id="is_locked" class="card card-body">
+<h4 class="card-title">is_locked</h4>
+<p>
+<strong>change_default:</strong> False<br>
+<strong>company_dependent:</strong> False<br>
+<strong>default_export_compatible:</strong> False<br>
+<strong>depends:</strong> []<br>
+<strong>exportable:</strong> True<br>
+<strong>groupable:</strong> True<br>
+<strong>help:</strong> When the picking is not done this allows changing the initial demand. When the picking is done this allows changing the done quantities.<br>
+<strong>manual:</strong> False<br>
+<strong>name:</strong> is_locked<br>
+<strong>readonly:</strong> False<br>
+<strong>required:</strong> False<br>
+<strong>searchable:</strong> True<br>
+<strong>sortable:</strong> True<br>
+<strong>store:</strong> True<br>
+<strong>string:</strong> Is Locked<br>
+<strong>type:</strong> boolean<br>
+</p>
+</section>
+
+<section id="weight_bulk" class="card card-body">
+<h4 class="card-title">weight_bulk</h4>
+<p>
+<strong>change_default:</strong> False<br>
+<strong>company_dependent:</strong> False<br>
+<strong>default_export_compatible:</strong> False<br>
+<strong>depends:</strong> ['move_line_ids', 'move_line_ids.result_package_id', 'move_line_ids.product_uom_id', 'move_line_ids.quantity']<br>
+<strong>exportable:</strong> True<br>
+<strong>groupable:</strong> False<br>
+<strong>help:</strong> Total weight of products which are not in a package.<br>
+<strong>manual:</strong> False<br>
+<strong>name:</strong> weight_bulk<br>
+<strong>readonly:</strong> True<br>
+<strong>required:</strong> False<br>
+<strong>searchable:</strong> False<br>
+<strong>sortable:</strong> False<br>
+<strong>store:</strong> False<br>
+<strong>string:</strong> Bulk Weight<br>
+<strong>type:</strong> float<br>
+</p>
+</section>
+
+<section id="shipping_weight" class="card card-body">
+<h4 class="card-title">shipping_weight</h4>
+<p>
+<strong>change_default:</strong> False<br>
+<strong>company_dependent:</strong> False<br>
+<strong>default_export_compatible:</strong> False<br>
+<strong>depends:</strong> ['move_line_ids.result_package_id', 'move_line_ids.result_package_id.shipping_weight', 'weight_bulk']<br>
+<strong>exportable:</strong> True<br>
+<strong>groupable:</strong> False<br>
+<strong>help:</strong> Total weight of packages and products not in a package. Packages with no shipping weight specified will default to their products' total weight. This is the weight used to compute the cost of the shipping.<br>
+<strong>manual:</strong> False<br>
+<strong>name:</strong> shipping_weight<br>
+<strong>readonly:</strong> False<br>
+<strong>required:</strong> False<br>
+<strong>searchable:</strong> False<br>
+<strong>sortable:</strong> False<br>
+<strong>store:</strong> False<br>
+<strong>string:</strong> Weight for Shipping<br>
+<strong>type:</strong> float<br>
+</p>
+</section>
+
+<section id="shipping_volume" class="card card-body">
+<h4 class="card-title">shipping_volume</h4>
+<p>
+<strong>change_default:</strong> False<br>
+<strong>company_dependent:</strong> False<br>
+<strong>default_export_compatible:</strong> False<br>
+<strong>depends:</strong> []<br>
+<strong>exportable:</strong> True<br>
+<strong>groupable:</strong> False<br>
+<strong>manual:</strong> False<br>
+<strong>name:</strong> shipping_volume<br>
+<strong>readonly:</strong> True<br>
+<strong>required:</strong> False<br>
+<strong>searchable:</strong> False<br>
+<strong>sortable:</strong> False<br>
+<strong>store:</strong> False<br>
+<strong>string:</strong> Volume for Shipping<br>
+<strong>type:</strong> float<br>
+</p>
+</section>
+
+<section id="product_id" class="card card-body">
+<h4 class="card-title">product_id</h4>
+<p>
+<strong>allow_hierachy_operators:</strong> False<br>
+<strong>change_default:</strong> False<br>
+<strong>company_dependent:</strong> False<br>
+<strong>context:</strong> {}<br>
+<strong>default_export_compatible:</strong> False<br>
+<strong>depends:</strong> ['move_ids.product_id']<br>
+<strong>exportable:</strong> True<br>
+<strong>groupable:</strong> False<br>
+<strong>manual:</strong> False<br>
+<strong>name:</strong> product_id<br>
+<strong>readonly:</strong> True<br>
+<strong>related:</strong> move_ids.product_id<br>
+<strong>relation:</strong> <a class="nav-link" href="../product_product/index.html">product.product</a><br>
+<strong>required:</strong> False<br>
+<strong>searchable:</strong> True<br>
+<strong>sortable:</strong> False<br>
+<strong>store:</strong> False<br>
+<strong>string:</strong> Product<br>
+<strong>type:</strong> many2one<br>
+</p>
+</section>
+
+<section id="lot_id" class="card card-body">
+<h4 class="card-title">lot_id</h4>
+<p>
+<strong>allow_hierachy_operators:</strong> False<br>
+<strong>change_default:</strong> False<br>
+<strong>company_dependent:</strong> False<br>
+<strong>context:</strong> {}<br>
+<strong>default_export_compatible:</strong> False<br>
+<strong>depends:</strong> ['move_line_ids.lot_id']<br>
+<strong>exportable:</strong> True<br>
+<strong>groupable:</strong> False<br>
+<strong>manual:</strong> False<br>
+<strong>name:</strong> lot_id<br>
+<strong>readonly:</strong> True<br>
+<strong>related:</strong> move_line_ids.lot_id<br>
+<strong>relation:</strong> <a class="nav-link" href="../stock_lot/index.html">stock.lot</a><br>
+<strong>required:</strong> False<br>
+<strong>searchable:</strong> True<br>
+<strong>sortable:</strong> False<br>
+<strong>store:</strong> False<br>
+<strong>string:</strong> Lot/Serial Number<br>
+<strong>type:</strong> many2one<br>
+</p>
+</section>
+
+<section id="show_operations" class="card card-body">
+<h4 class="card-title">show_operations</h4>
+<p>
+<strong>change_default:</strong> False<br>
+<strong>company_dependent:</strong> False<br>
+<strong>default_export_compatible:</strong> False<br>
+<strong>depends:</strong> ['picking_type_id.show_operations']<br>
+<strong>exportable:</strong> True<br>
+<strong>groupable:</strong> True<br>
+<strong>help:</strong> If this checkbox is ticked, the pickings lines will represent detailed stock operations. If not, the picking lines will represent an aggregate of detailed stock operations.<br>
+<strong>manual:</strong> False<br>
+<strong>name:</strong> show_operations<br>
+<strong>readonly:</strong> True<br>
+<strong>related:</strong> picking_type_id.show_operations<br>
+<strong>required:</strong> False<br>
+<strong>searchable:</strong> True<br>
+<strong>sortable:</strong> True<br>
+<strong>store:</strong> False<br>
+<strong>string:</strong> Show Detailed Operations<br>
+<strong>type:</strong> boolean<br>
+</p>
+</section>
+
+<section id="show_lots_text" class="card card-body">
+<h4 class="card-title">show_lots_text</h4>
+<p>
+<strong>change_default:</strong> False<br>
+<strong>company_dependent:</strong> False<br>
+<strong>default_export_compatible:</strong> False<br>
+<strong>depends:</strong> ['move_line_ids', 'picking_type_id.use_create_lots', 'picking_type_id.use_existing_lots', 'state']<br>
+<strong>exportable:</strong> True<br>
+<strong>groupable:</strong> False<br>
+<strong>manual:</strong> False<br>
+<strong>name:</strong> show_lots_text<br>
+<strong>readonly:</strong> True<br>
+<strong>required:</strong> False<br>
+<strong>searchable:</strong> False<br>
+<strong>sortable:</strong> False<br>
+<strong>store:</strong> False<br>
+<strong>string:</strong> Show Lots Text<br>
+<strong>type:</strong> boolean<br>
+</p>
+</section>
+
+<section id="has_tracking" class="card card-body">
+<h4 class="card-title">has_tracking</h4>
+<p>
+<strong>change_default:</strong> False<br>
+<strong>company_dependent:</strong> False<br>
+<strong>default_export_compatible:</strong> False<br>
+<strong>depends:</strong> []<br>
+<strong>exportable:</strong> True<br>
+<strong>groupable:</strong> False<br>
+<strong>manual:</strong> False<br>
+<strong>name:</strong> has_tracking<br>
+<strong>readonly:</strong> True<br>
+<strong>required:</strong> False<br>
+<strong>searchable:</strong> False<br>
+<strong>sortable:</strong> False<br>
+<strong>store:</strong> False<br>
+<strong>string:</strong> Has Tracking<br>
+<strong>type:</strong> boolean<br>
+</p>
+</section>
+
+<section id="package_level_ids" class="card card-body">
+<h4 class="card-title">package_level_ids</h4>
+<p>
+<strong>allow_hierachy_operators:</strong> False<br>
+<strong>change_default:</strong> False<br>
+<strong>company_dependent:</strong> False<br>
+<strong>context:</strong> {}<br>
+<strong>default_export_compatible:</strong> False<br>
+<strong>depends:</strong> []<br>
+<strong>domain:</strong> []<br>
+<strong>exportable:</strong> True<br>
+<strong>groupable:</strong> False<br>
+<strong>manual:</strong> False<br>
+<strong>name:</strong> package_level_ids<br>
+<strong>readonly:</strong> False<br>
+<strong>relation:</strong> <a class="nav-link" href="../stock_package_level/index.html">stock.package_level</a><br>
+<strong>relation_field:</strong> picking_id<br>
+<strong>required:</strong> False<br>
+<strong>searchable:</strong> True<br>
+<strong>sortable:</strong> False<br>
+<strong>store:</strong> True<br>
+<strong>string:</strong> Package Level<br>
+<strong>type:</strong> one2many<br>
+</p>
+</section>
+
+<section id="package_level_ids_details" class="card card-body">
+<h4 class="card-title">package_level_ids_details</h4>
+<p>
+<strong>allow_hierachy_operators:</strong> False<br>
+<strong>change_default:</strong> False<br>
+<strong>company_dependent:</strong> False<br>
+<strong>context:</strong> {}<br>
+<strong>default_export_compatible:</strong> False<br>
+<strong>depends:</strong> []<br>
+<strong>domain:</strong> []<br>
+<strong>exportable:</strong> True<br>
+<strong>groupable:</strong> False<br>
+<strong>manual:</strong> False<br>
+<strong>name:</strong> package_level_ids_details<br>
+<strong>readonly:</strong> False<br>
+<strong>relation:</strong> <a class="nav-link" href="../stock_package_level/index.html">stock.package_level</a><br>
+<strong>relation_field:</strong> picking_id<br>
+<strong>required:</strong> False<br>
+<strong>searchable:</strong> True<br>
+<strong>sortable:</strong> False<br>
+<strong>store:</strong> True<br>
+<strong>string:</strong> Package Level Ids Details<br>
+<strong>type:</strong> one2many<br>
+</p>
+</section>
+
+<section id="products_availability" class="card card-body">
+<h4 class="card-title">products_availability</h4>
+<p>
+<strong>change_default:</strong> False<br>
+<strong>company_dependent:</strong> False<br>
+<strong>default_export_compatible:</strong> False<br>
+<strong>depends:</strong> ['state', 'picking_type_code', 'scheduled_date', 'move_ids', 'move_ids.forecast_availability', 'move_ids.forecast_expected_date']<br>
+<strong>exportable:</strong> True<br>
+<strong>groupable:</strong> False<br>
+<strong>help:</strong> Latest product availability status of the picking<br>
+<strong>manual:</strong> False<br>
+<strong>name:</strong> products_availability<br>
+<strong>readonly:</strong> True<br>
+<strong>required:</strong> False<br>
+<strong>searchable:</strong> False<br>
+<strong>sortable:</strong> False<br>
+<strong>store:</strong> False<br>
+<strong>string:</strong> Product Availability<br>
+<strong>translate:</strong> False<br>
+<strong>trim:</strong> True<br>
+<strong>type:</strong> char<br>
+</p>
+</section>
+
+<section id="products_availability_state" class="card card-body">
+<h4 class="card-title">products_availability_state</h4>
+<p>
+<strong>change_default:</strong> False<br>
+<strong>company_dependent:</strong> False<br>
+<strong>default_export_compatible:</strong> False<br>
+<strong>depends:</strong> ['state', 'picking_type_code', 'scheduled_date', 'move_ids', 'move_ids.forecast_availability', 'move_ids.forecast_expected_date']<br>
+<strong>exportable:</strong> True<br>
+<strong>groupable:</strong> False<br>
+<strong>manual:</strong> False<br>
+<strong>name:</strong> products_availability_state<br>
+<strong>readonly:</strong> True<br>
+<strong>required:</strong> False<br>
+<strong>searchable:</strong> True<br>
+<strong>selection:</strong> [['available', 'Available'], ['expected', 'Expected'], ['late', 'Late']]<br>
+<strong>sortable:</strong> False<br>
+<strong>store:</strong> False<br>
+<strong>string:</strong> Products Availability State<br>
+<strong>type:</strong> selection<br>
+</p>
+</section>
+
+<section id="picking_properties" class="card card-body">
+<h4 class="card-title">picking_properties</h4>
+<p>
+<strong>change_default:</strong> False<br>
+<strong>company_dependent:</strong> False<br>
+<strong>default_export_compatible:</strong> False<br>
+<strong>definition_record:</strong> picking_type_id<br>
+<strong>definition_record_field:</strong> picking_properties_definition<br>
+<strong>depends:</strong> ['picking_type_id']<br>
+<strong>exportable:</strong> True<br>
+<strong>groupable:</strong> True<br>
+<strong>manual:</strong> False<br>
+<strong>name:</strong> picking_properties<br>
+<strong>readonly:</strong> False<br>
+<strong>required:</strong> False<br>
+<strong>searchable:</strong> True<br>
+<strong>sortable:</strong> True<br>
+<strong>store:</strong> True<br>
+<strong>string:</strong> Properties<br>
+<strong>type:</strong> properties<br>
+</p>
+</section>
+
+<section id="show_next_pickings" class="card card-body">
+<h4 class="card-title">show_next_pickings</h4>
+<p>
+<strong>change_default:</strong> False<br>
+<strong>company_dependent:</strong> False<br>
+<strong>default_export_compatible:</strong> False<br>
+<strong>depends:</strong> ['move_ids.move_dest_ids']<br>
+<strong>exportable:</strong> True<br>
+<strong>groupable:</strong> False<br>
+<strong>manual:</strong> False<br>
+<strong>name:</strong> show_next_pickings<br>
+<strong>readonly:</strong> True<br>
+<strong>required:</strong> False<br>
+<strong>searchable:</strong> False<br>
+<strong>sortable:</strong> False<br>
+<strong>store:</strong> False<br>
+<strong>string:</strong> Show Next Pickings<br>
+<strong>type:</strong> boolean<br>
+</p>
+</section>
+
+<section id="search_date_category" class="card card-body">
+<h4 class="card-title">search_date_category</h4>
+<p>
+<strong>change_default:</strong> False<br>
+<strong>company_dependent:</strong> False<br>
+<strong>default_export_compatible:</strong> False<br>
+<strong>depends:</strong> []<br>
+<strong>exportable:</strong> True<br>
+<strong>groupable:</strong> False<br>
+<strong>manual:</strong> False<br>
+<strong>name:</strong> search_date_category<br>
+<strong>readonly:</strong> True<br>
+<strong>required:</strong> False<br>
+<strong>searchable:</strong> True<br>
+<strong>selection:</strong> [['before', 'Before'], ['yesterday', 'Yesterday'], ['today', 'Today'], ['day_1', 'Tomorrow'], ['day_2', 'The day after tomorrow'], ['after', 'After']]<br>
+<strong>sortable:</strong> False<br>
+<strong>store:</strong> False<br>
+<strong>string:</strong> Date Category<br>
+<strong>type:</strong> selection<br>
+</p>
+</section>
+
+<section id="id" class="card card-body">
+<h4 class="card-title">id</h4>
+<p>
+<strong>change_default:</strong> False<br>
+<strong>company_dependent:</strong> False<br>
+<strong>default_export_compatible:</strong> False<br>
+<strong>depends:</strong> []<br>
+<strong>exportable:</strong> True<br>
+<strong>groupable:</strong> True<br>
+<strong>manual:</strong> False<br>
+<strong>name:</strong> id<br>
+<strong>readonly:</strong> True<br>
+<strong>required:</strong> False<br>
+<strong>searchable:</strong> True<br>
+<strong>sortable:</strong> True<br>
+<strong>store:</strong> True<br>
+<strong>string:</strong> ID<br>
+<strong>type:</strong> integer<br>
+</p>
+</section>
+
+<section id="display_name" class="card card-body">
+<h4 class="card-title">display_name</h4>
+<p>
+<strong>change_default:</strong> False<br>
+<strong>company_dependent:</strong> False<br>
+<strong>default_export_compatible:</strong> False<br>
+<strong>depends:</strong> ['name']<br>
+<strong>exportable:</strong> True<br>
+<strong>groupable:</strong> False<br>
+<strong>manual:</strong> False<br>
+<strong>name:</strong> display_name<br>
+<strong>readonly:</strong> True<br>
+<strong>required:</strong> False<br>
+<strong>searchable:</strong> True<br>
+<strong>sortable:</strong> False<br>
+<strong>store:</strong> False<br>
+<strong>string:</strong> Display Name<br>
+<strong>translate:</strong> False<br>
+<strong>trim:</strong> True<br>
+<strong>type:</strong> char<br>
+</p>
+</section>
+
+<section id="create_uid" class="card card-body">
+<h4 class="card-title">create_uid</h4>
+<p>
+<strong>allow_hierachy_operators:</strong> True<br>
+<strong>change_default:</strong> False<br>
+<strong>company_dependent:</strong> False<br>
+<strong>context:</strong> {}<br>
+<strong>default_export_compatible:</strong> False<br>
+<strong>depends:</strong> []<br>
+<strong>domain:</strong> []<br>
+<strong>exportable:</strong> True<br>
+<strong>groupable:</strong> True<br>
+<strong>manual:</strong> False<br>
+<strong>name:</strong> create_uid<br>
+<strong>readonly:</strong> True<br>
+<strong>relation:</strong> <a class="nav-link" href="../res_users/index.html">res.users</a><br>
+<strong>required:</strong> False<br>
+<strong>searchable:</strong> True<br>
+<strong>sortable:</strong> True<br>
+<strong>store:</strong> True<br>
+<strong>string:</strong> Created by<br>
+<strong>type:</strong> many2one<br>
+</p>
+</section>
+
+<section id="create_date" class="card card-body">
+<h4 class="card-title">create_date</h4>
+<p>
+<strong>change_default:</strong> False<br>
+<strong>company_dependent:</strong> False<br>
+<strong>default_export_compatible:</strong> False<br>
+<strong>depends:</strong> []<br>
+<strong>exportable:</strong> True<br>
+<strong>groupable:</strong> True<br>
+<strong>manual:</strong> False<br>
+<strong>name:</strong> create_date<br>
+<strong>readonly:</strong> True<br>
+<strong>required:</strong> False<br>
+<strong>searchable:</strong> True<br>
+<strong>sortable:</strong> True<br>
+<strong>store:</strong> True<br>
+<strong>string:</strong> Created on<br>
+<strong>type:</strong> datetime<br>
+</p>
+</section>
+
+<section id="write_uid" class="card card-body">
+<h4 class="card-title">write_uid</h4>
+<p>
+<strong>allow_hierachy_operators:</strong> True<br>
+<strong>change_default:</strong> False<br>
+<strong>company_dependent:</strong> False<br>
+<strong>context:</strong> {}<br>
+<strong>default_export_compatible:</strong> False<br>
+<strong>depends:</strong> []<br>
+<strong>domain:</strong> []<br>
+<strong>exportable:</strong> True<br>
+<strong>groupable:</strong> True<br>
+<strong>manual:</strong> False<br>
+<strong>name:</strong> write_uid<br>
+<strong>readonly:</strong> True<br>
+<strong>relation:</strong> <a class="nav-link" href="../res_users/index.html">res.users</a><br>
+<strong>required:</strong> False<br>
+<strong>searchable:</strong> True<br>
+<strong>sortable:</strong> True<br>
+<strong>store:</strong> True<br>
+<strong>string:</strong> Last Updated by<br>
+<strong>type:</strong> many2one<br>
+</p>
+</section>
+
+<section id="write_date" class="card card-body">
+<h4 class="card-title">write_date</h4>
+<p>
+<strong>change_default:</strong> False<br>
+<strong>company_dependent:</strong> False<br>
+<strong>default_export_compatible:</strong> False<br>
+<strong>depends:</strong> []<br>
+<strong>exportable:</strong> True<br>
+<strong>groupable:</strong> True<br>
+<strong>manual:</strong> False<br>
+<strong>name:</strong> write_date<br>
+<strong>readonly:</strong> True<br>
+<strong>required:</strong> False<br>
+<strong>searchable:</strong> True<br>
+<strong>sortable:</strong> True<br>
+<strong>store:</strong> True<br>
+<strong>string:</strong> Last Updated on<br>
+<strong>type:</strong> datetime<br>
+</p>
+</section>
+
+<section id="fsm_order_id" class="card card-body">
+<h4 class="card-title">fsm_order_id</h4>
+<p>
+<strong>allow_hierachy_operators:</strong> False<br>
+<strong>change_default:</strong> False<br>
+<strong>company_dependent:</strong> False<br>
+<strong>context:</strong> {}<br>
+<strong>default_export_compatible:</strong> False<br>
+<strong>depends:</strong> ['group_id.fsm_order_id']<br>
+<strong>domain:</strong> []<br>
+<strong>exportable:</strong> True<br>
+<strong>groupable:</strong> True<br>
+<strong>manual:</strong> False<br>
+<strong>name:</strong> fsm_order_id<br>
+<strong>readonly:</strong> True<br>
+<strong>related:</strong> group_id.fsm_order_id<br>
+<strong>relation:</strong> <a class="nav-link" href="../fsm_order/index.html">fsm.order</a><br>
+<strong>required:</strong> False<br>
+<strong>searchable:</strong> True<br>
+<strong>sortable:</strong> True<br>
+<strong>store:</strong> True<br>
+<strong>string:</strong> Field Service Order<br>
+<strong>type:</strong> many2one<br>
+</p>
+</section>
+
+<section id="country_code" class="card card-body">
+<h4 class="card-title">country_code</h4>
+<p>
+<strong>change_default:</strong> False<br>
+<strong>company_dependent:</strong> False<br>
+<strong>default_export_compatible:</strong> False<br>
+<strong>depends:</strong> ['company_id.account_fiscal_country_id.code']<br>
+<strong>exportable:</strong> True<br>
+<strong>groupable:</strong> True<br>
+<strong>help:</strong> The ISO country code in two chars. 
+You can use this field for quick search.<br>
+<strong>manual:</strong> False<br>
+<strong>name:</strong> country_code<br>
+<strong>readonly:</strong> True<br>
+<strong>related:</strong> company_id.account_fiscal_country_id.code<br>
+<strong>required:</strong> False<br>
+<strong>searchable:</strong> True<br>
+<strong>size:</strong> 2<br>
+<strong>sortable:</strong> True<br>
+<strong>store:</strong> False<br>
+<strong>string:</strong> Country Code<br>
+<strong>translate:</strong> False<br>
+<strong>trim:</strong> True<br>
+<strong>type:</strong> char<br>
+</p>
+</section>
+
+<section id="sale_id" class="card card-body">
+<h4 class="card-title">sale_id</h4>
+<p>
+<strong>allow_hierachy_operators:</strong> False<br>
+<strong>change_default:</strong> False<br>
+<strong>company_dependent:</strong> False<br>
+<strong>context:</strong> {}<br>
+<strong>default_export_compatible:</strong> False<br>
+<strong>depends:</strong> ['group_id']<br>
+<strong>domain:</strong> []<br>
+<strong>exportable:</strong> True<br>
+<strong>groupable:</strong> True<br>
+<strong>manual:</strong> False<br>
+<strong>name:</strong> sale_id<br>
+<strong>readonly:</strong> False<br>
+<strong>relation:</strong> <a class="nav-link" href="../sale_order/index.html">sale.order</a><br>
+<strong>required:</strong> False<br>
+<strong>searchable:</strong> True<br>
+<strong>sortable:</strong> True<br>
+<strong>store:</strong> True<br>
+<strong>string:</strong> Sales Order<br>
+<strong>type:</strong> many2one<br>
+</p>
+</section>
+
+
+      </div>
+    </div>
+
+  </div>
+  <!-- Content end -->
+
+  <!-- Footer
+  ============================ -->
+  <footer id="footer" class="section bg-dark footer-text-light">
+    <div class="container">
+      <ul class="social-icons social-icons-lg social-icons-muted justify-content-center mb-3">
+        <li><a data-toggle="tooltip" href="https://twitter.com/harnishdesign/" target="_blank" title=""
+            data-original-title="Twitter"><i class="fab fa-twitter"></i></a></li>
+        <li><a data-toggle="tooltip" href="http://www.facebook.com/harnishdesign/" target="_blank" title=""
+            data-original-title="Facebook"><i class="fab fa-facebook-f"></i></a></li>
+        <li><a data-toggle="tooltip" href="http://www.dribbble.com/harnishdesign/" target="_blank" title=""
+            data-original-title="Dribbble"><i class="fab fa-dribbble"></i></a></li>
+        <li><a data-toggle="tooltip" href="http://www.github.com/" target="_blank" title=""
+            data-original-title="GitHub"><i class="fab fa-github"></i></a></li>
+      </ul>
+      <p class="text-center">Copyright &copy; 2020 <a
+          href="http://www.harnishdesign.net/idocs-one-page-documentation-html-template/">iDocs</a>. All Rights
+        Reserved.</p>
+      <p class="text-2 text-center mb-0">Design &amp; Develop by <a class="btn-link" target="_blank"
+          href="http://www.harnishdesign.net/">HarnishDesign</a>.</p>
+    </div>
+  </footer>
+  <!-- Footer end -->
+
+  </div>
+  <!-- Document Wrapper end -->
+
+  <!-- Back To Top -->
+  <a id="back-to-top" data-toggle="tooltip" title="Back to Top" href="javascript:void(0)"><i
+      class="fa fa-chevron-up"></i></a>
+
+  <!-- JavaScript
+============================ -->
+  <script src="../../assets/vendor/jquery/jquery.min.js"></script>
+  <script src="../../assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <!-- Highlight JS -->
+  <script src="../../assets/vendor/highlight.js/highlight.min.js"></script>
+  <!-- Easing -->
+  <script src="../../assets/vendor/jquery.easing/jquery.easing.min.js"></script>
+  <!-- Magnific Popup -->
+  <script src="../../assets/vendor/magnific-popup/jquery.magnific-popup.min.js"></script>
+  <!-- Custom Script -->
+  <script src="../../assets/js/theme.js"></script>
+</body>
+
+</html>

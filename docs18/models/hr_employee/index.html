@@ -1,0 +1,3761 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1.0, shrink-to-fit=no">
+  <link href="../../assets/images/odoo_doc.png" rel="icon" />
+  <title>Odoo API Documentation</title>
+  <meta name="description" content="Your ThemeForest item Name and description">
+  <meta name="author" content="harnishdesign.net">
+
+  <!-- Stylesheet
+============================== -->
+  <!-- Bootstrap -->
+  <link rel="stylesheet" type="text/css" href="../../assets/vendor/bootstrap/css/bootstrap.min.css" />
+  <!-- Font Awesome Icon -->
+  <link rel="stylesheet" type="text/css" href="../../assets/vendor/font-awesome/css/all.min.css" />
+  <!-- Magnific Popup -->
+  <link rel="stylesheet" type="text/css" href="../../assets/vendor/magnific-popup/magnific-popup.min.css" />
+  <!-- Highlight Syntax -->
+  <link rel="stylesheet" type="text/css" href="../../assets/vendor/highlight.js/styles/github.css" />
+  <!-- Custom Stylesheet -->
+  <link rel="stylesheet" type="text/css" href="../../assets/css/stylesheet.css" />
+</head>
+
+<body data-spy="scroll" data-target=".idocs-navigation" data-offset="125">
+
+  <!-- Preloader -->
+  <div class="preloader">
+    <div class="lds-ellipsis">
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+    </div>
+  </div>
+  <!-- Preloader End -->
+
+  <!-- Document Wrapper   
+=============================== -->
+  <div id="main-wrapper">
+
+  <!-- Header
+  ============================ -->
+  <header id="header" class="sticky-top">
+    <!-- Navbar -->
+    <nav class="primary-menu navbar navbar-expand-lg navbar-dropdown-dark">
+      <div class="container-fluid">
+        <!-- Sidebar Toggler -->
+		<button id="sidebarCollapse" class="navbar-toggler d-block d-md-none" type="button"><span></span><span class="w-75"></span><span class="w-50"></span></button>
+
+		<!-- Logo -->
+        <a class="logo ml-md-3" href="index.html" title="iDocs Template"> <img src="../../assets/images/odoo_doc.png" alt="iDocs Template"/> </a>
+		<span class="text-2 ml-2">v1.0</span>
+        <!-- Logo End -->
+
+		<!-- Navbar Toggler -->
+		<button class="navbar-toggler ml-auto" type="button" data-toggle="collapse" data-target="#header-nav"><span></span><span></span><span></span></button>
+
+		<div id="header-nav" class="collapse navbar-collapse justify-content-end">
+          <ul class="navbar-nav">
+            <li class="dropdown"> <a class="dropdown-toggle" href="#">Navigation</a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="index.html">ir.model</a></li>
+                <li><a class="dropdown-item" href="odoo_operators.html">operators</a></li>
+              </ul>
+            </li>
+            <li><a target="_blank" href="https://themeforest.net/user/harnishdesign/#contact?ref=HarnishDesign">Support</a></li>
+          </ul>
+        </div>
+        <ul class="social-icons social-icons-sm ml-lg-2 mr-2">
+          <li class="social-icons-twitter"><a data-toggle="tooltip" href="http://www.twitter.com/harnishdesign/" target="_blank" title="" data-original-title="Twitter"><i class="fab fa-twitter"></i></a></li>
+        </ul>
+      </div>
+    </nav>
+    <!-- Navbar End -->
+  </header>
+  <!-- Header End -->
+
+  <!-- Content
+  ============================ -->
+  <div id="content" role="main">
+
+    <!-- Sidebar Navigation
+	============================ -->
+    <div class="idocs-navigation bg-light">
+        <ul class="nav flex-column">
+          <li class="nav-item"><a class="nav-link" href="#image_1920">image_1920</a></li>
+<li class="nav-item"><a class="nav-link" href="#image_1024">image_1024</a></li>
+<li class="nav-item"><a class="nav-link" href="#image_512">image_512</a></li>
+<li class="nav-item"><a class="nav-link" href="#image_256">image_256</a></li>
+<li class="nav-item"><a class="nav-link" href="#image_128">image_128</a></li>
+<li class="nav-item"><a class="nav-link" href="#avatar_1920">avatar_1920</a></li>
+<li class="nav-item"><a class="nav-link" href="#avatar_1024">avatar_1024</a></li>
+<li class="nav-item"><a class="nav-link" href="#avatar_512">avatar_512</a></li>
+<li class="nav-item"><a class="nav-link" href="#avatar_256">avatar_256</a></li>
+<li class="nav-item"><a class="nav-link" href="#avatar_128">avatar_128</a></li>
+<li class="nav-item"><a class="nav-link" href="#resource_id">resource_id</a></li>
+<li class="nav-item"><a class="nav-link" href="#company_id">company_id</a></li>
+<li class="nav-item"><a class="nav-link" href="#resource_calendar_id">resource_calendar_id</a></li>
+<li class="nav-item"><a class="nav-link" href="#tz">tz</a></li>
+<li class="nav-item"><a class="nav-link" href="#activity_ids">activity_ids</a></li>
+<li class="nav-item"><a class="nav-link" href="#activity_state">activity_state</a></li>
+<li class="nav-item"><a class="nav-link" href="#activity_user_id">activity_user_id</a></li>
+<li class="nav-item"><a class="nav-link" href="#activity_type_id">activity_type_id</a></li>
+<li class="nav-item"><a class="nav-link" href="#activity_type_icon">activity_type_icon</a></li>
+<li class="nav-item"><a class="nav-link" href="#activity_date_deadline">activity_date_deadline</a></li>
+<li class="nav-item"><a class="nav-link" href="#my_activity_date_deadline">my_activity_date_deadline</a></li>
+<li class="nav-item"><a class="nav-link" href="#activity_summary">activity_summary</a></li>
+<li class="nav-item"><a class="nav-link" href="#activity_exception_decoration">activity_exception_decoration</a></li>
+<li class="nav-item"><a class="nav-link" href="#activity_exception_icon">activity_exception_icon</a></li>
+<li class="nav-item"><a class="nav-link" href="#activity_calendar_event_id">activity_calendar_event_id</a></li>
+<li class="nav-item"><a class="nav-link" href="#message_is_follower">message_is_follower</a></li>
+<li class="nav-item"><a class="nav-link" href="#message_follower_ids">message_follower_ids</a></li>
+<li class="nav-item"><a class="nav-link" href="#message_partner_ids">message_partner_ids</a></li>
+<li class="nav-item"><a class="nav-link" href="#message_ids">message_ids</a></li>
+<li class="nav-item"><a class="nav-link" href="#has_message">has_message</a></li>
+<li class="nav-item"><a class="nav-link" href="#message_needaction">message_needaction</a></li>
+<li class="nav-item"><a class="nav-link" href="#message_needaction_counter">message_needaction_counter</a></li>
+<li class="nav-item"><a class="nav-link" href="#message_has_error">message_has_error</a></li>
+<li class="nav-item"><a class="nav-link" href="#message_has_error_counter">message_has_error_counter</a></li>
+<li class="nav-item"><a class="nav-link" href="#message_attachment_count">message_attachment_count</a></li>
+<li class="nav-item"><a class="nav-link" href="#website_message_ids">website_message_ids</a></li>
+<li class="nav-item"><a class="nav-link" href="#message_has_sms_error">message_has_sms_error</a></li>
+<li class="nav-item"><a class="nav-link" href="#message_main_attachment_id">message_main_attachment_id</a></li>
+<li class="nav-item"><a class="nav-link" href="#name">name</a></li>
+<li class="nav-item"><a class="nav-link" href="#active">active</a></li>
+<li class="nav-item"><a class="nav-link" href="#color">color</a></li>
+<li class="nav-item"><a class="nav-link" href="#department_id">department_id</a></li>
+<li class="nav-item"><a class="nav-link" href="#member_of_department">member_of_department</a></li>
+<li class="nav-item"><a class="nav-link" href="#job_id">job_id</a></li>
+<li class="nav-item"><a class="nav-link" href="#job_title">job_title</a></li>
+<li class="nav-item"><a class="nav-link" href="#address_id">address_id</a></li>
+<li class="nav-item"><a class="nav-link" href="#work_phone">work_phone</a></li>
+<li class="nav-item"><a class="nav-link" href="#phone">phone</a></li>
+<li class="nav-item"><a class="nav-link" href="#mobile_phone">mobile_phone</a></li>
+<li class="nav-item"><a class="nav-link" href="#work_email">work_email</a></li>
+<li class="nav-item"><a class="nav-link" href="#email">email</a></li>
+<li class="nav-item"><a class="nav-link" href="#work_contact_id">work_contact_id</a></li>
+<li class="nav-item"><a class="nav-link" href="#work_location_id">work_location_id</a></li>
+<li class="nav-item"><a class="nav-link" href="#work_location_name">work_location_name</a></li>
+<li class="nav-item"><a class="nav-link" href="#work_location_type">work_location_type</a></li>
+<li class="nav-item"><a class="nav-link" href="#user_id">user_id</a></li>
+<li class="nav-item"><a class="nav-link" href="#share">share</a></li>
+<li class="nav-item"><a class="nav-link" href="#is_flexible">is_flexible</a></li>
+<li class="nav-item"><a class="nav-link" href="#is_fully_flexible">is_fully_flexible</a></li>
+<li class="nav-item"><a class="nav-link" href="#parent_id">parent_id</a></li>
+<li class="nav-item"><a class="nav-link" href="#coach_id">coach_id</a></li>
+<li class="nav-item"><a class="nav-link" href="#hr_presence_state">hr_presence_state</a></li>
+<li class="nav-item"><a class="nav-link" href="#last_activity">last_activity</a></li>
+<li class="nav-item"><a class="nav-link" href="#last_activity_time">last_activity_time</a></li>
+<li class="nav-item"><a class="nav-link" href="#hr_icon_display">hr_icon_display</a></li>
+<li class="nav-item"><a class="nav-link" href="#show_hr_icon_display">show_hr_icon_display</a></li>
+<li class="nav-item"><a class="nav-link" href="#im_status">im_status</a></li>
+<li class="nav-item"><a class="nav-link" href="#newly_hired">newly_hired</a></li>
+<li class="nav-item"><a class="nav-link" href="#child_all_count">child_all_count</a></li>
+<li class="nav-item"><a class="nav-link" href="#department_color">department_color</a></li>
+<li class="nav-item"><a class="nav-link" href="#child_count">child_count</a></li>
+<li class="nav-item"><a class="nav-link" href="#user_partner_id">user_partner_id</a></li>
+<li class="nav-item"><a class="nav-link" href="#company_country_id">company_country_id</a></li>
+<li class="nav-item"><a class="nav-link" href="#company_country_code">company_country_code</a></li>
+<li class="nav-item"><a class="nav-link" href="#private_street">private_street</a></li>
+<li class="nav-item"><a class="nav-link" href="#private_street2">private_street2</a></li>
+<li class="nav-item"><a class="nav-link" href="#private_city">private_city</a></li>
+<li class="nav-item"><a class="nav-link" href="#private_state_id">private_state_id</a></li>
+<li class="nav-item"><a class="nav-link" href="#private_zip">private_zip</a></li>
+<li class="nav-item"><a class="nav-link" href="#private_country_id">private_country_id</a></li>
+<li class="nav-item"><a class="nav-link" href="#private_phone">private_phone</a></li>
+<li class="nav-item"><a class="nav-link" href="#private_email">private_email</a></li>
+<li class="nav-item"><a class="nav-link" href="#lang">lang</a></li>
+<li class="nav-item"><a class="nav-link" href="#country_id">country_id</a></li>
+<li class="nav-item"><a class="nav-link" href="#gender">gender</a></li>
+<li class="nav-item"><a class="nav-link" href="#marital">marital</a></li>
+<li class="nav-item"><a class="nav-link" href="#spouse_complete_name">spouse_complete_name</a></li>
+<li class="nav-item"><a class="nav-link" href="#spouse_birthdate">spouse_birthdate</a></li>
+<li class="nav-item"><a class="nav-link" href="#children">children</a></li>
+<li class="nav-item"><a class="nav-link" href="#place_of_birth">place_of_birth</a></li>
+<li class="nav-item"><a class="nav-link" href="#country_of_birth">country_of_birth</a></li>
+<li class="nav-item"><a class="nav-link" href="#birthday">birthday</a></li>
+<li class="nav-item"><a class="nav-link" href="#ssnid">ssnid</a></li>
+<li class="nav-item"><a class="nav-link" href="#sinid">sinid</a></li>
+<li class="nav-item"><a class="nav-link" href="#identification_id">identification_id</a></li>
+<li class="nav-item"><a class="nav-link" href="#passport_id">passport_id</a></li>
+<li class="nav-item"><a class="nav-link" href="#bank_account_id">bank_account_id</a></li>
+<li class="nav-item"><a class="nav-link" href="#permit_no">permit_no</a></li>
+<li class="nav-item"><a class="nav-link" href="#visa_no">visa_no</a></li>
+<li class="nav-item"><a class="nav-link" href="#visa_expire">visa_expire</a></li>
+<li class="nav-item"><a class="nav-link" href="#work_permit_expiration_date">work_permit_expiration_date</a></li>
+<li class="nav-item"><a class="nav-link" href="#has_work_permit">has_work_permit</a></li>
+<li class="nav-item"><a class="nav-link" href="#work_permit_scheduled_activity">work_permit_scheduled_activity</a></li>
+<li class="nav-item"><a class="nav-link" href="#work_permit_name">work_permit_name</a></li>
+<li class="nav-item"><a class="nav-link" href="#additional_note">additional_note</a></li>
+<li class="nav-item"><a class="nav-link" href="#certificate">certificate</a></li>
+<li class="nav-item"><a class="nav-link" href="#study_field">study_field</a></li>
+<li class="nav-item"><a class="nav-link" href="#study_school">study_school</a></li>
+<li class="nav-item"><a class="nav-link" href="#emergency_contact">emergency_contact</a></li>
+<li class="nav-item"><a class="nav-link" href="#emergency_phone">emergency_phone</a></li>
+<li class="nav-item"><a class="nav-link" href="#distance_home_work">distance_home_work</a></li>
+<li class="nav-item"><a class="nav-link" href="#km_home_work">km_home_work</a></li>
+<li class="nav-item"><a class="nav-link" href="#distance_home_work_unit">distance_home_work_unit</a></li>
+<li class="nav-item"><a class="nav-link" href="#employee_type">employee_type</a></li>
+<li class="nav-item"><a class="nav-link" href="#child_ids">child_ids</a></li>
+<li class="nav-item"><a class="nav-link" href="#category_ids">category_ids</a></li>
+<li class="nav-item"><a class="nav-link" href="#notes">notes</a></li>
+<li class="nav-item"><a class="nav-link" href="#barcode">barcode</a></li>
+<li class="nav-item"><a class="nav-link" href="#pin">pin</a></li>
+<li class="nav-item"><a class="nav-link" href="#departure_reason_id">departure_reason_id</a></li>
+<li class="nav-item"><a class="nav-link" href="#departure_description">departure_description</a></li>
+<li class="nav-item"><a class="nav-link" href="#departure_date">departure_date</a></li>
+<li class="nav-item"><a class="nav-link" href="#id_card">id_card</a></li>
+<li class="nav-item"><a class="nav-link" href="#driving_license">driving_license</a></li>
+<li class="nav-item"><a class="nav-link" href="#private_car_plate">private_car_plate</a></li>
+<li class="nav-item"><a class="nav-link" href="#currency_id">currency_id</a></li>
+<li class="nav-item"><a class="nav-link" href="#related_partners_count">related_partners_count</a></li>
+<li class="nav-item"><a class="nav-link" href="#employee_properties">employee_properties</a></li>
+<li class="nav-item"><a class="nav-link" href="#id">id</a></li>
+<li class="nav-item"><a class="nav-link" href="#display_name">display_name</a></li>
+<li class="nav-item"><a class="nav-link" href="#create_uid">create_uid</a></li>
+<li class="nav-item"><a class="nav-link" href="#create_date">create_date</a></li>
+<li class="nav-item"><a class="nav-link" href="#write_uid">write_uid</a></li>
+<li class="nav-item"><a class="nav-link" href="#write_date">write_date</a></li>
+<li class="nav-item"><a class="nav-link" href="#employee_cars_count">employee_cars_count</a></li>
+<li class="nav-item"><a class="nav-link" href="#car_ids">car_ids</a></li>
+<li class="nav-item"><a class="nav-link" href="#license_plate">license_plate</a></li>
+<li class="nav-item"><a class="nav-link" href="#mobility_card">mobility_card</a></li>
+<li class="nav-item"><a class="nav-link" href="#equipment_ids">equipment_ids</a></li>
+<li class="nav-item"><a class="nav-link" href="#equipment_count">equipment_count</a></li>
+<li class="nav-item"><a class="nav-link" href="#subordinate_ids">subordinate_ids</a></li>
+<li class="nav-item"><a class="nav-link" href="#is_subordinate">is_subordinate</a></li>
+<li class="nav-item"><a class="nav-link" href="#resume_line_ids">resume_line_ids</a></li>
+<li class="nav-item"><a class="nav-link" href="#employee_skill_ids">employee_skill_ids</a></li>
+<li class="nav-item"><a class="nav-link" href="#skill_ids">skill_ids</a></li>
+
+        </ul>
+    </div>
+
+    <!-- Docs Content
+	============================ -->
+    <div class="idocs-content">
+      <div class="container">
+        <h2>hr.employee</h2>
+<section id="image_1920" class="card card-body">
+<h4 class="card-title">image_1920</h4>
+<p>
+<strong>attachment:</strong> True<br>
+<strong>change_default:</strong> False<br>
+<strong>company_dependent:</strong> False<br>
+<strong>default_export_compatible:</strong> False<br>
+<strong>depends:</strong> []<br>
+<strong>exportable:</strong> True<br>
+<strong>groupable:</strong> False<br>
+<strong>manual:</strong> False<br>
+<strong>name:</strong> image_1920<br>
+<strong>readonly:</strong> False<br>
+<strong>required:</strong> False<br>
+<strong>searchable:</strong> True<br>
+<strong>sortable:</strong> False<br>
+<strong>store:</strong> True<br>
+<strong>string:</strong> Image<br>
+<strong>type:</strong> binary<br>
+</p>
+</section>
+
+<section id="image_1024" class="card card-body">
+<h4 class="card-title">image_1024</h4>
+<p>
+<strong>attachment:</strong> True<br>
+<strong>change_default:</strong> False<br>
+<strong>company_dependent:</strong> False<br>
+<strong>default_export_compatible:</strong> False<br>
+<strong>depends:</strong> ['image_1920']<br>
+<strong>exportable:</strong> True<br>
+<strong>groupable:</strong> False<br>
+<strong>manual:</strong> False<br>
+<strong>name:</strong> image_1024<br>
+<strong>readonly:</strong> True<br>
+<strong>related:</strong> image_1920<br>
+<strong>required:</strong> False<br>
+<strong>searchable:</strong> True<br>
+<strong>sortable:</strong> False<br>
+<strong>store:</strong> True<br>
+<strong>string:</strong> Image 1024<br>
+<strong>type:</strong> binary<br>
+</p>
+</section>
+
+<section id="image_512" class="card card-body">
+<h4 class="card-title">image_512</h4>
+<p>
+<strong>attachment:</strong> True<br>
+<strong>change_default:</strong> False<br>
+<strong>company_dependent:</strong> False<br>
+<strong>default_export_compatible:</strong> False<br>
+<strong>depends:</strong> ['image_1920']<br>
+<strong>exportable:</strong> True<br>
+<strong>groupable:</strong> False<br>
+<strong>manual:</strong> False<br>
+<strong>name:</strong> image_512<br>
+<strong>readonly:</strong> True<br>
+<strong>related:</strong> image_1920<br>
+<strong>required:</strong> False<br>
+<strong>searchable:</strong> True<br>
+<strong>sortable:</strong> False<br>
+<strong>store:</strong> True<br>
+<strong>string:</strong> Image 512<br>
+<strong>type:</strong> binary<br>
+</p>
+</section>
+
+<section id="image_256" class="card card-body">
+<h4 class="card-title">image_256</h4>
+<p>
+<strong>attachment:</strong> True<br>
+<strong>change_default:</strong> False<br>
+<strong>company_dependent:</strong> False<br>
+<strong>default_export_compatible:</strong> False<br>
+<strong>depends:</strong> ['image_1920']<br>
+<strong>exportable:</strong> True<br>
+<strong>groupable:</strong> False<br>
+<strong>manual:</strong> False<br>
+<strong>name:</strong> image_256<br>
+<strong>readonly:</strong> True<br>
+<strong>related:</strong> image_1920<br>
+<strong>required:</strong> False<br>
+<strong>searchable:</strong> True<br>
+<strong>sortable:</strong> False<br>
+<strong>store:</strong> True<br>
+<strong>string:</strong> Image 256<br>
+<strong>type:</strong> binary<br>
+</p>
+</section>
+
+<section id="image_128" class="card card-body">
+<h4 class="card-title">image_128</h4>
+<p>
+<strong>attachment:</strong> True<br>
+<strong>change_default:</strong> False<br>
+<strong>company_dependent:</strong> False<br>
+<strong>default_export_compatible:</strong> False<br>
+<strong>depends:</strong> ['image_1920']<br>
+<strong>exportable:</strong> True<br>
+<strong>groupable:</strong> False<br>
+<strong>manual:</strong> False<br>
+<strong>name:</strong> image_128<br>
+<strong>readonly:</strong> True<br>
+<strong>related:</strong> image_1920<br>
+<strong>required:</strong> False<br>
+<strong>searchable:</strong> True<br>
+<strong>sortable:</strong> False<br>
+<strong>store:</strong> True<br>
+<strong>string:</strong> Image 128<br>
+<strong>type:</strong> binary<br>
+</p>
+</section>
+
+<section id="avatar_1920" class="card card-body">
+<h4 class="card-title">avatar_1920</h4>
+<p>
+<strong>attachment:</strong> False<br>
+<strong>change_default:</strong> False<br>
+<strong>company_dependent:</strong> False<br>
+<strong>default_export_compatible:</strong> False<br>
+<strong>depends:</strong> ['name', 'user_id.avatar_1920', 'image_1920', 'name', 'image_1920']<br>
+<strong>exportable:</strong> True<br>
+<strong>groupable:</strong> False<br>
+<strong>manual:</strong> False<br>
+<strong>name:</strong> avatar_1920<br>
+<strong>readonly:</strong> True<br>
+<strong>required:</strong> False<br>
+<strong>searchable:</strong> False<br>
+<strong>sortable:</strong> False<br>
+<strong>store:</strong> False<br>
+<strong>string:</strong> Avatar<br>
+<strong>type:</strong> binary<br>
+</p>
+</section>
+
+<section id="avatar_1024" class="card card-body">
+<h4 class="card-title">avatar_1024</h4>
+<p>
+<strong>attachment:</strong> False<br>
+<strong>change_default:</strong> False<br>
+<strong>company_dependent:</strong> False<br>
+<strong>default_export_compatible:</strong> False<br>
+<strong>depends:</strong> ['name', 'user_id.avatar_1024', 'image_1024', 'name', 'image_1024']<br>
+<strong>exportable:</strong> True<br>
+<strong>groupable:</strong> False<br>
+<strong>manual:</strong> False<br>
+<strong>name:</strong> avatar_1024<br>
+<strong>readonly:</strong> True<br>
+<strong>required:</strong> False<br>
+<strong>searchable:</strong> False<br>
+<strong>sortable:</strong> False<br>
+<strong>store:</strong> False<br>
+<strong>string:</strong> Avatar 1024<br>
+<strong>type:</strong> binary<br>
+</p>
+</section>
+
+<section id="avatar_512" class="card card-body">
+<h4 class="card-title">avatar_512</h4>
+<p>
+<strong>attachment:</strong> False<br>
+<strong>change_default:</strong> False<br>
+<strong>company_dependent:</strong> False<br>
+<strong>default_export_compatible:</strong> False<br>
+<strong>depends:</strong> ['name', 'user_id.avatar_512', 'image_512', 'name', 'image_512']<br>
+<strong>exportable:</strong> True<br>
+<strong>groupable:</strong> False<br>
+<strong>manual:</strong> False<br>
+<strong>name:</strong> avatar_512<br>
+<strong>readonly:</strong> True<br>
+<strong>required:</strong> False<br>
+<strong>searchable:</strong> False<br>
+<strong>sortable:</strong> False<br>
+<strong>store:</strong> False<br>
+<strong>string:</strong> Avatar 512<br>
+<strong>type:</strong> binary<br>
+</p>
+</section>
+
+<section id="avatar_256" class="card card-body">
+<h4 class="card-title">avatar_256</h4>
+<p>
+<strong>attachment:</strong> False<br>
+<strong>change_default:</strong> False<br>
+<strong>company_dependent:</strong> False<br>
+<strong>default_export_compatible:</strong> False<br>
+<strong>depends:</strong> ['name', 'user_id.avatar_256', 'image_256', 'name', 'image_256']<br>
+<strong>exportable:</strong> True<br>
+<strong>groupable:</strong> False<br>
+<strong>manual:</strong> False<br>
+<strong>name:</strong> avatar_256<br>
+<strong>readonly:</strong> True<br>
+<strong>required:</strong> False<br>
+<strong>searchable:</strong> False<br>
+<strong>sortable:</strong> False<br>
+<strong>store:</strong> False<br>
+<strong>string:</strong> Avatar 256<br>
+<strong>type:</strong> binary<br>
+</p>
+</section>
+
+<section id="avatar_128" class="card card-body">
+<h4 class="card-title">avatar_128</h4>
+<p>
+<strong>attachment:</strong> False<br>
+<strong>change_default:</strong> False<br>
+<strong>company_dependent:</strong> False<br>
+<strong>default_export_compatible:</strong> False<br>
+<strong>depends:</strong> ['name', 'user_id.avatar_128', 'image_128', 'name', 'image_128']<br>
+<strong>exportable:</strong> True<br>
+<strong>groupable:</strong> False<br>
+<strong>manual:</strong> False<br>
+<strong>name:</strong> avatar_128<br>
+<strong>readonly:</strong> True<br>
+<strong>required:</strong> False<br>
+<strong>searchable:</strong> False<br>
+<strong>sortable:</strong> False<br>
+<strong>store:</strong> False<br>
+<strong>string:</strong> Avatar 128<br>
+<strong>type:</strong> binary<br>
+</p>
+</section>
+
+<section id="resource_id" class="card card-body">
+<h4 class="card-title">resource_id</h4>
+<p>
+<strong>allow_hierachy_operators:</strong> False<br>
+<strong>change_default:</strong> False<br>
+<strong>company_dependent:</strong> False<br>
+<strong>context:</strong> {}<br>
+<strong>default_export_compatible:</strong> False<br>
+<strong>depends:</strong> []<br>
+<strong>domain:</strong> []<br>
+<strong>exportable:</strong> True<br>
+<strong>groupable:</strong> True<br>
+<strong>manual:</strong> False<br>
+<strong>name:</strong> resource_id<br>
+<strong>readonly:</strong> False<br>
+<strong>relation:</strong> <a class="nav-link" href="../resource_resource/index.html">resource.resource</a><br>
+<strong>required:</strong> True<br>
+<strong>searchable:</strong> True<br>
+<strong>sortable:</strong> True<br>
+<strong>store:</strong> True<br>
+<strong>string:</strong> Resource<br>
+<strong>type:</strong> many2one<br>
+</p>
+</section>
+
+<section id="company_id" class="card card-body">
+<h4 class="card-title">company_id</h4>
+<p>
+<strong>allow_hierachy_operators:</strong> True<br>
+<strong>change_default:</strong> False<br>
+<strong>company_dependent:</strong> False<br>
+<strong>context:</strong> {}<br>
+<strong>default_export_compatible:</strong> False<br>
+<strong>depends:</strong> ['resource_id.company_id']<br>
+<strong>domain:</strong> []<br>
+<strong>exportable:</strong> True<br>
+<strong>groupable:</strong> True<br>
+<strong>manual:</strong> False<br>
+<strong>name:</strong> company_id<br>
+<strong>readonly:</strong> False<br>
+<strong>related:</strong> resource_id.company_id<br>
+<strong>relation:</strong> <a class="nav-link" href="../res_company/index.html">res.company</a><br>
+<strong>required:</strong> True<br>
+<strong>searchable:</strong> True<br>
+<strong>sortable:</strong> True<br>
+<strong>store:</strong> True<br>
+<strong>string:</strong> Company<br>
+<strong>type:</strong> many2one<br>
+</p>
+</section>
+
+<section id="resource_calendar_id" class="card card-body">
+<h4 class="card-title">resource_calendar_id</h4>
+<p>
+<strong>allow_hierachy_operators:</strong> False<br>
+<strong>change_default:</strong> False<br>
+<strong>company_dependent:</strong> False<br>
+<strong>context:</strong> {}<br>
+<strong>default_export_compatible:</strong> False<br>
+<strong>depends:</strong> ['resource_id.calendar_id']<br>
+<strong>domain:</strong> (company_id and [('company_id', 'in', [company_id] + [False])] or [('company_id', '=', False)]) + ([])<br>
+<strong>exportable:</strong> True<br>
+<strong>groupable:</strong> True<br>
+<strong>help:</strong> Define the working schedule of the resource. If not set, the resource will have fully flexible working hours.<br>
+<strong>manual:</strong> False<br>
+<strong>name:</strong> resource_calendar_id<br>
+<strong>readonly:</strong> False<br>
+<strong>related:</strong> resource_id.calendar_id<br>
+<strong>relation:</strong> <a class="nav-link" href="../resource_calendar/index.html">resource.calendar</a><br>
+<strong>required:</strong> False<br>
+<strong>searchable:</strong> True<br>
+<strong>sortable:</strong> True<br>
+<strong>store:</strong> True<br>
+<strong>string:</strong> Working Hours<br>
+<strong>type:</strong> many2one<br>
+</p>
+</section>
+
+<section id="tz" class="card card-body">
+<h4 class="card-title">tz</h4>
+<p>
+<strong>change_default:</strong> False<br>
+<strong>company_dependent:</strong> False<br>
+<strong>default_export_compatible:</strong> False<br>
+<strong>depends:</strong> ['resource_id.tz']<br>
+<strong>exportable:</strong> True<br>
+<strong>groupable:</strong> True<br>
+<strong>help:</strong> This field is used in order to define in which timezone the employee will work.<br>
+<strong>manual:</strong> False<br>
+<strong>name:</strong> tz<br>
+<strong>readonly:</strong> False<br>
+<strong>related:</strong> resource_id.tz<br>
+<strong>required:</strong> False<br>
+<strong>searchable:</strong> True<br>
+<strong>selection:</strong> [['Africa/Abidjan', 'Africa/Abidjan'], ['Africa/Accra', 'Africa/Accra'], ['Africa/Addis_Ababa', 'Africa/Addis_Ababa'], ['Africa/Algiers', 'Africa/Algiers'], ['Africa/Asmara', 'Africa/Asmara'], ['Africa/Asmera', 'Africa/Asmera'], ['Africa/Bamako', 'Africa/Bamako'], ['Africa/Bangui', 'Africa/Bangui'], ['Africa/Banjul', 'Africa/Banjul'], ['Africa/Bissau', 'Africa/Bissau'], ['Africa/Blantyre', 'Africa/Blantyre'], ['Africa/Brazzaville', 'Africa/Brazzaville'], ['Africa/Bujumbura', 'Africa/Bujumbura'], ['Africa/Cairo', 'Africa/Cairo'], ['Africa/Casablanca', 'Africa/Casablanca'], ['Africa/Ceuta', 'Africa/Ceuta'], ['Africa/Conakry', 'Africa/Conakry'], ['Africa/Dakar', 'Africa/Dakar'], ['Africa/Dar_es_Salaam', 'Africa/Dar_es_Salaam'], ['Africa/Djibouti', 'Africa/Djibouti'], ['Africa/Douala', 'Africa/Douala'], ['Africa/El_Aaiun', 'Africa/El_Aaiun'], ['Africa/Freetown', 'Africa/Freetown'], ['Africa/Gaborone', 'Africa/Gaborone'], ['Africa/Harare', 'Africa/Harare'], ['Africa/Johannesburg', 'Africa/Johannesburg'], ['Africa/Juba', 'Africa/Juba'], ['Africa/Kampala', 'Africa/Kampala'], ['Africa/Khartoum', 'Africa/Khartoum'], ['Africa/Kigali', 'Africa/Kigali'], ['Africa/Kinshasa', 'Africa/Kinshasa'], ['Africa/Lagos', 'Africa/Lagos'], ['Africa/Libreville', 'Africa/Libreville'], ['Africa/Lome', 'Africa/Lome'], ['Africa/Luanda', 'Africa/Luanda'], ['Africa/Lubumbashi', 'Africa/Lubumbashi'], ['Africa/Lusaka', 'Africa/Lusaka'], ['Africa/Malabo', 'Africa/Malabo'], ['Africa/Maputo', 'Africa/Maputo'], ['Africa/Maseru', 'Africa/Maseru'], ['Africa/Mbabane', 'Africa/Mbabane'], ['Africa/Mogadishu', 'Africa/Mogadishu'], ['Africa/Monrovia', 'Africa/Monrovia'], ['Africa/Nairobi', 'Africa/Nairobi'], ['Africa/Ndjamena', 'Africa/Ndjamena'], ['Africa/Niamey', 'Africa/Niamey'], ['Africa/Nouakchott', 'Africa/Nouakchott'], ['Africa/Ouagadougou', 'Africa/Ouagadougou'], ['Africa/Porto-Novo', 'Africa/Porto-Novo'], ['Africa/Sao_Tome', 'Africa/Sao_Tome'], ['Africa/Timbuktu', 'Africa/Timbuktu'], ['Africa/Tripoli', 'Africa/Tripoli'], ['Africa/Tunis', 'Africa/Tunis'], ['Africa/Windhoek', 'Africa/Windhoek'], ['America/Adak', 'America/Adak'], ['America/Anchorage', 'America/Anchorage'], ['America/Anguilla', 'America/Anguilla'], ['America/Antigua', 'America/Antigua'], ['America/Araguaina', 'America/Araguaina'], ['America/Argentina/Buenos_Aires', 'America/Argentina/Buenos_Aires'], ['America/Argentina/Catamarca', 'America/Argentina/Catamarca'], ['America/Argentina/ComodRivadavia', 'America/Argentina/ComodRivadavia'], ['America/Argentina/Cordoba', 'America/Argentina/Cordoba'], ['America/Argentina/Jujuy', 'America/Argentina/Jujuy'], ['America/Argentina/La_Rioja', 'America/Argentina/La_Rioja'], ['America/Argentina/Mendoza', 'America/Argentina/Mendoza'], ['America/Argentina/Rio_Gallegos', 'America/Argentina/Rio_Gallegos'], ['America/Argentina/Salta', 'America/Argentina/Salta'], ['America/Argentina/San_Juan', 'America/Argentina/San_Juan'], ['America/Argentina/San_Luis', 'America/Argentina/San_Luis'], ['America/Argentina/Tucuman', 'America/Argentina/Tucuman'], ['America/Argentina/Ushuaia', 'America/Argentina/Ushuaia'], ['America/Aruba', 'America/Aruba'], ['America/Asuncion', 'America/Asuncion'], ['America/Atikokan', 'America/Atikokan'], ['America/Atka', 'America/Atka'], ['America/Bahia', 'America/Bahia'], ['America/Bahia_Banderas', 'America/Bahia_Banderas'], ['America/Barbados', 'America/Barbados'], ['America/Belem', 'America/Belem'], ['America/Belize', 'America/Belize'], ['America/Blanc-Sablon', 'America/Blanc-Sablon'], ['America/Boa_Vista', 'America/Boa_Vista'], ['America/Bogota', 'America/Bogota'], ['America/Boise', 'America/Boise'], ['America/Buenos_Aires', 'America/Buenos_Aires'], ['America/Cambridge_Bay', 'America/Cambridge_Bay'], ['America/Campo_Grande', 'America/Campo_Grande'], ['America/Cancun', 'America/Cancun'], ['America/Caracas', 'America/Caracas'], ['America/Catamarca', 'America/Catamarca'], ['America/Cayenne', 'America/Cayenne'], ['America/Cayman', 'America/Cayman'], ['America/Chicago', 'America/Chicago'], ['America/Chihuahua', 'America/Chihuahua'], ['America/Ciudad_Juarez', 'America/Ciudad_Juarez'], ['America/Coral_Harbour', 'America/Coral_Harbour'], ['America/Cordoba', 'America/Cordoba'], ['America/Costa_Rica', 'America/Costa_Rica'], ['America/Coyhaique', 'America/Coyhaique'], ['America/Creston', 'America/Creston'], ['America/Cuiaba', 'America/Cuiaba'], ['America/Curacao', 'America/Curacao'], ['America/Danmarkshavn', 'America/Danmarkshavn'], ['America/Dawson', 'America/Dawson'], ['America/Dawson_Creek', 'America/Dawson_Creek'], ['America/Denver', 'America/Denver'], ['America/Detroit', 'America/Detroit'], ['America/Dominica', 'America/Dominica'], ['America/Edmonton', 'America/Edmonton'], ['America/Eirunepe', 'America/Eirunepe'], ['America/El_Salvador', 'America/El_Salvador'], ['America/Ensenada', 'America/Ensenada'], ['America/Fort_Nelson', 'America/Fort_Nelson'], ['America/Fort_Wayne', 'America/Fort_Wayne'], ['America/Fortaleza', 'America/Fortaleza'], ['America/Glace_Bay', 'America/Glace_Bay'], ['America/Godthab', 'America/Godthab'], ['America/Goose_Bay', 'America/Goose_Bay'], ['America/Grand_Turk', 'America/Grand_Turk'], ['America/Grenada', 'America/Grenada'], ['America/Guadeloupe', 'America/Guadeloupe'], ['America/Guatemala', 'America/Guatemala'], ['America/Guayaquil', 'America/Guayaquil'], ['America/Guyana', 'America/Guyana'], ['America/Halifax', 'America/Halifax'], ['America/Havana', 'America/Havana'], ['America/Hermosillo', 'America/Hermosillo'], ['America/Indiana/Indianapolis', 'America/Indiana/Indianapolis'], ['America/Indiana/Knox', 'America/Indiana/Knox'], ['America/Indiana/Marengo', 'America/Indiana/Marengo'], ['America/Indiana/Petersburg', 'America/Indiana/Petersburg'], ['America/Indiana/Tell_City', 'America/Indiana/Tell_City'], ['America/Indiana/Vevay', 'America/Indiana/Vevay'], ['America/Indiana/Vincennes', 'America/Indiana/Vincennes'], ['America/Indiana/Winamac', 'America/Indiana/Winamac'], ['America/Indianapolis', 'America/Indianapolis'], ['America/Inuvik', 'America/Inuvik'], ['America/Iqaluit', 'America/Iqaluit'], ['America/Jamaica', 'America/Jamaica'], ['America/Jujuy', 'America/Jujuy'], ['America/Juneau', 'America/Juneau'], ['America/Kentucky/Louisville', 'America/Kentucky/Louisville'], ['America/Kentucky/Monticello', 'America/Kentucky/Monticello'], ['America/Knox_IN', 'America/Knox_IN'], ['America/Kralendijk', 'America/Kralendijk'], ['America/La_Paz', 'America/La_Paz'], ['America/Lima', 'America/Lima'], ['America/Los_Angeles', 'America/Los_Angeles'], ['America/Louisville', 'America/Louisville'], ['America/Lower_Princes', 'America/Lower_Princes'], ['America/Maceio', 'America/Maceio'], ['America/Managua', 'America/Managua'], ['America/Manaus', 'America/Manaus'], ['America/Marigot', 'America/Marigot'], ['America/Martinique', 'America/Martinique'], ['America/Matamoros', 'America/Matamoros'], ['America/Mazatlan', 'America/Mazatlan'], ['America/Mendoza', 'America/Mendoza'], ['America/Menominee', 'America/Menominee'], ['America/Merida', 'America/Merida'], ['America/Metlakatla', 'America/Metlakatla'], ['America/Mexico_City', 'America/Mexico_City'], ['America/Miquelon', 'America/Miquelon'], ['America/Moncton', 'America/Moncton'], ['America/Monterrey', 'America/Monterrey'], ['America/Montevideo', 'America/Montevideo'], ['America/Montreal', 'America/Montreal'], ['America/Montserrat', 'America/Montserrat'], ['America/Nassau', 'America/Nassau'], ['America/New_York', 'America/New_York'], ['America/Nipigon', 'America/Nipigon'], ['America/Nome', 'America/Nome'], ['America/Noronha', 'America/Noronha'], ['America/North_Dakota/Beulah', 'America/North_Dakota/Beulah'], ['America/North_Dakota/Center', 'America/North_Dakota/Center'], ['America/North_Dakota/New_Salem', 'America/North_Dakota/New_Salem'], ['America/Nuuk', 'America/Nuuk'], ['America/Ojinaga', 'America/Ojinaga'], ['America/Panama', 'America/Panama'], ['America/Pangnirtung', 'America/Pangnirtung'], ['America/Paramaribo', 'America/Paramaribo'], ['America/Phoenix', 'America/Phoenix'], ['America/Port-au-Prince', 'America/Port-au-Prince'], ['America/Port_of_Spain', 'America/Port_of_Spain'], ['America/Porto_Acre', 'America/Porto_Acre'], ['America/Porto_Velho', 'America/Porto_Velho'], ['America/Puerto_Rico', 'America/Puerto_Rico'], ['America/Punta_Arenas', 'America/Punta_Arenas'], ['America/Rainy_River', 'America/Rainy_River'], ['America/Rankin_Inlet', 'America/Rankin_Inlet'], ['America/Recife', 'America/Recife'], ['America/Regina', 'America/Regina'], ['America/Resolute', 'America/Resolute'], ['America/Rio_Branco', 'America/Rio_Branco'], ['America/Rosario', 'America/Rosario'], ['America/Santa_Isabel', 'America/Santa_Isabel'], ['America/Santarem', 'America/Santarem'], ['America/Santiago', 'America/Santiago'], ['America/Santo_Domingo', 'America/Santo_Domingo'], ['America/Sao_Paulo', 'America/Sao_Paulo'], ['America/Scoresbysund', 'America/Scoresbysund'], ['America/Shiprock', 'America/Shiprock'], ['America/Sitka', 'America/Sitka'], ['America/St_Barthelemy', 'America/St_Barthelemy'], ['America/St_Johns', 'America/St_Johns'], ['America/St_Kitts', 'America/St_Kitts'], ['America/St_Lucia', 'America/St_Lucia'], ['America/St_Thomas', 'America/St_Thomas'], ['America/St_Vincent', 'America/St_Vincent'], ['America/Swift_Current', 'America/Swift_Current'], ['America/Tegucigalpa', 'America/Tegucigalpa'], ['America/Thule', 'America/Thule'], ['America/Thunder_Bay', 'America/Thunder_Bay'], ['America/Tijuana', 'America/Tijuana'], ['America/Toronto', 'America/Toronto'], ['America/Tortola', 'America/Tortola'], ['America/Vancouver', 'America/Vancouver'], ['America/Virgin', 'America/Virgin'], ['America/Whitehorse', 'America/Whitehorse'], ['America/Winnipeg', 'America/Winnipeg'], ['America/Yakutat', 'America/Yakutat'], ['America/Yellowknife', 'America/Yellowknife'], ['Antarctica/Casey', 'Antarctica/Casey'], ['Antarctica/Davis', 'Antarctica/Davis'], ['Antarctica/DumontDUrville', 'Antarctica/DumontDUrville'], ['Antarctica/Macquarie', 'Antarctica/Macquarie'], ['Antarctica/Mawson', 'Antarctica/Mawson'], ['Antarctica/McMurdo', 'Antarctica/McMurdo'], ['Antarctica/Palmer', 'Antarctica/Palmer'], ['Antarctica/Rothera', 'Antarctica/Rothera'], ['Antarctica/South_Pole', 'Antarctica/South_Pole'], ['Antarctica/Syowa', 'Antarctica/Syowa'], ['Antarctica/Troll', 'Antarctica/Troll'], ['Antarctica/Vostok', 'Antarctica/Vostok'], ['Arctic/Longyearbyen', 'Arctic/Longyearbyen'], ['Asia/Aden', 'Asia/Aden'], ['Asia/Almaty', 'Asia/Almaty'], ['Asia/Amman', 'Asia/Amman'], ['Asia/Anadyr', 'Asia/Anadyr'], ['Asia/Aqtau', 'Asia/Aqtau'], ['Asia/Aqtobe', 'Asia/Aqtobe'], ['Asia/Ashgabat', 'Asia/Ashgabat'], ['Asia/Ashkhabad', 'Asia/Ashkhabad'], ['Asia/Atyrau', 'Asia/Atyrau'], ['Asia/Baghdad', 'Asia/Baghdad'], ['Asia/Bahrain', 'Asia/Bahrain'], ['Asia/Baku', 'Asia/Baku'], ['Asia/Bangkok', 'Asia/Bangkok'], ['Asia/Barnaul', 'Asia/Barnaul'], ['Asia/Beirut', 'Asia/Beirut'], ['Asia/Bishkek', 'Asia/Bishkek'], ['Asia/Brunei', 'Asia/Brunei'], ['Asia/Calcutta', 'Asia/Calcutta'], ['Asia/Chita', 'Asia/Chita'], ['Asia/Choibalsan', 'Asia/Choibalsan'], ['Asia/Chongqing', 'Asia/Chongqing'], ['Asia/Chungking', 'Asia/Chungking'], ['Asia/Colombo', 'Asia/Colombo'], ['Asia/Dacca', 'Asia/Dacca'], ['Asia/Damascus', 'Asia/Damascus'], ['Asia/Dhaka', 'Asia/Dhaka'], ['Asia/Dili', 'Asia/Dili'], ['Asia/Dubai', 'Asia/Dubai'], ['Asia/Dushanbe', 'Asia/Dushanbe'], ['Asia/Famagusta', 'Asia/Famagusta'], ['Asia/Gaza', 'Asia/Gaza'], ['Asia/Harbin', 'Asia/Harbin'], ['Asia/Hebron', 'Asia/Hebron'], ['Asia/Ho_Chi_Minh', 'Asia/Ho_Chi_Minh'], ['Asia/Hong_Kong', 'Asia/Hong_Kong'], ['Asia/Hovd', 'Asia/Hovd'], ['Asia/Irkutsk', 'Asia/Irkutsk'], ['Asia/Istanbul', 'Asia/Istanbul'], ['Asia/Jakarta', 'Asia/Jakarta'], ['Asia/Jayapura', 'Asia/Jayapura'], ['Asia/Jerusalem', 'Asia/Jerusalem'], ['Asia/Kabul', 'Asia/Kabul'], ['Asia/Kamchatka', 'Asia/Kamchatka'], ['Asia/Karachi', 'Asia/Karachi'], ['Asia/Kashgar', 'Asia/Kashgar'], ['Asia/Kathmandu', 'Asia/Kathmandu'], ['Asia/Katmandu', 'Asia/Katmandu'], ['Asia/Khandyga', 'Asia/Khandyga'], ['Asia/Kolkata', 'Asia/Kolkata'], ['Asia/Krasnoyarsk', 'Asia/Krasnoyarsk'], ['Asia/Kuala_Lumpur', 'Asia/Kuala_Lumpur'], ['Asia/Kuching', 'Asia/Kuching'], ['Asia/Kuwait', 'Asia/Kuwait'], ['Asia/Macao', 'Asia/Macao'], ['Asia/Macau', 'Asia/Macau'], ['Asia/Magadan', 'Asia/Magadan'], ['Asia/Makassar', 'Asia/Makassar'], ['Asia/Manila', 'Asia/Manila'], ['Asia/Muscat', 'Asia/Muscat'], ['Asia/Nicosia', 'Asia/Nicosia'], ['Asia/Novokuznetsk', 'Asia/Novokuznetsk'], ['Asia/Novosibirsk', 'Asia/Novosibirsk'], ['Asia/Omsk', 'Asia/Omsk'], ['Asia/Oral', 'Asia/Oral'], ['Asia/Phnom_Penh', 'Asia/Phnom_Penh'], ['Asia/Pontianak', 'Asia/Pontianak'], ['Asia/Pyongyang', 'Asia/Pyongyang'], ['Asia/Qatar', 'Asia/Qatar'], ['Asia/Qostanay', 'Asia/Qostanay'], ['Asia/Qyzylorda', 'Asia/Qyzylorda'], ['Asia/Rangoon', 'Asia/Rangoon'], ['Asia/Riyadh', 'Asia/Riyadh'], ['Asia/Saigon', 'Asia/Saigon'], ['Asia/Sakhalin', 'Asia/Sakhalin'], ['Asia/Samarkand', 'Asia/Samarkand'], ['Asia/Seoul', 'Asia/Seoul'], ['Asia/Shanghai', 'Asia/Shanghai'], ['Asia/Singapore', 'Asia/Singapore'], ['Asia/Srednekolymsk', 'Asia/Srednekolymsk'], ['Asia/Taipei', 'Asia/Taipei'], ['Asia/Tashkent', 'Asia/Tashkent'], ['Asia/Tbilisi', 'Asia/Tbilisi'], ['Asia/Tehran', 'Asia/Tehran'], ['Asia/Tel_Aviv', 'Asia/Tel_Aviv'], ['Asia/Thimbu', 'Asia/Thimbu'], ['Asia/Thimphu', 'Asia/Thimphu'], ['Asia/Tokyo', 'Asia/Tokyo'], ['Asia/Tomsk', 'Asia/Tomsk'], ['Asia/Ujung_Pandang', 'Asia/Ujung_Pandang'], ['Asia/Ulaanbaatar', 'Asia/Ulaanbaatar'], ['Asia/Ulan_Bator', 'Asia/Ulan_Bator'], ['Asia/Urumqi', 'Asia/Urumqi'], ['Asia/Ust-Nera', 'Asia/Ust-Nera'], ['Asia/Vientiane', 'Asia/Vientiane'], ['Asia/Vladivostok', 'Asia/Vladivostok'], ['Asia/Yakutsk', 'Asia/Yakutsk'], ['Asia/Yangon', 'Asia/Yangon'], ['Asia/Yekaterinburg', 'Asia/Yekaterinburg'], ['Asia/Yerevan', 'Asia/Yerevan'], ['Atlantic/Azores', 'Atlantic/Azores'], ['Atlantic/Bermuda', 'Atlantic/Bermuda'], ['Atlantic/Canary', 'Atlantic/Canary'], ['Atlantic/Cape_Verde', 'Atlantic/Cape_Verde'], ['Atlantic/Faeroe', 'Atlantic/Faeroe'], ['Atlantic/Faroe', 'Atlantic/Faroe'], ['Atlantic/Jan_Mayen', 'Atlantic/Jan_Mayen'], ['Atlantic/Madeira', 'Atlantic/Madeira'], ['Atlantic/Reykjavik', 'Atlantic/Reykjavik'], ['Atlantic/South_Georgia', 'Atlantic/South_Georgia'], ['Atlantic/St_Helena', 'Atlantic/St_Helena'], ['Atlantic/Stanley', 'Atlantic/Stanley'], ['Australia/ACT', 'Australia/ACT'], ['Australia/Adelaide', 'Australia/Adelaide'], ['Australia/Brisbane', 'Australia/Brisbane'], ['Australia/Broken_Hill', 'Australia/Broken_Hill'], ['Australia/Canberra', 'Australia/Canberra'], ['Australia/Currie', 'Australia/Currie'], ['Australia/Darwin', 'Australia/Darwin'], ['Australia/Eucla', 'Australia/Eucla'], ['Australia/Hobart', 'Australia/Hobart'], ['Australia/LHI', 'Australia/LHI'], ['Australia/Lindeman', 'Australia/Lindeman'], ['Australia/Lord_Howe', 'Australia/Lord_Howe'], ['Australia/Melbourne', 'Australia/Melbourne'], ['Australia/NSW', 'Australia/NSW'], ['Australia/North', 'Australia/North'], ['Australia/Perth', 'Australia/Perth'], ['Australia/Queensland', 'Australia/Queensland'], ['Australia/South', 'Australia/South'], ['Australia/Sydney', 'Australia/Sydney'], ['Australia/Tasmania', 'Australia/Tasmania'], ['Australia/Victoria', 'Australia/Victoria'], ['Australia/West', 'Australia/West'], ['Australia/Yancowinna', 'Australia/Yancowinna'], ['Brazil/Acre', 'Brazil/Acre'], ['Brazil/DeNoronha', 'Brazil/DeNoronha'], ['Brazil/East', 'Brazil/East'], ['Brazil/West', 'Brazil/West'], ['CET', 'CET'], ['CST6CDT', 'CST6CDT'], ['Canada/Atlantic', 'Canada/Atlantic'], ['Canada/Central', 'Canada/Central'], ['Canada/Eastern', 'Canada/Eastern'], ['Canada/Mountain', 'Canada/Mountain'], ['Canada/Newfoundland', 'Canada/Newfoundland'], ['Canada/Pacific', 'Canada/Pacific'], ['Canada/Saskatchewan', 'Canada/Saskatchewan'], ['Canada/Yukon', 'Canada/Yukon'], ['Chile/Continental', 'Chile/Continental'], ['Chile/EasterIsland', 'Chile/EasterIsland'], ['Cuba', 'Cuba'], ['EET', 'EET'], ['EST', 'EST'], ['EST5EDT', 'EST5EDT'], ['Egypt', 'Egypt'], ['Eire', 'Eire'], ['Europe/Amsterdam', 'Europe/Amsterdam'], ['Europe/Andorra', 'Europe/Andorra'], ['Europe/Astrakhan', 'Europe/Astrakhan'], ['Europe/Athens', 'Europe/Athens'], ['Europe/Belfast', 'Europe/Belfast'], ['Europe/Belgrade', 'Europe/Belgrade'], ['Europe/Berlin', 'Europe/Berlin'], ['Europe/Bratislava', 'Europe/Bratislava'], ['Europe/Brussels', 'Europe/Brussels'], ['Europe/Bucharest', 'Europe/Bucharest'], ['Europe/Budapest', 'Europe/Budapest'], ['Europe/Busingen', 'Europe/Busingen'], ['Europe/Chisinau', 'Europe/Chisinau'], ['Europe/Copenhagen', 'Europe/Copenhagen'], ['Europe/Dublin', 'Europe/Dublin'], ['Europe/Gibraltar', 'Europe/Gibraltar'], ['Europe/Guernsey', 'Europe/Guernsey'], ['Europe/Helsinki', 'Europe/Helsinki'], ['Europe/Isle_of_Man', 'Europe/Isle_of_Man'], ['Europe/Istanbul', 'Europe/Istanbul'], ['Europe/Jersey', 'Europe/Jersey'], ['Europe/Kaliningrad', 'Europe/Kaliningrad'], ['Europe/Kiev', 'Europe/Kiev'], ['Europe/Kirov', 'Europe/Kirov'], ['Europe/Kyiv', 'Europe/Kyiv'], ['Europe/Lisbon', 'Europe/Lisbon'], ['Europe/Ljubljana', 'Europe/Ljubljana'], ['Europe/London', 'Europe/London'], ['Europe/Luxembourg', 'Europe/Luxembourg'], ['Europe/Madrid', 'Europe/Madrid'], ['Europe/Malta', 'Europe/Malta'], ['Europe/Mariehamn', 'Europe/Mariehamn'], ['Europe/Minsk', 'Europe/Minsk'], ['Europe/Monaco', 'Europe/Monaco'], ['Europe/Moscow', 'Europe/Moscow'], ['Europe/Nicosia', 'Europe/Nicosia'], ['Europe/Oslo', 'Europe/Oslo'], ['Europe/Paris', 'Europe/Paris'], ['Europe/Podgorica', 'Europe/Podgorica'], ['Europe/Prague', 'Europe/Prague'], ['Europe/Riga', 'Europe/Riga'], ['Europe/Rome', 'Europe/Rome'], ['Europe/Samara', 'Europe/Samara'], ['Europe/San_Marino', 'Europe/San_Marino'], ['Europe/Sarajevo', 'Europe/Sarajevo'], ['Europe/Saratov', 'Europe/Saratov'], ['Europe/Simferopol', 'Europe/Simferopol'], ['Europe/Skopje', 'Europe/Skopje'], ['Europe/Sofia', 'Europe/Sofia'], ['Europe/Stockholm', 'Europe/Stockholm'], ['Europe/Tallinn', 'Europe/Tallinn'], ['Europe/Tirane', 'Europe/Tirane'], ['Europe/Tiraspol', 'Europe/Tiraspol'], ['Europe/Ulyanovsk', 'Europe/Ulyanovsk'], ['Europe/Uzhgorod', 'Europe/Uzhgorod'], ['Europe/Vaduz', 'Europe/Vaduz'], ['Europe/Vatican', 'Europe/Vatican'], ['Europe/Vienna', 'Europe/Vienna'], ['Europe/Vilnius', 'Europe/Vilnius'], ['Europe/Volgograd', 'Europe/Volgograd'], ['Europe/Warsaw', 'Europe/Warsaw'], ['Europe/Zagreb', 'Europe/Zagreb'], ['Europe/Zaporozhye', 'Europe/Zaporozhye'], ['Europe/Zurich', 'Europe/Zurich'], ['GB', 'GB'], ['GB-Eire', 'GB-Eire'], ['GMT', 'GMT'], ['GMT+0', 'GMT+0'], ['GMT-0', 'GMT-0'], ['GMT0', 'GMT0'], ['Greenwich', 'Greenwich'], ['HST', 'HST'], ['Hongkong', 'Hongkong'], ['Iceland', 'Iceland'], ['Indian/Antananarivo', 'Indian/Antananarivo'], ['Indian/Chagos', 'Indian/Chagos'], ['Indian/Christmas', 'Indian/Christmas'], ['Indian/Cocos', 'Indian/Cocos'], ['Indian/Comoro', 'Indian/Comoro'], ['Indian/Kerguelen', 'Indian/Kerguelen'], ['Indian/Mahe', 'Indian/Mahe'], ['Indian/Maldives', 'Indian/Maldives'], ['Indian/Mauritius', 'Indian/Mauritius'], ['Indian/Mayotte', 'Indian/Mayotte'], ['Indian/Reunion', 'Indian/Reunion'], ['Iran', 'Iran'], ['Israel', 'Israel'], ['Jamaica', 'Jamaica'], ['Japan', 'Japan'], ['Kwajalein', 'Kwajalein'], ['Libya', 'Libya'], ['MET', 'MET'], ['MST', 'MST'], ['MST7MDT', 'MST7MDT'], ['Mexico/BajaNorte', 'Mexico/BajaNorte'], ['Mexico/BajaSur', 'Mexico/BajaSur'], ['Mexico/General', 'Mexico/General'], ['NZ', 'NZ'], ['NZ-CHAT', 'NZ-CHAT'], ['Navajo', 'Navajo'], ['PRC', 'PRC'], ['PST8PDT', 'PST8PDT'], ['Pacific/Apia', 'Pacific/Apia'], ['Pacific/Auckland', 'Pacific/Auckland'], ['Pacific/Bougainville', 'Pacific/Bougainville'], ['Pacific/Chatham', 'Pacific/Chatham'], ['Pacific/Chuuk', 'Pacific/Chuuk'], ['Pacific/Easter', 'Pacific/Easter'], ['Pacific/Efate', 'Pacific/Efate'], ['Pacific/Enderbury', 'Pacific/Enderbury'], ['Pacific/Fakaofo', 'Pacific/Fakaofo'], ['Pacific/Fiji', 'Pacific/Fiji'], ['Pacific/Funafuti', 'Pacific/Funafuti'], ['Pacific/Galapagos', 'Pacific/Galapagos'], ['Pacific/Gambier', 'Pacific/Gambier'], ['Pacific/Guadalcanal', 'Pacific/Guadalcanal'], ['Pacific/Guam', 'Pacific/Guam'], ['Pacific/Honolulu', 'Pacific/Honolulu'], ['Pacific/Johnston', 'Pacific/Johnston'], ['Pacific/Kanton', 'Pacific/Kanton'], ['Pacific/Kiritimati', 'Pacific/Kiritimati'], ['Pacific/Kosrae', 'Pacific/Kosrae'], ['Pacific/Kwajalein', 'Pacific/Kwajalein'], ['Pacific/Majuro', 'Pacific/Majuro'], ['Pacific/Marquesas', 'Pacific/Marquesas'], ['Pacific/Midway', 'Pacific/Midway'], ['Pacific/Nauru', 'Pacific/Nauru'], ['Pacific/Niue', 'Pacific/Niue'], ['Pacific/Norfolk', 'Pacific/Norfolk'], ['Pacific/Noumea', 'Pacific/Noumea'], ['Pacific/Pago_Pago', 'Pacific/Pago_Pago'], ['Pacific/Palau', 'Pacific/Palau'], ['Pacific/Pitcairn', 'Pacific/Pitcairn'], ['Pacific/Pohnpei', 'Pacific/Pohnpei'], ['Pacific/Ponape', 'Pacific/Ponape'], ['Pacific/Port_Moresby', 'Pacific/Port_Moresby'], ['Pacific/Rarotonga', 'Pacific/Rarotonga'], ['Pacific/Saipan', 'Pacific/Saipan'], ['Pacific/Samoa', 'Pacific/Samoa'], ['Pacific/Tahiti', 'Pacific/Tahiti'], ['Pacific/Tarawa', 'Pacific/Tarawa'], ['Pacific/Tongatapu', 'Pacific/Tongatapu'], ['Pacific/Truk', 'Pacific/Truk'], ['Pacific/Wake', 'Pacific/Wake'], ['Pacific/Wallis', 'Pacific/Wallis'], ['Pacific/Yap', 'Pacific/Yap'], ['Poland', 'Poland'], ['Portugal', 'Portugal'], ['ROC', 'ROC'], ['ROK', 'ROK'], ['Singapore', 'Singapore'], ['Turkey', 'Turkey'], ['UCT', 'UCT'], ['US/Alaska', 'US/Alaska'], ['US/Aleutian', 'US/Aleutian'], ['US/Arizona', 'US/Arizona'], ['US/Central', 'US/Central'], ['US/East-Indiana', 'US/East-Indiana'], ['US/Eastern', 'US/Eastern'], ['US/Hawaii', 'US/Hawaii'], ['US/Indiana-Starke', 'US/Indiana-Starke'], ['US/Michigan', 'US/Michigan'], ['US/Mountain', 'US/Mountain'], ['US/Pacific', 'US/Pacific'], ['US/Samoa', 'US/Samoa'], ['UTC', 'UTC'], ['Universal', 'Universal'], ['W-SU', 'W-SU'], ['WET', 'WET'], ['Zulu', 'Zulu'], ['Etc/GMT', 'Etc/GMT'], ['Etc/GMT+0', 'Etc/GMT+0'], ['Etc/GMT+1', 'Etc/GMT+1'], ['Etc/GMT+10', 'Etc/GMT+10'], ['Etc/GMT+11', 'Etc/GMT+11'], ['Etc/GMT+12', 'Etc/GMT+12'], ['Etc/GMT+2', 'Etc/GMT+2'], ['Etc/GMT+3', 'Etc/GMT+3'], ['Etc/GMT+4', 'Etc/GMT+4'], ['Etc/GMT+5', 'Etc/GMT+5'], ['Etc/GMT+6', 'Etc/GMT+6'], ['Etc/GMT+7', 'Etc/GMT+7'], ['Etc/GMT+8', 'Etc/GMT+8'], ['Etc/GMT+9', 'Etc/GMT+9'], ['Etc/GMT-0', 'Etc/GMT-0'], ['Etc/GMT-1', 'Etc/GMT-1'], ['Etc/GMT-10', 'Etc/GMT-10'], ['Etc/GMT-11', 'Etc/GMT-11'], ['Etc/GMT-12', 'Etc/GMT-12'], ['Etc/GMT-13', 'Etc/GMT-13'], ['Etc/GMT-14', 'Etc/GMT-14'], ['Etc/GMT-2', 'Etc/GMT-2'], ['Etc/GMT-3', 'Etc/GMT-3'], ['Etc/GMT-4', 'Etc/GMT-4'], ['Etc/GMT-5', 'Etc/GMT-5'], ['Etc/GMT-6', 'Etc/GMT-6'], ['Etc/GMT-7', 'Etc/GMT-7'], ['Etc/GMT-8', 'Etc/GMT-8'], ['Etc/GMT-9', 'Etc/GMT-9'], ['Etc/GMT0', 'Etc/GMT0'], ['Etc/Greenwich', 'Etc/Greenwich'], ['Etc/UCT', 'Etc/UCT'], ['Etc/UTC', 'Etc/UTC'], ['Etc/Universal', 'Etc/Universal'], ['Etc/Zulu', 'Etc/Zulu']]<br>
+<strong>sortable:</strong> True<br>
+<strong>store:</strong> False<br>
+<strong>string:</strong> Timezone<br>
+<strong>type:</strong> selection<br>
+</p>
+</section>
+
+<section id="activity_ids" class="card card-body">
+<h4 class="card-title">activity_ids</h4>
+<p>
+<strong>allow_hierachy_operators:</strong> False<br>
+<strong>change_default:</strong> False<br>
+<strong>company_dependent:</strong> False<br>
+<strong>context:</strong> {}<br>
+<strong>default_export_compatible:</strong> False<br>
+<strong>depends:</strong> []<br>
+<strong>domain:</strong> []<br>
+<strong>exportable:</strong> True<br>
+<strong>groupable:</strong> False<br>
+<strong>groups:</strong> hr.group_hr_user<br>
+<strong>manual:</strong> False<br>
+<strong>name:</strong> activity_ids<br>
+<strong>readonly:</strong> False<br>
+<strong>relation:</strong> <a class="nav-link" href="../mail_activity/index.html">mail.activity</a><br>
+<strong>relation_field:</strong> res_id<br>
+<strong>required:</strong> False<br>
+<strong>searchable:</strong> True<br>
+<strong>sortable:</strong> False<br>
+<strong>store:</strong> True<br>
+<strong>string:</strong> Activities<br>
+<strong>type:</strong> one2many<br>
+</p>
+</section>
+
+<section id="activity_state" class="card card-body">
+<h4 class="card-title">activity_state</h4>
+<p>
+<strong>change_default:</strong> False<br>
+<strong>company_dependent:</strong> False<br>
+<strong>default_export_compatible:</strong> False<br>
+<strong>depends:</strong> ['activity_ids.state']<br>
+<strong>exportable:</strong> True<br>
+<strong>groupable:</strong> True<br>
+<strong>groups:</strong> hr.group_hr_user<br>
+<strong>help:</strong> Status based on activities
+Overdue: Due date is already passed
+Today: Activity date is today
+Planned: Future activities.<br>
+<strong>manual:</strong> False<br>
+<strong>name:</strong> activity_state<br>
+<strong>readonly:</strong> True<br>
+<strong>required:</strong> False<br>
+<strong>searchable:</strong> True<br>
+<strong>selection:</strong> [['overdue', 'Overdue'], ['today', 'Today'], ['planned', 'Planned']]<br>
+<strong>sortable:</strong> False<br>
+<strong>store:</strong> False<br>
+<strong>string:</strong> Activity State<br>
+<strong>type:</strong> selection<br>
+</p>
+</section>
+
+<section id="activity_user_id" class="card card-body">
+<h4 class="card-title">activity_user_id</h4>
+<p>
+<strong>allow_hierachy_operators:</strong> True<br>
+<strong>change_default:</strong> False<br>
+<strong>company_dependent:</strong> False<br>
+<strong>context:</strong> {}<br>
+<strong>default_export_compatible:</strong> False<br>
+<strong>depends:</strong> ['activity_ids.user_id']<br>
+<strong>domain:</strong> []<br>
+<strong>exportable:</strong> True<br>
+<strong>groupable:</strong> False<br>
+<strong>groups:</strong> hr.group_hr_user<br>
+<strong>manual:</strong> False<br>
+<strong>name:</strong> activity_user_id<br>
+<strong>readonly:</strong> True<br>
+<strong>relation:</strong> <a class="nav-link" href="../res_users/index.html">res.users</a><br>
+<strong>required:</strong> False<br>
+<strong>searchable:</strong> True<br>
+<strong>sortable:</strong> False<br>
+<strong>store:</strong> False<br>
+<strong>string:</strong> Responsible User<br>
+<strong>type:</strong> many2one<br>
+</p>
+</section>
+
+<section id="activity_type_id" class="card card-body">
+<h4 class="card-title">activity_type_id</h4>
+<p>
+<strong>allow_hierachy_operators:</strong> False<br>
+<strong>change_default:</strong> False<br>
+<strong>company_dependent:</strong> False<br>
+<strong>context:</strong> {}<br>
+<strong>default_export_compatible:</strong> False<br>
+<strong>depends:</strong> ['activity_ids.activity_type_id']<br>
+<strong>exportable:</strong> True<br>
+<strong>groupable:</strong> False<br>
+<strong>groups:</strong> hr.group_hr_user<br>
+<strong>manual:</strong> False<br>
+<strong>name:</strong> activity_type_id<br>
+<strong>readonly:</strong> False<br>
+<strong>related:</strong> activity_ids.activity_type_id<br>
+<strong>relation:</strong> <a class="nav-link" href="../mail_activity_type/index.html">mail.activity.type</a><br>
+<strong>required:</strong> False<br>
+<strong>searchable:</strong> True<br>
+<strong>sortable:</strong> False<br>
+<strong>store:</strong> False<br>
+<strong>string:</strong> Next Activity Type<br>
+<strong>type:</strong> many2one<br>
+</p>
+</section>
+
+<section id="activity_type_icon" class="card card-body">
+<h4 class="card-title">activity_type_icon</h4>
+<p>
+<strong>change_default:</strong> False<br>
+<strong>company_dependent:</strong> False<br>
+<strong>default_export_compatible:</strong> False<br>
+<strong>depends:</strong> ['activity_ids.icon']<br>
+<strong>exportable:</strong> True<br>
+<strong>groupable:</strong> False<br>
+<strong>groups:</strong> hr.group_hr_user<br>
+<strong>help:</strong> Font awesome icon e.g. fa-tasks<br>
+<strong>manual:</strong> False<br>
+<strong>name:</strong> activity_type_icon<br>
+<strong>readonly:</strong> True<br>
+<strong>related:</strong> activity_ids.icon<br>
+<strong>required:</strong> False<br>
+<strong>searchable:</strong> True<br>
+<strong>sortable:</strong> False<br>
+<strong>store:</strong> False<br>
+<strong>string:</strong> Activity Type Icon<br>
+<strong>translate:</strong> False<br>
+<strong>trim:</strong> True<br>
+<strong>type:</strong> char<br>
+</p>
+</section>
+
+<section id="activity_date_deadline" class="card card-body">
+<h4 class="card-title">activity_date_deadline</h4>
+<p>
+<strong>change_default:</strong> False<br>
+<strong>company_dependent:</strong> False<br>
+<strong>default_export_compatible:</strong> False<br>
+<strong>depends:</strong> ['activity_ids.date_deadline']<br>
+<strong>exportable:</strong> True<br>
+<strong>groupable:</strong> False<br>
+<strong>groups:</strong> hr.group_hr_user<br>
+<strong>manual:</strong> False<br>
+<strong>name:</strong> activity_date_deadline<br>
+<strong>readonly:</strong> True<br>
+<strong>required:</strong> False<br>
+<strong>searchable:</strong> True<br>
+<strong>sortable:</strong> False<br>
+<strong>store:</strong> False<br>
+<strong>string:</strong> Next Activity Deadline<br>
+<strong>type:</strong> date<br>
+</p>
+</section>
+
+<section id="my_activity_date_deadline" class="card card-body">
+<h4 class="card-title">my_activity_date_deadline</h4>
+<p>
+<strong>change_default:</strong> False<br>
+<strong>company_dependent:</strong> False<br>
+<strong>default_export_compatible:</strong> False<br>
+<strong>depends:</strong> ['activity_ids.date_deadline', 'activity_ids.user_id']<br>
+<strong>exportable:</strong> True<br>
+<strong>groupable:</strong> False<br>
+<strong>groups:</strong> hr.group_hr_user<br>
+<strong>manual:</strong> False<br>
+<strong>name:</strong> my_activity_date_deadline<br>
+<strong>readonly:</strong> True<br>
+<strong>required:</strong> False<br>
+<strong>searchable:</strong> True<br>
+<strong>sortable:</strong> False<br>
+<strong>store:</strong> False<br>
+<strong>string:</strong> My Activity Deadline<br>
+<strong>type:</strong> date<br>
+</p>
+</section>
+
+<section id="activity_summary" class="card card-body">
+<h4 class="card-title">activity_summary</h4>
+<p>
+<strong>change_default:</strong> False<br>
+<strong>company_dependent:</strong> False<br>
+<strong>default_export_compatible:</strong> False<br>
+<strong>depends:</strong> ['activity_ids.summary']<br>
+<strong>exportable:</strong> True<br>
+<strong>groupable:</strong> False<br>
+<strong>groups:</strong> hr.group_hr_user<br>
+<strong>manual:</strong> False<br>
+<strong>name:</strong> activity_summary<br>
+<strong>readonly:</strong> False<br>
+<strong>related:</strong> activity_ids.summary<br>
+<strong>required:</strong> False<br>
+<strong>searchable:</strong> True<br>
+<strong>sortable:</strong> False<br>
+<strong>store:</strong> False<br>
+<strong>string:</strong> Next Activity Summary<br>
+<strong>translate:</strong> False<br>
+<strong>trim:</strong> True<br>
+<strong>type:</strong> char<br>
+</p>
+</section>
+
+<section id="activity_exception_decoration" class="card card-body">
+<h4 class="card-title">activity_exception_decoration</h4>
+<p>
+<strong>change_default:</strong> False<br>
+<strong>company_dependent:</strong> False<br>
+<strong>default_export_compatible:</strong> False<br>
+<strong>depends:</strong> ['activity_ids.activity_type_id.decoration_type', 'activity_ids.activity_type_id.icon']<br>
+<strong>exportable:</strong> True<br>
+<strong>groupable:</strong> False<br>
+<strong>groups:</strong> hr.group_hr_user<br>
+<strong>help:</strong> Type of the exception activity on record.<br>
+<strong>manual:</strong> False<br>
+<strong>name:</strong> activity_exception_decoration<br>
+<strong>readonly:</strong> True<br>
+<strong>required:</strong> False<br>
+<strong>searchable:</strong> True<br>
+<strong>selection:</strong> [['warning', 'Alert'], ['danger', 'Error']]<br>
+<strong>sortable:</strong> False<br>
+<strong>store:</strong> False<br>
+<strong>string:</strong> Activity Exception Decoration<br>
+<strong>type:</strong> selection<br>
+</p>
+</section>
+
+<section id="activity_exception_icon" class="card card-body">
+<h4 class="card-title">activity_exception_icon</h4>
+<p>
+<strong>change_default:</strong> False<br>
+<strong>company_dependent:</strong> False<br>
+<strong>default_export_compatible:</strong> False<br>
+<strong>depends:</strong> ['activity_ids.activity_type_id.decoration_type', 'activity_ids.activity_type_id.icon']<br>
+<strong>exportable:</strong> True<br>
+<strong>groupable:</strong> False<br>
+<strong>groups:</strong> hr.group_hr_user<br>
+<strong>help:</strong> Icon to indicate an exception activity.<br>
+<strong>manual:</strong> False<br>
+<strong>name:</strong> activity_exception_icon<br>
+<strong>readonly:</strong> True<br>
+<strong>required:</strong> False<br>
+<strong>searchable:</strong> False<br>
+<strong>sortable:</strong> False<br>
+<strong>store:</strong> False<br>
+<strong>string:</strong> Icon<br>
+<strong>translate:</strong> False<br>
+<strong>trim:</strong> True<br>
+<strong>type:</strong> char<br>
+</p>
+</section>
+
+<section id="activity_calendar_event_id" class="card card-body">
+<h4 class="card-title">activity_calendar_event_id</h4>
+<p>
+<strong>allow_hierachy_operators:</strong> False<br>
+<strong>change_default:</strong> False<br>
+<strong>company_dependent:</strong> False<br>
+<strong>context:</strong> {}<br>
+<strong>default_export_compatible:</strong> False<br>
+<strong>depends:</strong> ['activity_ids.calendar_event_id']<br>
+<strong>domain:</strong> []<br>
+<strong>exportable:</strong> True<br>
+<strong>groupable:</strong> False<br>
+<strong>groups:</strong> base.group_user<br>
+<strong>manual:</strong> False<br>
+<strong>name:</strong> activity_calendar_event_id<br>
+<strong>readonly:</strong> True<br>
+<strong>relation:</strong> <a class="nav-link" href="../calendar_event/index.html">calendar.event</a><br>
+<strong>required:</strong> False<br>
+<strong>searchable:</strong> False<br>
+<strong>sortable:</strong> False<br>
+<strong>store:</strong> False<br>
+<strong>string:</strong> Next Activity Calendar Event<br>
+<strong>type:</strong> many2one<br>
+</p>
+</section>
+
+<section id="message_is_follower" class="card card-body">
+<h4 class="card-title">message_is_follower</h4>
+<p>
+<strong>change_default:</strong> False<br>
+<strong>company_dependent:</strong> False<br>
+<strong>default_export_compatible:</strong> False<br>
+<strong>depends:</strong> ['message_follower_ids']<br>
+<strong>exportable:</strong> True<br>
+<strong>groupable:</strong> False<br>
+<strong>groups:</strong> hr.group_hr_user<br>
+<strong>manual:</strong> False<br>
+<strong>name:</strong> message_is_follower<br>
+<strong>readonly:</strong> True<br>
+<strong>required:</strong> False<br>
+<strong>searchable:</strong> True<br>
+<strong>sortable:</strong> False<br>
+<strong>store:</strong> False<br>
+<strong>string:</strong> Is Follower<br>
+<strong>type:</strong> boolean<br>
+</p>
+</section>
+
+<section id="message_follower_ids" class="card card-body">
+<h4 class="card-title">message_follower_ids</h4>
+<p>
+<strong>allow_hierachy_operators:</strong> False<br>
+<strong>change_default:</strong> False<br>
+<strong>company_dependent:</strong> False<br>
+<strong>context:</strong> {}<br>
+<strong>default_export_compatible:</strong> False<br>
+<strong>depends:</strong> []<br>
+<strong>domain:</strong> []<br>
+<strong>exportable:</strong> True<br>
+<strong>groupable:</strong> False<br>
+<strong>groups:</strong> hr.group_hr_user<br>
+<strong>manual:</strong> False<br>
+<strong>name:</strong> message_follower_ids<br>
+<strong>readonly:</strong> False<br>
+<strong>relation:</strong> <a class="nav-link" href="../mail_followers/index.html">mail.followers</a><br>
+<strong>relation_field:</strong> res_id<br>
+<strong>required:</strong> False<br>
+<strong>searchable:</strong> True<br>
+<strong>sortable:</strong> False<br>
+<strong>store:</strong> True<br>
+<strong>string:</strong> Followers<br>
+<strong>type:</strong> one2many<br>
+</p>
+</section>
+
+<section id="message_partner_ids" class="card card-body">
+<h4 class="card-title">message_partner_ids</h4>
+<p>
+<strong>allow_hierachy_operators:</strong> True<br>
+<strong>change_default:</strong> False<br>
+<strong>company_dependent:</strong> False<br>
+<strong>context:</strong> {}<br>
+<strong>default_export_compatible:</strong> False<br>
+<strong>depends:</strong> ['message_follower_ids']<br>
+<strong>domain:</strong> []<br>
+<strong>exportable:</strong> True<br>
+<strong>groupable:</strong> False<br>
+<strong>groups:</strong> hr.group_hr_user<br>
+<strong>manual:</strong> False<br>
+<strong>name:</strong> message_partner_ids<br>
+<strong>readonly:</strong> False<br>
+<strong>relation:</strong> <a class="nav-link" href="../res_partner/index.html">res.partner</a><br>
+<strong>required:</strong> False<br>
+<strong>searchable:</strong> True<br>
+<strong>sortable:</strong> False<br>
+<strong>store:</strong> False<br>
+<strong>string:</strong> Followers (Partners)<br>
+<strong>type:</strong> many2many<br>
+</p>
+</section>
+
+<section id="message_ids" class="card card-body">
+<h4 class="card-title">message_ids</h4>
+<p>
+<strong>allow_hierachy_operators:</strong> True<br>
+<strong>change_default:</strong> False<br>
+<strong>company_dependent:</strong> False<br>
+<strong>context:</strong> {}<br>
+<strong>default_export_compatible:</strong> False<br>
+<strong>depends:</strong> []<br>
+<strong>domain:</strong> [['message_type', '!=', 'user_notification']]<br>
+<strong>exportable:</strong> True<br>
+<strong>groupable:</strong> False<br>
+<strong>groups:</strong> hr.group_hr_user<br>
+<strong>manual:</strong> False<br>
+<strong>name:</strong> message_ids<br>
+<strong>readonly:</strong> False<br>
+<strong>relation:</strong> <a class="nav-link" href="../mail_message/index.html">mail.message</a><br>
+<strong>relation_field:</strong> res_id<br>
+<strong>required:</strong> False<br>
+<strong>searchable:</strong> True<br>
+<strong>sortable:</strong> False<br>
+<strong>store:</strong> True<br>
+<strong>string:</strong> Messages<br>
+<strong>type:</strong> one2many<br>
+</p>
+</section>
+
+<section id="has_message" class="card card-body">
+<h4 class="card-title">has_message</h4>
+<p>
+<strong>change_default:</strong> False<br>
+<strong>company_dependent:</strong> False<br>
+<strong>default_export_compatible:</strong> False<br>
+<strong>depends:</strong> []<br>
+<strong>exportable:</strong> True<br>
+<strong>groupable:</strong> False<br>
+<strong>groups:</strong> hr.group_hr_user<br>
+<strong>manual:</strong> False<br>
+<strong>name:</strong> has_message<br>
+<strong>readonly:</strong> True<br>
+<strong>required:</strong> False<br>
+<strong>searchable:</strong> True<br>
+<strong>sortable:</strong> False<br>
+<strong>store:</strong> False<br>
+<strong>string:</strong> Has Message<br>
+<strong>type:</strong> boolean<br>
+</p>
+</section>
+
+<section id="message_needaction" class="card card-body">
+<h4 class="card-title">message_needaction</h4>
+<p>
+<strong>change_default:</strong> False<br>
+<strong>company_dependent:</strong> False<br>
+<strong>default_export_compatible:</strong> False<br>
+<strong>depends:</strong> []<br>
+<strong>exportable:</strong> True<br>
+<strong>groupable:</strong> False<br>
+<strong>groups:</strong> hr.group_hr_user<br>
+<strong>help:</strong> If checked, new messages require your attention.<br>
+<strong>manual:</strong> False<br>
+<strong>name:</strong> message_needaction<br>
+<strong>readonly:</strong> True<br>
+<strong>required:</strong> False<br>
+<strong>searchable:</strong> True<br>
+<strong>sortable:</strong> False<br>
+<strong>store:</strong> False<br>
+<strong>string:</strong> Action Needed<br>
+<strong>type:</strong> boolean<br>
+</p>
+</section>
+
+<section id="message_needaction_counter" class="card card-body">
+<h4 class="card-title">message_needaction_counter</h4>
+<p>
+<strong>change_default:</strong> False<br>
+<strong>company_dependent:</strong> False<br>
+<strong>default_export_compatible:</strong> False<br>
+<strong>depends:</strong> []<br>
+<strong>exportable:</strong> True<br>
+<strong>groupable:</strong> False<br>
+<strong>groups:</strong> hr.group_hr_user<br>
+<strong>help:</strong> Number of messages requiring action<br>
+<strong>manual:</strong> False<br>
+<strong>name:</strong> message_needaction_counter<br>
+<strong>readonly:</strong> True<br>
+<strong>required:</strong> False<br>
+<strong>searchable:</strong> False<br>
+<strong>sortable:</strong> False<br>
+<strong>store:</strong> False<br>
+<strong>string:</strong> Number of Actions<br>
+<strong>type:</strong> integer<br>
+</p>
+</section>
+
+<section id="message_has_error" class="card card-body">
+<h4 class="card-title">message_has_error</h4>
+<p>
+<strong>change_default:</strong> False<br>
+<strong>company_dependent:</strong> False<br>
+<strong>default_export_compatible:</strong> False<br>
+<strong>depends:</strong> []<br>
+<strong>exportable:</strong> True<br>
+<strong>groupable:</strong> False<br>
+<strong>groups:</strong> hr.group_hr_user<br>
+<strong>help:</strong> If checked, some messages have a delivery error.<br>
+<strong>manual:</strong> False<br>
+<strong>name:</strong> message_has_error<br>
+<strong>readonly:</strong> True<br>
+<strong>required:</strong> False<br>
+<strong>searchable:</strong> True<br>
+<strong>sortable:</strong> False<br>
+<strong>store:</strong> False<br>
+<strong>string:</strong> Message Delivery error<br>
+<strong>type:</strong> boolean<br>
+</p>
+</section>
+
+<section id="message_has_error_counter" class="card card-body">
+<h4 class="card-title">message_has_error_counter</h4>
+<p>
+<strong>change_default:</strong> False<br>
+<strong>company_dependent:</strong> False<br>
+<strong>default_export_compatible:</strong> False<br>
+<strong>depends:</strong> []<br>
+<strong>exportable:</strong> True<br>
+<strong>groupable:</strong> False<br>
+<strong>groups:</strong> hr.group_hr_user<br>
+<strong>help:</strong> Number of messages with delivery error<br>
+<strong>manual:</strong> False<br>
+<strong>name:</strong> message_has_error_counter<br>
+<strong>readonly:</strong> True<br>
+<strong>required:</strong> False<br>
+<strong>searchable:</strong> False<br>
+<strong>sortable:</strong> False<br>
+<strong>store:</strong> False<br>
+<strong>string:</strong> Number of errors<br>
+<strong>type:</strong> integer<br>
+</p>
+</section>
+
+<section id="message_attachment_count" class="card card-body">
+<h4 class="card-title">message_attachment_count</h4>
+<p>
+<strong>change_default:</strong> False<br>
+<strong>company_dependent:</strong> False<br>
+<strong>default_export_compatible:</strong> False<br>
+<strong>depends:</strong> []<br>
+<strong>exportable:</strong> True<br>
+<strong>groupable:</strong> False<br>
+<strong>groups:</strong> hr.group_hr_user<br>
+<strong>manual:</strong> False<br>
+<strong>name:</strong> message_attachment_count<br>
+<strong>readonly:</strong> True<br>
+<strong>required:</strong> False<br>
+<strong>searchable:</strong> False<br>
+<strong>sortable:</strong> False<br>
+<strong>store:</strong> False<br>
+<strong>string:</strong> Attachment Count<br>
+<strong>type:</strong> integer<br>
+</p>
+</section>
+
+<section id="website_message_ids" class="card card-body">
+<h4 class="card-title">website_message_ids</h4>
+<p>
+<strong>allow_hierachy_operators:</strong> True<br>
+<strong>change_default:</strong> False<br>
+<strong>company_dependent:</strong> False<br>
+<strong>context:</strong> {}<br>
+<strong>default_export_compatible:</strong> False<br>
+<strong>depends:</strong> []<br>
+<strong>domain:</strong> [['model', '=', 'hr.employee'], ['message_type', 'in', ['comment', 'email', 'email_outgoing', 'auto_comment']]]<br>
+<strong>exportable:</strong> True<br>
+<strong>groupable:</strong> False<br>
+<strong>help:</strong> Website communication history<br>
+<strong>manual:</strong> False<br>
+<strong>name:</strong> website_message_ids<br>
+<strong>readonly:</strong> False<br>
+<strong>relation:</strong> <a class="nav-link" href="../mail_message/index.html">mail.message</a><br>
+<strong>relation_field:</strong> res_id<br>
+<strong>required:</strong> False<br>
+<strong>searchable:</strong> True<br>
+<strong>sortable:</strong> False<br>
+<strong>store:</strong> True<br>
+<strong>string:</strong> Website Messages<br>
+<strong>type:</strong> one2many<br>
+</p>
+</section>
+
+<section id="message_has_sms_error" class="card card-body">
+<h4 class="card-title">message_has_sms_error</h4>
+<p>
+<strong>change_default:</strong> False<br>
+<strong>company_dependent:</strong> False<br>
+<strong>default_export_compatible:</strong> False<br>
+<strong>depends:</strong> []<br>
+<strong>exportable:</strong> True<br>
+<strong>groupable:</strong> False<br>
+<strong>help:</strong> If checked, some messages have a delivery error.<br>
+<strong>manual:</strong> False<br>
+<strong>name:</strong> message_has_sms_error<br>
+<strong>readonly:</strong> True<br>
+<strong>required:</strong> False<br>
+<strong>searchable:</strong> True<br>
+<strong>sortable:</strong> False<br>
+<strong>store:</strong> False<br>
+<strong>string:</strong> SMS Delivery error<br>
+<strong>type:</strong> boolean<br>
+</p>
+</section>
+
+<section id="message_main_attachment_id" class="card card-body">
+<h4 class="card-title">message_main_attachment_id</h4>
+<p>
+<strong>allow_hierachy_operators:</strong> False<br>
+<strong>change_default:</strong> False<br>
+<strong>company_dependent:</strong> False<br>
+<strong>context:</strong> {}<br>
+<strong>default_export_compatible:</strong> False<br>
+<strong>depends:</strong> []<br>
+<strong>domain:</strong> []<br>
+<strong>exportable:</strong> True<br>
+<strong>groupable:</strong> True<br>
+<strong>groups:</strong> hr.group_hr_user<br>
+<strong>manual:</strong> False<br>
+<strong>name:</strong> message_main_attachment_id<br>
+<strong>readonly:</strong> False<br>
+<strong>relation:</strong> <a class="nav-link" href="../ir_attachment/index.html">ir.attachment</a><br>
+<strong>required:</strong> False<br>
+<strong>searchable:</strong> True<br>
+<strong>sortable:</strong> True<br>
+<strong>store:</strong> True<br>
+<strong>string:</strong> Main Attachment<br>
+<strong>type:</strong> many2one<br>
+</p>
+</section>
+
+<section id="name" class="card card-body">
+<h4 class="card-title">name</h4>
+<p>
+<strong>change_default:</strong> False<br>
+<strong>company_dependent:</strong> False<br>
+<strong>default_export_compatible:</strong> False<br>
+<strong>depends:</strong> ['resource_id.name']<br>
+<strong>exportable:</strong> True<br>
+<strong>groupable:</strong> True<br>
+<strong>manual:</strong> False<br>
+<strong>name:</strong> name<br>
+<strong>readonly:</strong> False<br>
+<strong>related:</strong> resource_id.name<br>
+<strong>required:</strong> False<br>
+<strong>searchable:</strong> True<br>
+<strong>sortable:</strong> True<br>
+<strong>store:</strong> True<br>
+<strong>string:</strong> Employee Name<br>
+<strong>translate:</strong> False<br>
+<strong>trim:</strong> True<br>
+<strong>type:</strong> char<br>
+</p>
+</section>
+
+<section id="active" class="card card-body">
+<h4 class="card-title">active</h4>
+<p>
+<strong>change_default:</strong> False<br>
+<strong>company_dependent:</strong> False<br>
+<strong>default_export_compatible:</strong> False<br>
+<strong>depends:</strong> ['resource_id.active']<br>
+<strong>exportable:</strong> True<br>
+<strong>groupable:</strong> True<br>
+<strong>help:</strong> If the active field is set to False, it will allow you to hide the resource record without removing it.<br>
+<strong>manual:</strong> False<br>
+<strong>name:</strong> active<br>
+<strong>readonly:</strong> False<br>
+<strong>related:</strong> resource_id.active<br>
+<strong>required:</strong> False<br>
+<strong>searchable:</strong> True<br>
+<strong>sortable:</strong> True<br>
+<strong>store:</strong> True<br>
+<strong>string:</strong> Active<br>
+<strong>type:</strong> boolean<br>
+</p>
+</section>
+
+<section id="color" class="card card-body">
+<h4 class="card-title">color</h4>
+<p>
+<strong>aggregator:</strong> sum<br>
+<strong>change_default:</strong> False<br>
+<strong>company_dependent:</strong> False<br>
+<strong>default_export_compatible:</strong> False<br>
+<strong>depends:</strong> []<br>
+<strong>exportable:</strong> True<br>
+<strong>groupable:</strong> True<br>
+<strong>manual:</strong> False<br>
+<strong>name:</strong> color<br>
+<strong>readonly:</strong> False<br>
+<strong>required:</strong> False<br>
+<strong>searchable:</strong> True<br>
+<strong>sortable:</strong> True<br>
+<strong>store:</strong> True<br>
+<strong>string:</strong> Color Index<br>
+<strong>type:</strong> integer<br>
+</p>
+</section>
+
+<section id="department_id" class="card card-body">
+<h4 class="card-title">department_id</h4>
+<p>
+<strong>allow_hierachy_operators:</strong> True<br>
+<strong>change_default:</strong> False<br>
+<strong>company_dependent:</strong> False<br>
+<strong>context:</strong> {}<br>
+<strong>default_export_compatible:</strong> False<br>
+<strong>depends:</strong> []<br>
+<strong>domain:</strong> (company_id and [('company_id', 'in', [company_id] + [False])] or [('company_id', '=', False)]) + ([])<br>
+<strong>exportable:</strong> True<br>
+<strong>groupable:</strong> True<br>
+<strong>manual:</strong> False<br>
+<strong>name:</strong> department_id<br>
+<strong>readonly:</strong> False<br>
+<strong>relation:</strong> <a class="nav-link" href="../hr_department/index.html">hr.department</a><br>
+<strong>required:</strong> False<br>
+<strong>searchable:</strong> True<br>
+<strong>sortable:</strong> True<br>
+<strong>store:</strong> True<br>
+<strong>string:</strong> Department<br>
+<strong>type:</strong> many2one<br>
+</p>
+</section>
+
+<section id="member_of_department" class="card card-body">
+<h4 class="card-title">member_of_department</h4>
+<p>
+<strong>change_default:</strong> False<br>
+<strong>company_dependent:</strong> False<br>
+<strong>default_export_compatible:</strong> False<br>
+<strong>depends:</strong> ['department_id']<br>
+<strong>exportable:</strong> True<br>
+<strong>groupable:</strong> False<br>
+<strong>help:</strong> Whether the employee is a member of the active user's department or one of it's child department.<br>
+<strong>manual:</strong> False<br>
+<strong>name:</strong> member_of_department<br>
+<strong>readonly:</strong> True<br>
+<strong>required:</strong> False<br>
+<strong>searchable:</strong> True<br>
+<strong>sortable:</strong> False<br>
+<strong>store:</strong> False<br>
+<strong>string:</strong> Member of department<br>
+<strong>type:</strong> boolean<br>
+</p>
+</section>
+
+<section id="job_id" class="card card-body">
+<h4 class="card-title">job_id</h4>
+<p>
+<strong>allow_hierachy_operators:</strong> False<br>
+<strong>change_default:</strong> False<br>
+<strong>company_dependent:</strong> False<br>
+<strong>context:</strong> {}<br>
+<strong>default_export_compatible:</strong> False<br>
+<strong>depends:</strong> []<br>
+<strong>domain:</strong> (company_id and [('company_id', 'in', [company_id] + [False])] or [('company_id', '=', False)]) + ([])<br>
+<strong>exportable:</strong> True<br>
+<strong>groupable:</strong> True<br>
+<strong>manual:</strong> False<br>
+<strong>name:</strong> job_id<br>
+<strong>readonly:</strong> False<br>
+<strong>relation:</strong> <a class="nav-link" href="../hr_job/index.html">hr.job</a><br>
+<strong>required:</strong> False<br>
+<strong>searchable:</strong> True<br>
+<strong>sortable:</strong> True<br>
+<strong>store:</strong> True<br>
+<strong>string:</strong> Job Position<br>
+<strong>type:</strong> many2one<br>
+</p>
+</section>
+
+<section id="job_title" class="card card-body">
+<h4 class="card-title">job_title</h4>
+<p>
+<strong>change_default:</strong> False<br>
+<strong>company_dependent:</strong> False<br>
+<strong>default_export_compatible:</strong> False<br>
+<strong>depends:</strong> ['job_id']<br>
+<strong>exportable:</strong> True<br>
+<strong>groupable:</strong> True<br>
+<strong>manual:</strong> False<br>
+<strong>name:</strong> job_title<br>
+<strong>readonly:</strong> False<br>
+<strong>required:</strong> False<br>
+<strong>searchable:</strong> True<br>
+<strong>sortable:</strong> True<br>
+<strong>store:</strong> True<br>
+<strong>string:</strong> Job Title<br>
+<strong>translate:</strong> False<br>
+<strong>trim:</strong> True<br>
+<strong>type:</strong> char<br>
+</p>
+</section>
+
+<section id="address_id" class="card card-body">
+<h4 class="card-title">address_id</h4>
+<p>
+<strong>allow_hierachy_operators:</strong> True<br>
+<strong>change_default:</strong> False<br>
+<strong>company_dependent:</strong> False<br>
+<strong>context:</strong> {}<br>
+<strong>default_export_compatible:</strong> False<br>
+<strong>depends:</strong> ['company_id']<br>
+<strong>domain:</strong> (company_id and ['|', ('company_id', '=', False), ('company_id', 'parent_of', [company_id])] or ['|', ('company_id', '=', False), ('company_id', 'parent_of', '')]) + ([])<br>
+<strong>exportable:</strong> True<br>
+<strong>groupable:</strong> True<br>
+<strong>manual:</strong> False<br>
+<strong>name:</strong> address_id<br>
+<strong>readonly:</strong> False<br>
+<strong>relation:</strong> <a class="nav-link" href="../res_partner/index.html">res.partner</a><br>
+<strong>required:</strong> False<br>
+<strong>searchable:</strong> True<br>
+<strong>sortable:</strong> True<br>
+<strong>store:</strong> True<br>
+<strong>string:</strong> Work Address<br>
+<strong>type:</strong> many2one<br>
+</p>
+</section>
+
+<section id="work_phone" class="card card-body">
+<h4 class="card-title">work_phone</h4>
+<p>
+<strong>change_default:</strong> False<br>
+<strong>company_dependent:</strong> False<br>
+<strong>default_export_compatible:</strong> False<br>
+<strong>depends:</strong> ['address_id']<br>
+<strong>exportable:</strong> True<br>
+<strong>groupable:</strong> True<br>
+<strong>manual:</strong> False<br>
+<strong>name:</strong> work_phone<br>
+<strong>readonly:</strong> False<br>
+<strong>required:</strong> False<br>
+<strong>searchable:</strong> True<br>
+<strong>sortable:</strong> True<br>
+<strong>store:</strong> True<br>
+<strong>string:</strong> Work Phone<br>
+<strong>translate:</strong> False<br>
+<strong>trim:</strong> True<br>
+<strong>type:</strong> char<br>
+</p>
+</section>
+
+<section id="phone" class="card card-body">
+<h4 class="card-title">phone</h4>
+<p>
+<strong>change_default:</strong> False<br>
+<strong>company_dependent:</strong> False<br>
+<strong>default_export_compatible:</strong> False<br>
+<strong>depends:</strong> ['user_id.phone']<br>
+<strong>exportable:</strong> True<br>
+<strong>groupable:</strong> True<br>
+<strong>manual:</strong> False<br>
+<strong>name:</strong> phone<br>
+<strong>readonly:</strong> True<br>
+<strong>related:</strong> user_id.phone<br>
+<strong>required:</strong> False<br>
+<strong>searchable:</strong> True<br>
+<strong>sortable:</strong> True<br>
+<strong>store:</strong> False<br>
+<strong>string:</strong> Phone<br>
+<strong>translate:</strong> False<br>
+<strong>trim:</strong> True<br>
+<strong>type:</strong> char<br>
+</p>
+</section>
+
+<section id="mobile_phone" class="card card-body">
+<h4 class="card-title">mobile_phone</h4>
+<p>
+<strong>change_default:</strong> False<br>
+<strong>company_dependent:</strong> False<br>
+<strong>default_export_compatible:</strong> False<br>
+<strong>depends:</strong> ['work_contact_id', 'work_contact_id.mobile', 'work_contact_id.email']<br>
+<strong>exportable:</strong> True<br>
+<strong>groupable:</strong> True<br>
+<strong>manual:</strong> False<br>
+<strong>name:</strong> mobile_phone<br>
+<strong>readonly:</strong> False<br>
+<strong>required:</strong> False<br>
+<strong>searchable:</strong> True<br>
+<strong>sortable:</strong> True<br>
+<strong>store:</strong> True<br>
+<strong>string:</strong> Work Mobile<br>
+<strong>translate:</strong> False<br>
+<strong>trim:</strong> True<br>
+<strong>type:</strong> char<br>
+</p>
+</section>
+
+<section id="work_email" class="card card-body">
+<h4 class="card-title">work_email</h4>
+<p>
+<strong>change_default:</strong> False<br>
+<strong>company_dependent:</strong> False<br>
+<strong>default_export_compatible:</strong> False<br>
+<strong>depends:</strong> ['work_contact_id', 'work_contact_id.mobile', 'work_contact_id.email']<br>
+<strong>exportable:</strong> True<br>
+<strong>groupable:</strong> True<br>
+<strong>manual:</strong> False<br>
+<strong>name:</strong> work_email<br>
+<strong>readonly:</strong> False<br>
+<strong>required:</strong> False<br>
+<strong>searchable:</strong> True<br>
+<strong>sortable:</strong> True<br>
+<strong>store:</strong> True<br>
+<strong>string:</strong> Work Email<br>
+<strong>translate:</strong> False<br>
+<strong>trim:</strong> True<br>
+<strong>type:</strong> char<br>
+</p>
+</section>
+
+<section id="email" class="card card-body">
+<h4 class="card-title">email</h4>
+<p>
+<strong>change_default:</strong> False<br>
+<strong>company_dependent:</strong> False<br>
+<strong>default_export_compatible:</strong> False<br>
+<strong>depends:</strong> ['user_id.email']<br>
+<strong>exportable:</strong> True<br>
+<strong>groupable:</strong> True<br>
+<strong>manual:</strong> False<br>
+<strong>name:</strong> email<br>
+<strong>readonly:</strong> True<br>
+<strong>related:</strong> user_id.email<br>
+<strong>required:</strong> False<br>
+<strong>searchable:</strong> True<br>
+<strong>sortable:</strong> True<br>
+<strong>store:</strong> False<br>
+<strong>string:</strong> Email<br>
+<strong>translate:</strong> False<br>
+<strong>trim:</strong> True<br>
+<strong>type:</strong> char<br>
+</p>
+</section>
+
+<section id="work_contact_id" class="card card-body">
+<h4 class="card-title">work_contact_id</h4>
+<p>
+<strong>allow_hierachy_operators:</strong> True<br>
+<strong>change_default:</strong> False<br>
+<strong>company_dependent:</strong> False<br>
+<strong>context:</strong> {}<br>
+<strong>default_export_compatible:</strong> False<br>
+<strong>depends:</strong> []<br>
+<strong>domain:</strong> []<br>
+<strong>exportable:</strong> True<br>
+<strong>groupable:</strong> True<br>
+<strong>manual:</strong> False<br>
+<strong>name:</strong> work_contact_id<br>
+<strong>readonly:</strong> False<br>
+<strong>relation:</strong> <a class="nav-link" href="../res_partner/index.html">res.partner</a><br>
+<strong>required:</strong> False<br>
+<strong>searchable:</strong> True<br>
+<strong>sortable:</strong> True<br>
+<strong>store:</strong> True<br>
+<strong>string:</strong> Work Contact<br>
+<strong>type:</strong> many2one<br>
+</p>
+</section>
+
+<section id="work_location_id" class="card card-body">
+<h4 class="card-title">work_location_id</h4>
+<p>
+<strong>allow_hierachy_operators:</strong> False<br>
+<strong>change_default:</strong> False<br>
+<strong>company_dependent:</strong> False<br>
+<strong>context:</strong> {}<br>
+<strong>default_export_compatible:</strong> False<br>
+<strong>depends:</strong> []<br>
+<strong>domain:</strong> [('address_id', '=', address_id)]<br>
+<strong>exportable:</strong> True<br>
+<strong>groupable:</strong> True<br>
+<strong>manual:</strong> False<br>
+<strong>name:</strong> work_location_id<br>
+<strong>readonly:</strong> False<br>
+<strong>relation:</strong> <a class="nav-link" href="../hr_work_location/index.html">hr.work.location</a><br>
+<strong>required:</strong> False<br>
+<strong>searchable:</strong> True<br>
+<strong>sortable:</strong> True<br>
+<strong>store:</strong> True<br>
+<strong>string:</strong> Work Location<br>
+<strong>type:</strong> many2one<br>
+</p>
+</section>
+
+<section id="work_location_name" class="card card-body">
+<h4 class="card-title">work_location_name</h4>
+<p>
+<strong>change_default:</strong> False<br>
+<strong>company_dependent:</strong> False<br>
+<strong>default_export_compatible:</strong> False<br>
+<strong>depends:</strong> ['work_location_id.name', 'work_location_id.location_type']<br>
+<strong>exportable:</strong> True<br>
+<strong>groupable:</strong> False<br>
+<strong>manual:</strong> False<br>
+<strong>name:</strong> work_location_name<br>
+<strong>readonly:</strong> True<br>
+<strong>required:</strong> False<br>
+<strong>searchable:</strong> False<br>
+<strong>sortable:</strong> False<br>
+<strong>store:</strong> False<br>
+<strong>string:</strong> Work Location Name<br>
+<strong>translate:</strong> False<br>
+<strong>trim:</strong> True<br>
+<strong>type:</strong> char<br>
+</p>
+</section>
+
+<section id="work_location_type" class="card card-body">
+<h4 class="card-title">work_location_type</h4>
+<p>
+<strong>change_default:</strong> False<br>
+<strong>company_dependent:</strong> False<br>
+<strong>default_export_compatible:</strong> False<br>
+<strong>depends:</strong> ['work_location_id.name', 'work_location_id.location_type']<br>
+<strong>exportable:</strong> True<br>
+<strong>groupable:</strong> False<br>
+<strong>manual:</strong> False<br>
+<strong>name:</strong> work_location_type<br>
+<strong>readonly:</strong> True<br>
+<strong>required:</strong> False<br>
+<strong>searchable:</strong> False<br>
+<strong>selection:</strong> [['home', 'Home'], ['office', 'Office'], ['other', 'Other']]<br>
+<strong>sortable:</strong> False<br>
+<strong>store:</strong> False<br>
+<strong>string:</strong> Work Location Type<br>
+<strong>type:</strong> selection<br>
+</p>
+</section>
+
+<section id="user_id" class="card card-body">
+<h4 class="card-title">user_id</h4>
+<p>
+<strong>allow_hierachy_operators:</strong> True<br>
+<strong>change_default:</strong> False<br>
+<strong>company_dependent:</strong> False<br>
+<strong>context:</strong> {}<br>
+<strong>default_export_compatible:</strong> False<br>
+<strong>depends:</strong> ['resource_id.user_id']<br>
+<strong>domain:</strong> (company_id and [('company_ids', 'in', [company_id])] or []) + ([])<br>
+<strong>exportable:</strong> True<br>
+<strong>groupable:</strong> True<br>
+<strong>help:</strong> <br>
+<strong>manual:</strong> False<br>
+<strong>name:</strong> user_id<br>
+<strong>readonly:</strong> False<br>
+<strong>related:</strong> resource_id.user_id<br>
+<strong>relation:</strong> <a class="nav-link" href="../res_users/index.html">res.users</a><br>
+<strong>required:</strong> False<br>
+<strong>searchable:</strong> True<br>
+<strong>sortable:</strong> True<br>
+<strong>store:</strong> True<br>
+<strong>string:</strong> User<br>
+<strong>type:</strong> many2one<br>
+</p>
+</section>
+
+<section id="share" class="card card-body">
+<h4 class="card-title">share</h4>
+<p>
+<strong>change_default:</strong> False<br>
+<strong>company_dependent:</strong> False<br>
+<strong>default_export_compatible:</strong> False<br>
+<strong>depends:</strong> ['user_id.share']<br>
+<strong>exportable:</strong> True<br>
+<strong>groupable:</strong> True<br>
+<strong>help:</strong> External user with limited access, created only for the purpose of sharing data.<br>
+<strong>manual:</strong> False<br>
+<strong>name:</strong> share<br>
+<strong>readonly:</strong> True<br>
+<strong>related:</strong> user_id.share<br>
+<strong>required:</strong> False<br>
+<strong>searchable:</strong> True<br>
+<strong>sortable:</strong> True<br>
+<strong>store:</strong> False<br>
+<strong>string:</strong> Share User<br>
+<strong>type:</strong> boolean<br>
+</p>
+</section>
+
+<section id="is_flexible" class="card card-body">
+<h4 class="card-title">is_flexible</h4>
+<p>
+<strong>change_default:</strong> False<br>
+<strong>company_dependent:</strong> False<br>
+<strong>default_export_compatible:</strong> False<br>
+<strong>depends:</strong> ['resource_calendar_id.flexible_hours']<br>
+<strong>exportable:</strong> True<br>
+<strong>groupable:</strong> True<br>
+<strong>manual:</strong> False<br>
+<strong>name:</strong> is_flexible<br>
+<strong>readonly:</strong> True<br>
+<strong>required:</strong> False<br>
+<strong>searchable:</strong> True<br>
+<strong>sortable:</strong> True<br>
+<strong>store:</strong> True<br>
+<strong>string:</strong> Is Flexible<br>
+<strong>type:</strong> boolean<br>
+</p>
+</section>
+
+<section id="is_fully_flexible" class="card card-body">
+<h4 class="card-title">is_fully_flexible</h4>
+<p>
+<strong>change_default:</strong> False<br>
+<strong>company_dependent:</strong> False<br>
+<strong>default_export_compatible:</strong> False<br>
+<strong>depends:</strong> ['resource_calendar_id.flexible_hours']<br>
+<strong>exportable:</strong> True<br>
+<strong>groupable:</strong> True<br>
+<strong>manual:</strong> False<br>
+<strong>name:</strong> is_fully_flexible<br>
+<strong>readonly:</strong> True<br>
+<strong>required:</strong> False<br>
+<strong>searchable:</strong> True<br>
+<strong>sortable:</strong> True<br>
+<strong>store:</strong> True<br>
+<strong>string:</strong> Is Fully Flexible<br>
+<strong>type:</strong> boolean<br>
+</p>
+</section>
+
+<section id="parent_id" class="card card-body">
+<h4 class="card-title">parent_id</h4>
+<p>
+<strong>allow_hierachy_operators:</strong> True<br>
+<strong>change_default:</strong> False<br>
+<strong>company_dependent:</strong> False<br>
+<strong>context:</strong> {}<br>
+<strong>default_export_compatible:</strong> False<br>
+<strong>depends:</strong> ['department_id']<br>
+<strong>domain:</strong> ['|', ('company_id', '=', False), ('company_id', 'in', allowed_company_ids)]<br>
+<strong>exportable:</strong> True<br>
+<strong>groupable:</strong> True<br>
+<strong>manual:</strong> False<br>
+<strong>name:</strong> parent_id<br>
+<strong>readonly:</strong> False<br>
+<strong>relation:</strong> <a class="nav-link" href="../hr_employee/index.html">hr.employee</a><br>
+<strong>required:</strong> False<br>
+<strong>searchable:</strong> True<br>
+<strong>sortable:</strong> True<br>
+<strong>store:</strong> True<br>
+<strong>string:</strong> Manager<br>
+<strong>type:</strong> many2one<br>
+</p>
+</section>
+
+<section id="coach_id" class="card card-body">
+<h4 class="card-title">coach_id</h4>
+<p>
+<strong>allow_hierachy_operators:</strong> True<br>
+<strong>change_default:</strong> False<br>
+<strong>company_dependent:</strong> False<br>
+<strong>context:</strong> {}<br>
+<strong>default_export_compatible:</strong> False<br>
+<strong>depends:</strong> ['parent_id']<br>
+<strong>domain:</strong> ['|', ('company_id', '=', False), ('company_id', 'in', allowed_company_ids)]<br>
+<strong>exportable:</strong> True<br>
+<strong>groupable:</strong> True<br>
+<strong>help:</strong> Select the "Employee" who is the coach of this employee.
+The "Coach" has no specific rights or responsibilities by default.<br>
+<strong>manual:</strong> False<br>
+<strong>name:</strong> coach_id<br>
+<strong>readonly:</strong> False<br>
+<strong>relation:</strong> <a class="nav-link" href="../hr_employee/index.html">hr.employee</a><br>
+<strong>required:</strong> False<br>
+<strong>searchable:</strong> True<br>
+<strong>sortable:</strong> True<br>
+<strong>store:</strong> True<br>
+<strong>string:</strong> Coach<br>
+<strong>type:</strong> many2one<br>
+</p>
+</section>
+
+<section id="hr_presence_state" class="card card-body">
+<h4 class="card-title">hr_presence_state</h4>
+<p>
+<strong>change_default:</strong> False<br>
+<strong>company_dependent:</strong> False<br>
+<strong>default_export_compatible:</strong> False<br>
+<strong>depends:</strong> ['user_id.im_status']<br>
+<strong>exportable:</strong> True<br>
+<strong>groupable:</strong> False<br>
+<strong>manual:</strong> False<br>
+<strong>name:</strong> hr_presence_state<br>
+<strong>readonly:</strong> True<br>
+<strong>required:</strong> False<br>
+<strong>searchable:</strong> False<br>
+<strong>selection:</strong> [['present', 'Present'], ['absent', 'Absent'], ['archive', 'Archived'], ['out_of_working_hour', 'Out of Working hours']]<br>
+<strong>sortable:</strong> False<br>
+<strong>store:</strong> False<br>
+<strong>string:</strong> Hr Presence State<br>
+<strong>type:</strong> selection<br>
+</p>
+</section>
+
+<section id="last_activity" class="card card-body">
+<h4 class="card-title">last_activity</h4>
+<p>
+<strong>change_default:</strong> False<br>
+<strong>company_dependent:</strong> False<br>
+<strong>default_export_compatible:</strong> False<br>
+<strong>depends:</strong> ['user_id']<br>
+<strong>exportable:</strong> True<br>
+<strong>groupable:</strong> False<br>
+<strong>manual:</strong> False<br>
+<strong>name:</strong> last_activity<br>
+<strong>readonly:</strong> True<br>
+<strong>required:</strong> False<br>
+<strong>searchable:</strong> False<br>
+<strong>sortable:</strong> False<br>
+<strong>store:</strong> False<br>
+<strong>string:</strong> Last Activity<br>
+<strong>type:</strong> date<br>
+</p>
+</section>
+
+<section id="last_activity_time" class="card card-body">
+<h4 class="card-title">last_activity_time</h4>
+<p>
+<strong>change_default:</strong> False<br>
+<strong>company_dependent:</strong> False<br>
+<strong>default_export_compatible:</strong> False<br>
+<strong>depends:</strong> ['user_id']<br>
+<strong>exportable:</strong> True<br>
+<strong>groupable:</strong> False<br>
+<strong>manual:</strong> False<br>
+<strong>name:</strong> last_activity_time<br>
+<strong>readonly:</strong> True<br>
+<strong>required:</strong> False<br>
+<strong>searchable:</strong> False<br>
+<strong>sortable:</strong> False<br>
+<strong>store:</strong> False<br>
+<strong>string:</strong> Last Activity Time<br>
+<strong>translate:</strong> False<br>
+<strong>trim:</strong> True<br>
+<strong>type:</strong> char<br>
+</p>
+</section>
+
+<section id="hr_icon_display" class="card card-body">
+<h4 class="card-title">hr_icon_display</h4>
+<p>
+<strong>change_default:</strong> False<br>
+<strong>company_dependent:</strong> False<br>
+<strong>default_export_compatible:</strong> False<br>
+<strong>depends:</strong> ['resource_calendar_id', 'hr_presence_state']<br>
+<strong>exportable:</strong> True<br>
+<strong>groupable:</strong> False<br>
+<strong>manual:</strong> False<br>
+<strong>name:</strong> hr_icon_display<br>
+<strong>readonly:</strong> True<br>
+<strong>required:</strong> False<br>
+<strong>searchable:</strong> False<br>
+<strong>selection:</strong> [['presence_present', 'Present'], ['presence_out_of_working_hour', 'Out of Working hours'], ['presence_absent', 'Absent'], ['presence_archive', 'Archived'], ['presence_undetermined', 'Undetermined']]<br>
+<strong>sortable:</strong> False<br>
+<strong>store:</strong> False<br>
+<strong>string:</strong> Hr Icon Display<br>
+<strong>type:</strong> selection<br>
+</p>
+</section>
+
+<section id="show_hr_icon_display" class="card card-body">
+<h4 class="card-title">show_hr_icon_display</h4>
+<p>
+<strong>change_default:</strong> False<br>
+<strong>company_dependent:</strong> False<br>
+<strong>default_export_compatible:</strong> False<br>
+<strong>depends:</strong> ['resource_calendar_id', 'hr_presence_state']<br>
+<strong>exportable:</strong> True<br>
+<strong>groupable:</strong> False<br>
+<strong>manual:</strong> False<br>
+<strong>name:</strong> show_hr_icon_display<br>
+<strong>readonly:</strong> True<br>
+<strong>required:</strong> False<br>
+<strong>searchable:</strong> False<br>
+<strong>sortable:</strong> False<br>
+<strong>store:</strong> False<br>
+<strong>string:</strong> Show Hr Icon Display<br>
+<strong>type:</strong> boolean<br>
+</p>
+</section>
+
+<section id="im_status" class="card card-body">
+<h4 class="card-title">im_status</h4>
+<p>
+<strong>change_default:</strong> False<br>
+<strong>company_dependent:</strong> False<br>
+<strong>default_export_compatible:</strong> False<br>
+<strong>depends:</strong> ['user_id.im_status']<br>
+<strong>exportable:</strong> True<br>
+<strong>groupable:</strong> False<br>
+<strong>manual:</strong> False<br>
+<strong>name:</strong> im_status<br>
+<strong>readonly:</strong> True<br>
+<strong>related:</strong> user_id.im_status<br>
+<strong>required:</strong> False<br>
+<strong>searchable:</strong> False<br>
+<strong>sortable:</strong> False<br>
+<strong>store:</strong> False<br>
+<strong>string:</strong> IM Status<br>
+<strong>translate:</strong> False<br>
+<strong>trim:</strong> True<br>
+<strong>type:</strong> char<br>
+</p>
+</section>
+
+<section id="newly_hired" class="card card-body">
+<h4 class="card-title">newly_hired</h4>
+<p>
+<strong>change_default:</strong> False<br>
+<strong>company_dependent:</strong> False<br>
+<strong>default_export_compatible:</strong> False<br>
+<strong>depends:</strong> []<br>
+<strong>exportable:</strong> True<br>
+<strong>groupable:</strong> False<br>
+<strong>manual:</strong> False<br>
+<strong>name:</strong> newly_hired<br>
+<strong>readonly:</strong> True<br>
+<strong>required:</strong> False<br>
+<strong>searchable:</strong> True<br>
+<strong>sortable:</strong> False<br>
+<strong>store:</strong> False<br>
+<strong>string:</strong> Newly Hired<br>
+<strong>type:</strong> boolean<br>
+</p>
+</section>
+
+<section id="child_all_count" class="card card-body">
+<h4 class="card-title">child_all_count</h4>
+<p>
+<strong>change_default:</strong> False<br>
+<strong>company_dependent:</strong> False<br>
+<strong>default_export_compatible:</strong> False<br>
+<strong>depends:</strong> ['child_ids', 'child_ids.child_all_count']<br>
+<strong>exportable:</strong> True<br>
+<strong>groupable:</strong> False<br>
+<strong>manual:</strong> False<br>
+<strong>name:</strong> child_all_count<br>
+<strong>readonly:</strong> True<br>
+<strong>required:</strong> False<br>
+<strong>searchable:</strong> False<br>
+<strong>sortable:</strong> False<br>
+<strong>store:</strong> False<br>
+<strong>string:</strong> Indirect Subordinates Count<br>
+<strong>type:</strong> integer<br>
+</p>
+</section>
+
+<section id="department_color" class="card card-body">
+<h4 class="card-title">department_color</h4>
+<p>
+<strong>aggregator:</strong> sum<br>
+<strong>change_default:</strong> False<br>
+<strong>company_dependent:</strong> False<br>
+<strong>default_export_compatible:</strong> False<br>
+<strong>depends:</strong> ['department_id.color']<br>
+<strong>exportable:</strong> True<br>
+<strong>groupable:</strong> True<br>
+<strong>manual:</strong> False<br>
+<strong>name:</strong> department_color<br>
+<strong>readonly:</strong> True<br>
+<strong>related:</strong> department_id.color<br>
+<strong>required:</strong> False<br>
+<strong>searchable:</strong> True<br>
+<strong>sortable:</strong> True<br>
+<strong>store:</strong> False<br>
+<strong>string:</strong> Department Color<br>
+<strong>type:</strong> integer<br>
+</p>
+</section>
+
+<section id="child_count" class="card card-body">
+<h4 class="card-title">child_count</h4>
+<p>
+<strong>change_default:</strong> False<br>
+<strong>company_dependent:</strong> False<br>
+<strong>default_export_compatible:</strong> False<br>
+<strong>depends:</strong> []<br>
+<strong>exportable:</strong> True<br>
+<strong>groupable:</strong> False<br>
+<strong>manual:</strong> False<br>
+<strong>name:</strong> child_count<br>
+<strong>readonly:</strong> True<br>
+<strong>required:</strong> False<br>
+<strong>searchable:</strong> False<br>
+<strong>sortable:</strong> False<br>
+<strong>store:</strong> False<br>
+<strong>string:</strong> Direct Subordinates Count<br>
+<strong>type:</strong> integer<br>
+</p>
+</section>
+
+<section id="user_partner_id" class="card card-body">
+<h4 class="card-title">user_partner_id</h4>
+<p>
+<strong>allow_hierachy_operators:</strong> True<br>
+<strong>change_default:</strong> False<br>
+<strong>company_dependent:</strong> False<br>
+<strong>context:</strong> {}<br>
+<strong>default_export_compatible:</strong> False<br>
+<strong>depends:</strong> ['user_id.partner_id']<br>
+<strong>domain:</strong> []<br>
+<strong>exportable:</strong> True<br>
+<strong>groupable:</strong> False<br>
+<strong>help:</strong> Partner-related data of the user<br>
+<strong>manual:</strong> False<br>
+<strong>name:</strong> user_partner_id<br>
+<strong>readonly:</strong> True<br>
+<strong>related:</strong> user_id.partner_id<br>
+<strong>relation:</strong> <a class="nav-link" href="../res_partner/index.html">res.partner</a><br>
+<strong>required:</strong> False<br>
+<strong>searchable:</strong> True<br>
+<strong>sortable:</strong> False<br>
+<strong>store:</strong> False<br>
+<strong>string:</strong> User's partner<br>
+<strong>type:</strong> many2one<br>
+</p>
+</section>
+
+<section id="company_country_id" class="card card-body">
+<h4 class="card-title">company_country_id</h4>
+<p>
+<strong>allow_hierachy_operators:</strong> False<br>
+<strong>change_default:</strong> False<br>
+<strong>company_dependent:</strong> False<br>
+<strong>context:</strong> {}<br>
+<strong>default_export_compatible:</strong> False<br>
+<strong>depends:</strong> ['company_id.country_id']<br>
+<strong>domain:</strong> []<br>
+<strong>exportable:</strong> True<br>
+<strong>groupable:</strong> False<br>
+<strong>groups:</strong> base.group_system,hr.group_hr_user<br>
+<strong>manual:</strong> False<br>
+<strong>name:</strong> company_country_id<br>
+<strong>readonly:</strong> True<br>
+<strong>related:</strong> company_id.country_id<br>
+<strong>relation:</strong> <a class="nav-link" href="../res_country/index.html">res.country</a><br>
+<strong>required:</strong> False<br>
+<strong>searchable:</strong> False<br>
+<strong>sortable:</strong> False<br>
+<strong>store:</strong> False<br>
+<strong>string:</strong> Company Country<br>
+<strong>type:</strong> many2one<br>
+</p>
+</section>
+
+<section id="company_country_code" class="card card-body">
+<h4 class="card-title">company_country_code</h4>
+<p>
+<strong>change_default:</strong> False<br>
+<strong>company_dependent:</strong> False<br>
+<strong>default_export_compatible:</strong> False<br>
+<strong>depends:</strong> ['company_country_id']<br>
+<strong>exportable:</strong> True<br>
+<strong>groupable:</strong> False<br>
+<strong>groups:</strong> base.group_system,hr.group_hr_user<br>
+<strong>help:</strong> The ISO country code in two chars. 
+You can use this field for quick search.<br>
+<strong>manual:</strong> False<br>
+<strong>name:</strong> company_country_code<br>
+<strong>readonly:</strong> True<br>
+<strong>related:</strong> company_country_id.code<br>
+<strong>required:</strong> False<br>
+<strong>searchable:</strong> True<br>
+<strong>size:</strong> 2<br>
+<strong>sortable:</strong> False<br>
+<strong>store:</strong> False<br>
+<strong>string:</strong> Country Code<br>
+<strong>translate:</strong> False<br>
+<strong>trim:</strong> True<br>
+<strong>type:</strong> char<br>
+</p>
+</section>
+
+<section id="private_street" class="card card-body">
+<h4 class="card-title">private_street</h4>
+<p>
+<strong>change_default:</strong> False<br>
+<strong>company_dependent:</strong> False<br>
+<strong>default_export_compatible:</strong> False<br>
+<strong>depends:</strong> []<br>
+<strong>exportable:</strong> True<br>
+<strong>groupable:</strong> True<br>
+<strong>groups:</strong> hr.group_hr_user<br>
+<strong>manual:</strong> False<br>
+<strong>name:</strong> private_street<br>
+<strong>readonly:</strong> False<br>
+<strong>required:</strong> False<br>
+<strong>searchable:</strong> True<br>
+<strong>sortable:</strong> True<br>
+<strong>store:</strong> True<br>
+<strong>string:</strong> Private Street<br>
+<strong>translate:</strong> False<br>
+<strong>trim:</strong> True<br>
+<strong>type:</strong> char<br>
+</p>
+</section>
+
+<section id="private_street2" class="card card-body">
+<h4 class="card-title">private_street2</h4>
+<p>
+<strong>change_default:</strong> False<br>
+<strong>company_dependent:</strong> False<br>
+<strong>default_export_compatible:</strong> False<br>
+<strong>depends:</strong> []<br>
+<strong>exportable:</strong> True<br>
+<strong>groupable:</strong> True<br>
+<strong>groups:</strong> hr.group_hr_user<br>
+<strong>manual:</strong> False<br>
+<strong>name:</strong> private_street2<br>
+<strong>readonly:</strong> False<br>
+<strong>required:</strong> False<br>
+<strong>searchable:</strong> True<br>
+<strong>sortable:</strong> True<br>
+<strong>store:</strong> True<br>
+<strong>string:</strong> Private Street2<br>
+<strong>translate:</strong> False<br>
+<strong>trim:</strong> True<br>
+<strong>type:</strong> char<br>
+</p>
+</section>
+
+<section id="private_city" class="card card-body">
+<h4 class="card-title">private_city</h4>
+<p>
+<strong>change_default:</strong> False<br>
+<strong>company_dependent:</strong> False<br>
+<strong>default_export_compatible:</strong> False<br>
+<strong>depends:</strong> []<br>
+<strong>exportable:</strong> True<br>
+<strong>groupable:</strong> True<br>
+<strong>groups:</strong> hr.group_hr_user<br>
+<strong>manual:</strong> False<br>
+<strong>name:</strong> private_city<br>
+<strong>readonly:</strong> False<br>
+<strong>required:</strong> False<br>
+<strong>searchable:</strong> True<br>
+<strong>sortable:</strong> True<br>
+<strong>store:</strong> True<br>
+<strong>string:</strong> Private City<br>
+<strong>translate:</strong> False<br>
+<strong>trim:</strong> True<br>
+<strong>type:</strong> char<br>
+</p>
+</section>
+
+<section id="private_state_id" class="card card-body">
+<h4 class="card-title">private_state_id</h4>
+<p>
+<strong>allow_hierachy_operators:</strong> False<br>
+<strong>change_default:</strong> False<br>
+<strong>company_dependent:</strong> False<br>
+<strong>context:</strong> {}<br>
+<strong>default_export_compatible:</strong> False<br>
+<strong>depends:</strong> []<br>
+<strong>domain:</strong> [('country_id', '=?', private_country_id)]<br>
+<strong>exportable:</strong> True<br>
+<strong>groupable:</strong> True<br>
+<strong>groups:</strong> hr.group_hr_user<br>
+<strong>manual:</strong> False<br>
+<strong>name:</strong> private_state_id<br>
+<strong>readonly:</strong> False<br>
+<strong>relation:</strong> <a class="nav-link" href="../res_country_state/index.html">res.country.state</a><br>
+<strong>required:</strong> False<br>
+<strong>searchable:</strong> True<br>
+<strong>sortable:</strong> True<br>
+<strong>store:</strong> True<br>
+<strong>string:</strong> Private State<br>
+<strong>type:</strong> many2one<br>
+</p>
+</section>
+
+<section id="private_zip" class="card card-body">
+<h4 class="card-title">private_zip</h4>
+<p>
+<strong>change_default:</strong> False<br>
+<strong>company_dependent:</strong> False<br>
+<strong>default_export_compatible:</strong> False<br>
+<strong>depends:</strong> []<br>
+<strong>exportable:</strong> True<br>
+<strong>groupable:</strong> True<br>
+<strong>groups:</strong> hr.group_hr_user<br>
+<strong>manual:</strong> False<br>
+<strong>name:</strong> private_zip<br>
+<strong>readonly:</strong> False<br>
+<strong>required:</strong> False<br>
+<strong>searchable:</strong> True<br>
+<strong>sortable:</strong> True<br>
+<strong>store:</strong> True<br>
+<strong>string:</strong> Private Zip<br>
+<strong>translate:</strong> False<br>
+<strong>trim:</strong> True<br>
+<strong>type:</strong> char<br>
+</p>
+</section>
+
+<section id="private_country_id" class="card card-body">
+<h4 class="card-title">private_country_id</h4>
+<p>
+<strong>allow_hierachy_operators:</strong> False<br>
+<strong>change_default:</strong> False<br>
+<strong>company_dependent:</strong> False<br>
+<strong>context:</strong> {}<br>
+<strong>default_export_compatible:</strong> False<br>
+<strong>depends:</strong> []<br>
+<strong>domain:</strong> []<br>
+<strong>exportable:</strong> True<br>
+<strong>groupable:</strong> True<br>
+<strong>groups:</strong> hr.group_hr_user<br>
+<strong>manual:</strong> False<br>
+<strong>name:</strong> private_country_id<br>
+<strong>readonly:</strong> False<br>
+<strong>relation:</strong> <a class="nav-link" href="../res_country/index.html">res.country</a><br>
+<strong>required:</strong> False<br>
+<strong>searchable:</strong> True<br>
+<strong>sortable:</strong> True<br>
+<strong>store:</strong> True<br>
+<strong>string:</strong> Private Country<br>
+<strong>type:</strong> many2one<br>
+</p>
+</section>
+
+<section id="private_phone" class="card card-body">
+<h4 class="card-title">private_phone</h4>
+<p>
+<strong>change_default:</strong> False<br>
+<strong>company_dependent:</strong> False<br>
+<strong>default_export_compatible:</strong> False<br>
+<strong>depends:</strong> []<br>
+<strong>exportable:</strong> True<br>
+<strong>groupable:</strong> True<br>
+<strong>groups:</strong> hr.group_hr_user<br>
+<strong>manual:</strong> False<br>
+<strong>name:</strong> private_phone<br>
+<strong>readonly:</strong> False<br>
+<strong>required:</strong> False<br>
+<strong>searchable:</strong> True<br>
+<strong>sortable:</strong> True<br>
+<strong>store:</strong> True<br>
+<strong>string:</strong> Private Phone<br>
+<strong>translate:</strong> False<br>
+<strong>trim:</strong> True<br>
+<strong>type:</strong> char<br>
+</p>
+</section>
+
+<section id="private_email" class="card card-body">
+<h4 class="card-title">private_email</h4>
+<p>
+<strong>change_default:</strong> False<br>
+<strong>company_dependent:</strong> False<br>
+<strong>default_export_compatible:</strong> False<br>
+<strong>depends:</strong> []<br>
+<strong>exportable:</strong> True<br>
+<strong>groupable:</strong> True<br>
+<strong>groups:</strong> hr.group_hr_user<br>
+<strong>manual:</strong> False<br>
+<strong>name:</strong> private_email<br>
+<strong>readonly:</strong> False<br>
+<strong>required:</strong> False<br>
+<strong>searchable:</strong> True<br>
+<strong>sortable:</strong> True<br>
+<strong>store:</strong> True<br>
+<strong>string:</strong> Private Email<br>
+<strong>translate:</strong> False<br>
+<strong>trim:</strong> True<br>
+<strong>type:</strong> char<br>
+</p>
+</section>
+
+<section id="lang" class="card card-body">
+<h4 class="card-title">lang</h4>
+<p>
+<strong>change_default:</strong> False<br>
+<strong>company_dependent:</strong> False<br>
+<strong>default_export_compatible:</strong> False<br>
+<strong>depends:</strong> []<br>
+<strong>exportable:</strong> True<br>
+<strong>groupable:</strong> True<br>
+<strong>groups:</strong> hr.group_hr_user<br>
+<strong>manual:</strong> False<br>
+<strong>name:</strong> lang<br>
+<strong>readonly:</strong> False<br>
+<strong>required:</strong> False<br>
+<strong>searchable:</strong> True<br>
+<strong>selection:</strong> [['en_US', 'English (US)'], ['fr_FR', 'French / Français']]<br>
+<strong>sortable:</strong> True<br>
+<strong>store:</strong> True<br>
+<strong>string:</strong> Lang<br>
+<strong>type:</strong> selection<br>
+</p>
+</section>
+
+<section id="country_id" class="card card-body">
+<h4 class="card-title">country_id</h4>
+<p>
+<strong>allow_hierachy_operators:</strong> False<br>
+<strong>change_default:</strong> False<br>
+<strong>company_dependent:</strong> False<br>
+<strong>context:</strong> {}<br>
+<strong>default_export_compatible:</strong> False<br>
+<strong>depends:</strong> []<br>
+<strong>domain:</strong> []<br>
+<strong>exportable:</strong> True<br>
+<strong>groupable:</strong> True<br>
+<strong>groups:</strong> hr.group_hr_user<br>
+<strong>manual:</strong> False<br>
+<strong>name:</strong> country_id<br>
+<strong>readonly:</strong> False<br>
+<strong>relation:</strong> <a class="nav-link" href="../res_country/index.html">res.country</a><br>
+<strong>required:</strong> False<br>
+<strong>searchable:</strong> True<br>
+<strong>sortable:</strong> True<br>
+<strong>store:</strong> True<br>
+<strong>string:</strong> Nationality (Country)<br>
+<strong>type:</strong> many2one<br>
+</p>
+</section>
+
+<section id="gender" class="card card-body">
+<h4 class="card-title">gender</h4>
+<p>
+<strong>change_default:</strong> False<br>
+<strong>company_dependent:</strong> False<br>
+<strong>default_export_compatible:</strong> False<br>
+<strong>depends:</strong> []<br>
+<strong>exportable:</strong> True<br>
+<strong>groupable:</strong> True<br>
+<strong>groups:</strong> hr.group_hr_user<br>
+<strong>manual:</strong> False<br>
+<strong>name:</strong> gender<br>
+<strong>readonly:</strong> False<br>
+<strong>required:</strong> False<br>
+<strong>searchable:</strong> True<br>
+<strong>selection:</strong> [['male', 'Male'], ['female', 'Female'], ['other', 'Other']]<br>
+<strong>sortable:</strong> True<br>
+<strong>store:</strong> True<br>
+<strong>string:</strong> Gender<br>
+<strong>type:</strong> selection<br>
+</p>
+</section>
+
+<section id="marital" class="card card-body">
+<h4 class="card-title">marital</h4>
+<p>
+<strong>change_default:</strong> False<br>
+<strong>company_dependent:</strong> False<br>
+<strong>default_export_compatible:</strong> False<br>
+<strong>depends:</strong> []<br>
+<strong>exportable:</strong> True<br>
+<strong>groupable:</strong> True<br>
+<strong>groups:</strong> hr.group_hr_user<br>
+<strong>manual:</strong> False<br>
+<strong>name:</strong> marital<br>
+<strong>readonly:</strong> False<br>
+<strong>required:</strong> True<br>
+<strong>searchable:</strong> True<br>
+<strong>selection:</strong> [['single', 'Célibataire'], ['married', 'Marié'], ['cohabitant', 'Cohabitant légal'], ['widower', 'Veuf(ve)'], ['divorced', 'Divorcé(e)']]<br>
+<strong>sortable:</strong> True<br>
+<strong>store:</strong> True<br>
+<strong>string:</strong> Marital Status<br>
+<strong>type:</strong> selection<br>
+</p>
+</section>
+
+<section id="spouse_complete_name" class="card card-body">
+<h4 class="card-title">spouse_complete_name</h4>
+<p>
+<strong>change_default:</strong> False<br>
+<strong>company_dependent:</strong> False<br>
+<strong>default_export_compatible:</strong> False<br>
+<strong>depends:</strong> []<br>
+<strong>exportable:</strong> True<br>
+<strong>groupable:</strong> True<br>
+<strong>groups:</strong> hr.group_hr_user<br>
+<strong>manual:</strong> False<br>
+<strong>name:</strong> spouse_complete_name<br>
+<strong>readonly:</strong> False<br>
+<strong>required:</strong> False<br>
+<strong>searchable:</strong> True<br>
+<strong>sortable:</strong> True<br>
+<strong>store:</strong> True<br>
+<strong>string:</strong> Spouse Complete Name<br>
+<strong>translate:</strong> False<br>
+<strong>trim:</strong> True<br>
+<strong>type:</strong> char<br>
+</p>
+</section>
+
+<section id="spouse_birthdate" class="card card-body">
+<h4 class="card-title">spouse_birthdate</h4>
+<p>
+<strong>change_default:</strong> False<br>
+<strong>company_dependent:</strong> False<br>
+<strong>default_export_compatible:</strong> False<br>
+<strong>depends:</strong> []<br>
+<strong>exportable:</strong> True<br>
+<strong>groupable:</strong> True<br>
+<strong>groups:</strong> hr.group_hr_user<br>
+<strong>manual:</strong> False<br>
+<strong>name:</strong> spouse_birthdate<br>
+<strong>readonly:</strong> False<br>
+<strong>required:</strong> False<br>
+<strong>searchable:</strong> True<br>
+<strong>sortable:</strong> True<br>
+<strong>store:</strong> True<br>
+<strong>string:</strong> Spouse Birthdate<br>
+<strong>type:</strong> date<br>
+</p>
+</section>
+
+<section id="children" class="card card-body">
+<h4 class="card-title">children</h4>
+<p>
+<strong>aggregator:</strong> sum<br>
+<strong>change_default:</strong> False<br>
+<strong>company_dependent:</strong> False<br>
+<strong>default_export_compatible:</strong> False<br>
+<strong>depends:</strong> []<br>
+<strong>exportable:</strong> True<br>
+<strong>groupable:</strong> True<br>
+<strong>groups:</strong> hr.group_hr_user<br>
+<strong>manual:</strong> False<br>
+<strong>name:</strong> children<br>
+<strong>readonly:</strong> False<br>
+<strong>required:</strong> False<br>
+<strong>searchable:</strong> True<br>
+<strong>sortable:</strong> True<br>
+<strong>store:</strong> True<br>
+<strong>string:</strong> Number of Dependent Children<br>
+<strong>type:</strong> integer<br>
+</p>
+</section>
+
+<section id="place_of_birth" class="card card-body">
+<h4 class="card-title">place_of_birth</h4>
+<p>
+<strong>change_default:</strong> False<br>
+<strong>company_dependent:</strong> False<br>
+<strong>default_export_compatible:</strong> False<br>
+<strong>depends:</strong> []<br>
+<strong>exportable:</strong> True<br>
+<strong>groupable:</strong> True<br>
+<strong>groups:</strong> hr.group_hr_user<br>
+<strong>manual:</strong> False<br>
+<strong>name:</strong> place_of_birth<br>
+<strong>readonly:</strong> False<br>
+<strong>required:</strong> False<br>
+<strong>searchable:</strong> True<br>
+<strong>sortable:</strong> True<br>
+<strong>store:</strong> True<br>
+<strong>string:</strong> Place of Birth<br>
+<strong>translate:</strong> False<br>
+<strong>trim:</strong> True<br>
+<strong>type:</strong> char<br>
+</p>
+</section>
+
+<section id="country_of_birth" class="card card-body">
+<h4 class="card-title">country_of_birth</h4>
+<p>
+<strong>allow_hierachy_operators:</strong> False<br>
+<strong>change_default:</strong> False<br>
+<strong>company_dependent:</strong> False<br>
+<strong>context:</strong> {}<br>
+<strong>default_export_compatible:</strong> False<br>
+<strong>depends:</strong> []<br>
+<strong>domain:</strong> []<br>
+<strong>exportable:</strong> True<br>
+<strong>groupable:</strong> True<br>
+<strong>groups:</strong> hr.group_hr_user<br>
+<strong>manual:</strong> False<br>
+<strong>name:</strong> country_of_birth<br>
+<strong>readonly:</strong> False<br>
+<strong>relation:</strong> <a class="nav-link" href="../res_country/index.html">res.country</a><br>
+<strong>required:</strong> False<br>
+<strong>searchable:</strong> True<br>
+<strong>sortable:</strong> True<br>
+<strong>store:</strong> True<br>
+<strong>string:</strong> Country of Birth<br>
+<strong>type:</strong> many2one<br>
+</p>
+</section>
+
+<section id="birthday" class="card card-body">
+<h4 class="card-title">birthday</h4>
+<p>
+<strong>change_default:</strong> False<br>
+<strong>company_dependent:</strong> False<br>
+<strong>default_export_compatible:</strong> False<br>
+<strong>depends:</strong> []<br>
+<strong>exportable:</strong> True<br>
+<strong>groupable:</strong> True<br>
+<strong>groups:</strong> hr.group_hr_user<br>
+<strong>manual:</strong> False<br>
+<strong>name:</strong> birthday<br>
+<strong>readonly:</strong> False<br>
+<strong>required:</strong> False<br>
+<strong>searchable:</strong> True<br>
+<strong>sortable:</strong> True<br>
+<strong>store:</strong> True<br>
+<strong>string:</strong> Date of Birth<br>
+<strong>type:</strong> date<br>
+</p>
+</section>
+
+<section id="ssnid" class="card card-body">
+<h4 class="card-title">ssnid</h4>
+<p>
+<strong>change_default:</strong> False<br>
+<strong>company_dependent:</strong> False<br>
+<strong>default_export_compatible:</strong> False<br>
+<strong>depends:</strong> []<br>
+<strong>exportable:</strong> True<br>
+<strong>groupable:</strong> True<br>
+<strong>groups:</strong> hr.group_hr_user<br>
+<strong>help:</strong> Social Security Number<br>
+<strong>manual:</strong> False<br>
+<strong>name:</strong> ssnid<br>
+<strong>readonly:</strong> False<br>
+<strong>required:</strong> False<br>
+<strong>searchable:</strong> True<br>
+<strong>sortable:</strong> True<br>
+<strong>store:</strong> True<br>
+<strong>string:</strong> SSN No<br>
+<strong>translate:</strong> False<br>
+<strong>trim:</strong> True<br>
+<strong>type:</strong> char<br>
+</p>
+</section>
+
+<section id="sinid" class="card card-body">
+<h4 class="card-title">sinid</h4>
+<p>
+<strong>change_default:</strong> False<br>
+<strong>company_dependent:</strong> False<br>
+<strong>default_export_compatible:</strong> False<br>
+<strong>depends:</strong> []<br>
+<strong>exportable:</strong> True<br>
+<strong>groupable:</strong> True<br>
+<strong>groups:</strong> hr.group_hr_user<br>
+<strong>help:</strong> Social Insurance Number<br>
+<strong>manual:</strong> False<br>
+<strong>name:</strong> sinid<br>
+<strong>readonly:</strong> False<br>
+<strong>required:</strong> False<br>
+<strong>searchable:</strong> True<br>
+<strong>sortable:</strong> True<br>
+<strong>store:</strong> True<br>
+<strong>string:</strong> SIN No<br>
+<strong>translate:</strong> False<br>
+<strong>trim:</strong> True<br>
+<strong>type:</strong> char<br>
+</p>
+</section>
+
+<section id="identification_id" class="card card-body">
+<h4 class="card-title">identification_id</h4>
+<p>
+<strong>change_default:</strong> False<br>
+<strong>company_dependent:</strong> False<br>
+<strong>default_export_compatible:</strong> False<br>
+<strong>depends:</strong> []<br>
+<strong>exportable:</strong> True<br>
+<strong>groupable:</strong> True<br>
+<strong>groups:</strong> hr.group_hr_user<br>
+<strong>manual:</strong> False<br>
+<strong>name:</strong> identification_id<br>
+<strong>readonly:</strong> False<br>
+<strong>required:</strong> False<br>
+<strong>searchable:</strong> True<br>
+<strong>sortable:</strong> True<br>
+<strong>store:</strong> True<br>
+<strong>string:</strong> Identification No<br>
+<strong>translate:</strong> False<br>
+<strong>trim:</strong> True<br>
+<strong>type:</strong> char<br>
+</p>
+</section>
+
+<section id="passport_id" class="card card-body">
+<h4 class="card-title">passport_id</h4>
+<p>
+<strong>change_default:</strong> False<br>
+<strong>company_dependent:</strong> False<br>
+<strong>default_export_compatible:</strong> False<br>
+<strong>depends:</strong> []<br>
+<strong>exportable:</strong> True<br>
+<strong>groupable:</strong> True<br>
+<strong>groups:</strong> hr.group_hr_user<br>
+<strong>manual:</strong> False<br>
+<strong>name:</strong> passport_id<br>
+<strong>readonly:</strong> False<br>
+<strong>required:</strong> False<br>
+<strong>searchable:</strong> True<br>
+<strong>sortable:</strong> True<br>
+<strong>store:</strong> True<br>
+<strong>string:</strong> Passport No<br>
+<strong>translate:</strong> False<br>
+<strong>trim:</strong> True<br>
+<strong>type:</strong> char<br>
+</p>
+</section>
+
+<section id="bank_account_id" class="card card-body">
+<h4 class="card-title">bank_account_id</h4>
+<p>
+<strong>allow_hierachy_operators:</strong> False<br>
+<strong>change_default:</strong> False<br>
+<strong>company_dependent:</strong> False<br>
+<strong>context:</strong> {}<br>
+<strong>default_export_compatible:</strong> False<br>
+<strong>depends:</strong> []<br>
+<strong>domain:</strong> [('partner_id', '=', work_contact_id), '|', ('company_id', '=', False), ('company_id', '=', company_id)]<br>
+<strong>exportable:</strong> True<br>
+<strong>groupable:</strong> True<br>
+<strong>groups:</strong> hr.group_hr_user<br>
+<strong>help:</strong> Employee bank account to pay salaries<br>
+<strong>manual:</strong> False<br>
+<strong>name:</strong> bank_account_id<br>
+<strong>readonly:</strong> False<br>
+<strong>relation:</strong> <a class="nav-link" href="../res_partner_bank/index.html">res.partner.bank</a><br>
+<strong>required:</strong> False<br>
+<strong>searchable:</strong> True<br>
+<strong>sortable:</strong> True<br>
+<strong>store:</strong> True<br>
+<strong>string:</strong> Bank Account<br>
+<strong>type:</strong> many2one<br>
+</p>
+</section>
+
+<section id="permit_no" class="card card-body">
+<h4 class="card-title">permit_no</h4>
+<p>
+<strong>change_default:</strong> False<br>
+<strong>company_dependent:</strong> False<br>
+<strong>default_export_compatible:</strong> False<br>
+<strong>depends:</strong> []<br>
+<strong>exportable:</strong> True<br>
+<strong>groupable:</strong> True<br>
+<strong>groups:</strong> hr.group_hr_user<br>
+<strong>manual:</strong> False<br>
+<strong>name:</strong> permit_no<br>
+<strong>readonly:</strong> False<br>
+<strong>required:</strong> False<br>
+<strong>searchable:</strong> True<br>
+<strong>sortable:</strong> True<br>
+<strong>store:</strong> True<br>
+<strong>string:</strong> Work Permit No<br>
+<strong>translate:</strong> False<br>
+<strong>trim:</strong> True<br>
+<strong>type:</strong> char<br>
+</p>
+</section>
+
+<section id="visa_no" class="card card-body">
+<h4 class="card-title">visa_no</h4>
+<p>
+<strong>change_default:</strong> False<br>
+<strong>company_dependent:</strong> False<br>
+<strong>default_export_compatible:</strong> False<br>
+<strong>depends:</strong> []<br>
+<strong>exportable:</strong> True<br>
+<strong>groupable:</strong> True<br>
+<strong>groups:</strong> hr.group_hr_user<br>
+<strong>manual:</strong> False<br>
+<strong>name:</strong> visa_no<br>
+<strong>readonly:</strong> False<br>
+<strong>required:</strong> False<br>
+<strong>searchable:</strong> True<br>
+<strong>sortable:</strong> True<br>
+<strong>store:</strong> True<br>
+<strong>string:</strong> Visa No<br>
+<strong>translate:</strong> False<br>
+<strong>trim:</strong> True<br>
+<strong>type:</strong> char<br>
+</p>
+</section>
+
+<section id="visa_expire" class="card card-body">
+<h4 class="card-title">visa_expire</h4>
+<p>
+<strong>change_default:</strong> False<br>
+<strong>company_dependent:</strong> False<br>
+<strong>default_export_compatible:</strong> False<br>
+<strong>depends:</strong> []<br>
+<strong>exportable:</strong> True<br>
+<strong>groupable:</strong> True<br>
+<strong>groups:</strong> hr.group_hr_user<br>
+<strong>manual:</strong> False<br>
+<strong>name:</strong> visa_expire<br>
+<strong>readonly:</strong> False<br>
+<strong>required:</strong> False<br>
+<strong>searchable:</strong> True<br>
+<strong>sortable:</strong> True<br>
+<strong>store:</strong> True<br>
+<strong>string:</strong> Visa Expiration Date<br>
+<strong>type:</strong> date<br>
+</p>
+</section>
+
+<section id="work_permit_expiration_date" class="card card-body">
+<h4 class="card-title">work_permit_expiration_date</h4>
+<p>
+<strong>change_default:</strong> False<br>
+<strong>company_dependent:</strong> False<br>
+<strong>default_export_compatible:</strong> False<br>
+<strong>depends:</strong> []<br>
+<strong>exportable:</strong> True<br>
+<strong>groupable:</strong> True<br>
+<strong>groups:</strong> hr.group_hr_user<br>
+<strong>manual:</strong> False<br>
+<strong>name:</strong> work_permit_expiration_date<br>
+<strong>readonly:</strong> False<br>
+<strong>required:</strong> False<br>
+<strong>searchable:</strong> True<br>
+<strong>sortable:</strong> True<br>
+<strong>store:</strong> True<br>
+<strong>string:</strong> Work Permit Expiration Date<br>
+<strong>type:</strong> date<br>
+</p>
+</section>
+
+<section id="has_work_permit" class="card card-body">
+<h4 class="card-title">has_work_permit</h4>
+<p>
+<strong>attachment:</strong> True<br>
+<strong>change_default:</strong> False<br>
+<strong>company_dependent:</strong> False<br>
+<strong>default_export_compatible:</strong> False<br>
+<strong>depends:</strong> []<br>
+<strong>exportable:</strong> True<br>
+<strong>groupable:</strong> False<br>
+<strong>groups:</strong> hr.group_hr_user<br>
+<strong>manual:</strong> False<br>
+<strong>name:</strong> has_work_permit<br>
+<strong>readonly:</strong> False<br>
+<strong>required:</strong> False<br>
+<strong>searchable:</strong> True<br>
+<strong>sortable:</strong> False<br>
+<strong>store:</strong> True<br>
+<strong>string:</strong> Work Permit<br>
+<strong>type:</strong> binary<br>
+</p>
+</section>
+
+<section id="work_permit_scheduled_activity" class="card card-body">
+<h4 class="card-title">work_permit_scheduled_activity</h4>
+<p>
+<strong>change_default:</strong> False<br>
+<strong>company_dependent:</strong> False<br>
+<strong>default_export_compatible:</strong> False<br>
+<strong>depends:</strong> []<br>
+<strong>exportable:</strong> True<br>
+<strong>groupable:</strong> True<br>
+<strong>groups:</strong> hr.group_hr_user<br>
+<strong>manual:</strong> False<br>
+<strong>name:</strong> work_permit_scheduled_activity<br>
+<strong>readonly:</strong> False<br>
+<strong>required:</strong> False<br>
+<strong>searchable:</strong> True<br>
+<strong>sortable:</strong> True<br>
+<strong>store:</strong> True<br>
+<strong>string:</strong> Work Permit Scheduled Activity<br>
+<strong>type:</strong> boolean<br>
+</p>
+</section>
+
+<section id="work_permit_name" class="card card-body">
+<h4 class="card-title">work_permit_name</h4>
+<p>
+<strong>change_default:</strong> False<br>
+<strong>company_dependent:</strong> False<br>
+<strong>default_export_compatible:</strong> False<br>
+<strong>depends:</strong> ['name', 'permit_no']<br>
+<strong>exportable:</strong> True<br>
+<strong>groupable:</strong> False<br>
+<strong>groups:</strong> hr.group_hr_user<br>
+<strong>manual:</strong> False<br>
+<strong>name:</strong> work_permit_name<br>
+<strong>readonly:</strong> True<br>
+<strong>required:</strong> False<br>
+<strong>searchable:</strong> False<br>
+<strong>sortable:</strong> False<br>
+<strong>store:</strong> False<br>
+<strong>string:</strong> work_permit_name<br>
+<strong>translate:</strong> False<br>
+<strong>trim:</strong> True<br>
+<strong>type:</strong> char<br>
+</p>
+</section>
+
+<section id="additional_note" class="card card-body">
+<h4 class="card-title">additional_note</h4>
+<p>
+<strong>change_default:</strong> False<br>
+<strong>company_dependent:</strong> False<br>
+<strong>default_export_compatible:</strong> False<br>
+<strong>depends:</strong> []<br>
+<strong>exportable:</strong> True<br>
+<strong>groupable:</strong> True<br>
+<strong>groups:</strong> hr.group_hr_user<br>
+<strong>manual:</strong> False<br>
+<strong>name:</strong> additional_note<br>
+<strong>readonly:</strong> False<br>
+<strong>required:</strong> False<br>
+<strong>searchable:</strong> True<br>
+<strong>sortable:</strong> True<br>
+<strong>store:</strong> True<br>
+<strong>string:</strong> Additional Note<br>
+<strong>translate:</strong> False<br>
+<strong>type:</strong> text<br>
+</p>
+</section>
+
+<section id="certificate" class="card card-body">
+<h4 class="card-title">certificate</h4>
+<p>
+<strong>change_default:</strong> False<br>
+<strong>company_dependent:</strong> False<br>
+<strong>default_export_compatible:</strong> False<br>
+<strong>depends:</strong> []<br>
+<strong>exportable:</strong> True<br>
+<strong>groupable:</strong> True<br>
+<strong>groups:</strong> hr.group_hr_user<br>
+<strong>manual:</strong> False<br>
+<strong>name:</strong> certificate<br>
+<strong>readonly:</strong> False<br>
+<strong>required:</strong> False<br>
+<strong>searchable:</strong> True<br>
+<strong>selection:</strong> [['graduate', 'Graduate'], ['bachelor', 'Bachelor'], ['master', 'Master'], ['doctor', 'Doctor'], ['other', 'Other']]<br>
+<strong>sortable:</strong> True<br>
+<strong>store:</strong> True<br>
+<strong>string:</strong> Certificate Level<br>
+<strong>type:</strong> selection<br>
+</p>
+</section>
+
+<section id="study_field" class="card card-body">
+<h4 class="card-title">study_field</h4>
+<p>
+<strong>change_default:</strong> False<br>
+<strong>company_dependent:</strong> False<br>
+<strong>default_export_compatible:</strong> False<br>
+<strong>depends:</strong> []<br>
+<strong>exportable:</strong> True<br>
+<strong>groupable:</strong> True<br>
+<strong>groups:</strong> hr.group_hr_user<br>
+<strong>manual:</strong> False<br>
+<strong>name:</strong> study_field<br>
+<strong>readonly:</strong> False<br>
+<strong>required:</strong> False<br>
+<strong>searchable:</strong> True<br>
+<strong>sortable:</strong> True<br>
+<strong>store:</strong> True<br>
+<strong>string:</strong> Field of Study<br>
+<strong>translate:</strong> False<br>
+<strong>trim:</strong> True<br>
+<strong>type:</strong> char<br>
+</p>
+</section>
+
+<section id="study_school" class="card card-body">
+<h4 class="card-title">study_school</h4>
+<p>
+<strong>change_default:</strong> False<br>
+<strong>company_dependent:</strong> False<br>
+<strong>default_export_compatible:</strong> False<br>
+<strong>depends:</strong> []<br>
+<strong>exportable:</strong> True<br>
+<strong>groupable:</strong> True<br>
+<strong>groups:</strong> hr.group_hr_user<br>
+<strong>manual:</strong> False<br>
+<strong>name:</strong> study_school<br>
+<strong>readonly:</strong> False<br>
+<strong>required:</strong> False<br>
+<strong>searchable:</strong> True<br>
+<strong>sortable:</strong> True<br>
+<strong>store:</strong> True<br>
+<strong>string:</strong> School<br>
+<strong>translate:</strong> False<br>
+<strong>trim:</strong> True<br>
+<strong>type:</strong> char<br>
+</p>
+</section>
+
+<section id="emergency_contact" class="card card-body">
+<h4 class="card-title">emergency_contact</h4>
+<p>
+<strong>change_default:</strong> False<br>
+<strong>company_dependent:</strong> False<br>
+<strong>default_export_compatible:</strong> False<br>
+<strong>depends:</strong> []<br>
+<strong>exportable:</strong> True<br>
+<strong>groupable:</strong> True<br>
+<strong>groups:</strong> hr.group_hr_user<br>
+<strong>manual:</strong> False<br>
+<strong>name:</strong> emergency_contact<br>
+<strong>readonly:</strong> False<br>
+<strong>required:</strong> False<br>
+<strong>searchable:</strong> True<br>
+<strong>sortable:</strong> True<br>
+<strong>store:</strong> True<br>
+<strong>string:</strong> Contact Name<br>
+<strong>translate:</strong> False<br>
+<strong>trim:</strong> True<br>
+<strong>type:</strong> char<br>
+</p>
+</section>
+
+<section id="emergency_phone" class="card card-body">
+<h4 class="card-title">emergency_phone</h4>
+<p>
+<strong>change_default:</strong> False<br>
+<strong>company_dependent:</strong> False<br>
+<strong>default_export_compatible:</strong> False<br>
+<strong>depends:</strong> []<br>
+<strong>exportable:</strong> True<br>
+<strong>groupable:</strong> True<br>
+<strong>groups:</strong> hr.group_hr_user<br>
+<strong>manual:</strong> False<br>
+<strong>name:</strong> emergency_phone<br>
+<strong>readonly:</strong> False<br>
+<strong>required:</strong> False<br>
+<strong>searchable:</strong> True<br>
+<strong>sortable:</strong> True<br>
+<strong>store:</strong> True<br>
+<strong>string:</strong> Contact Phone<br>
+<strong>translate:</strong> False<br>
+<strong>trim:</strong> True<br>
+<strong>type:</strong> char<br>
+</p>
+</section>
+
+<section id="distance_home_work" class="card card-body">
+<h4 class="card-title">distance_home_work</h4>
+<p>
+<strong>aggregator:</strong> sum<br>
+<strong>change_default:</strong> False<br>
+<strong>company_dependent:</strong> False<br>
+<strong>default_export_compatible:</strong> False<br>
+<strong>depends:</strong> []<br>
+<strong>exportable:</strong> True<br>
+<strong>groupable:</strong> True<br>
+<strong>groups:</strong> hr.group_hr_user<br>
+<strong>manual:</strong> False<br>
+<strong>name:</strong> distance_home_work<br>
+<strong>readonly:</strong> False<br>
+<strong>required:</strong> False<br>
+<strong>searchable:</strong> True<br>
+<strong>sortable:</strong> True<br>
+<strong>store:</strong> True<br>
+<strong>string:</strong> Home-Work Distance<br>
+<strong>type:</strong> integer<br>
+</p>
+</section>
+
+<section id="km_home_work" class="card card-body">
+<h4 class="card-title">km_home_work</h4>
+<p>
+<strong>aggregator:</strong> sum<br>
+<strong>change_default:</strong> False<br>
+<strong>company_dependent:</strong> False<br>
+<strong>default_export_compatible:</strong> False<br>
+<strong>depends:</strong> ['distance_home_work', 'distance_home_work_unit']<br>
+<strong>exportable:</strong> True<br>
+<strong>groupable:</strong> True<br>
+<strong>groups:</strong> hr.group_hr_user<br>
+<strong>manual:</strong> False<br>
+<strong>name:</strong> km_home_work<br>
+<strong>readonly:</strong> False<br>
+<strong>required:</strong> False<br>
+<strong>searchable:</strong> True<br>
+<strong>sortable:</strong> True<br>
+<strong>store:</strong> True<br>
+<strong>string:</strong> Home-Work Distance in Km<br>
+<strong>type:</strong> integer<br>
+</p>
+</section>
+
+<section id="distance_home_work_unit" class="card card-body">
+<h4 class="card-title">distance_home_work_unit</h4>
+<p>
+<strong>change_default:</strong> False<br>
+<strong>company_dependent:</strong> False<br>
+<strong>default_export_compatible:</strong> False<br>
+<strong>depends:</strong> []<br>
+<strong>exportable:</strong> True<br>
+<strong>groupable:</strong> True<br>
+<strong>groups:</strong> hr.group_hr_user<br>
+<strong>manual:</strong> False<br>
+<strong>name:</strong> distance_home_work_unit<br>
+<strong>readonly:</strong> False<br>
+<strong>required:</strong> True<br>
+<strong>searchable:</strong> True<br>
+<strong>selection:</strong> [['kilometers', 'km'], ['miles', 'mi']]<br>
+<strong>sortable:</strong> True<br>
+<strong>store:</strong> True<br>
+<strong>string:</strong> Home-Work Distance unit<br>
+<strong>type:</strong> selection<br>
+</p>
+</section>
+
+<section id="employee_type" class="card card-body">
+<h4 class="card-title">employee_type</h4>
+<p>
+<strong>change_default:</strong> False<br>
+<strong>company_dependent:</strong> False<br>
+<strong>default_export_compatible:</strong> False<br>
+<strong>depends:</strong> []<br>
+<strong>exportable:</strong> True<br>
+<strong>groupable:</strong> True<br>
+<strong>groups:</strong> hr.group_hr_user<br>
+<strong>help:</strong> Categorize your Employees by type. This field also has an impact on contracts. Only Employees, Students and Trainee will have contract history.<br>
+<strong>manual:</strong> False<br>
+<strong>name:</strong> employee_type<br>
+<strong>readonly:</strong> False<br>
+<strong>required:</strong> True<br>
+<strong>searchable:</strong> True<br>
+<strong>selection:</strong> [['employee', 'Employee'], ['worker', 'Worker'], ['student', 'Student'], ['trainee', 'Trainee'], ['contractor', 'Contractor'], ['freelance', 'Freelancer']]<br>
+<strong>sortable:</strong> True<br>
+<strong>store:</strong> True<br>
+<strong>string:</strong> Employee Type<br>
+<strong>type:</strong> selection<br>
+</p>
+</section>
+
+<section id="child_ids" class="card card-body">
+<h4 class="card-title">child_ids</h4>
+<p>
+<strong>allow_hierachy_operators:</strong> True<br>
+<strong>change_default:</strong> False<br>
+<strong>company_dependent:</strong> False<br>
+<strong>context:</strong> {}<br>
+<strong>default_export_compatible:</strong> False<br>
+<strong>depends:</strong> []<br>
+<strong>domain:</strong> []<br>
+<strong>exportable:</strong> True<br>
+<strong>groupable:</strong> False<br>
+<strong>manual:</strong> False<br>
+<strong>name:</strong> child_ids<br>
+<strong>readonly:</strong> False<br>
+<strong>relation:</strong> <a class="nav-link" href="../hr_employee/index.html">hr.employee</a><br>
+<strong>relation_field:</strong> parent_id<br>
+<strong>required:</strong> False<br>
+<strong>searchable:</strong> True<br>
+<strong>sortable:</strong> False<br>
+<strong>store:</strong> True<br>
+<strong>string:</strong> Direct subordinates<br>
+<strong>type:</strong> one2many<br>
+</p>
+</section>
+
+<section id="category_ids" class="card card-body">
+<h4 class="card-title">category_ids</h4>
+<p>
+<strong>allow_hierachy_operators:</strong> False<br>
+<strong>change_default:</strong> False<br>
+<strong>company_dependent:</strong> False<br>
+<strong>context:</strong> {}<br>
+<strong>default_export_compatible:</strong> False<br>
+<strong>depends:</strong> []<br>
+<strong>domain:</strong> []<br>
+<strong>exportable:</strong> True<br>
+<strong>groupable:</strong> True<br>
+<strong>groups:</strong> hr.group_hr_user<br>
+<strong>manual:</strong> False<br>
+<strong>name:</strong> category_ids<br>
+<strong>readonly:</strong> False<br>
+<strong>relation:</strong> <a class="nav-link" href="../hr_employee_category/index.html">hr.employee.category</a><br>
+<strong>required:</strong> False<br>
+<strong>searchable:</strong> True<br>
+<strong>sortable:</strong> False<br>
+<strong>store:</strong> True<br>
+<strong>string:</strong> Tags<br>
+<strong>type:</strong> many2many<br>
+</p>
+</section>
+
+<section id="notes" class="card card-body">
+<h4 class="card-title">notes</h4>
+<p>
+<strong>change_default:</strong> False<br>
+<strong>company_dependent:</strong> False<br>
+<strong>default_export_compatible:</strong> False<br>
+<strong>depends:</strong> []<br>
+<strong>exportable:</strong> True<br>
+<strong>groupable:</strong> True<br>
+<strong>groups:</strong> hr.group_hr_user<br>
+<strong>manual:</strong> False<br>
+<strong>name:</strong> notes<br>
+<strong>readonly:</strong> False<br>
+<strong>required:</strong> False<br>
+<strong>searchable:</strong> True<br>
+<strong>sortable:</strong> True<br>
+<strong>store:</strong> True<br>
+<strong>string:</strong> Notes<br>
+<strong>translate:</strong> False<br>
+<strong>type:</strong> text<br>
+</p>
+</section>
+
+<section id="barcode" class="card card-body">
+<h4 class="card-title">barcode</h4>
+<p>
+<strong>change_default:</strong> False<br>
+<strong>company_dependent:</strong> False<br>
+<strong>default_export_compatible:</strong> False<br>
+<strong>depends:</strong> []<br>
+<strong>exportable:</strong> True<br>
+<strong>groupable:</strong> True<br>
+<strong>groups:</strong> hr.group_hr_user<br>
+<strong>help:</strong> ID used for employee identification.<br>
+<strong>manual:</strong> False<br>
+<strong>name:</strong> barcode<br>
+<strong>readonly:</strong> False<br>
+<strong>required:</strong> False<br>
+<strong>searchable:</strong> True<br>
+<strong>sortable:</strong> True<br>
+<strong>store:</strong> True<br>
+<strong>string:</strong> Badge ID<br>
+<strong>translate:</strong> False<br>
+<strong>trim:</strong> True<br>
+<strong>type:</strong> char<br>
+</p>
+</section>
+
+<section id="pin" class="card card-body">
+<h4 class="card-title">pin</h4>
+<p>
+<strong>change_default:</strong> False<br>
+<strong>company_dependent:</strong> False<br>
+<strong>default_export_compatible:</strong> False<br>
+<strong>depends:</strong> []<br>
+<strong>exportable:</strong> True<br>
+<strong>groupable:</strong> True<br>
+<strong>groups:</strong> hr.group_hr_user<br>
+<strong>help:</strong> PIN used to Check In/Out in the Kiosk Mode of the Attendance application (if enabled in Configuration) and to change the cashier in the Point of Sale application.<br>
+<strong>manual:</strong> False<br>
+<strong>name:</strong> pin<br>
+<strong>readonly:</strong> False<br>
+<strong>required:</strong> False<br>
+<strong>searchable:</strong> True<br>
+<strong>sortable:</strong> True<br>
+<strong>store:</strong> True<br>
+<strong>string:</strong> PIN<br>
+<strong>translate:</strong> False<br>
+<strong>trim:</strong> True<br>
+<strong>type:</strong> char<br>
+</p>
+</section>
+
+<section id="departure_reason_id" class="card card-body">
+<h4 class="card-title">departure_reason_id</h4>
+<p>
+<strong>allow_hierachy_operators:</strong> False<br>
+<strong>change_default:</strong> False<br>
+<strong>company_dependent:</strong> False<br>
+<strong>context:</strong> {}<br>
+<strong>default_export_compatible:</strong> False<br>
+<strong>depends:</strong> []<br>
+<strong>domain:</strong> []<br>
+<strong>exportable:</strong> True<br>
+<strong>groupable:</strong> True<br>
+<strong>groups:</strong> hr.group_hr_user<br>
+<strong>manual:</strong> False<br>
+<strong>name:</strong> departure_reason_id<br>
+<strong>readonly:</strong> False<br>
+<strong>relation:</strong> <a class="nav-link" href="../hr_departure_reason/index.html">hr.departure.reason</a><br>
+<strong>required:</strong> False<br>
+<strong>searchable:</strong> True<br>
+<strong>sortable:</strong> True<br>
+<strong>store:</strong> True<br>
+<strong>string:</strong> Departure Reason<br>
+<strong>type:</strong> many2one<br>
+</p>
+</section>
+
+<section id="departure_description" class="card card-body">
+<h4 class="card-title">departure_description</h4>
+<p>
+<strong>change_default:</strong> False<br>
+<strong>company_dependent:</strong> False<br>
+<strong>default_export_compatible:</strong> False<br>
+<strong>depends:</strong> []<br>
+<strong>exportable:</strong> True<br>
+<strong>groupable:</strong> True<br>
+<strong>groups:</strong> hr.group_hr_user<br>
+<strong>manual:</strong> False<br>
+<strong>name:</strong> departure_description<br>
+<strong>readonly:</strong> False<br>
+<strong>required:</strong> False<br>
+<strong>sanitize:</strong> True<br>
+<strong>sanitize_attributes:</strong> True<br>
+<strong>sanitize_style:</strong> False<br>
+<strong>sanitize_tags:</strong> True<br>
+<strong>searchable:</strong> True<br>
+<strong>sortable:</strong> True<br>
+<strong>store:</strong> True<br>
+<strong>string:</strong> Additional Information<br>
+<strong>strip_classes:</strong> False<br>
+<strong>strip_style:</strong> False<br>
+<strong>translate:</strong> False<br>
+<strong>type:</strong> html<br>
+</p>
+</section>
+
+<section id="departure_date" class="card card-body">
+<h4 class="card-title">departure_date</h4>
+<p>
+<strong>change_default:</strong> False<br>
+<strong>company_dependent:</strong> False<br>
+<strong>default_export_compatible:</strong> False<br>
+<strong>depends:</strong> []<br>
+<strong>exportable:</strong> True<br>
+<strong>groupable:</strong> True<br>
+<strong>groups:</strong> hr.group_hr_user<br>
+<strong>manual:</strong> False<br>
+<strong>name:</strong> departure_date<br>
+<strong>readonly:</strong> False<br>
+<strong>required:</strong> False<br>
+<strong>searchable:</strong> True<br>
+<strong>sortable:</strong> True<br>
+<strong>store:</strong> True<br>
+<strong>string:</strong> Departure Date<br>
+<strong>type:</strong> date<br>
+</p>
+</section>
+
+<section id="id_card" class="card card-body">
+<h4 class="card-title">id_card</h4>
+<p>
+<strong>attachment:</strong> True<br>
+<strong>change_default:</strong> False<br>
+<strong>company_dependent:</strong> False<br>
+<strong>default_export_compatible:</strong> False<br>
+<strong>depends:</strong> []<br>
+<strong>exportable:</strong> True<br>
+<strong>groupable:</strong> False<br>
+<strong>groups:</strong> hr.group_hr_user<br>
+<strong>manual:</strong> False<br>
+<strong>name:</strong> id_card<br>
+<strong>readonly:</strong> False<br>
+<strong>required:</strong> False<br>
+<strong>searchable:</strong> True<br>
+<strong>sortable:</strong> False<br>
+<strong>store:</strong> True<br>
+<strong>string:</strong> ID Card Copy<br>
+<strong>type:</strong> binary<br>
+</p>
+</section>
+
+<section id="driving_license" class="card card-body">
+<h4 class="card-title">driving_license</h4>
+<p>
+<strong>attachment:</strong> True<br>
+<strong>change_default:</strong> False<br>
+<strong>company_dependent:</strong> False<br>
+<strong>default_export_compatible:</strong> False<br>
+<strong>depends:</strong> []<br>
+<strong>exportable:</strong> True<br>
+<strong>groupable:</strong> False<br>
+<strong>groups:</strong> hr.group_hr_user<br>
+<strong>manual:</strong> False<br>
+<strong>name:</strong> driving_license<br>
+<strong>readonly:</strong> False<br>
+<strong>required:</strong> False<br>
+<strong>searchable:</strong> True<br>
+<strong>sortable:</strong> False<br>
+<strong>store:</strong> True<br>
+<strong>string:</strong> Driving License<br>
+<strong>type:</strong> binary<br>
+</p>
+</section>
+
+<section id="private_car_plate" class="card card-body">
+<h4 class="card-title">private_car_plate</h4>
+<p>
+<strong>change_default:</strong> False<br>
+<strong>company_dependent:</strong> False<br>
+<strong>default_export_compatible:</strong> False<br>
+<strong>depends:</strong> []<br>
+<strong>exportable:</strong> True<br>
+<strong>groupable:</strong> True<br>
+<strong>groups:</strong> hr.group_hr_user<br>
+<strong>help:</strong> If you have more than one car, just separate the plates by a space.<br>
+<strong>manual:</strong> False<br>
+<strong>name:</strong> private_car_plate<br>
+<strong>readonly:</strong> False<br>
+<strong>required:</strong> False<br>
+<strong>searchable:</strong> True<br>
+<strong>sortable:</strong> True<br>
+<strong>store:</strong> True<br>
+<strong>string:</strong> Private Car Plate<br>
+<strong>translate:</strong> False<br>
+<strong>trim:</strong> True<br>
+<strong>type:</strong> char<br>
+</p>
+</section>
+
+<section id="currency_id" class="card card-body">
+<h4 class="card-title">currency_id</h4>
+<p>
+<strong>allow_hierachy_operators:</strong> False<br>
+<strong>change_default:</strong> False<br>
+<strong>company_dependent:</strong> False<br>
+<strong>context:</strong> {}<br>
+<strong>default_export_compatible:</strong> False<br>
+<strong>depends:</strong> ['company_id.currency_id']<br>
+<strong>domain:</strong> []<br>
+<strong>exportable:</strong> True<br>
+<strong>groupable:</strong> True<br>
+<strong>groups:</strong> hr.group_hr_user<br>
+<strong>manual:</strong> False<br>
+<strong>name:</strong> currency_id<br>
+<strong>readonly:</strong> True<br>
+<strong>related:</strong> company_id.currency_id<br>
+<strong>relation:</strong> <a class="nav-link" href="../res_currency/index.html">res.currency</a><br>
+<strong>required:</strong> False<br>
+<strong>searchable:</strong> True<br>
+<strong>sortable:</strong> True<br>
+<strong>store:</strong> False<br>
+<strong>string:</strong> Currency<br>
+<strong>type:</strong> many2one<br>
+</p>
+</section>
+
+<section id="related_partners_count" class="card card-body">
+<h4 class="card-title">related_partners_count</h4>
+<p>
+<strong>change_default:</strong> False<br>
+<strong>company_dependent:</strong> False<br>
+<strong>default_export_compatible:</strong> False<br>
+<strong>depends:</strong> ['user_id']<br>
+<strong>exportable:</strong> True<br>
+<strong>groupable:</strong> False<br>
+<strong>groups:</strong> hr.group_hr_user<br>
+<strong>manual:</strong> False<br>
+<strong>name:</strong> related_partners_count<br>
+<strong>readonly:</strong> True<br>
+<strong>required:</strong> False<br>
+<strong>searchable:</strong> False<br>
+<strong>sortable:</strong> False<br>
+<strong>store:</strong> False<br>
+<strong>string:</strong> Related Partners Count<br>
+<strong>type:</strong> integer<br>
+</p>
+</section>
+
+<section id="employee_properties" class="card card-body">
+<h4 class="card-title">employee_properties</h4>
+<p>
+<strong>change_default:</strong> False<br>
+<strong>company_dependent:</strong> False<br>
+<strong>default_export_compatible:</strong> False<br>
+<strong>definition_record:</strong> company_id<br>
+<strong>definition_record_field:</strong> employee_properties_definition<br>
+<strong>depends:</strong> ['company_id']<br>
+<strong>exportable:</strong> True<br>
+<strong>groupable:</strong> True<br>
+<strong>groups:</strong> hr.group_hr_user<br>
+<strong>manual:</strong> False<br>
+<strong>name:</strong> employee_properties<br>
+<strong>readonly:</strong> False<br>
+<strong>required:</strong> False<br>
+<strong>searchable:</strong> True<br>
+<strong>sortable:</strong> True<br>
+<strong>store:</strong> True<br>
+<strong>string:</strong> Properties<br>
+<strong>type:</strong> properties<br>
+</p>
+</section>
+
+<section id="id" class="card card-body">
+<h4 class="card-title">id</h4>
+<p>
+<strong>change_default:</strong> False<br>
+<strong>company_dependent:</strong> False<br>
+<strong>default_export_compatible:</strong> False<br>
+<strong>depends:</strong> []<br>
+<strong>exportable:</strong> True<br>
+<strong>groupable:</strong> True<br>
+<strong>manual:</strong> False<br>
+<strong>name:</strong> id<br>
+<strong>readonly:</strong> True<br>
+<strong>required:</strong> False<br>
+<strong>searchable:</strong> True<br>
+<strong>sortable:</strong> True<br>
+<strong>store:</strong> True<br>
+<strong>string:</strong> ID<br>
+<strong>type:</strong> integer<br>
+</p>
+</section>
+
+<section id="display_name" class="card card-body">
+<h4 class="card-title">display_name</h4>
+<p>
+<strong>change_default:</strong> False<br>
+<strong>company_dependent:</strong> False<br>
+<strong>default_export_compatible:</strong> False<br>
+<strong>depends:</strong> ['name']<br>
+<strong>exportable:</strong> True<br>
+<strong>groupable:</strong> False<br>
+<strong>manual:</strong> False<br>
+<strong>name:</strong> display_name<br>
+<strong>readonly:</strong> True<br>
+<strong>required:</strong> False<br>
+<strong>searchable:</strong> True<br>
+<strong>sortable:</strong> False<br>
+<strong>store:</strong> False<br>
+<strong>string:</strong> Display Name<br>
+<strong>translate:</strong> False<br>
+<strong>trim:</strong> True<br>
+<strong>type:</strong> char<br>
+</p>
+</section>
+
+<section id="create_uid" class="card card-body">
+<h4 class="card-title">create_uid</h4>
+<p>
+<strong>allow_hierachy_operators:</strong> True<br>
+<strong>change_default:</strong> False<br>
+<strong>company_dependent:</strong> False<br>
+<strong>context:</strong> {}<br>
+<strong>default_export_compatible:</strong> False<br>
+<strong>depends:</strong> []<br>
+<strong>domain:</strong> []<br>
+<strong>exportable:</strong> True<br>
+<strong>groupable:</strong> True<br>
+<strong>manual:</strong> False<br>
+<strong>name:</strong> create_uid<br>
+<strong>readonly:</strong> True<br>
+<strong>relation:</strong> <a class="nav-link" href="../res_users/index.html">res.users</a><br>
+<strong>required:</strong> False<br>
+<strong>searchable:</strong> True<br>
+<strong>sortable:</strong> True<br>
+<strong>store:</strong> True<br>
+<strong>string:</strong> Created by<br>
+<strong>type:</strong> many2one<br>
+</p>
+</section>
+
+<section id="create_date" class="card card-body">
+<h4 class="card-title">create_date</h4>
+<p>
+<strong>change_default:</strong> False<br>
+<strong>company_dependent:</strong> False<br>
+<strong>default_export_compatible:</strong> False<br>
+<strong>depends:</strong> []<br>
+<strong>exportable:</strong> True<br>
+<strong>groupable:</strong> True<br>
+<strong>manual:</strong> False<br>
+<strong>name:</strong> create_date<br>
+<strong>readonly:</strong> True<br>
+<strong>required:</strong> False<br>
+<strong>searchable:</strong> True<br>
+<strong>sortable:</strong> True<br>
+<strong>store:</strong> True<br>
+<strong>string:</strong> Created on<br>
+<strong>type:</strong> datetime<br>
+</p>
+</section>
+
+<section id="write_uid" class="card card-body">
+<h4 class="card-title">write_uid</h4>
+<p>
+<strong>allow_hierachy_operators:</strong> True<br>
+<strong>change_default:</strong> False<br>
+<strong>company_dependent:</strong> False<br>
+<strong>context:</strong> {}<br>
+<strong>default_export_compatible:</strong> False<br>
+<strong>depends:</strong> []<br>
+<strong>domain:</strong> []<br>
+<strong>exportable:</strong> True<br>
+<strong>groupable:</strong> True<br>
+<strong>manual:</strong> False<br>
+<strong>name:</strong> write_uid<br>
+<strong>readonly:</strong> True<br>
+<strong>relation:</strong> <a class="nav-link" href="../res_users/index.html">res.users</a><br>
+<strong>required:</strong> False<br>
+<strong>searchable:</strong> True<br>
+<strong>sortable:</strong> True<br>
+<strong>store:</strong> True<br>
+<strong>string:</strong> Last Updated by<br>
+<strong>type:</strong> many2one<br>
+</p>
+</section>
+
+<section id="write_date" class="card card-body">
+<h4 class="card-title">write_date</h4>
+<p>
+<strong>change_default:</strong> False<br>
+<strong>company_dependent:</strong> False<br>
+<strong>default_export_compatible:</strong> False<br>
+<strong>depends:</strong> []<br>
+<strong>exportable:</strong> True<br>
+<strong>groupable:</strong> True<br>
+<strong>manual:</strong> False<br>
+<strong>name:</strong> write_date<br>
+<strong>readonly:</strong> True<br>
+<strong>required:</strong> False<br>
+<strong>searchable:</strong> True<br>
+<strong>sortable:</strong> True<br>
+<strong>store:</strong> True<br>
+<strong>string:</strong> Last Updated on<br>
+<strong>type:</strong> datetime<br>
+</p>
+</section>
+
+<section id="employee_cars_count" class="card card-body">
+<h4 class="card-title">employee_cars_count</h4>
+<p>
+<strong>change_default:</strong> False<br>
+<strong>company_dependent:</strong> False<br>
+<strong>default_export_compatible:</strong> False<br>
+<strong>depends:</strong> []<br>
+<strong>exportable:</strong> True<br>
+<strong>groupable:</strong> False<br>
+<strong>groups:</strong> fleet.fleet_group_manager<br>
+<strong>manual:</strong> False<br>
+<strong>name:</strong> employee_cars_count<br>
+<strong>readonly:</strong> True<br>
+<strong>required:</strong> False<br>
+<strong>searchable:</strong> False<br>
+<strong>sortable:</strong> False<br>
+<strong>store:</strong> False<br>
+<strong>string:</strong> Cars<br>
+<strong>type:</strong> integer<br>
+</p>
+</section>
+
+<section id="car_ids" class="card card-body">
+<h4 class="card-title">car_ids</h4>
+<p>
+<strong>allow_hierachy_operators:</strong> False<br>
+<strong>change_default:</strong> False<br>
+<strong>company_dependent:</strong> False<br>
+<strong>context:</strong> {}<br>
+<strong>default_export_compatible:</strong> False<br>
+<strong>depends:</strong> []<br>
+<strong>domain:</strong> []<br>
+<strong>exportable:</strong> True<br>
+<strong>groupable:</strong> False<br>
+<strong>groups:</strong> fleet.fleet_group_manager,hr.group_hr_user<br>
+<strong>manual:</strong> False<br>
+<strong>name:</strong> car_ids<br>
+<strong>readonly:</strong> False<br>
+<strong>relation:</strong> <a class="nav-link" href="../fleet_vehicle/index.html">fleet.vehicle</a><br>
+<strong>relation_field:</strong> driver_employee_id<br>
+<strong>required:</strong> False<br>
+<strong>searchable:</strong> True<br>
+<strong>sortable:</strong> False<br>
+<strong>store:</strong> True<br>
+<strong>string:</strong> Vehicles (private)<br>
+<strong>type:</strong> one2many<br>
+</p>
+</section>
+
+<section id="license_plate" class="card card-body">
+<h4 class="card-title">license_plate</h4>
+<p>
+<strong>change_default:</strong> False<br>
+<strong>company_dependent:</strong> False<br>
+<strong>default_export_compatible:</strong> False<br>
+<strong>depends:</strong> ['private_car_plate', 'car_ids.license_plate']<br>
+<strong>exportable:</strong> True<br>
+<strong>groupable:</strong> False<br>
+<strong>groups:</strong> hr.group_hr_user<br>
+<strong>manual:</strong> False<br>
+<strong>name:</strong> license_plate<br>
+<strong>readonly:</strong> True<br>
+<strong>required:</strong> False<br>
+<strong>searchable:</strong> True<br>
+<strong>sortable:</strong> False<br>
+<strong>store:</strong> False<br>
+<strong>string:</strong> License Plate<br>
+<strong>translate:</strong> False<br>
+<strong>trim:</strong> True<br>
+<strong>type:</strong> char<br>
+</p>
+</section>
+
+<section id="mobility_card" class="card card-body">
+<h4 class="card-title">mobility_card</h4>
+<p>
+<strong>change_default:</strong> False<br>
+<strong>company_dependent:</strong> False<br>
+<strong>default_export_compatible:</strong> False<br>
+<strong>depends:</strong> []<br>
+<strong>exportable:</strong> True<br>
+<strong>groupable:</strong> True<br>
+<strong>groups:</strong> fleet.fleet_group_user<br>
+<strong>manual:</strong> False<br>
+<strong>name:</strong> mobility_card<br>
+<strong>readonly:</strong> False<br>
+<strong>required:</strong> False<br>
+<strong>searchable:</strong> True<br>
+<strong>sortable:</strong> True<br>
+<strong>store:</strong> True<br>
+<strong>string:</strong> Mobility Card<br>
+<strong>translate:</strong> False<br>
+<strong>trim:</strong> True<br>
+<strong>type:</strong> char<br>
+</p>
+</section>
+
+<section id="equipment_ids" class="card card-body">
+<h4 class="card-title">equipment_ids</h4>
+<p>
+<strong>allow_hierachy_operators:</strong> False<br>
+<strong>change_default:</strong> False<br>
+<strong>company_dependent:</strong> False<br>
+<strong>context:</strong> {}<br>
+<strong>default_export_compatible:</strong> False<br>
+<strong>depends:</strong> []<br>
+<strong>domain:</strong> []<br>
+<strong>exportable:</strong> True<br>
+<strong>groupable:</strong> False<br>
+<strong>groups:</strong> hr.group_hr_user<br>
+<strong>manual:</strong> False<br>
+<strong>name:</strong> equipment_ids<br>
+<strong>readonly:</strong> False<br>
+<strong>relation:</strong> <a class="nav-link" href="../maintenance_equipment/index.html">maintenance.equipment</a><br>
+<strong>relation_field:</strong> employee_id<br>
+<strong>required:</strong> False<br>
+<strong>searchable:</strong> True<br>
+<strong>sortable:</strong> False<br>
+<strong>store:</strong> True<br>
+<strong>string:</strong> Equipment<br>
+<strong>type:</strong> one2many<br>
+</p>
+</section>
+
+<section id="equipment_count" class="card card-body">
+<h4 class="card-title">equipment_count</h4>
+<p>
+<strong>change_default:</strong> False<br>
+<strong>company_dependent:</strong> False<br>
+<strong>default_export_compatible:</strong> False<br>
+<strong>depends:</strong> ['equipment_ids']<br>
+<strong>exportable:</strong> True<br>
+<strong>groupable:</strong> False<br>
+<strong>groups:</strong> hr.group_hr_user<br>
+<strong>manual:</strong> False<br>
+<strong>name:</strong> equipment_count<br>
+<strong>readonly:</strong> True<br>
+<strong>required:</strong> False<br>
+<strong>searchable:</strong> False<br>
+<strong>sortable:</strong> False<br>
+<strong>store:</strong> False<br>
+<strong>string:</strong> Equipment Count<br>
+<strong>type:</strong> integer<br>
+</p>
+</section>
+
+<section id="subordinate_ids" class="card card-body">
+<h4 class="card-title">subordinate_ids</h4>
+<p>
+<strong>allow_hierachy_operators:</strong> True<br>
+<strong>change_default:</strong> False<br>
+<strong>company_dependent:</strong> False<br>
+<strong>context:</strong> {}<br>
+<strong>default_export_compatible:</strong> False<br>
+<strong>depends:</strong> ['child_ids', 'child_ids.child_all_count']<br>
+<strong>domain:</strong> []<br>
+<strong>exportable:</strong> True<br>
+<strong>groupable:</strong> False<br>
+<strong>help:</strong> Direct and indirect subordinates<br>
+<strong>manual:</strong> False<br>
+<strong>name:</strong> subordinate_ids<br>
+<strong>readonly:</strong> True<br>
+<strong>relation:</strong> <a class="nav-link" href="../hr_employee/index.html">hr.employee</a><br>
+<strong>required:</strong> False<br>
+<strong>searchable:</strong> False<br>
+<strong>sortable:</strong> False<br>
+<strong>store:</strong> False<br>
+<strong>string:</strong> Subordinates<br>
+<strong>type:</strong> one2many<br>
+</p>
+</section>
+
+<section id="is_subordinate" class="card card-body">
+<h4 class="card-title">is_subordinate</h4>
+<p>
+<strong>change_default:</strong> False<br>
+<strong>company_dependent:</strong> False<br>
+<strong>default_export_compatible:</strong> False<br>
+<strong>depends:</strong> ['parent_id']<br>
+<strong>exportable:</strong> True<br>
+<strong>groupable:</strong> False<br>
+<strong>manual:</strong> False<br>
+<strong>name:</strong> is_subordinate<br>
+<strong>readonly:</strong> True<br>
+<strong>required:</strong> False<br>
+<strong>searchable:</strong> True<br>
+<strong>sortable:</strong> False<br>
+<strong>store:</strong> False<br>
+<strong>string:</strong> Is Subordinate<br>
+<strong>type:</strong> boolean<br>
+</p>
+</section>
+
+<section id="resume_line_ids" class="card card-body">
+<h4 class="card-title">resume_line_ids</h4>
+<p>
+<strong>allow_hierachy_operators:</strong> False<br>
+<strong>change_default:</strong> False<br>
+<strong>company_dependent:</strong> False<br>
+<strong>context:</strong> {}<br>
+<strong>default_export_compatible:</strong> False<br>
+<strong>depends:</strong> []<br>
+<strong>domain:</strong> []<br>
+<strong>exportable:</strong> True<br>
+<strong>groupable:</strong> False<br>
+<strong>manual:</strong> False<br>
+<strong>name:</strong> resume_line_ids<br>
+<strong>readonly:</strong> False<br>
+<strong>relation:</strong> <a class="nav-link" href="../hr_resume_line/index.html">hr.resume.line</a><br>
+<strong>relation_field:</strong> employee_id<br>
+<strong>required:</strong> False<br>
+<strong>searchable:</strong> True<br>
+<strong>sortable:</strong> False<br>
+<strong>store:</strong> True<br>
+<strong>string:</strong> Resume lines<br>
+<strong>type:</strong> one2many<br>
+</p>
+</section>
+
+<section id="employee_skill_ids" class="card card-body">
+<h4 class="card-title">employee_skill_ids</h4>
+<p>
+<strong>allow_hierachy_operators:</strong> False<br>
+<strong>change_default:</strong> False<br>
+<strong>company_dependent:</strong> False<br>
+<strong>context:</strong> {}<br>
+<strong>default_export_compatible:</strong> False<br>
+<strong>depends:</strong> ['employee_skill_ids.skill_type_id.active']<br>
+<strong>domain:</strong> [['skill_type_id.active', '=', True]]<br>
+<strong>exportable:</strong> True<br>
+<strong>groupable:</strong> False<br>
+<strong>manual:</strong> False<br>
+<strong>name:</strong> employee_skill_ids<br>
+<strong>readonly:</strong> False<br>
+<strong>relation:</strong> <a class="nav-link" href="../hr_employee_skill/index.html">hr.employee.skill</a><br>
+<strong>relation_field:</strong> employee_id<br>
+<strong>required:</strong> False<br>
+<strong>searchable:</strong> True<br>
+<strong>sortable:</strong> False<br>
+<strong>store:</strong> True<br>
+<strong>string:</strong> Skills<br>
+<strong>type:</strong> one2many<br>
+</p>
+</section>
+
+<section id="skill_ids" class="card card-body">
+<h4 class="card-title">skill_ids</h4>
+<p>
+<strong>allow_hierachy_operators:</strong> False<br>
+<strong>change_default:</strong> False<br>
+<strong>company_dependent:</strong> False<br>
+<strong>context:</strong> {}<br>
+<strong>default_export_compatible:</strong> False<br>
+<strong>depends:</strong> ['employee_skill_ids.skill_id']<br>
+<strong>domain:</strong> []<br>
+<strong>exportable:</strong> True<br>
+<strong>groupable:</strong> True<br>
+<strong>groups:</strong> hr.group_hr_user<br>
+<strong>manual:</strong> False<br>
+<strong>name:</strong> skill_ids<br>
+<strong>readonly:</strong> True<br>
+<strong>relation:</strong> <a class="nav-link" href="../hr_skill/index.html">hr.skill</a><br>
+<strong>required:</strong> False<br>
+<strong>searchable:</strong> True<br>
+<strong>sortable:</strong> False<br>
+<strong>store:</strong> True<br>
+<strong>string:</strong> Skill<br>
+<strong>type:</strong> many2many<br>
+</p>
+</section>
+
+
+      </div>
+    </div>
+
+  </div>
+  <!-- Content end -->
+
+  <!-- Footer
+  ============================ -->
+  <footer id="footer" class="section bg-dark footer-text-light">
+    <div class="container">
+      <ul class="social-icons social-icons-lg social-icons-muted justify-content-center mb-3">
+        <li><a data-toggle="tooltip" href="https://twitter.com/harnishdesign/" target="_blank" title=""
+            data-original-title="Twitter"><i class="fab fa-twitter"></i></a></li>
+        <li><a data-toggle="tooltip" href="http://www.facebook.com/harnishdesign/" target="_blank" title=""
+            data-original-title="Facebook"><i class="fab fa-facebook-f"></i></a></li>
+        <li><a data-toggle="tooltip" href="http://www.dribbble.com/harnishdesign/" target="_blank" title=""
+            data-original-title="Dribbble"><i class="fab fa-dribbble"></i></a></li>
+        <li><a data-toggle="tooltip" href="http://www.github.com/" target="_blank" title=""
+            data-original-title="GitHub"><i class="fab fa-github"></i></a></li>
+      </ul>
+      <p class="text-center">Copyright &copy; 2020 <a
+          href="http://www.harnishdesign.net/idocs-one-page-documentation-html-template/">iDocs</a>. All Rights
+        Reserved.</p>
+      <p class="text-2 text-center mb-0">Design &amp; Develop by <a class="btn-link" target="_blank"
+          href="http://www.harnishdesign.net/">HarnishDesign</a>.</p>
+    </div>
+  </footer>
+  <!-- Footer end -->
+
+  </div>
+  <!-- Document Wrapper end -->
+
+  <!-- Back To Top -->
+  <a id="back-to-top" data-toggle="tooltip" title="Back to Top" href="javascript:void(0)"><i
+      class="fa fa-chevron-up"></i></a>
+
+  <!-- JavaScript
+============================ -->
+  <script src="../../assets/vendor/jquery/jquery.min.js"></script>
+  <script src="../../assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <!-- Highlight JS -->
+  <script src="../../assets/vendor/highlight.js/highlight.min.js"></script>
+  <!-- Easing -->
+  <script src="../../assets/vendor/jquery.easing/jquery.easing.min.js"></script>
+  <!-- Magnific Popup -->
+  <script src="../../assets/vendor/magnific-popup/jquery.magnific-popup.min.js"></script>
+  <!-- Custom Script -->
+  <script src="../../assets/js/theme.js"></script>
+</body>
+
+</html>

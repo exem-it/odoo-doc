@@ -1,0 +1,2448 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1.0, shrink-to-fit=no">
+  <link href="../../assets/images/odoo_doc.png" rel="icon" />
+  <title>Odoo API Documentation</title>
+  <meta name="description" content="Your ThemeForest item Name and description">
+  <meta name="author" content="harnishdesign.net">
+
+  <!-- Stylesheet
+============================== -->
+  <!-- Bootstrap -->
+  <link rel="stylesheet" type="text/css" href="../../assets/vendor/bootstrap/css/bootstrap.min.css" />
+  <!-- Font Awesome Icon -->
+  <link rel="stylesheet" type="text/css" href="../../assets/vendor/font-awesome/css/all.min.css" />
+  <!-- Magnific Popup -->
+  <link rel="stylesheet" type="text/css" href="../../assets/vendor/magnific-popup/magnific-popup.min.css" />
+  <!-- Highlight Syntax -->
+  <link rel="stylesheet" type="text/css" href="../../assets/vendor/highlight.js/styles/github.css" />
+  <!-- Custom Stylesheet -->
+  <link rel="stylesheet" type="text/css" href="../../assets/css/stylesheet.css" />
+</head>
+
+<body data-spy="scroll" data-target=".idocs-navigation" data-offset="125">
+
+  <!-- Preloader -->
+  <div class="preloader">
+    <div class="lds-ellipsis">
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+    </div>
+  </div>
+  <!-- Preloader End -->
+
+  <!-- Document Wrapper   
+=============================== -->
+  <div id="main-wrapper">
+
+  <!-- Header
+  ============================ -->
+  <header id="header" class="sticky-top">
+    <!-- Navbar -->
+    <nav class="primary-menu navbar navbar-expand-lg navbar-dropdown-dark">
+      <div class="container-fluid">
+        <!-- Sidebar Toggler -->
+		<button id="sidebarCollapse" class="navbar-toggler d-block d-md-none" type="button"><span></span><span class="w-75"></span><span class="w-50"></span></button>
+
+		<!-- Logo -->
+        <a class="logo ml-md-3" href="index.html" title="iDocs Template"> <img src="../../assets/images/odoo_doc.png" alt="iDocs Template"/> </a>
+		<span class="text-2 ml-2">v1.0</span>
+        <!-- Logo End -->
+
+		<!-- Navbar Toggler -->
+		<button class="navbar-toggler ml-auto" type="button" data-toggle="collapse" data-target="#header-nav"><span></span><span></span><span></span></button>
+
+		<div id="header-nav" class="collapse navbar-collapse justify-content-end">
+          <ul class="navbar-nav">
+            <li class="dropdown"> <a class="dropdown-toggle" href="#">Navigation</a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="index.html">ir.model</a></li>
+                <li><a class="dropdown-item" href="odoo_operators.html">operators</a></li>
+              </ul>
+            </li>
+            <li><a target="_blank" href="https://themeforest.net/user/harnishdesign/#contact?ref=HarnishDesign">Support</a></li>
+          </ul>
+        </div>
+        <ul class="social-icons social-icons-sm ml-lg-2 mr-2">
+          <li class="social-icons-twitter"><a data-toggle="tooltip" href="http://www.twitter.com/harnishdesign/" target="_blank" title="" data-original-title="Twitter"><i class="fab fa-twitter"></i></a></li>
+        </ul>
+      </div>
+    </nav>
+    <!-- Navbar End -->
+  </header>
+  <!-- Header End -->
+
+  <!-- Content
+  ============================ -->
+  <div id="content" role="main">
+
+    <!-- Sidebar Navigation
+	============================ -->
+    <div class="idocs-navigation bg-light">
+        <ul class="nav flex-column">
+          <li class="nav-item"><a class="nav-link" href="#analytic_distribution">analytic_distribution</a></li>
+<li class="nav-item"><a class="nav-link" href="#analytic_precision">analytic_precision</a></li>
+<li class="nav-item"><a class="nav-link" href="#distribution_analytic_account_ids">distribution_analytic_account_ids</a></li>
+<li class="nav-item"><a class="nav-link" href="#move_id">move_id</a></li>
+<li class="nav-item"><a class="nav-link" href="#journal_id">journal_id</a></li>
+<li class="nav-item"><a class="nav-link" href="#journal_group_id">journal_group_id</a></li>
+<li class="nav-item"><a class="nav-link" href="#company_id">company_id</a></li>
+<li class="nav-item"><a class="nav-link" href="#company_currency_id">company_currency_id</a></li>
+<li class="nav-item"><a class="nav-link" href="#move_name">move_name</a></li>
+<li class="nav-item"><a class="nav-link" href="#parent_state">parent_state</a></li>
+<li class="nav-item"><a class="nav-link" href="#date">date</a></li>
+<li class="nav-item"><a class="nav-link" href="#invoice_date">invoice_date</a></li>
+<li class="nav-item"><a class="nav-link" href="#ref">ref</a></li>
+<li class="nav-item"><a class="nav-link" href="#is_storno">is_storno</a></li>
+<li class="nav-item"><a class="nav-link" href="#sequence">sequence</a></li>
+<li class="nav-item"><a class="nav-link" href="#move_type">move_type</a></li>
+<li class="nav-item"><a class="nav-link" href="#account_id">account_id</a></li>
+<li class="nav-item"><a class="nav-link" href="#account_name">account_name</a></li>
+<li class="nav-item"><a class="nav-link" href="#account_code">account_code</a></li>
+<li class="nav-item"><a class="nav-link" href="#name">name</a></li>
+<li class="nav-item"><a class="nav-link" href="#debit">debit</a></li>
+<li class="nav-item"><a class="nav-link" href="#credit">credit</a></li>
+<li class="nav-item"><a class="nav-link" href="#balance">balance</a></li>
+<li class="nav-item"><a class="nav-link" href="#cumulated_balance">cumulated_balance</a></li>
+<li class="nav-item"><a class="nav-link" href="#currency_rate">currency_rate</a></li>
+<li class="nav-item"><a class="nav-link" href="#amount_currency">amount_currency</a></li>
+<li class="nav-item"><a class="nav-link" href="#currency_id">currency_id</a></li>
+<li class="nav-item"><a class="nav-link" href="#is_same_currency">is_same_currency</a></li>
+<li class="nav-item"><a class="nav-link" href="#partner_id">partner_id</a></li>
+<li class="nav-item"><a class="nav-link" href="#is_imported">is_imported</a></li>
+<li class="nav-item"><a class="nav-link" href="#reconcile_model_id">reconcile_model_id</a></li>
+<li class="nav-item"><a class="nav-link" href="#payment_id">payment_id</a></li>
+<li class="nav-item"><a class="nav-link" href="#statement_line_id">statement_line_id</a></li>
+<li class="nav-item"><a class="nav-link" href="#statement_id">statement_id</a></li>
+<li class="nav-item"><a class="nav-link" href="#commercial_partner_country">commercial_partner_country</a></li>
+<li class="nav-item"><a class="nav-link" href="#tax_ids">tax_ids</a></li>
+<li class="nav-item"><a class="nav-link" href="#group_tax_id">group_tax_id</a></li>
+<li class="nav-item"><a class="nav-link" href="#tax_line_id">tax_line_id</a></li>
+<li class="nav-item"><a class="nav-link" href="#tax_group_id">tax_group_id</a></li>
+<li class="nav-item"><a class="nav-link" href="#tax_base_amount">tax_base_amount</a></li>
+<li class="nav-item"><a class="nav-link" href="#tax_repartition_line_id">tax_repartition_line_id</a></li>
+<li class="nav-item"><a class="nav-link" href="#tax_tag_ids">tax_tag_ids</a></li>
+<li class="nav-item"><a class="nav-link" href="#tax_tag_invert">tax_tag_invert</a></li>
+<li class="nav-item"><a class="nav-link" href="#amount_residual">amount_residual</a></li>
+<li class="nav-item"><a class="nav-link" href="#amount_residual_currency">amount_residual_currency</a></li>
+<li class="nav-item"><a class="nav-link" href="#reconciled">reconciled</a></li>
+<li class="nav-item"><a class="nav-link" href="#full_reconcile_id">full_reconcile_id</a></li>
+<li class="nav-item"><a class="nav-link" href="#matched_debit_ids">matched_debit_ids</a></li>
+<li class="nav-item"><a class="nav-link" href="#matched_credit_ids">matched_credit_ids</a></li>
+<li class="nav-item"><a class="nav-link" href="#matching_number">matching_number</a></li>
+<li class="nav-item"><a class="nav-link" href="#is_account_reconcile">is_account_reconcile</a></li>
+<li class="nav-item"><a class="nav-link" href="#account_type">account_type</a></li>
+<li class="nav-item"><a class="nav-link" href="#account_internal_group">account_internal_group</a></li>
+<li class="nav-item"><a class="nav-link" href="#account_root_id">account_root_id</a></li>
+<li class="nav-item"><a class="nav-link" href="#product_category_id">product_category_id</a></li>
+<li class="nav-item"><a class="nav-link" href="#display_type">display_type</a></li>
+<li class="nav-item"><a class="nav-link" href="#product_id">product_id</a></li>
+<li class="nav-item"><a class="nav-link" href="#product_uom_id">product_uom_id</a></li>
+<li class="nav-item"><a class="nav-link" href="#product_uom_category_id">product_uom_category_id</a></li>
+<li class="nav-item"><a class="nav-link" href="#quantity">quantity</a></li>
+<li class="nav-item"><a class="nav-link" href="#date_maturity">date_maturity</a></li>
+<li class="nav-item"><a class="nav-link" href="#price_unit">price_unit</a></li>
+<li class="nav-item"><a class="nav-link" href="#price_subtotal">price_subtotal</a></li>
+<li class="nav-item"><a class="nav-link" href="#price_total">price_total</a></li>
+<li class="nav-item"><a class="nav-link" href="#discount">discount</a></li>
+<li class="nav-item"><a class="nav-link" href="#tax_calculation_rounding_method">tax_calculation_rounding_method</a></li>
+<li class="nav-item"><a class="nav-link" href="#term_key">term_key</a></li>
+<li class="nav-item"><a class="nav-link" href="#epd_key">epd_key</a></li>
+<li class="nav-item"><a class="nav-link" href="#epd_needed">epd_needed</a></li>
+<li class="nav-item"><a class="nav-link" href="#epd_dirty">epd_dirty</a></li>
+<li class="nav-item"><a class="nav-link" href="#discount_allocation_key">discount_allocation_key</a></li>
+<li class="nav-item"><a class="nav-link" href="#discount_allocation_needed">discount_allocation_needed</a></li>
+<li class="nav-item"><a class="nav-link" href="#discount_allocation_dirty">discount_allocation_dirty</a></li>
+<li class="nav-item"><a class="nav-link" href="#analytic_line_ids">analytic_line_ids</a></li>
+<li class="nav-item"><a class="nav-link" href="#discount_date">discount_date</a></li>
+<li class="nav-item"><a class="nav-link" href="#discount_amount_currency">discount_amount_currency</a></li>
+<li class="nav-item"><a class="nav-link" href="#discount_balance">discount_balance</a></li>
+<li class="nav-item"><a class="nav-link" href="#payment_date">payment_date</a></li>
+<li class="nav-item"><a class="nav-link" href="#is_refund">is_refund</a></li>
+<li class="nav-item"><a class="nav-link" href="#id">id</a></li>
+<li class="nav-item"><a class="nav-link" href="#display_name">display_name</a></li>
+<li class="nav-item"><a class="nav-link" href="#create_uid">create_uid</a></li>
+<li class="nav-item"><a class="nav-link" href="#create_date">create_date</a></li>
+<li class="nav-item"><a class="nav-link" href="#write_uid">write_uid</a></li>
+<li class="nav-item"><a class="nav-link" href="#write_date">write_date</a></li>
+<li class="nav-item"><a class="nav-link" href="#vehicle_id">vehicle_id</a></li>
+<li class="nav-item"><a class="nav-link" href="#need_vehicle">need_vehicle</a></li>
+<li class="nav-item"><a class="nav-link" href="#vehicle_log_service_ids">vehicle_log_service_ids</a></li>
+<li class="nav-item"><a class="nav-link" href="#fsm_order_ids">fsm_order_ids</a></li>
+<li class="nav-item"><a class="nav-link" href="#stock_valuation_layer_ids">stock_valuation_layer_ids</a></li>
+<li class="nav-item"><a class="nav-link" href="#cogs_origin_id">cogs_origin_id</a></li>
+<li class="nav-item"><a class="nav-link" href="#is_downpayment">is_downpayment</a></li>
+<li class="nav-item"><a class="nav-link" href="#sale_line_ids">sale_line_ids</a></li>
+
+        </ul>
+    </div>
+
+    <!-- Docs Content
+	============================ -->
+    <div class="idocs-content">
+      <div class="container">
+        <h2>account.move.line</h2>
+<section id="analytic_distribution" class="card card-body">
+<h4 class="card-title">analytic_distribution</h4>
+<p>
+<strong>change_default:</strong> False<br>
+<strong>company_dependent:</strong> False<br>
+<strong>default_export_compatible:</strong> False<br>
+<strong>depends:</strong> ['account_id', 'partner_id', 'product_id']<br>
+<strong>exportable:</strong> True<br>
+<strong>groupable:</strong> True<br>
+<strong>manual:</strong> False<br>
+<strong>name:</strong> analytic_distribution<br>
+<strong>readonly:</strong> False<br>
+<strong>required:</strong> False<br>
+<strong>searchable:</strong> True<br>
+<strong>sortable:</strong> True<br>
+<strong>store:</strong> True<br>
+<strong>string:</strong> Analytic Distribution<br>
+<strong>type:</strong> json<br>
+</p>
+</section>
+
+<section id="analytic_precision" class="card card-body">
+<h4 class="card-title">analytic_precision</h4>
+<p>
+<strong>change_default:</strong> False<br>
+<strong>company_dependent:</strong> False<br>
+<strong>default_export_compatible:</strong> False<br>
+<strong>depends:</strong> []<br>
+<strong>exportable:</strong> True<br>
+<strong>groupable:</strong> False<br>
+<strong>manual:</strong> False<br>
+<strong>name:</strong> analytic_precision<br>
+<strong>readonly:</strong> False<br>
+<strong>required:</strong> False<br>
+<strong>searchable:</strong> False<br>
+<strong>sortable:</strong> False<br>
+<strong>store:</strong> False<br>
+<strong>string:</strong> Analytic Precision<br>
+<strong>type:</strong> integer<br>
+</p>
+</section>
+
+<section id="distribution_analytic_account_ids" class="card card-body">
+<h4 class="card-title">distribution_analytic_account_ids</h4>
+<p>
+<strong>allow_hierachy_operators:</strong> False<br>
+<strong>change_default:</strong> False<br>
+<strong>company_dependent:</strong> False<br>
+<strong>context:</strong> {}<br>
+<strong>default_export_compatible:</strong> False<br>
+<strong>depends:</strong> ['analytic_distribution']<br>
+<strong>domain:</strong> []<br>
+<strong>exportable:</strong> True<br>
+<strong>groupable:</strong> False<br>
+<strong>manual:</strong> False<br>
+<strong>name:</strong> distribution_analytic_account_ids<br>
+<strong>readonly:</strong> True<br>
+<strong>relation:</strong> <a class="nav-link" href="../account_analytic_account/index.html">account.analytic.account</a><br>
+<strong>required:</strong> False<br>
+<strong>searchable:</strong> True<br>
+<strong>sortable:</strong> False<br>
+<strong>store:</strong> False<br>
+<strong>string:</strong> Distribution Analytic Account<br>
+<strong>type:</strong> many2many<br>
+</p>
+</section>
+
+<section id="move_id" class="card card-body">
+<h4 class="card-title">move_id</h4>
+<p>
+<strong>allow_hierachy_operators:</strong> False<br>
+<strong>change_default:</strong> False<br>
+<strong>company_dependent:</strong> False<br>
+<strong>context:</strong> {}<br>
+<strong>default_export_compatible:</strong> False<br>
+<strong>depends:</strong> []<br>
+<strong>domain:</strong> (company_id and [('company_id', 'in', [company_id] + [False])] or [('company_id', '=', False)]) + ([])<br>
+<strong>exportable:</strong> True<br>
+<strong>groupable:</strong> True<br>
+<strong>manual:</strong> False<br>
+<strong>name:</strong> move_id<br>
+<strong>readonly:</strong> True<br>
+<strong>relation:</strong> <a class="nav-link" href="../account_move/index.html">account.move</a><br>
+<strong>required:</strong> True<br>
+<strong>searchable:</strong> True<br>
+<strong>sortable:</strong> True<br>
+<strong>store:</strong> True<br>
+<strong>string:</strong> Journal Entry<br>
+<strong>type:</strong> many2one<br>
+</p>
+</section>
+
+<section id="journal_id" class="card card-body">
+<h4 class="card-title">journal_id</h4>
+<p>
+<strong>allow_hierachy_operators:</strong> False<br>
+<strong>change_default:</strong> False<br>
+<strong>company_dependent:</strong> False<br>
+<strong>context:</strong> {}<br>
+<strong>default_export_compatible:</strong> False<br>
+<strong>depends:</strong> ['move_id.journal_id']<br>
+<strong>exportable:</strong> True<br>
+<strong>groupable:</strong> True<br>
+<strong>manual:</strong> False<br>
+<strong>name:</strong> journal_id<br>
+<strong>readonly:</strong> True<br>
+<strong>related:</strong> move_id.journal_id<br>
+<strong>relation:</strong> <a class="nav-link" href="../account_journal/index.html">account.journal</a><br>
+<strong>required:</strong> False<br>
+<strong>searchable:</strong> True<br>
+<strong>sortable:</strong> True<br>
+<strong>store:</strong> True<br>
+<strong>string:</strong> Journal<br>
+<strong>type:</strong> many2one<br>
+</p>
+</section>
+
+<section id="journal_group_id" class="card card-body">
+<h4 class="card-title">journal_group_id</h4>
+<p>
+<strong>allow_hierachy_operators:</strong> False<br>
+<strong>change_default:</strong> False<br>
+<strong>company_dependent:</strong> False<br>
+<strong>context:</strong> {}<br>
+<strong>default_export_compatible:</strong> False<br>
+<strong>depends:</strong> []<br>
+<strong>domain:</strong> []<br>
+<strong>exportable:</strong> True<br>
+<strong>groupable:</strong> False<br>
+<strong>manual:</strong> False<br>
+<strong>name:</strong> journal_group_id<br>
+<strong>readonly:</strong> False<br>
+<strong>relation:</strong> <a class="nav-link" href="../account_journal_group/index.html">account.journal.group</a><br>
+<strong>required:</strong> False<br>
+<strong>searchable:</strong> True<br>
+<strong>sortable:</strong> False<br>
+<strong>store:</strong> False<br>
+<strong>string:</strong> Ledger<br>
+<strong>type:</strong> many2one<br>
+</p>
+</section>
+
+<section id="company_id" class="card card-body">
+<h4 class="card-title">company_id</h4>
+<p>
+<strong>allow_hierachy_operators:</strong> True<br>
+<strong>change_default:</strong> False<br>
+<strong>company_dependent:</strong> False<br>
+<strong>context:</strong> {}<br>
+<strong>default_export_compatible:</strong> False<br>
+<strong>depends:</strong> ['move_id.company_id']<br>
+<strong>domain:</strong> []<br>
+<strong>exportable:</strong> True<br>
+<strong>groupable:</strong> True<br>
+<strong>manual:</strong> False<br>
+<strong>name:</strong> company_id<br>
+<strong>readonly:</strong> True<br>
+<strong>related:</strong> move_id.company_id<br>
+<strong>relation:</strong> <a class="nav-link" href="../res_company/index.html">res.company</a><br>
+<strong>required:</strong> False<br>
+<strong>searchable:</strong> True<br>
+<strong>sortable:</strong> True<br>
+<strong>store:</strong> True<br>
+<strong>string:</strong> Company<br>
+<strong>type:</strong> many2one<br>
+</p>
+</section>
+
+<section id="company_currency_id" class="card card-body">
+<h4 class="card-title">company_currency_id</h4>
+<p>
+<strong>allow_hierachy_operators:</strong> False<br>
+<strong>change_default:</strong> False<br>
+<strong>company_dependent:</strong> False<br>
+<strong>context:</strong> {}<br>
+<strong>default_export_compatible:</strong> False<br>
+<strong>depends:</strong> ['move_id.company_currency_id']<br>
+<strong>domain:</strong> []<br>
+<strong>exportable:</strong> True<br>
+<strong>groupable:</strong> True<br>
+<strong>manual:</strong> False<br>
+<strong>name:</strong> company_currency_id<br>
+<strong>readonly:</strong> True<br>
+<strong>related:</strong> move_id.company_currency_id<br>
+<strong>relation:</strong> <a class="nav-link" href="../res_currency/index.html">res.currency</a><br>
+<strong>required:</strong> False<br>
+<strong>searchable:</strong> True<br>
+<strong>sortable:</strong> True<br>
+<strong>store:</strong> True<br>
+<strong>string:</strong> Company Currency<br>
+<strong>type:</strong> many2one<br>
+</p>
+</section>
+
+<section id="move_name" class="card card-body">
+<h4 class="card-title">move_name</h4>
+<p>
+<strong>change_default:</strong> False<br>
+<strong>company_dependent:</strong> False<br>
+<strong>default_export_compatible:</strong> False<br>
+<strong>depends:</strong> ['move_id.name']<br>
+<strong>exportable:</strong> True<br>
+<strong>groupable:</strong> True<br>
+<strong>manual:</strong> False<br>
+<strong>name:</strong> move_name<br>
+<strong>readonly:</strong> True<br>
+<strong>related:</strong> move_id.name<br>
+<strong>required:</strong> False<br>
+<strong>searchable:</strong> True<br>
+<strong>sortable:</strong> True<br>
+<strong>store:</strong> True<br>
+<strong>string:</strong> Number<br>
+<strong>translate:</strong> False<br>
+<strong>trim:</strong> True<br>
+<strong>type:</strong> char<br>
+</p>
+</section>
+
+<section id="parent_state" class="card card-body">
+<h4 class="card-title">parent_state</h4>
+<p>
+<strong>change_default:</strong> False<br>
+<strong>company_dependent:</strong> False<br>
+<strong>default_export_compatible:</strong> False<br>
+<strong>depends:</strong> ['move_id.state']<br>
+<strong>exportable:</strong> True<br>
+<strong>groupable:</strong> True<br>
+<strong>manual:</strong> False<br>
+<strong>name:</strong> parent_state<br>
+<strong>readonly:</strong> True<br>
+<strong>related:</strong> move_id.state<br>
+<strong>required:</strong> False<br>
+<strong>searchable:</strong> True<br>
+<strong>selection:</strong> [['draft', 'Draft'], ['posted', 'Posted'], ['cancel', 'Cancelled']]<br>
+<strong>sortable:</strong> True<br>
+<strong>store:</strong> True<br>
+<strong>string:</strong> Status<br>
+<strong>type:</strong> selection<br>
+</p>
+</section>
+
+<section id="date" class="card card-body">
+<h4 class="card-title">date</h4>
+<p>
+<strong>aggregator:</strong> min<br>
+<strong>change_default:</strong> False<br>
+<strong>company_dependent:</strong> False<br>
+<strong>default_export_compatible:</strong> False<br>
+<strong>depends:</strong> ['move_id.date']<br>
+<strong>exportable:</strong> True<br>
+<strong>groupable:</strong> True<br>
+<strong>manual:</strong> False<br>
+<strong>name:</strong> date<br>
+<strong>readonly:</strong> True<br>
+<strong>related:</strong> move_id.date<br>
+<strong>required:</strong> False<br>
+<strong>searchable:</strong> True<br>
+<strong>sortable:</strong> True<br>
+<strong>store:</strong> True<br>
+<strong>string:</strong> Date<br>
+<strong>type:</strong> date<br>
+</p>
+</section>
+
+<section id="invoice_date" class="card card-body">
+<h4 class="card-title">invoice_date</h4>
+<p>
+<strong>aggregator:</strong> min<br>
+<strong>change_default:</strong> False<br>
+<strong>company_dependent:</strong> False<br>
+<strong>default_export_compatible:</strong> False<br>
+<strong>depends:</strong> ['move_id.invoice_date']<br>
+<strong>exportable:</strong> True<br>
+<strong>groupable:</strong> True<br>
+<strong>manual:</strong> False<br>
+<strong>name:</strong> invoice_date<br>
+<strong>readonly:</strong> True<br>
+<strong>related:</strong> move_id.invoice_date<br>
+<strong>required:</strong> False<br>
+<strong>searchable:</strong> True<br>
+<strong>sortable:</strong> True<br>
+<strong>store:</strong> True<br>
+<strong>string:</strong> Invoice/Bill Date<br>
+<strong>type:</strong> date<br>
+</p>
+</section>
+
+<section id="ref" class="card card-body">
+<h4 class="card-title">ref</h4>
+<p>
+<strong>change_default:</strong> False<br>
+<strong>company_dependent:</strong> False<br>
+<strong>default_export_compatible:</strong> False<br>
+<strong>depends:</strong> ['move_id.ref']<br>
+<strong>exportable:</strong> True<br>
+<strong>groupable:</strong> True<br>
+<strong>manual:</strong> False<br>
+<strong>name:</strong> ref<br>
+<strong>readonly:</strong> True<br>
+<strong>related:</strong> move_id.ref<br>
+<strong>required:</strong> False<br>
+<strong>searchable:</strong> True<br>
+<strong>sortable:</strong> True<br>
+<strong>store:</strong> True<br>
+<strong>string:</strong> Reference<br>
+<strong>translate:</strong> False<br>
+<strong>trim:</strong> True<br>
+<strong>type:</strong> char<br>
+</p>
+</section>
+
+<section id="is_storno" class="card card-body">
+<h4 class="card-title">is_storno</h4>
+<p>
+<strong>change_default:</strong> False<br>
+<strong>company_dependent:</strong> False<br>
+<strong>default_export_compatible:</strong> False<br>
+<strong>depends:</strong> ['move_id.is_storno']<br>
+<strong>exportable:</strong> True<br>
+<strong>groupable:</strong> True<br>
+<strong>help:</strong> Utility field to express whether the journal item is subject to storno accounting<br>
+<strong>manual:</strong> False<br>
+<strong>name:</strong> is_storno<br>
+<strong>readonly:</strong> True<br>
+<strong>related:</strong> move_id.is_storno<br>
+<strong>required:</strong> False<br>
+<strong>searchable:</strong> True<br>
+<strong>sortable:</strong> True<br>
+<strong>store:</strong> False<br>
+<strong>string:</strong> Company Storno Accounting<br>
+<strong>type:</strong> boolean<br>
+</p>
+</section>
+
+<section id="sequence" class="card card-body">
+<h4 class="card-title">sequence</h4>
+<p>
+<strong>change_default:</strong> False<br>
+<strong>company_dependent:</strong> False<br>
+<strong>default_export_compatible:</strong> False<br>
+<strong>depends:</strong> ['display_type']<br>
+<strong>exportable:</strong> True<br>
+<strong>groupable:</strong> True<br>
+<strong>manual:</strong> False<br>
+<strong>name:</strong> sequence<br>
+<strong>readonly:</strong> False<br>
+<strong>required:</strong> False<br>
+<strong>searchable:</strong> True<br>
+<strong>sortable:</strong> True<br>
+<strong>store:</strong> True<br>
+<strong>string:</strong> Sequence<br>
+<strong>type:</strong> integer<br>
+</p>
+</section>
+
+<section id="move_type" class="card card-body">
+<h4 class="card-title">move_type</h4>
+<p>
+<strong>change_default:</strong> False<br>
+<strong>company_dependent:</strong> False<br>
+<strong>default_export_compatible:</strong> False<br>
+<strong>depends:</strong> ['move_id.move_type']<br>
+<strong>exportable:</strong> True<br>
+<strong>groupable:</strong> True<br>
+<strong>manual:</strong> False<br>
+<strong>name:</strong> move_type<br>
+<strong>readonly:</strong> True<br>
+<strong>related:</strong> move_id.move_type<br>
+<strong>required:</strong> False<br>
+<strong>searchable:</strong> True<br>
+<strong>selection:</strong> [['entry', 'Journal Entry'], ['out_invoice', 'Customer Invoice'], ['out_refund', 'Customer Credit Note'], ['in_invoice', 'Vendor Bill'], ['in_refund', 'Vendor Credit Note'], ['out_receipt', 'Sales Receipt'], ['in_receipt', 'Purchase Receipt']]<br>
+<strong>sortable:</strong> True<br>
+<strong>store:</strong> False<br>
+<strong>string:</strong> Type<br>
+<strong>type:</strong> selection<br>
+</p>
+</section>
+
+<section id="account_id" class="card card-body">
+<h4 class="card-title">account_id</h4>
+<p>
+<strong>allow_hierachy_operators:</strong> False<br>
+<strong>change_default:</strong> False<br>
+<strong>company_dependent:</strong> False<br>
+<strong>context:</strong> {}<br>
+<strong>default_export_compatible:</strong> False<br>
+<strong>depends:</strong> []<br>
+<strong>domain:</strong> (company_id and [('company_ids', 'parent_of', [company_id])] or [('company_ids', 'parent_of', '')]) + ([('deprecated', '=', False), ('account_type', '!=', 'off_balance')])<br>
+<strong>exportable:</strong> True<br>
+<strong>groupable:</strong> True<br>
+<strong>manual:</strong> False<br>
+<strong>name:</strong> account_id<br>
+<strong>readonly:</strong> False<br>
+<strong>relation:</strong> <a class="nav-link" href="../account_account/index.html">account.account</a><br>
+<strong>required:</strong> False<br>
+<strong>searchable:</strong> True<br>
+<strong>sortable:</strong> True<br>
+<strong>store:</strong> True<br>
+<strong>string:</strong> Account<br>
+<strong>type:</strong> many2one<br>
+</p>
+</section>
+
+<section id="account_name" class="card card-body">
+<h4 class="card-title">account_name</h4>
+<p>
+<strong>change_default:</strong> False<br>
+<strong>company_dependent:</strong> False<br>
+<strong>default_export_compatible:</strong> False<br>
+<strong>depends:</strong> ['account_id.name']<br>
+<strong>exportable:</strong> True<br>
+<strong>groupable:</strong> True<br>
+<strong>manual:</strong> False<br>
+<strong>name:</strong> account_name<br>
+<strong>readonly:</strong> True<br>
+<strong>related:</strong> account_id.name<br>
+<strong>required:</strong> False<br>
+<strong>searchable:</strong> True<br>
+<strong>sortable:</strong> True<br>
+<strong>store:</strong> False<br>
+<strong>string:</strong> Account Name<br>
+<strong>translate:</strong> True<br>
+<strong>trim:</strong> True<br>
+<strong>type:</strong> char<br>
+</p>
+</section>
+
+<section id="account_code" class="card card-body">
+<h4 class="card-title">account_code</h4>
+<p>
+<strong>change_default:</strong> False<br>
+<strong>company_dependent:</strong> False<br>
+<strong>default_export_compatible:</strong> False<br>
+<strong>depends:</strong> ['account_id.code']<br>
+<strong>exportable:</strong> True<br>
+<strong>groupable:</strong> True<br>
+<strong>manual:</strong> False<br>
+<strong>name:</strong> account_code<br>
+<strong>readonly:</strong> True<br>
+<strong>related:</strong> account_id.code<br>
+<strong>required:</strong> False<br>
+<strong>searchable:</strong> True<br>
+<strong>size:</strong> 64<br>
+<strong>sortable:</strong> True<br>
+<strong>store:</strong> False<br>
+<strong>string:</strong> Code<br>
+<strong>translate:</strong> False<br>
+<strong>trim:</strong> True<br>
+<strong>type:</strong> char<br>
+</p>
+</section>
+
+<section id="name" class="card card-body">
+<h4 class="card-title">name</h4>
+<p>
+<strong>change_default:</strong> False<br>
+<strong>company_dependent:</strong> False<br>
+<strong>default_export_compatible:</strong> False<br>
+<strong>depends:</strong> ['product_id', 'move_id.ref', 'move_id.payment_reference']<br>
+<strong>exportable:</strong> True<br>
+<strong>groupable:</strong> True<br>
+<strong>manual:</strong> False<br>
+<strong>name:</strong> name<br>
+<strong>readonly:</strong> False<br>
+<strong>required:</strong> False<br>
+<strong>searchable:</strong> True<br>
+<strong>sortable:</strong> True<br>
+<strong>store:</strong> True<br>
+<strong>string:</strong> Label<br>
+<strong>translate:</strong> False<br>
+<strong>trim:</strong> True<br>
+<strong>type:</strong> char<br>
+</p>
+</section>
+
+<section id="debit" class="card card-body">
+<h4 class="card-title">debit</h4>
+<p>
+<strong>aggregator:</strong> sum<br>
+<strong>change_default:</strong> False<br>
+<strong>company_dependent:</strong> False<br>
+<strong>currency_field:</strong> company_currency_id<br>
+<strong>default_export_compatible:</strong> False<br>
+<strong>depends:</strong> ['balance', 'move_id.is_storno']<br>
+<strong>exportable:</strong> True<br>
+<strong>groupable:</strong> True<br>
+<strong>manual:</strong> False<br>
+<strong>name:</strong> debit<br>
+<strong>readonly:</strong> False<br>
+<strong>required:</strong> False<br>
+<strong>searchable:</strong> True<br>
+<strong>sortable:</strong> True<br>
+<strong>store:</strong> True<br>
+<strong>string:</strong> Debit<br>
+<strong>type:</strong> monetary<br>
+</p>
+</section>
+
+<section id="credit" class="card card-body">
+<h4 class="card-title">credit</h4>
+<p>
+<strong>aggregator:</strong> sum<br>
+<strong>change_default:</strong> False<br>
+<strong>company_dependent:</strong> False<br>
+<strong>currency_field:</strong> company_currency_id<br>
+<strong>default_export_compatible:</strong> False<br>
+<strong>depends:</strong> ['balance', 'move_id.is_storno']<br>
+<strong>exportable:</strong> True<br>
+<strong>groupable:</strong> True<br>
+<strong>manual:</strong> False<br>
+<strong>name:</strong> credit<br>
+<strong>readonly:</strong> False<br>
+<strong>required:</strong> False<br>
+<strong>searchable:</strong> True<br>
+<strong>sortable:</strong> True<br>
+<strong>store:</strong> True<br>
+<strong>string:</strong> Credit<br>
+<strong>type:</strong> monetary<br>
+</p>
+</section>
+
+<section id="balance" class="card card-body">
+<h4 class="card-title">balance</h4>
+<p>
+<strong>aggregator:</strong> sum<br>
+<strong>change_default:</strong> False<br>
+<strong>company_dependent:</strong> False<br>
+<strong>currency_field:</strong> company_currency_id<br>
+<strong>default_export_compatible:</strong> False<br>
+<strong>depends:</strong> ['move_id']<br>
+<strong>exportable:</strong> True<br>
+<strong>groupable:</strong> True<br>
+<strong>manual:</strong> False<br>
+<strong>name:</strong> balance<br>
+<strong>readonly:</strong> False<br>
+<strong>required:</strong> False<br>
+<strong>searchable:</strong> True<br>
+<strong>sortable:</strong> True<br>
+<strong>store:</strong> True<br>
+<strong>string:</strong> Balance<br>
+<strong>type:</strong> monetary<br>
+</p>
+</section>
+
+<section id="cumulated_balance" class="card card-body">
+<h4 class="card-title">cumulated_balance</h4>
+<p>
+<strong>change_default:</strong> False<br>
+<strong>company_dependent:</strong> False<br>
+<strong>currency_field:</strong> company_currency_id<br>
+<strong>default_export_compatible:</strong> False<br>
+<strong>depends:</strong> []<br>
+<strong>exportable:</strong> False<br>
+<strong>groupable:</strong> False<br>
+<strong>help:</strong> Cumulated balance depending on the domain and the order chosen in the view.<br>
+<strong>manual:</strong> False<br>
+<strong>name:</strong> cumulated_balance<br>
+<strong>readonly:</strong> True<br>
+<strong>required:</strong> False<br>
+<strong>searchable:</strong> False<br>
+<strong>sortable:</strong> False<br>
+<strong>store:</strong> False<br>
+<strong>string:</strong> Cumulated Balance<br>
+<strong>type:</strong> monetary<br>
+</p>
+</section>
+
+<section id="currency_rate" class="card card-body">
+<h4 class="card-title">currency_rate</h4>
+<p>
+<strong>change_default:</strong> False<br>
+<strong>company_dependent:</strong> False<br>
+<strong>default_export_compatible:</strong> False<br>
+<strong>depends:</strong> ['currency_id', 'company_id', 'move_id.invoice_currency_rate', 'move_id.date']<br>
+<strong>exportable:</strong> True<br>
+<strong>groupable:</strong> False<br>
+<strong>help:</strong> Currency rate from company currency to document currency.<br>
+<strong>manual:</strong> False<br>
+<strong>name:</strong> currency_rate<br>
+<strong>readonly:</strong> True<br>
+<strong>required:</strong> False<br>
+<strong>searchable:</strong> False<br>
+<strong>sortable:</strong> False<br>
+<strong>store:</strong> False<br>
+<strong>string:</strong> Currency Rate<br>
+<strong>type:</strong> float<br>
+</p>
+</section>
+
+<section id="amount_currency" class="card card-body">
+<h4 class="card-title">amount_currency</h4>
+<p>
+<strong>aggregator:</strong> sum<br>
+<strong>change_default:</strong> False<br>
+<strong>company_dependent:</strong> False<br>
+<strong>currency_field:</strong> currency_id<br>
+<strong>default_export_compatible:</strong> False<br>
+<strong>depends:</strong> ['currency_rate', 'balance']<br>
+<strong>exportable:</strong> True<br>
+<strong>groupable:</strong> True<br>
+<strong>help:</strong> The amount expressed in an optional other currency if it is a multi-currency entry.<br>
+<strong>manual:</strong> False<br>
+<strong>name:</strong> amount_currency<br>
+<strong>readonly:</strong> False<br>
+<strong>required:</strong> False<br>
+<strong>searchable:</strong> True<br>
+<strong>sortable:</strong> True<br>
+<strong>store:</strong> True<br>
+<strong>string:</strong> Amount in Currency<br>
+<strong>type:</strong> monetary<br>
+</p>
+</section>
+
+<section id="currency_id" class="card card-body">
+<h4 class="card-title">currency_id</h4>
+<p>
+<strong>allow_hierachy_operators:</strong> False<br>
+<strong>change_default:</strong> False<br>
+<strong>company_dependent:</strong> False<br>
+<strong>context:</strong> {}<br>
+<strong>default_export_compatible:</strong> False<br>
+<strong>depends:</strong> ['move_id.currency_id']<br>
+<strong>domain:</strong> []<br>
+<strong>exportable:</strong> True<br>
+<strong>groupable:</strong> True<br>
+<strong>manual:</strong> False<br>
+<strong>name:</strong> currency_id<br>
+<strong>readonly:</strong> False<br>
+<strong>relation:</strong> <a class="nav-link" href="../res_currency/index.html">res.currency</a><br>
+<strong>required:</strong> True<br>
+<strong>searchable:</strong> True<br>
+<strong>sortable:</strong> True<br>
+<strong>store:</strong> True<br>
+<strong>string:</strong> Currency<br>
+<strong>type:</strong> many2one<br>
+</p>
+</section>
+
+<section id="is_same_currency" class="card card-body">
+<h4 class="card-title">is_same_currency</h4>
+<p>
+<strong>change_default:</strong> False<br>
+<strong>company_dependent:</strong> False<br>
+<strong>default_export_compatible:</strong> False<br>
+<strong>depends:</strong> ['currency_id', 'company_currency_id']<br>
+<strong>exportable:</strong> True<br>
+<strong>groupable:</strong> False<br>
+<strong>manual:</strong> False<br>
+<strong>name:</strong> is_same_currency<br>
+<strong>readonly:</strong> True<br>
+<strong>required:</strong> False<br>
+<strong>searchable:</strong> False<br>
+<strong>sortable:</strong> False<br>
+<strong>store:</strong> False<br>
+<strong>string:</strong> Is Same Currency<br>
+<strong>type:</strong> boolean<br>
+</p>
+</section>
+
+<section id="partner_id" class="card card-body">
+<h4 class="card-title">partner_id</h4>
+<p>
+<strong>allow_hierachy_operators:</strong> True<br>
+<strong>change_default:</strong> False<br>
+<strong>company_dependent:</strong> False<br>
+<strong>context:</strong> {}<br>
+<strong>default_export_compatible:</strong> False<br>
+<strong>depends:</strong> []<br>
+<strong>domain:</strong> []<br>
+<strong>exportable:</strong> True<br>
+<strong>groupable:</strong> True<br>
+<strong>manual:</strong> False<br>
+<strong>name:</strong> partner_id<br>
+<strong>readonly:</strong> False<br>
+<strong>relation:</strong> <a class="nav-link" href="../res_partner/index.html">res.partner</a><br>
+<strong>required:</strong> False<br>
+<strong>searchable:</strong> True<br>
+<strong>sortable:</strong> True<br>
+<strong>store:</strong> True<br>
+<strong>string:</strong> Partner<br>
+<strong>type:</strong> many2one<br>
+</p>
+</section>
+
+<section id="is_imported" class="card card-body">
+<h4 class="card-title">is_imported</h4>
+<p>
+<strong>change_default:</strong> False<br>
+<strong>company_dependent:</strong> False<br>
+<strong>default_export_compatible:</strong> False<br>
+<strong>depends:</strong> []<br>
+<strong>exportable:</strong> True<br>
+<strong>groupable:</strong> True<br>
+<strong>manual:</strong> False<br>
+<strong>name:</strong> is_imported<br>
+<strong>readonly:</strong> False<br>
+<strong>required:</strong> False<br>
+<strong>searchable:</strong> True<br>
+<strong>sortable:</strong> True<br>
+<strong>store:</strong> True<br>
+<strong>string:</strong> Is Imported<br>
+<strong>type:</strong> boolean<br>
+</p>
+</section>
+
+<section id="reconcile_model_id" class="card card-body">
+<h4 class="card-title">reconcile_model_id</h4>
+<p>
+<strong>allow_hierachy_operators:</strong> False<br>
+<strong>change_default:</strong> False<br>
+<strong>company_dependent:</strong> False<br>
+<strong>context:</strong> {}<br>
+<strong>default_export_compatible:</strong> False<br>
+<strong>depends:</strong> []<br>
+<strong>domain:</strong> (company_id and [('company_id', 'in', [company_id] + [False])] or [('company_id', '=', False)]) + ([])<br>
+<strong>exportable:</strong> True<br>
+<strong>groupable:</strong> True<br>
+<strong>manual:</strong> False<br>
+<strong>name:</strong> reconcile_model_id<br>
+<strong>readonly:</strong> True<br>
+<strong>relation:</strong> <a class="nav-link" href="../account_reconcile_model/index.html">account.reconcile.model</a><br>
+<strong>required:</strong> False<br>
+<strong>searchable:</strong> True<br>
+<strong>sortable:</strong> True<br>
+<strong>store:</strong> True<br>
+<strong>string:</strong> Reconciliation Model<br>
+<strong>type:</strong> many2one<br>
+</p>
+</section>
+
+<section id="payment_id" class="card card-body">
+<h4 class="card-title">payment_id</h4>
+<p>
+<strong>allow_hierachy_operators:</strong> False<br>
+<strong>change_default:</strong> False<br>
+<strong>company_dependent:</strong> False<br>
+<strong>context:</strong> {}<br>
+<strong>default_export_compatible:</strong> False<br>
+<strong>depends:</strong> ['move_id.origin_payment_id']<br>
+<strong>domain:</strong> []<br>
+<strong>exportable:</strong> True<br>
+<strong>groupable:</strong> True<br>
+<strong>help:</strong> The payment that created this entry<br>
+<strong>manual:</strong> False<br>
+<strong>name:</strong> payment_id<br>
+<strong>readonly:</strong> True<br>
+<strong>related:</strong> move_id.origin_payment_id<br>
+<strong>relation:</strong> <a class="nav-link" href="../account_payment/index.html">account.payment</a><br>
+<strong>required:</strong> False<br>
+<strong>searchable:</strong> True<br>
+<strong>sortable:</strong> True<br>
+<strong>store:</strong> True<br>
+<strong>string:</strong> Originator Payment<br>
+<strong>type:</strong> many2one<br>
+</p>
+</section>
+
+<section id="statement_line_id" class="card card-body">
+<h4 class="card-title">statement_line_id</h4>
+<p>
+<strong>allow_hierachy_operators:</strong> False<br>
+<strong>change_default:</strong> False<br>
+<strong>company_dependent:</strong> False<br>
+<strong>context:</strong> {}<br>
+<strong>default_export_compatible:</strong> False<br>
+<strong>depends:</strong> ['move_id.statement_line_id']<br>
+<strong>domain:</strong> []<br>
+<strong>exportable:</strong> True<br>
+<strong>groupable:</strong> True<br>
+<strong>help:</strong> The statement line that created this entry<br>
+<strong>manual:</strong> False<br>
+<strong>name:</strong> statement_line_id<br>
+<strong>readonly:</strong> True<br>
+<strong>related:</strong> move_id.statement_line_id<br>
+<strong>relation:</strong> <a class="nav-link" href="../account_bank_statement_line/index.html">account.bank.statement.line</a><br>
+<strong>required:</strong> False<br>
+<strong>searchable:</strong> True<br>
+<strong>sortable:</strong> True<br>
+<strong>store:</strong> True<br>
+<strong>string:</strong> Originator Statement Line<br>
+<strong>type:</strong> many2one<br>
+</p>
+</section>
+
+<section id="statement_id" class="card card-body">
+<h4 class="card-title">statement_id</h4>
+<p>
+<strong>allow_hierachy_operators:</strong> False<br>
+<strong>change_default:</strong> False<br>
+<strong>company_dependent:</strong> False<br>
+<strong>context:</strong> {}<br>
+<strong>default_export_compatible:</strong> False<br>
+<strong>depends:</strong> ['statement_line_id.statement_id']<br>
+<strong>domain:</strong> []<br>
+<strong>exportable:</strong> True<br>
+<strong>groupable:</strong> True<br>
+<strong>help:</strong> The bank statement used for bank reconciliation<br>
+<strong>manual:</strong> False<br>
+<strong>name:</strong> statement_id<br>
+<strong>readonly:</strong> True<br>
+<strong>related:</strong> statement_line_id.statement_id<br>
+<strong>relation:</strong> <a class="nav-link" href="../account_bank_statement/index.html">account.bank.statement</a><br>
+<strong>required:</strong> False<br>
+<strong>searchable:</strong> True<br>
+<strong>sortable:</strong> True<br>
+<strong>store:</strong> True<br>
+<strong>string:</strong> Statement<br>
+<strong>type:</strong> many2one<br>
+</p>
+</section>
+
+<section id="commercial_partner_country" class="card card-body">
+<h4 class="card-title">commercial_partner_country</h4>
+<p>
+<strong>allow_hierachy_operators:</strong> False<br>
+<strong>change_default:</strong> False<br>
+<strong>company_dependent:</strong> False<br>
+<strong>context:</strong> {}<br>
+<strong>default_export_compatible:</strong> False<br>
+<strong>depends:</strong> ['move_id.commercial_partner_id.country_id']<br>
+<strong>domain:</strong> []<br>
+<strong>exportable:</strong> True<br>
+<strong>groupable:</strong> True<br>
+<strong>manual:</strong> False<br>
+<strong>name:</strong> commercial_partner_country<br>
+<strong>readonly:</strong> True<br>
+<strong>related:</strong> move_id.commercial_partner_id.country_id<br>
+<strong>relation:</strong> <a class="nav-link" href="../res_country/index.html">res.country</a><br>
+<strong>required:</strong> False<br>
+<strong>searchable:</strong> True<br>
+<strong>sortable:</strong> True<br>
+<strong>store:</strong> False<br>
+<strong>string:</strong> Commercial Partner Country<br>
+<strong>type:</strong> many2one<br>
+</p>
+</section>
+
+<section id="tax_ids" class="card card-body">
+<h4 class="card-title">tax_ids</h4>
+<p>
+<strong>allow_hierachy_operators:</strong> False<br>
+<strong>change_default:</strong> False<br>
+<strong>company_dependent:</strong> False<br>
+<strong>context:</strong> {'active_test': False}<br>
+<strong>default_export_compatible:</strong> False<br>
+<strong>depends:</strong> ['product_id', 'product_uom_id']<br>
+<strong>domain:</strong> (company_id and ['|', ('company_id', '=', False), ('company_id', 'parent_of', [company_id])] or ['|', ('company_id', '=', False), ('company_id', 'parent_of', '')]) + ([])<br>
+<strong>exportable:</strong> True<br>
+<strong>groupable:</strong> True<br>
+<strong>manual:</strong> False<br>
+<strong>name:</strong> tax_ids<br>
+<strong>readonly:</strong> False<br>
+<strong>relation:</strong> <a class="nav-link" href="../account_tax/index.html">account.tax</a><br>
+<strong>required:</strong> False<br>
+<strong>searchable:</strong> True<br>
+<strong>sortable:</strong> False<br>
+<strong>store:</strong> True<br>
+<strong>string:</strong> Taxes<br>
+<strong>type:</strong> many2many<br>
+</p>
+</section>
+
+<section id="group_tax_id" class="card card-body">
+<h4 class="card-title">group_tax_id</h4>
+<p>
+<strong>allow_hierachy_operators:</strong> False<br>
+<strong>change_default:</strong> False<br>
+<strong>company_dependent:</strong> False<br>
+<strong>context:</strong> {}<br>
+<strong>default_export_compatible:</strong> False<br>
+<strong>depends:</strong> []<br>
+<strong>domain:</strong> (company_id and ['|', ('company_id', '=', False), ('company_id', 'parent_of', [company_id])] or ['|', ('company_id', '=', False), ('company_id', 'parent_of', '')]) + ([])<br>
+<strong>exportable:</strong> True<br>
+<strong>groupable:</strong> True<br>
+<strong>manual:</strong> False<br>
+<strong>name:</strong> group_tax_id<br>
+<strong>readonly:</strong> False<br>
+<strong>relation:</strong> <a class="nav-link" href="../account_tax/index.html">account.tax</a><br>
+<strong>required:</strong> False<br>
+<strong>searchable:</strong> True<br>
+<strong>sortable:</strong> True<br>
+<strong>store:</strong> True<br>
+<strong>string:</strong> Originator Group of Taxes<br>
+<strong>type:</strong> many2one<br>
+</p>
+</section>
+
+<section id="tax_line_id" class="card card-body">
+<h4 class="card-title">tax_line_id</h4>
+<p>
+<strong>allow_hierachy_operators:</strong> False<br>
+<strong>change_default:</strong> False<br>
+<strong>company_dependent:</strong> False<br>
+<strong>context:</strong> {}<br>
+<strong>default_export_compatible:</strong> False<br>
+<strong>depends:</strong> ['tax_repartition_line_id.tax_id']<br>
+<strong>domain:</strong> []<br>
+<strong>exportable:</strong> True<br>
+<strong>groupable:</strong> True<br>
+<strong>help:</strong> Indicates that this journal item is a tax line<br>
+<strong>manual:</strong> False<br>
+<strong>name:</strong> tax_line_id<br>
+<strong>readonly:</strong> True<br>
+<strong>related:</strong> tax_repartition_line_id.tax_id<br>
+<strong>relation:</strong> <a class="nav-link" href="../account_tax/index.html">account.tax</a><br>
+<strong>required:</strong> False<br>
+<strong>searchable:</strong> True<br>
+<strong>sortable:</strong> True<br>
+<strong>store:</strong> True<br>
+<strong>string:</strong> Originator Tax<br>
+<strong>type:</strong> many2one<br>
+</p>
+</section>
+
+<section id="tax_group_id" class="card card-body">
+<h4 class="card-title">tax_group_id</h4>
+<p>
+<strong>allow_hierachy_operators:</strong> False<br>
+<strong>change_default:</strong> False<br>
+<strong>company_dependent:</strong> False<br>
+<strong>context:</strong> {}<br>
+<strong>default_export_compatible:</strong> False<br>
+<strong>depends:</strong> ['tax_line_id.tax_group_id']<br>
+<strong>exportable:</strong> True<br>
+<strong>groupable:</strong> True<br>
+<strong>manual:</strong> False<br>
+<strong>name:</strong> tax_group_id<br>
+<strong>readonly:</strong> True<br>
+<strong>related:</strong> tax_line_id.tax_group_id<br>
+<strong>relation:</strong> <a class="nav-link" href="../account_tax_group/index.html">account.tax.group</a><br>
+<strong>required:</strong> False<br>
+<strong>searchable:</strong> True<br>
+<strong>sortable:</strong> True<br>
+<strong>store:</strong> True<br>
+<strong>string:</strong> Originator tax group<br>
+<strong>type:</strong> many2one<br>
+</p>
+</section>
+
+<section id="tax_base_amount" class="card card-body">
+<h4 class="card-title">tax_base_amount</h4>
+<p>
+<strong>aggregator:</strong> sum<br>
+<strong>change_default:</strong> False<br>
+<strong>company_dependent:</strong> False<br>
+<strong>currency_field:</strong> company_currency_id<br>
+<strong>default_export_compatible:</strong> False<br>
+<strong>depends:</strong> []<br>
+<strong>exportable:</strong> True<br>
+<strong>groupable:</strong> True<br>
+<strong>manual:</strong> False<br>
+<strong>name:</strong> tax_base_amount<br>
+<strong>readonly:</strong> True<br>
+<strong>required:</strong> False<br>
+<strong>searchable:</strong> True<br>
+<strong>sortable:</strong> True<br>
+<strong>store:</strong> True<br>
+<strong>string:</strong> Base Amount<br>
+<strong>type:</strong> monetary<br>
+</p>
+</section>
+
+<section id="tax_repartition_line_id" class="card card-body">
+<h4 class="card-title">tax_repartition_line_id</h4>
+<p>
+<strong>allow_hierachy_operators:</strong> False<br>
+<strong>change_default:</strong> False<br>
+<strong>company_dependent:</strong> False<br>
+<strong>context:</strong> {}<br>
+<strong>default_export_compatible:</strong> False<br>
+<strong>depends:</strong> []<br>
+<strong>domain:</strong> (company_id and ['|', ('company_id', '=', False), ('company_id', 'parent_of', [company_id])] or ['|', ('company_id', '=', False), ('company_id', 'parent_of', '')]) + ([])<br>
+<strong>exportable:</strong> True<br>
+<strong>groupable:</strong> True<br>
+<strong>help:</strong> Tax distribution line that caused the creation of this move line, if any<br>
+<strong>manual:</strong> False<br>
+<strong>name:</strong> tax_repartition_line_id<br>
+<strong>readonly:</strong> True<br>
+<strong>relation:</strong> <a class="nav-link" href="../account_tax_repartition_line/index.html">account.tax.repartition.line</a><br>
+<strong>required:</strong> False<br>
+<strong>searchable:</strong> True<br>
+<strong>sortable:</strong> True<br>
+<strong>store:</strong> True<br>
+<strong>string:</strong> Originator Tax Distribution Line<br>
+<strong>type:</strong> many2one<br>
+</p>
+</section>
+
+<section id="tax_tag_ids" class="card card-body">
+<h4 class="card-title">tax_tag_ids</h4>
+<p>
+<strong>allow_hierachy_operators:</strong> False<br>
+<strong>change_default:</strong> False<br>
+<strong>company_dependent:</strong> False<br>
+<strong>context:</strong> {'active_test': False}<br>
+<strong>default_export_compatible:</strong> False<br>
+<strong>depends:</strong> []<br>
+<strong>domain:</strong> []<br>
+<strong>exportable:</strong> True<br>
+<strong>groupable:</strong> True<br>
+<strong>help:</strong> Tags assigned to this line by the tax creating it, if any. It determines its impact on financial reports.<br>
+<strong>manual:</strong> False<br>
+<strong>name:</strong> tax_tag_ids<br>
+<strong>readonly:</strong> False<br>
+<strong>relation:</strong> <a class="nav-link" href="../account_account_tag/index.html">account.account.tag</a><br>
+<strong>required:</strong> False<br>
+<strong>searchable:</strong> True<br>
+<strong>sortable:</strong> False<br>
+<strong>store:</strong> True<br>
+<strong>string:</strong> Tags<br>
+<strong>type:</strong> many2many<br>
+</p>
+</section>
+
+<section id="tax_tag_invert" class="card card-body">
+<h4 class="card-title">tax_tag_invert</h4>
+<p>
+<strong>change_default:</strong> False<br>
+<strong>company_dependent:</strong> False<br>
+<strong>default_export_compatible:</strong> False<br>
+<strong>depends:</strong> ['move_id.move_type', 'tax_ids', 'tax_repartition_line_id', 'debit', 'credit', 'tax_tag_ids', 'is_refund', 'move_id.tax_cash_basis_origin_move_id']<br>
+<strong>exportable:</strong> True<br>
+<strong>groupable:</strong> True<br>
+<strong>manual:</strong> False<br>
+<strong>name:</strong> tax_tag_invert<br>
+<strong>readonly:</strong> False<br>
+<strong>required:</strong> False<br>
+<strong>searchable:</strong> True<br>
+<strong>sortable:</strong> True<br>
+<strong>store:</strong> True<br>
+<strong>string:</strong> Invert Tags<br>
+<strong>type:</strong> boolean<br>
+</p>
+</section>
+
+<section id="amount_residual" class="card card-body">
+<h4 class="card-title">amount_residual</h4>
+<p>
+<strong>aggregator:</strong> sum<br>
+<strong>change_default:</strong> False<br>
+<strong>company_dependent:</strong> False<br>
+<strong>currency_field:</strong> company_currency_id<br>
+<strong>default_export_compatible:</strong> False<br>
+<strong>depends:</strong> ['debit', 'credit', 'amount_currency', 'account_id', 'currency_id', 'company_id', 'matched_debit_ids', 'matched_credit_ids']<br>
+<strong>exportable:</strong> True<br>
+<strong>groupable:</strong> True<br>
+<strong>help:</strong> The residual amount on a journal item expressed in the company currency.<br>
+<strong>manual:</strong> False<br>
+<strong>name:</strong> amount_residual<br>
+<strong>readonly:</strong> True<br>
+<strong>required:</strong> False<br>
+<strong>searchable:</strong> True<br>
+<strong>sortable:</strong> True<br>
+<strong>store:</strong> True<br>
+<strong>string:</strong> Residual Amount<br>
+<strong>type:</strong> monetary<br>
+</p>
+</section>
+
+<section id="amount_residual_currency" class="card card-body">
+<h4 class="card-title">amount_residual_currency</h4>
+<p>
+<strong>change_default:</strong> False<br>
+<strong>company_dependent:</strong> False<br>
+<strong>currency_field:</strong> currency_id<br>
+<strong>default_export_compatible:</strong> False<br>
+<strong>depends:</strong> ['debit', 'credit', 'amount_currency', 'account_id', 'currency_id', 'company_id', 'matched_debit_ids', 'matched_credit_ids']<br>
+<strong>exportable:</strong> True<br>
+<strong>groupable:</strong> True<br>
+<strong>help:</strong> The residual amount on a journal item expressed in its currency (possibly not the company currency).<br>
+<strong>manual:</strong> False<br>
+<strong>name:</strong> amount_residual_currency<br>
+<strong>readonly:</strong> True<br>
+<strong>required:</strong> False<br>
+<strong>searchable:</strong> True<br>
+<strong>sortable:</strong> True<br>
+<strong>store:</strong> True<br>
+<strong>string:</strong> Residual Amount in Currency<br>
+<strong>type:</strong> monetary<br>
+</p>
+</section>
+
+<section id="reconciled" class="card card-body">
+<h4 class="card-title">reconciled</h4>
+<p>
+<strong>change_default:</strong> False<br>
+<strong>company_dependent:</strong> False<br>
+<strong>default_export_compatible:</strong> False<br>
+<strong>depends:</strong> ['debit', 'credit', 'amount_currency', 'account_id', 'currency_id', 'company_id', 'matched_debit_ids', 'matched_credit_ids']<br>
+<strong>exportable:</strong> True<br>
+<strong>groupable:</strong> True<br>
+<strong>manual:</strong> False<br>
+<strong>name:</strong> reconciled<br>
+<strong>readonly:</strong> True<br>
+<strong>required:</strong> False<br>
+<strong>searchable:</strong> True<br>
+<strong>sortable:</strong> True<br>
+<strong>store:</strong> True<br>
+<strong>string:</strong> Reconciled<br>
+<strong>type:</strong> boolean<br>
+</p>
+</section>
+
+<section id="full_reconcile_id" class="card card-body">
+<h4 class="card-title">full_reconcile_id</h4>
+<p>
+<strong>allow_hierachy_operators:</strong> False<br>
+<strong>change_default:</strong> False<br>
+<strong>company_dependent:</strong> False<br>
+<strong>context:</strong> {}<br>
+<strong>default_export_compatible:</strong> False<br>
+<strong>depends:</strong> []<br>
+<strong>domain:</strong> []<br>
+<strong>exportable:</strong> True<br>
+<strong>groupable:</strong> True<br>
+<strong>manual:</strong> False<br>
+<strong>name:</strong> full_reconcile_id<br>
+<strong>readonly:</strong> True<br>
+<strong>relation:</strong> <a class="nav-link" href="../account_full_reconcile/index.html">account.full.reconcile</a><br>
+<strong>required:</strong> False<br>
+<strong>searchable:</strong> True<br>
+<strong>sortable:</strong> True<br>
+<strong>store:</strong> True<br>
+<strong>string:</strong> Matching<br>
+<strong>type:</strong> many2one<br>
+</p>
+</section>
+
+<section id="matched_debit_ids" class="card card-body">
+<h4 class="card-title">matched_debit_ids</h4>
+<p>
+<strong>allow_hierachy_operators:</strong> False<br>
+<strong>change_default:</strong> False<br>
+<strong>company_dependent:</strong> False<br>
+<strong>context:</strong> {}<br>
+<strong>default_export_compatible:</strong> False<br>
+<strong>depends:</strong> []<br>
+<strong>domain:</strong> []<br>
+<strong>exportable:</strong> True<br>
+<strong>groupable:</strong> False<br>
+<strong>help:</strong> Debit journal items that are matched with this journal item.<br>
+<strong>manual:</strong> False<br>
+<strong>name:</strong> matched_debit_ids<br>
+<strong>readonly:</strong> True<br>
+<strong>relation:</strong> <a class="nav-link" href="../account_partial_reconcile/index.html">account.partial.reconcile</a><br>
+<strong>relation_field:</strong> credit_move_id<br>
+<strong>required:</strong> False<br>
+<strong>searchable:</strong> True<br>
+<strong>sortable:</strong> False<br>
+<strong>store:</strong> True<br>
+<strong>string:</strong> Matched Debits<br>
+<strong>type:</strong> one2many<br>
+</p>
+</section>
+
+<section id="matched_credit_ids" class="card card-body">
+<h4 class="card-title">matched_credit_ids</h4>
+<p>
+<strong>allow_hierachy_operators:</strong> False<br>
+<strong>change_default:</strong> False<br>
+<strong>company_dependent:</strong> False<br>
+<strong>context:</strong> {}<br>
+<strong>default_export_compatible:</strong> False<br>
+<strong>depends:</strong> []<br>
+<strong>domain:</strong> []<br>
+<strong>exportable:</strong> True<br>
+<strong>groupable:</strong> False<br>
+<strong>help:</strong> Credit journal items that are matched with this journal item.<br>
+<strong>manual:</strong> False<br>
+<strong>name:</strong> matched_credit_ids<br>
+<strong>readonly:</strong> True<br>
+<strong>relation:</strong> <a class="nav-link" href="../account_partial_reconcile/index.html">account.partial.reconcile</a><br>
+<strong>relation_field:</strong> debit_move_id<br>
+<strong>required:</strong> False<br>
+<strong>searchable:</strong> True<br>
+<strong>sortable:</strong> False<br>
+<strong>store:</strong> True<br>
+<strong>string:</strong> Matched Credits<br>
+<strong>type:</strong> one2many<br>
+</p>
+</section>
+
+<section id="matching_number" class="card card-body">
+<h4 class="card-title">matching_number</h4>
+<p>
+<strong>change_default:</strong> False<br>
+<strong>company_dependent:</strong> False<br>
+<strong>default_export_compatible:</strong> False<br>
+<strong>depends:</strong> []<br>
+<strong>exportable:</strong> True<br>
+<strong>groupable:</strong> True<br>
+<strong>help:</strong> Matching number for this line, 'P' if it is only partially reconcile, or the name of the full reconcile if it exists.<br>
+<strong>manual:</strong> False<br>
+<strong>name:</strong> matching_number<br>
+<strong>readonly:</strong> False<br>
+<strong>required:</strong> False<br>
+<strong>searchable:</strong> True<br>
+<strong>sortable:</strong> True<br>
+<strong>store:</strong> True<br>
+<strong>string:</strong> Matching #<br>
+<strong>translate:</strong> False<br>
+<strong>trim:</strong> True<br>
+<strong>type:</strong> char<br>
+</p>
+</section>
+
+<section id="is_account_reconcile" class="card card-body">
+<h4 class="card-title">is_account_reconcile</h4>
+<p>
+<strong>change_default:</strong> False<br>
+<strong>company_dependent:</strong> False<br>
+<strong>default_export_compatible:</strong> False<br>
+<strong>depends:</strong> ['account_id.reconcile']<br>
+<strong>exportable:</strong> True<br>
+<strong>groupable:</strong> True<br>
+<strong>help:</strong> Check this box if this account allows invoices & payments matching of journal items.<br>
+<strong>manual:</strong> False<br>
+<strong>name:</strong> is_account_reconcile<br>
+<strong>readonly:</strong> True<br>
+<strong>related:</strong> account_id.reconcile<br>
+<strong>required:</strong> False<br>
+<strong>searchable:</strong> True<br>
+<strong>sortable:</strong> True<br>
+<strong>store:</strong> False<br>
+<strong>string:</strong> Account Reconcile<br>
+<strong>type:</strong> boolean<br>
+</p>
+</section>
+
+<section id="account_type" class="card card-body">
+<h4 class="card-title">account_type</h4>
+<p>
+<strong>change_default:</strong> False<br>
+<strong>company_dependent:</strong> False<br>
+<strong>default_export_compatible:</strong> False<br>
+<strong>depends:</strong> ['account_id.account_type']<br>
+<strong>exportable:</strong> True<br>
+<strong>groupable:</strong> True<br>
+<strong>help:</strong> Account Type is used for information purpose, to generate country-specific legal reports, and set the rules to close a fiscal year and generate opening entries.<br>
+<strong>manual:</strong> False<br>
+<strong>name:</strong> account_type<br>
+<strong>readonly:</strong> True<br>
+<strong>related:</strong> account_id.account_type<br>
+<strong>required:</strong> False<br>
+<strong>searchable:</strong> True<br>
+<strong>selection:</strong> [['asset_receivable', 'Receivable'], ['asset_cash', 'Bank and Cash'], ['asset_current', 'Current Assets'], ['asset_non_current', 'Non-current Assets'], ['asset_prepayments', 'Prepayments'], ['asset_fixed', 'Fixed Assets'], ['liability_payable', 'Payable'], ['liability_credit_card', 'Credit Card'], ['liability_current', 'Current Liabilities'], ['liability_non_current', 'Non-current Liabilities'], ['equity', 'Equity'], ['equity_unaffected', 'Current Year Earnings'], ['income', 'Income'], ['income_other', 'Other Income'], ['expense', 'Expenses'], ['expense_depreciation', 'Depreciation'], ['expense_direct_cost', 'Cost of Revenue'], ['off_balance', 'Off-Balance Sheet']]<br>
+<strong>sortable:</strong> True<br>
+<strong>store:</strong> False<br>
+<strong>string:</strong> Internal Type<br>
+<strong>type:</strong> selection<br>
+</p>
+</section>
+
+<section id="account_internal_group" class="card card-body">
+<h4 class="card-title">account_internal_group</h4>
+<p>
+<strong>change_default:</strong> False<br>
+<strong>company_dependent:</strong> False<br>
+<strong>default_export_compatible:</strong> False<br>
+<strong>depends:</strong> ['account_id.internal_group']<br>
+<strong>exportable:</strong> True<br>
+<strong>groupable:</strong> True<br>
+<strong>manual:</strong> False<br>
+<strong>name:</strong> account_internal_group<br>
+<strong>readonly:</strong> True<br>
+<strong>related:</strong> account_id.internal_group<br>
+<strong>required:</strong> False<br>
+<strong>searchable:</strong> True<br>
+<strong>selection:</strong> [['equity', 'Equity'], ['asset', 'Asset'], ['liability', 'Liability'], ['income', 'Income'], ['expense', 'Expense'], ['off', 'Off Balance']]<br>
+<strong>sortable:</strong> True<br>
+<strong>store:</strong> False<br>
+<strong>string:</strong> Internal Group<br>
+<strong>type:</strong> selection<br>
+</p>
+</section>
+
+<section id="account_root_id" class="card card-body">
+<h4 class="card-title">account_root_id</h4>
+<p>
+<strong>allow_hierachy_operators:</strong> True<br>
+<strong>change_default:</strong> False<br>
+<strong>company_dependent:</strong> False<br>
+<strong>context:</strong> {}<br>
+<strong>default_export_compatible:</strong> False<br>
+<strong>depends:</strong> ['account_id.root_id']<br>
+<strong>domain:</strong> []<br>
+<strong>exportable:</strong> True<br>
+<strong>groupable:</strong> True<br>
+<strong>manual:</strong> False<br>
+<strong>name:</strong> account_root_id<br>
+<strong>readonly:</strong> True<br>
+<strong>related:</strong> account_id.root_id<br>
+<strong>relation:</strong> <a class="nav-link" href="../account_root/index.html">account.root</a><br>
+<strong>required:</strong> False<br>
+<strong>searchable:</strong> True<br>
+<strong>sortable:</strong> True<br>
+<strong>store:</strong> False<br>
+<strong>string:</strong> Account Root<br>
+<strong>type:</strong> many2one<br>
+</p>
+</section>
+
+<section id="product_category_id" class="card card-body">
+<h4 class="card-title">product_category_id</h4>
+<p>
+<strong>allow_hierachy_operators:</strong> True<br>
+<strong>change_default:</strong> False<br>
+<strong>company_dependent:</strong> False<br>
+<strong>context:</strong> {}<br>
+<strong>default_export_compatible:</strong> False<br>
+<strong>depends:</strong> ['product_id.product_tmpl_id.categ_id']<br>
+<strong>domain:</strong> []<br>
+<strong>exportable:</strong> True<br>
+<strong>groupable:</strong> True<br>
+<strong>manual:</strong> False<br>
+<strong>name:</strong> product_category_id<br>
+<strong>readonly:</strong> True<br>
+<strong>related:</strong> product_id.product_tmpl_id.categ_id<br>
+<strong>relation:</strong> <a class="nav-link" href="../product_category/index.html">product.category</a><br>
+<strong>required:</strong> False<br>
+<strong>searchable:</strong> True<br>
+<strong>sortable:</strong> True<br>
+<strong>store:</strong> False<br>
+<strong>string:</strong> Product Category<br>
+<strong>type:</strong> many2one<br>
+</p>
+</section>
+
+<section id="display_type" class="card card-body">
+<h4 class="card-title">display_type</h4>
+<p>
+<strong>change_default:</strong> False<br>
+<strong>company_dependent:</strong> False<br>
+<strong>default_export_compatible:</strong> False<br>
+<strong>depends:</strong> ['move_id']<br>
+<strong>exportable:</strong> True<br>
+<strong>groupable:</strong> True<br>
+<strong>manual:</strong> False<br>
+<strong>name:</strong> display_type<br>
+<strong>readonly:</strong> False<br>
+<strong>required:</strong> True<br>
+<strong>searchable:</strong> True<br>
+<strong>selection:</strong> [['product', 'Product'], ['cogs', 'Cost of Goods Sold'], ['tax', 'Tax'], ['discount', 'Discount'], ['rounding', 'Rounding'], ['payment_term', 'Payment Term'], ['line_section', 'Section'], ['line_note', 'Note'], ['epd', 'Early Payment Discount']]<br>
+<strong>sortable:</strong> True<br>
+<strong>store:</strong> True<br>
+<strong>string:</strong> Display Type<br>
+<strong>type:</strong> selection<br>
+</p>
+</section>
+
+<section id="product_id" class="card card-body">
+<h4 class="card-title">product_id</h4>
+<p>
+<strong>allow_hierachy_operators:</strong> False<br>
+<strong>change_default:</strong> False<br>
+<strong>company_dependent:</strong> False<br>
+<strong>context:</strong> {}<br>
+<strong>default_export_compatible:</strong> False<br>
+<strong>depends:</strong> []<br>
+<strong>domain:</strong> (company_id and ['|', ('company_id', '=', False), ('company_id', 'parent_of', [company_id])] or ['|', ('company_id', '=', False), ('company_id', 'parent_of', '')]) + ([])<br>
+<strong>exportable:</strong> True<br>
+<strong>groupable:</strong> True<br>
+<strong>manual:</strong> False<br>
+<strong>name:</strong> product_id<br>
+<strong>readonly:</strong> False<br>
+<strong>relation:</strong> <a class="nav-link" href="../product_product/index.html">product.product</a><br>
+<strong>required:</strong> False<br>
+<strong>searchable:</strong> True<br>
+<strong>sortable:</strong> True<br>
+<strong>store:</strong> True<br>
+<strong>string:</strong> Product<br>
+<strong>type:</strong> many2one<br>
+</p>
+</section>
+
+<section id="product_uom_id" class="card card-body">
+<h4 class="card-title">product_uom_id</h4>
+<p>
+<strong>allow_hierachy_operators:</strong> False<br>
+<strong>change_default:</strong> False<br>
+<strong>company_dependent:</strong> False<br>
+<strong>context:</strong> {}<br>
+<strong>default_export_compatible:</strong> False<br>
+<strong>depends:</strong> ['product_id']<br>
+<strong>domain:</strong> [('category_id', '=', product_uom_category_id)]<br>
+<strong>exportable:</strong> True<br>
+<strong>groupable:</strong> True<br>
+<strong>manual:</strong> False<br>
+<strong>name:</strong> product_uom_id<br>
+<strong>readonly:</strong> False<br>
+<strong>relation:</strong> <a class="nav-link" href="../uom_uom/index.html">uom.uom</a><br>
+<strong>required:</strong> False<br>
+<strong>searchable:</strong> True<br>
+<strong>sortable:</strong> True<br>
+<strong>store:</strong> True<br>
+<strong>string:</strong> Unit of Measure<br>
+<strong>type:</strong> many2one<br>
+</p>
+</section>
+
+<section id="product_uom_category_id" class="card card-body">
+<h4 class="card-title">product_uom_category_id</h4>
+<p>
+<strong>allow_hierachy_operators:</strong> False<br>
+<strong>change_default:</strong> False<br>
+<strong>company_dependent:</strong> False<br>
+<strong>context:</strong> {}<br>
+<strong>default_export_compatible:</strong> False<br>
+<strong>depends:</strong> ['product_id.uom_id.category_id']<br>
+<strong>domain:</strong> []<br>
+<strong>exportable:</strong> True<br>
+<strong>groupable:</strong> True<br>
+<strong>help:</strong> Conversion between Units of Measure can only occur if they belong to the same category. The conversion will be made based on the ratios.<br>
+<strong>manual:</strong> False<br>
+<strong>name:</strong> product_uom_category_id<br>
+<strong>readonly:</strong> True<br>
+<strong>related:</strong> product_id.uom_id.category_id<br>
+<strong>relation:</strong> <a class="nav-link" href="../uom_category/index.html">uom.category</a><br>
+<strong>required:</strong> False<br>
+<strong>searchable:</strong> True<br>
+<strong>sortable:</strong> True<br>
+<strong>store:</strong> False<br>
+<strong>string:</strong> Category<br>
+<strong>type:</strong> many2one<br>
+</p>
+</section>
+
+<section id="quantity" class="card card-body">
+<h4 class="card-title">quantity</h4>
+<p>
+<strong>aggregator:</strong> sum<br>
+<strong>change_default:</strong> False<br>
+<strong>company_dependent:</strong> False<br>
+<strong>default_export_compatible:</strong> False<br>
+<strong>depends:</strong> ['display_type']<br>
+<strong>digits:</strong> [16, 2]<br>
+<strong>exportable:</strong> True<br>
+<strong>groupable:</strong> True<br>
+<strong>help:</strong> The optional quantity expressed by this line, eg: number of product sold. The quantity is not a legal requirement but is very useful for some reports.<br>
+<strong>manual:</strong> False<br>
+<strong>name:</strong> quantity<br>
+<strong>readonly:</strong> False<br>
+<strong>required:</strong> False<br>
+<strong>searchable:</strong> True<br>
+<strong>sortable:</strong> True<br>
+<strong>store:</strong> True<br>
+<strong>string:</strong> Quantity<br>
+<strong>type:</strong> float<br>
+</p>
+</section>
+
+<section id="date_maturity" class="card card-body">
+<h4 class="card-title">date_maturity</h4>
+<p>
+<strong>change_default:</strong> False<br>
+<strong>company_dependent:</strong> False<br>
+<strong>default_export_compatible:</strong> False<br>
+<strong>depends:</strong> []<br>
+<strong>exportable:</strong> True<br>
+<strong>groupable:</strong> True<br>
+<strong>help:</strong> This field is used for payable and receivable journal entries. You can put the limit date for the payment of this line.<br>
+<strong>manual:</strong> False<br>
+<strong>name:</strong> date_maturity<br>
+<strong>readonly:</strong> False<br>
+<strong>required:</strong> False<br>
+<strong>searchable:</strong> True<br>
+<strong>sortable:</strong> True<br>
+<strong>store:</strong> True<br>
+<strong>string:</strong> Due Date<br>
+<strong>type:</strong> date<br>
+</p>
+</section>
+
+<section id="price_unit" class="card card-body">
+<h4 class="card-title">price_unit</h4>
+<p>
+<strong>aggregator:</strong> sum<br>
+<strong>change_default:</strong> False<br>
+<strong>company_dependent:</strong> False<br>
+<strong>default_export_compatible:</strong> False<br>
+<strong>depends:</strong> ['product_id', 'product_uom_id']<br>
+<strong>digits:</strong> False<br>
+<strong>exportable:</strong> True<br>
+<strong>groupable:</strong> True<br>
+<strong>manual:</strong> False<br>
+<strong>min_display_digits:</strong> 2<br>
+<strong>name:</strong> price_unit<br>
+<strong>readonly:</strong> False<br>
+<strong>required:</strong> False<br>
+<strong>searchable:</strong> True<br>
+<strong>sortable:</strong> True<br>
+<strong>store:</strong> True<br>
+<strong>string:</strong> Unit Price<br>
+<strong>type:</strong> float<br>
+</p>
+</section>
+
+<section id="price_subtotal" class="card card-body">
+<h4 class="card-title">price_subtotal</h4>
+<p>
+<strong>aggregator:</strong> sum<br>
+<strong>change_default:</strong> False<br>
+<strong>company_dependent:</strong> False<br>
+<strong>currency_field:</strong> currency_id<br>
+<strong>default_export_compatible:</strong> False<br>
+<strong>depends:</strong> ['quantity', 'discount', 'price_unit', 'tax_ids', 'currency_id']<br>
+<strong>exportable:</strong> True<br>
+<strong>groupable:</strong> True<br>
+<strong>manual:</strong> False<br>
+<strong>name:</strong> price_subtotal<br>
+<strong>readonly:</strong> True<br>
+<strong>required:</strong> False<br>
+<strong>searchable:</strong> True<br>
+<strong>sortable:</strong> True<br>
+<strong>store:</strong> True<br>
+<strong>string:</strong> Subtotal<br>
+<strong>type:</strong> monetary<br>
+</p>
+</section>
+
+<section id="price_total" class="card card-body">
+<h4 class="card-title">price_total</h4>
+<p>
+<strong>aggregator:</strong> sum<br>
+<strong>change_default:</strong> False<br>
+<strong>company_dependent:</strong> False<br>
+<strong>currency_field:</strong> currency_id<br>
+<strong>default_export_compatible:</strong> False<br>
+<strong>depends:</strong> ['quantity', 'discount', 'price_unit', 'tax_ids', 'currency_id']<br>
+<strong>exportable:</strong> True<br>
+<strong>groupable:</strong> True<br>
+<strong>manual:</strong> False<br>
+<strong>name:</strong> price_total<br>
+<strong>readonly:</strong> True<br>
+<strong>required:</strong> False<br>
+<strong>searchable:</strong> True<br>
+<strong>sortable:</strong> True<br>
+<strong>store:</strong> True<br>
+<strong>string:</strong> Total<br>
+<strong>type:</strong> monetary<br>
+</p>
+</section>
+
+<section id="discount" class="card card-body">
+<h4 class="card-title">discount</h4>
+<p>
+<strong>aggregator:</strong> sum<br>
+<strong>change_default:</strong> False<br>
+<strong>company_dependent:</strong> False<br>
+<strong>default_export_compatible:</strong> False<br>
+<strong>depends:</strong> []<br>
+<strong>digits:</strong> [16, 2]<br>
+<strong>exportable:</strong> True<br>
+<strong>groupable:</strong> True<br>
+<strong>manual:</strong> False<br>
+<strong>name:</strong> discount<br>
+<strong>readonly:</strong> False<br>
+<strong>required:</strong> False<br>
+<strong>searchable:</strong> True<br>
+<strong>sortable:</strong> True<br>
+<strong>store:</strong> True<br>
+<strong>string:</strong> Discount (%)<br>
+<strong>type:</strong> float<br>
+</p>
+</section>
+
+<section id="tax_calculation_rounding_method" class="card card-body">
+<h4 class="card-title">tax_calculation_rounding_method</h4>
+<p>
+<strong>change_default:</strong> False<br>
+<strong>company_dependent:</strong> False<br>
+<strong>default_export_compatible:</strong> False<br>
+<strong>depends:</strong> ['company_id.tax_calculation_rounding_method']<br>
+<strong>exportable:</strong> True<br>
+<strong>groupable:</strong> True<br>
+<strong>manual:</strong> False<br>
+<strong>name:</strong> tax_calculation_rounding_method<br>
+<strong>readonly:</strong> True<br>
+<strong>related:</strong> company_id.tax_calculation_rounding_method<br>
+<strong>required:</strong> False<br>
+<strong>searchable:</strong> True<br>
+<strong>selection:</strong> [['round_per_line', 'Round per Line'], ['round_globally', 'Round Globally']]<br>
+<strong>sortable:</strong> True<br>
+<strong>store:</strong> False<br>
+<strong>string:</strong> Tax calculation rounding method<br>
+<strong>type:</strong> selection<br>
+</p>
+</section>
+
+<section id="term_key" class="card card-body">
+<h4 class="card-title">term_key</h4>
+<p>
+<strong>attachment:</strong> False<br>
+<strong>change_default:</strong> False<br>
+<strong>company_dependent:</strong> False<br>
+<strong>default_export_compatible:</strong> False<br>
+<strong>depends:</strong> ['date_maturity']<br>
+<strong>exportable:</strong> False<br>
+<strong>groupable:</strong> False<br>
+<strong>manual:</strong> False<br>
+<strong>name:</strong> term_key<br>
+<strong>readonly:</strong> True<br>
+<strong>required:</strong> False<br>
+<strong>searchable:</strong> False<br>
+<strong>sortable:</strong> False<br>
+<strong>store:</strong> False<br>
+<strong>string:</strong> Term Key<br>
+<strong>type:</strong> binary<br>
+</p>
+</section>
+
+<section id="epd_key" class="card card-body">
+<h4 class="card-title">epd_key</h4>
+<p>
+<strong>attachment:</strong> False<br>
+<strong>change_default:</strong> False<br>
+<strong>company_dependent:</strong> False<br>
+<strong>default_export_compatible:</strong> False<br>
+<strong>depends:</strong> ['tax_ids', 'account_id', 'company_id']<br>
+<strong>exportable:</strong> False<br>
+<strong>groupable:</strong> False<br>
+<strong>manual:</strong> False<br>
+<strong>name:</strong> epd_key<br>
+<strong>readonly:</strong> True<br>
+<strong>required:</strong> False<br>
+<strong>searchable:</strong> False<br>
+<strong>sortable:</strong> False<br>
+<strong>store:</strong> False<br>
+<strong>string:</strong> Epd Key<br>
+<strong>type:</strong> binary<br>
+</p>
+</section>
+
+<section id="epd_needed" class="card card-body">
+<h4 class="card-title">epd_needed</h4>
+<p>
+<strong>attachment:</strong> False<br>
+<strong>change_default:</strong> False<br>
+<strong>company_dependent:</strong> False<br>
+<strong>default_export_compatible:</strong> False<br>
+<strong>depends:</strong> ['move_id.needed_terms', 'account_id', 'analytic_distribution', 'tax_ids', 'tax_tag_ids', 'company_id', 'price_subtotal']<br>
+<strong>exportable:</strong> False<br>
+<strong>groupable:</strong> False<br>
+<strong>manual:</strong> False<br>
+<strong>name:</strong> epd_needed<br>
+<strong>readonly:</strong> True<br>
+<strong>required:</strong> False<br>
+<strong>searchable:</strong> False<br>
+<strong>sortable:</strong> False<br>
+<strong>store:</strong> False<br>
+<strong>string:</strong> Epd Needed<br>
+<strong>type:</strong> binary<br>
+</p>
+</section>
+
+<section id="epd_dirty" class="card card-body">
+<h4 class="card-title">epd_dirty</h4>
+<p>
+<strong>change_default:</strong> False<br>
+<strong>company_dependent:</strong> False<br>
+<strong>default_export_compatible:</strong> False<br>
+<strong>depends:</strong> ['move_id.needed_terms', 'account_id', 'analytic_distribution', 'tax_ids', 'tax_tag_ids', 'company_id', 'price_subtotal']<br>
+<strong>exportable:</strong> True<br>
+<strong>groupable:</strong> False<br>
+<strong>manual:</strong> False<br>
+<strong>name:</strong> epd_dirty<br>
+<strong>readonly:</strong> True<br>
+<strong>required:</strong> False<br>
+<strong>searchable:</strong> False<br>
+<strong>sortable:</strong> False<br>
+<strong>store:</strong> False<br>
+<strong>string:</strong> Epd Dirty<br>
+<strong>type:</strong> boolean<br>
+</p>
+</section>
+
+<section id="discount_allocation_key" class="card card-body">
+<h4 class="card-title">discount_allocation_key</h4>
+<p>
+<strong>attachment:</strong> False<br>
+<strong>change_default:</strong> False<br>
+<strong>company_dependent:</strong> False<br>
+<strong>default_export_compatible:</strong> False<br>
+<strong>depends:</strong> ['account_id', 'company_id']<br>
+<strong>exportable:</strong> False<br>
+<strong>groupable:</strong> False<br>
+<strong>manual:</strong> False<br>
+<strong>name:</strong> discount_allocation_key<br>
+<strong>readonly:</strong> True<br>
+<strong>required:</strong> False<br>
+<strong>searchable:</strong> False<br>
+<strong>sortable:</strong> False<br>
+<strong>store:</strong> False<br>
+<strong>string:</strong> Discount Allocation Key<br>
+<strong>type:</strong> binary<br>
+</p>
+</section>
+
+<section id="discount_allocation_needed" class="card card-body">
+<h4 class="card-title">discount_allocation_needed</h4>
+<p>
+<strong>attachment:</strong> False<br>
+<strong>change_default:</strong> False<br>
+<strong>company_dependent:</strong> False<br>
+<strong>default_export_compatible:</strong> False<br>
+<strong>depends:</strong> ['account_id', 'company_id', 'discount', 'price_unit', 'quantity', 'currency_rate', 'analytic_distribution']<br>
+<strong>exportable:</strong> False<br>
+<strong>groupable:</strong> False<br>
+<strong>manual:</strong> False<br>
+<strong>name:</strong> discount_allocation_needed<br>
+<strong>readonly:</strong> True<br>
+<strong>required:</strong> False<br>
+<strong>searchable:</strong> False<br>
+<strong>sortable:</strong> False<br>
+<strong>store:</strong> False<br>
+<strong>string:</strong> Discount Allocation Needed<br>
+<strong>type:</strong> binary<br>
+</p>
+</section>
+
+<section id="discount_allocation_dirty" class="card card-body">
+<h4 class="card-title">discount_allocation_dirty</h4>
+<p>
+<strong>change_default:</strong> False<br>
+<strong>company_dependent:</strong> False<br>
+<strong>default_export_compatible:</strong> False<br>
+<strong>depends:</strong> ['account_id', 'company_id', 'discount', 'price_unit', 'quantity', 'currency_rate', 'analytic_distribution']<br>
+<strong>exportable:</strong> True<br>
+<strong>groupable:</strong> False<br>
+<strong>manual:</strong> False<br>
+<strong>name:</strong> discount_allocation_dirty<br>
+<strong>readonly:</strong> True<br>
+<strong>required:</strong> False<br>
+<strong>searchable:</strong> False<br>
+<strong>sortable:</strong> False<br>
+<strong>store:</strong> False<br>
+<strong>string:</strong> Discount Allocation Dirty<br>
+<strong>type:</strong> boolean<br>
+</p>
+</section>
+
+<section id="analytic_line_ids" class="card card-body">
+<h4 class="card-title">analytic_line_ids</h4>
+<p>
+<strong>allow_hierachy_operators:</strong> False<br>
+<strong>change_default:</strong> False<br>
+<strong>company_dependent:</strong> False<br>
+<strong>context:</strong> {}<br>
+<strong>default_export_compatible:</strong> False<br>
+<strong>depends:</strong> []<br>
+<strong>domain:</strong> []<br>
+<strong>exportable:</strong> True<br>
+<strong>groupable:</strong> False<br>
+<strong>manual:</strong> False<br>
+<strong>name:</strong> analytic_line_ids<br>
+<strong>readonly:</strong> False<br>
+<strong>relation:</strong> <a class="nav-link" href="../account_analytic_line/index.html">account.analytic.line</a><br>
+<strong>relation_field:</strong> move_line_id<br>
+<strong>required:</strong> False<br>
+<strong>searchable:</strong> True<br>
+<strong>sortable:</strong> False<br>
+<strong>store:</strong> True<br>
+<strong>string:</strong> Analytic lines<br>
+<strong>type:</strong> one2many<br>
+</p>
+</section>
+
+<section id="discount_date" class="card card-body">
+<h4 class="card-title">discount_date</h4>
+<p>
+<strong>change_default:</strong> False<br>
+<strong>company_dependent:</strong> False<br>
+<strong>default_export_compatible:</strong> False<br>
+<strong>depends:</strong> []<br>
+<strong>exportable:</strong> True<br>
+<strong>groupable:</strong> True<br>
+<strong>help:</strong> Last date at which the discounted amount must be paid in order for the Early Payment Discount to be granted<br>
+<strong>manual:</strong> False<br>
+<strong>name:</strong> discount_date<br>
+<strong>readonly:</strong> True<br>
+<strong>required:</strong> False<br>
+<strong>searchable:</strong> True<br>
+<strong>sortable:</strong> True<br>
+<strong>store:</strong> True<br>
+<strong>string:</strong> Discount Date<br>
+<strong>type:</strong> date<br>
+</p>
+</section>
+
+<section id="discount_amount_currency" class="card card-body">
+<h4 class="card-title">discount_amount_currency</h4>
+<p>
+<strong>change_default:</strong> False<br>
+<strong>company_dependent:</strong> False<br>
+<strong>currency_field:</strong> currency_id<br>
+<strong>default_export_compatible:</strong> False<br>
+<strong>depends:</strong> []<br>
+<strong>exportable:</strong> True<br>
+<strong>groupable:</strong> True<br>
+<strong>manual:</strong> False<br>
+<strong>name:</strong> discount_amount_currency<br>
+<strong>readonly:</strong> False<br>
+<strong>required:</strong> False<br>
+<strong>searchable:</strong> True<br>
+<strong>sortable:</strong> True<br>
+<strong>store:</strong> True<br>
+<strong>string:</strong> Discount amount in Currency<br>
+<strong>type:</strong> monetary<br>
+</p>
+</section>
+
+<section id="discount_balance" class="card card-body">
+<h4 class="card-title">discount_balance</h4>
+<p>
+<strong>aggregator:</strong> sum<br>
+<strong>change_default:</strong> False<br>
+<strong>company_dependent:</strong> False<br>
+<strong>currency_field:</strong> company_currency_id<br>
+<strong>default_export_compatible:</strong> False<br>
+<strong>depends:</strong> []<br>
+<strong>exportable:</strong> True<br>
+<strong>groupable:</strong> True<br>
+<strong>manual:</strong> False<br>
+<strong>name:</strong> discount_balance<br>
+<strong>readonly:</strong> False<br>
+<strong>required:</strong> False<br>
+<strong>searchable:</strong> True<br>
+<strong>sortable:</strong> True<br>
+<strong>store:</strong> True<br>
+<strong>string:</strong> Discount Balance<br>
+<strong>type:</strong> monetary<br>
+</p>
+</section>
+
+<section id="payment_date" class="card card-body">
+<h4 class="card-title">payment_date</h4>
+<p>
+<strong>change_default:</strong> False<br>
+<strong>company_dependent:</strong> False<br>
+<strong>default_export_compatible:</strong> False<br>
+<strong>depends:</strong> ['discount_date', 'date_maturity']<br>
+<strong>exportable:</strong> True<br>
+<strong>groupable:</strong> True<br>
+<strong>manual:</strong> False<br>
+<strong>name:</strong> payment_date<br>
+<strong>readonly:</strong> True<br>
+<strong>required:</strong> False<br>
+<strong>searchable:</strong> True<br>
+<strong>sortable:</strong> True<br>
+<strong>store:</strong> False<br>
+<strong>string:</strong> Next Payment Date<br>
+<strong>type:</strong> date<br>
+</p>
+</section>
+
+<section id="is_refund" class="card card-body">
+<h4 class="card-title">is_refund</h4>
+<p>
+<strong>change_default:</strong> False<br>
+<strong>company_dependent:</strong> False<br>
+<strong>default_export_compatible:</strong> False<br>
+<strong>depends:</strong> ['move_id.move_type', 'balance', 'tax_repartition_line_id', 'tax_ids']<br>
+<strong>exportable:</strong> True<br>
+<strong>groupable:</strong> False<br>
+<strong>manual:</strong> False<br>
+<strong>name:</strong> is_refund<br>
+<strong>readonly:</strong> True<br>
+<strong>required:</strong> False<br>
+<strong>searchable:</strong> False<br>
+<strong>sortable:</strong> False<br>
+<strong>store:</strong> False<br>
+<strong>string:</strong> Is Refund<br>
+<strong>type:</strong> boolean<br>
+</p>
+</section>
+
+<section id="id" class="card card-body">
+<h4 class="card-title">id</h4>
+<p>
+<strong>change_default:</strong> False<br>
+<strong>company_dependent:</strong> False<br>
+<strong>default_export_compatible:</strong> False<br>
+<strong>depends:</strong> []<br>
+<strong>exportable:</strong> True<br>
+<strong>groupable:</strong> True<br>
+<strong>manual:</strong> False<br>
+<strong>name:</strong> id<br>
+<strong>readonly:</strong> True<br>
+<strong>required:</strong> False<br>
+<strong>searchable:</strong> True<br>
+<strong>sortable:</strong> True<br>
+<strong>store:</strong> True<br>
+<strong>string:</strong> ID<br>
+<strong>type:</strong> integer<br>
+</p>
+</section>
+
+<section id="display_name" class="card card-body">
+<h4 class="card-title">display_name</h4>
+<p>
+<strong>change_default:</strong> False<br>
+<strong>company_dependent:</strong> False<br>
+<strong>default_export_compatible:</strong> False<br>
+<strong>depends:</strong> ['move_id', 'ref', 'product_id', 'name']<br>
+<strong>exportable:</strong> True<br>
+<strong>groupable:</strong> False<br>
+<strong>manual:</strong> False<br>
+<strong>name:</strong> display_name<br>
+<strong>readonly:</strong> True<br>
+<strong>required:</strong> False<br>
+<strong>searchable:</strong> True<br>
+<strong>sortable:</strong> False<br>
+<strong>store:</strong> False<br>
+<strong>string:</strong> Display Name<br>
+<strong>translate:</strong> False<br>
+<strong>trim:</strong> True<br>
+<strong>type:</strong> char<br>
+</p>
+</section>
+
+<section id="create_uid" class="card card-body">
+<h4 class="card-title">create_uid</h4>
+<p>
+<strong>allow_hierachy_operators:</strong> True<br>
+<strong>change_default:</strong> False<br>
+<strong>company_dependent:</strong> False<br>
+<strong>context:</strong> {}<br>
+<strong>default_export_compatible:</strong> False<br>
+<strong>depends:</strong> []<br>
+<strong>domain:</strong> []<br>
+<strong>exportable:</strong> True<br>
+<strong>groupable:</strong> True<br>
+<strong>manual:</strong> False<br>
+<strong>name:</strong> create_uid<br>
+<strong>readonly:</strong> True<br>
+<strong>relation:</strong> <a class="nav-link" href="../res_users/index.html">res.users</a><br>
+<strong>required:</strong> False<br>
+<strong>searchable:</strong> True<br>
+<strong>sortable:</strong> True<br>
+<strong>store:</strong> True<br>
+<strong>string:</strong> Created by<br>
+<strong>type:</strong> many2one<br>
+</p>
+</section>
+
+<section id="create_date" class="card card-body">
+<h4 class="card-title">create_date</h4>
+<p>
+<strong>change_default:</strong> False<br>
+<strong>company_dependent:</strong> False<br>
+<strong>default_export_compatible:</strong> False<br>
+<strong>depends:</strong> []<br>
+<strong>exportable:</strong> True<br>
+<strong>groupable:</strong> True<br>
+<strong>manual:</strong> False<br>
+<strong>name:</strong> create_date<br>
+<strong>readonly:</strong> True<br>
+<strong>required:</strong> False<br>
+<strong>searchable:</strong> True<br>
+<strong>sortable:</strong> True<br>
+<strong>store:</strong> True<br>
+<strong>string:</strong> Created on<br>
+<strong>type:</strong> datetime<br>
+</p>
+</section>
+
+<section id="write_uid" class="card card-body">
+<h4 class="card-title">write_uid</h4>
+<p>
+<strong>allow_hierachy_operators:</strong> True<br>
+<strong>change_default:</strong> False<br>
+<strong>company_dependent:</strong> False<br>
+<strong>context:</strong> {}<br>
+<strong>default_export_compatible:</strong> False<br>
+<strong>depends:</strong> []<br>
+<strong>domain:</strong> []<br>
+<strong>exportable:</strong> True<br>
+<strong>groupable:</strong> True<br>
+<strong>manual:</strong> False<br>
+<strong>name:</strong> write_uid<br>
+<strong>readonly:</strong> True<br>
+<strong>relation:</strong> <a class="nav-link" href="../res_users/index.html">res.users</a><br>
+<strong>required:</strong> False<br>
+<strong>searchable:</strong> True<br>
+<strong>sortable:</strong> True<br>
+<strong>store:</strong> True<br>
+<strong>string:</strong> Last Updated by<br>
+<strong>type:</strong> many2one<br>
+</p>
+</section>
+
+<section id="write_date" class="card card-body">
+<h4 class="card-title">write_date</h4>
+<p>
+<strong>change_default:</strong> False<br>
+<strong>company_dependent:</strong> False<br>
+<strong>default_export_compatible:</strong> False<br>
+<strong>depends:</strong> []<br>
+<strong>exportable:</strong> True<br>
+<strong>groupable:</strong> True<br>
+<strong>manual:</strong> False<br>
+<strong>name:</strong> write_date<br>
+<strong>readonly:</strong> True<br>
+<strong>required:</strong> False<br>
+<strong>searchable:</strong> True<br>
+<strong>sortable:</strong> True<br>
+<strong>store:</strong> True<br>
+<strong>string:</strong> Last Updated on<br>
+<strong>type:</strong> datetime<br>
+</p>
+</section>
+
+<section id="vehicle_id" class="card card-body">
+<h4 class="card-title">vehicle_id</h4>
+<p>
+<strong>allow_hierachy_operators:</strong> False<br>
+<strong>change_default:</strong> False<br>
+<strong>company_dependent:</strong> False<br>
+<strong>context:</strong> {}<br>
+<strong>default_export_compatible:</strong> False<br>
+<strong>depends:</strong> []<br>
+<strong>domain:</strong> []<br>
+<strong>exportable:</strong> True<br>
+<strong>groupable:</strong> True<br>
+<strong>manual:</strong> False<br>
+<strong>name:</strong> vehicle_id<br>
+<strong>readonly:</strong> False<br>
+<strong>relation:</strong> <a class="nav-link" href="../fleet_vehicle/index.html">fleet.vehicle</a><br>
+<strong>required:</strong> False<br>
+<strong>searchable:</strong> True<br>
+<strong>sortable:</strong> True<br>
+<strong>store:</strong> True<br>
+<strong>string:</strong> Vehicle<br>
+<strong>type:</strong> many2one<br>
+</p>
+</section>
+
+<section id="need_vehicle" class="card card-body">
+<h4 class="card-title">need_vehicle</h4>
+<p>
+<strong>change_default:</strong> False<br>
+<strong>company_dependent:</strong> False<br>
+<strong>default_export_compatible:</strong> False<br>
+<strong>depends:</strong> []<br>
+<strong>exportable:</strong> True<br>
+<strong>groupable:</strong> False<br>
+<strong>manual:</strong> False<br>
+<strong>name:</strong> need_vehicle<br>
+<strong>readonly:</strong> True<br>
+<strong>required:</strong> False<br>
+<strong>searchable:</strong> False<br>
+<strong>sortable:</strong> False<br>
+<strong>store:</strong> False<br>
+<strong>string:</strong> Need Vehicle<br>
+<strong>type:</strong> boolean<br>
+</p>
+</section>
+
+<section id="vehicle_log_service_ids" class="card card-body">
+<h4 class="card-title">vehicle_log_service_ids</h4>
+<p>
+<strong>allow_hierachy_operators:</strong> False<br>
+<strong>change_default:</strong> False<br>
+<strong>company_dependent:</strong> False<br>
+<strong>context:</strong> {}<br>
+<strong>default_export_compatible:</strong> False<br>
+<strong>depends:</strong> []<br>
+<strong>domain:</strong> []<br>
+<strong>exportable:</strong> True<br>
+<strong>groupable:</strong> False<br>
+<strong>manual:</strong> False<br>
+<strong>name:</strong> vehicle_log_service_ids<br>
+<strong>readonly:</strong> False<br>
+<strong>relation:</strong> <a class="nav-link" href="../fleet_vehicle_log_services/index.html">fleet.vehicle.log.services</a><br>
+<strong>relation_field:</strong> account_move_line_id<br>
+<strong>required:</strong> False<br>
+<strong>searchable:</strong> True<br>
+<strong>sortable:</strong> False<br>
+<strong>store:</strong> True<br>
+<strong>string:</strong> Vehicle Log Service<br>
+<strong>type:</strong> one2many<br>
+</p>
+</section>
+
+<section id="fsm_order_ids" class="card card-body">
+<h4 class="card-title">fsm_order_ids</h4>
+<p>
+<strong>allow_hierachy_operators:</strong> False<br>
+<strong>change_default:</strong> False<br>
+<strong>company_dependent:</strong> False<br>
+<strong>context:</strong> {}<br>
+<strong>default_export_compatible:</strong> False<br>
+<strong>depends:</strong> []<br>
+<strong>domain:</strong> []<br>
+<strong>exportable:</strong> True<br>
+<strong>groupable:</strong> True<br>
+<strong>manual:</strong> False<br>
+<strong>name:</strong> fsm_order_ids<br>
+<strong>readonly:</strong> True<br>
+<strong>relation:</strong> <a class="nav-link" href="../fsm_order/index.html">fsm.order</a><br>
+<strong>required:</strong> False<br>
+<strong>searchable:</strong> True<br>
+<strong>sortable:</strong> False<br>
+<strong>store:</strong> True<br>
+<strong>string:</strong> FSM Orders<br>
+<strong>type:</strong> many2many<br>
+</p>
+</section>
+
+<section id="stock_valuation_layer_ids" class="card card-body">
+<h4 class="card-title">stock_valuation_layer_ids</h4>
+<p>
+<strong>allow_hierachy_operators:</strong> False<br>
+<strong>change_default:</strong> False<br>
+<strong>company_dependent:</strong> False<br>
+<strong>context:</strong> {}<br>
+<strong>default_export_compatible:</strong> False<br>
+<strong>depends:</strong> []<br>
+<strong>domain:</strong> []<br>
+<strong>exportable:</strong> True<br>
+<strong>groupable:</strong> False<br>
+<strong>manual:</strong> False<br>
+<strong>name:</strong> stock_valuation_layer_ids<br>
+<strong>readonly:</strong> False<br>
+<strong>relation:</strong> <a class="nav-link" href="../stock_valuation_layer/index.html">stock.valuation.layer</a><br>
+<strong>relation_field:</strong> account_move_line_id<br>
+<strong>required:</strong> False<br>
+<strong>searchable:</strong> True<br>
+<strong>sortable:</strong> False<br>
+<strong>store:</strong> True<br>
+<strong>string:</strong> Stock Valuation Layer<br>
+<strong>type:</strong> one2many<br>
+</p>
+</section>
+
+<section id="cogs_origin_id" class="card card-body">
+<h4 class="card-title">cogs_origin_id</h4>
+<p>
+<strong>allow_hierachy_operators:</strong> False<br>
+<strong>change_default:</strong> False<br>
+<strong>company_dependent:</strong> False<br>
+<strong>context:</strong> {}<br>
+<strong>default_export_compatible:</strong> False<br>
+<strong>depends:</strong> []<br>
+<strong>domain:</strong> []<br>
+<strong>exportable:</strong> True<br>
+<strong>groupable:</strong> True<br>
+<strong>manual:</strong> False<br>
+<strong>name:</strong> cogs_origin_id<br>
+<strong>readonly:</strong> False<br>
+<strong>relation:</strong> <a class="nav-link" href="../account_move_line/index.html">account.move.line</a><br>
+<strong>required:</strong> False<br>
+<strong>searchable:</strong> True<br>
+<strong>sortable:</strong> True<br>
+<strong>store:</strong> True<br>
+<strong>string:</strong> Cogs Origin<br>
+<strong>type:</strong> many2one<br>
+</p>
+</section>
+
+<section id="is_downpayment" class="card card-body">
+<h4 class="card-title">is_downpayment</h4>
+<p>
+<strong>change_default:</strong> False<br>
+<strong>company_dependent:</strong> False<br>
+<strong>default_export_compatible:</strong> False<br>
+<strong>depends:</strong> []<br>
+<strong>exportable:</strong> True<br>
+<strong>groupable:</strong> True<br>
+<strong>manual:</strong> False<br>
+<strong>name:</strong> is_downpayment<br>
+<strong>readonly:</strong> False<br>
+<strong>required:</strong> False<br>
+<strong>searchable:</strong> True<br>
+<strong>sortable:</strong> True<br>
+<strong>store:</strong> True<br>
+<strong>string:</strong> Is Downpayment<br>
+<strong>type:</strong> boolean<br>
+</p>
+</section>
+
+<section id="sale_line_ids" class="card card-body">
+<h4 class="card-title">sale_line_ids</h4>
+<p>
+<strong>allow_hierachy_operators:</strong> False<br>
+<strong>change_default:</strong> False<br>
+<strong>company_dependent:</strong> False<br>
+<strong>context:</strong> {}<br>
+<strong>default_export_compatible:</strong> False<br>
+<strong>depends:</strong> []<br>
+<strong>domain:</strong> []<br>
+<strong>exportable:</strong> True<br>
+<strong>groupable:</strong> True<br>
+<strong>manual:</strong> False<br>
+<strong>name:</strong> sale_line_ids<br>
+<strong>readonly:</strong> True<br>
+<strong>relation:</strong> <a class="nav-link" href="../sale_order_line/index.html">sale.order.line</a><br>
+<strong>required:</strong> False<br>
+<strong>searchable:</strong> True<br>
+<strong>sortable:</strong> False<br>
+<strong>store:</strong> True<br>
+<strong>string:</strong> Sales Order Lines<br>
+<strong>type:</strong> many2many<br>
+</p>
+</section>
+
+
+      </div>
+    </div>
+
+  </div>
+  <!-- Content end -->
+
+  <!-- Footer
+  ============================ -->
+  <footer id="footer" class="section bg-dark footer-text-light">
+    <div class="container">
+      <ul class="social-icons social-icons-lg social-icons-muted justify-content-center mb-3">
+        <li><a data-toggle="tooltip" href="https://twitter.com/harnishdesign/" target="_blank" title=""
+            data-original-title="Twitter"><i class="fab fa-twitter"></i></a></li>
+        <li><a data-toggle="tooltip" href="http://www.facebook.com/harnishdesign/" target="_blank" title=""
+            data-original-title="Facebook"><i class="fab fa-facebook-f"></i></a></li>
+        <li><a data-toggle="tooltip" href="http://www.dribbble.com/harnishdesign/" target="_blank" title=""
+            data-original-title="Dribbble"><i class="fab fa-dribbble"></i></a></li>
+        <li><a data-toggle="tooltip" href="http://www.github.com/" target="_blank" title=""
+            data-original-title="GitHub"><i class="fab fa-github"></i></a></li>
+      </ul>
+      <p class="text-center">Copyright &copy; 2020 <a
+          href="http://www.harnishdesign.net/idocs-one-page-documentation-html-template/">iDocs</a>. All Rights
+        Reserved.</p>
+      <p class="text-2 text-center mb-0">Design &amp; Develop by <a class="btn-link" target="_blank"
+          href="http://www.harnishdesign.net/">HarnishDesign</a>.</p>
+    </div>
+  </footer>
+  <!-- Footer end -->
+
+  </div>
+  <!-- Document Wrapper end -->
+
+  <!-- Back To Top -->
+  <a id="back-to-top" data-toggle="tooltip" title="Back to Top" href="javascript:void(0)"><i
+      class="fa fa-chevron-up"></i></a>
+
+  <!-- JavaScript
+============================ -->
+  <script src="../../assets/vendor/jquery/jquery.min.js"></script>
+  <script src="../../assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <!-- Highlight JS -->
+  <script src="../../assets/vendor/highlight.js/highlight.min.js"></script>
+  <!-- Easing -->
+  <script src="../../assets/vendor/jquery.easing/jquery.easing.min.js"></script>
+  <!-- Magnific Popup -->
+  <script src="../../assets/vendor/magnific-popup/jquery.magnific-popup.min.js"></script>
+  <!-- Custom Script -->
+  <script src="../../assets/js/theme.js"></script>
+</body>
+
+</html>
